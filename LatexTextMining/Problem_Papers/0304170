@@ -1,0 +1,1040 @@
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb,amstext,amsthm,exscale,latexsym}
+\input epsf
+\hoffset-10mm
+\textwidth160mm
+\textheight 240mm
+\topmargin -20mm
+\newcommand {\al}   {\alpha}       \newcommand {\bt}  {\beta}
+\newcommand {\g }   {\gamma}       \newcommand {\G }  {\Gamma}
+\newcommand {\dl}   {\delta}       \newcommand {\e }  {\epsilon}
+\newcommand {\z }   {\zeta}        \newcommand {\et}  {\eta}
+\newcommand {\ve}   {\varepsilon}  \newcommand {\vt}  {\vartheta}
+\newcommand {\lm}   {\lambda}      \newcommand {\m }  {\mu}
+\newcommand {\n }   {\nu}          \newcommand {\x }  {\xi}
+\newcommand {\s }   {\sigma}       \newcommand {\vr } {\varrho}
+\newcommand {\ta}   {\tau}         \newcommand {\ph}  {\phi}
+\newcommand {\vf }  {\varphi}      \newcommand {\h }  {\chi}
+\newcommand {\pf}   {\psi}         \newcommand {\om}  {\omega}
+\newcommand {\Lm}   {\Lambda}      \newcommand {\Om}  {\Omega}
+\newcommand {\Th}   {\Theta}       \newcommand {\Ph}  {\Phi}
+\newcommand {\pl}   {\partial}     \newcommand {\nb}  {\nabla}
+%---------------------------------------------------------------------
+\newcommand   {\const}{{\sf\,const}}     \newcommand   {\Int}{{\sf\,Int\,}}
+\newcommand   {\diag}{{\sf\,diag\,}}     \newcommand   {\tr}{{\sf\,tr\,}}
+\renewcommand {\det}{{\sf\,det\,}}       \renewcommand {\exp}{{\sf\,exp\,}}
+\newcommand   {\sign}{{\sf\,sign\,}}     \renewcommand {\inf}{{\sf\,inf\,}}
+\renewcommand {\ln}{{\sf\,ln\,}}         \renewcommand {\log}{{\sf\,log\,}}
+\renewcommand {\sin}{{\sf\,sin\,}}       \renewcommand {\cos}{{\sf\,cos\,}}
+\newcommand {\tg}{{\sf\,tg\,}}           \newcommand {\ctg}{{\sf\,ctg\,}}
+\renewcommand {\arcsin}{{\sf\,arcsin\,}} \renewcommand {\arccos}{{\sf\,arccos\,}}
+\newcommand {\arctg}{{\sf\,arctg\,}}
+%*********************************************************************
+\newcommand {\MA }  {{\mathbb A}}   \newcommand {\MB}  {{\mathbb B}}
+\newcommand {\MC }  {{\mathbb C}}   \newcommand {\MD}  {{\mathbb D}}
+\newcommand {\ME }  {{\mathbb E}}   \newcommand {\MF}  {{\mathbb F}}
+\newcommand {\MG }  {{\mathbb G}}   \newcommand {\MH}  {{\mathbb H}}
+\newcommand {\MI }  {{\mathbb I}}   \newcommand {\MJ}  {{\mathbb J}}
+\newcommand {\MK }  {{\mathbb K}}   \newcommand {\ML}  {{\mathbb L}}
+\newcommand {\MM }  {{\mathbb M}}   \newcommand {\MN}  {{\mathbb N}}
+\newcommand {\MO }  {{\mathbb O}}   \newcommand {\MP}  {{\mathbb P}}
+\newcommand {\MQ }  {{\mathbb Q}}   \newcommand {\MR}  {{\mathbb R}}
+\newcommand {\MS }  {{\mathbb S}}   \newcommand {\MT}  {{\mathbb T}}
+\newcommand {\MU }  {{\mathbb U}}   \newcommand {\MV}  {{\mathbb V}}
+\newcommand {\MW }  {{\mathbb W}}   \newcommand {\MX}  {{\mathbb X}}
+\newcommand {\MY }  {{\mathbb Y}}   \newcommand {\MZ}  {{\mathbb Z}}
+
+\newcommand {\Ga}  {\mathfrak{a}}   \newcommand {\Gb}  {\mathfrak{b}}
+\newcommand {\Gc}  {\mathfrak{c}}   \newcommand {\Gd}  {\mathfrak{d}}
+\newcommand {\Ge}  {\mathfrak{e}}   \newcommand {\Gf}  {\mathfrak{f}}
+\newcommand {\Gg}  {\mathfrak{g}}   \newcommand {\Gh}  {\mathfrak{h}}
+\newcommand {\Gi}  {\mathfrak{i}}   \newcommand {\Gj}  {\mathfrak{j}}
+\newcommand {\Gk}  {\mathfrak{k}}   \newcommand {\Gl}  {\mathfrak{l}}
+\newcommand {\Gm}  {\mathfrak{m}}   \newcommand {\Gn}  {\mathfrak{n}}
+\newcommand {\Go}  {\mathfrak{o}}   \newcommand {\Gp}  {\mathfrak{p}}
+\newcommand {\Gq}  {\mathfrak{q}}   \newcommand {\Gr}  {\mathfrak{r}}
+\newcommand {\Gs}  {\mathfrak{s}}   \newcommand {\Gt}  {\mathfrak{t}}
+\newcommand {\Gu}  {\mathfrak{u}}   \newcommand {\Gv}  {\mathfrak{v}}
+\newcommand {\Gw}  {\mathfrak{w}}   \newcommand {\Gx}  {\mathfrak{x}}
+\newcommand {\Gy}  {\mathfrak{y}}   \newcommand {\Gz}  {\mathfrak{z}}
+
+\newcommand {\Sa}  {{\textsc{a}}}   \newcommand {\Sb}  {{\textsc{b}}}
+\newcommand {\CC }  {{\cal C}}      \newcommand {\CD}  {{\cal D}}
+%---------------------------------------------------------------------
+\newcommand {\Bb}  {\boldsymbol{b}}
+%*********************************************************************
+\begin{document}
+\title     {One-dimensional topologically nontrivial \\
+            solutions in the Skyrme model}
+\author    {M. O. Katanaev
+            \thanks{E-mail: katanaev@mi.ras.ru}\\ \\
+            \sl Steklov Mathematical Institute,\\
+            \sl Gubkin St.~8, 119991, Moscow, Russia}
+\date      {15 April 2003}
+\maketitle
+\begin{abstract}
+The Skyrme model is considered using the explicit parametrization
+of the rotation group $\MS\MO(3)$ by elements of its algebra.
+Topologically nontrivial solutions arise even in the one-dimensional
+case because the fundamental group of the group $\MS\MO(3)$ is equal
+to $\MZ_2$. Static one-dimensional solutions are found explicitly
+and analyzed. There are topologically nontrivial solutions with finite
+energy among them. New class of projective models is proposed with a
+target space which is an arbitrary real projective space $\MR\MP^d$.
+\end{abstract}
+%*******************************************************************
+\section{Introduction}
+%********************************************************************
+The Skyrme model \cite{Skyrme61} is one of the fundamental models in
+contemporary mathematical physics which finds applications in different
+fields of physics from the theory of elementary particles to solid
+state physics. The model was originally proposed in terms of four
+scalar fields taking values on a three-dimensional sphere $\MS^3$.
+The Lagrangian for the model can be also written in terms of elements
+of the algebra $\Gs\Gu(2)$ since a sphere $\MS^3$ is diffeomorphic
+to the group $\MS\MU(2)$ as a manifold. As long as the fundamental and
+the second homotopic groups of unitary groups $\MS\MU(n)$, $n\ge2$, and
+spheres $\MS^n$, $n\ge3$, are trivial there are no one- and two-dimensional
+topologically nontrivial solutions in the corresponding models. For this
+parametrization of the Skyrme model topologically nontrivial solutions are
+related to the third homotopic group $\pi_3(\MS^3)=\MZ$. However these
+solutions are not found in explicit form.
+
+During subsequent years much attention was also paid to $\MS\MO(n)$-models
+where a target space is any dimensional sphere $\MS^{n-1}$ with the
+rotational group $\MO(n)$ as the symmetry group. Review of these models
+and references can be found in monographs [2--6].
+\nocite{Rajara82R,TakFad86R,Zakrze89,RybSan01R}%
+In what follows we shall call these models $\MS^{n}$-models keeping the
+term $\MS\MO(n)$-model for the case where the target space is the group
+manifold by itself.
+
+Topological solitons of the lowest dimension exist for $\MS^1$-models for
+which $\pi(\MS^1)=\MZ$. These are, for example, well known kinks in
+the sine--Gordon model. Topologically nontrivial solutions for higher
+homotopic groups appear in the $\MS^2$-model where the second homotopic
+group is nontrivial $\pi_2(\MS^2)=\MZ$. Corresponding static solutions with
+nontrivial topological charge were found and analyzed in \cite{BelPol75R}.
+
+As was already noted the Lagrangian for the Skyrme model can be written
+in terms of the $\Gs\Gu(2)$ algebra elements. As far as the algebras for
+the $\MS\MU(2)$ and $\MS\MO(3)$ groups are isomorphic, the Skyrme model
+can be considered as the $\MS\MO(3)$-model with the group manifold by
+itself as the target space. To this end we use known (see, for example,
+\cite{EllDaw79}) but not widely used explicit parametrization of the
+rotational group $\MS\MO(3)$. So we are working with the three-dimensional
+group manifold directly. Topologically nontrivial solutions appear here
+even in a one-dimensional case since the fundamental group of the rotational
+group $\MS\MO(3)$ is nontrivial $\pi(\MS\MO(3))=\MZ_2$. Corresponding static
+solutions are explicitly found. They are analyzed and compared with the
+static solutions of the $\MS^2$-model.
+
+Explicit parametrization of the $\MS\MO(3)$ group used in the present
+paper allows one to make a generalization. It is well known that the
+$\MS\MO(3)$ group manifold is diffeomorphic to a three-dimensional
+projective space $\MR\MP^3$ (see, for example, \cite{DuNoFo98R}).
+It makes possible to generalize the Skyrme model to the case of arbitrary
+projective spaces over a field of real numbers when the target space is
+an arbitrary projective space $\MR\MP^n=\MS^n/\MZ_2$. The projective
+space $\MR\MP^n$ can be parametrized by points in the Euclidean space
+$\lbrace\om^i\rbrace\in\MR^n$ lying inside the ball
+$\om=\sqrt{\om^i\om_i}\le\pi$ for which the antipodal points of the
+boundary sphere of radius $\pi$ are identified. With this parametrization
+of a projective space the Lagrangian for an $\MR\MP^n$-model depends on
+$n$ fields $\om^i(x)$, $i=1,\dotsc,n$, and is invariant under local
+discreet transformations $\om^i\rightarrow\om^i+2\pi\om^i/\om$.
+In contrast to gauge models the symmetry group at every point of a
+space-time is not a Lie group but a discreet group $\MZ$ of translations
+on a constant vector. Representation of the translational group is
+local and does depend on a space-time point because direction of
+a vector changes continuously.
+
+We start our consideration by describing the explicit parametrization
+of the $\MO(3)$ group. In sections 3, 4 and 5 we write down Lagrangian
+for $\MS\MO(3)$-, $\MS\MU(2)$- and $\MS^2$-models, respectively, and
+discuss their relationship. Static solutions for $\MS^2$- and
+$\MS\MO(3)$-models are found and compared in sections 6 and 7. The
+$\MS\MO(3)$-model is generalized to arbitrary real projective spaces
+$\MR\MP^d$ in section 8.
+%*******************************************************************
+\section{Parametrization of three-dimensional \\ rotational group}
+%********************************************************************
+It is convenient for calculations with the $\MO(3)$ group to use
+explicit parametrization of group elements by elements of its algebra.
+An $\Gs\Go(3)$ algebra element can be parametrized by an arbitrary
+antisymmetric $3\times3$-matrix
+\begin{equation}                                        \label{epeans}
+  (\om\ve)_i{}^j=(\om^k \ve_k)_i{}^j=\om^k\ve_{ki}{}^j~~\in\Gs\Go(3),
+\end{equation}
+where $\ve_{ijk}$ is the totally antisymmetric third rank tensor,
+$\ve_{123}=1$, and raising and lowering of indices are performed with
+the Kronecker symbol. Here the first index $k$ enumerate the basis of the
+algebra while indices $i,j$ are considered as matrix ones. An algebra
+element is parametrized by three-dimensional vector $\om^k\in\MR^3$,
+and thus the $\MO(3)$ group is three-dimensional. There is one
+$\MS\MO(3)$ group element from the component connected to the unity
+element corresponding to each element of the algebra
+\begin{equation}                                        \label{elsogr}
+  S_{(+)i}{}^j=(e^{(\om\ve)})_i{}^j=\cos\om\,\dl_i^j
+  +\frac{(\om\ve)_i{}^j}\om\sin\om
+  +\frac{\om_i\om^j}{\om^2}(1-\cos\om)~          \in\MS\MO(3),
+\end{equation}
+where $\om=\sqrt{\om^i\om_i}$ is the modulus of the vector $\om^i$.
+Straightforward calculations easily show that $S_{(+)i}{}^j$ is the
+orthogonal matrix indeed. Let us note that the group element has
+symmetric as well as antisymmetric part in contrast to the algebra
+element. One can check that the $\MS\MO(3)$ group element is invariant
+with respect to translation of a vector
+$\om^i\rightarrow\om^i+2\pi\om^i/\om$
+\begin{equation*}
+  S_{(+)i}{}^j\left(\om^k+2\pi\frac{\om^k}\om\right)=S_{(+)i}{}^j(\om^k),
+\end{equation*}
+and this is the only invariance. The shift of vector $\om^i$
+changes only its length $\om\rightarrow\om+2\pi$, leaving its
+direction unchanged. One can easily convince oneself of
+the symmetry of the rotational matrix by noting that the ratio
+$\om^i/\om$ defining the direction of vector $\om^i$ remains
+unchanged under an arbitrary shift
+\begin{equation*}
+  \frac{\om^i}\om\rightarrow\frac{\om^i+c\om^i/\om}{\om+c}=\frac{\om^i}\om,
+  ~~~~c\in\MR.
+\end{equation*}
+It means that an element of rotational group is parametrized by a point
+of Euclidean space $\om^i\in\MR^3$ with the only equivalence relation
+\begin{equation}                                        \label{eqrsog}
+  \om^i\approx\om^i+2\pi\frac{\om^i}\om.
+\end{equation}
+Here the uncertainty at zero is defined along radial directions
+$\om^i=\e k^i$, $\e\to0$. That is the origin of the coordinate system
+is identified with the spheres of radii $2\pi m$, $m=1,2,\dotsc$.
+
+The vector $\om^i$ parametrizes the $\MS\MO(3)$ group in the
+following way. The direction of the vector $\om^i$ coincides with the
+rotational axis and its modulus $\om$ equals the rotational angle.
+In this way each $\MS\MO(3)$ group element is identified with the point
+of three-dimensional ball $\MB^3_\pi$ of radius $\pi$ and with the center
+at the coordinate origin. Different rotations correspond to different
+points, and antipodal points of the boundary sphere have to be identified
+because rotations by angles $\pi$ and $-\pi$ around a fixed axis yield
+the same result.
+
+Full group of three-dimensional rotations $\MO(3)$ consists of two
+disconnected components: orthogonal matrices with positive $S_{(+)}$ and
+negative $S_{(-)}$ determinants. Elements of the full $\MO(3)$ group are
+parametrized by algebra elements (\ref{epeans}) in the following way
+\begin{equation}                                        \label{elsogt}
+  S_{(\pm)i}{}^j=\cos\om\,\dl_i^j+\frac{(\om J)_i{}^j}\om\sin\om
+  +\frac{\om_i\om^j}{\om^2}(\pm1-\cos\om)~\in\MO(3),
+\end{equation}
+Let us note that there are two group elements $S_{(\pm)}\in\MO(3)$
+by one from each component which correspond to every element of the
+algebra $(\om\ve)_i{}^j\in\Gs\Go(3)$.
+
+The inverse matrices have the form
+\begin{equation}                                        \label{elsogi}
+  S^{-1}_{(\pm)i}{}^j(\om)=S_{(\pm)i}{}^j(-\om)=\cos\om\,\dl_i^j
+  -\frac{(\om\ve)_i{}^j}\om\sin\om
+  +\frac{\om_i\om^j}{\om^2}(\pm1-\cos\om)~\in\MO(3),
+\end{equation}
+that is they correspond to the inverse vector $-\om^i\in\MR^3$. In
+other words the inverse group element corresponds to the rotation of
+the Euclidean space about the same axis at the opposite angle.
+
+Contraction of the matrix $S_{(\pm)i}{}^j$ with the vector $\om_j$ yields
+\begin{equation*}
+  S_{(\pm)i}{}^j\om_j=\pm\om_i.
+\end{equation*}
+It means that the vector $\om^i$ is the eigenvector for orthogonal matrices
+with eigenvalues $\pm1$. In other words rotations $\MS\MO_{(+)}$ and
+$\MS\MO_{(-)}$ leave direction of the rotational axis unchanged or change
+it to opposite, respectively.
+
+Suppose that $\MO(3)$ group element smoothly depends on a point of an
+arbitrary manifold $\MM$, that is
+\begin{equation*}
+  \om^i(x):~~\MM\rightarrow\MO(3).
+\end{equation*}
+Let us introduce the notation
+\begin{equation}                                        \label{ealroe}
+  l_{(\pm)\al i}{}^j=(\pl_\al S_{(\pm)}^{-1}S_{(\pm)})_i{}^j.
+\end{equation}
+One can show the validity of the following formulae by straightforward
+calculations
+\begin{equation}                                           \label{ealgrs}
+\begin{split}
+  l_{(\pm)\al i}{}^j=\mp\frac{(\pl_\al\om\ve)_i{}^j}\om\sin\om
+  -\frac{\pl_\al\om(\om\ve)_i{}^j}\om\left(1\mp\frac{\sin\om}\om\right)&
+\\
+  \pm\frac{\pl_\al\om_i\om^j-\om_i\pl_\al\om^j}{\om^2}(\pm1-\cos\om)&
+  ~~\in\Gs\Go(3).
+\end{split}
+\end{equation}
+This matrix is antisymmetric in its indices and hence is the element of
+the $\Gs\Go(3)$ algebra. It is the trivial $\MO(3)$-connection (pure
+gauge) for which the curvature tensor is zero. The trivial
+$\MS\MO(3)$-connection will be denoted by $l_{\al i}{}^j=l_{(+)\al i}{}^j$
+in what follows.
+
+The considered parametrization of the rotational group shows that the
+group manifold is compact and orientable. As a manifold the component
+$\MS\MO(3)$ connected to the unity element coincides with the
+three-dimensional projective space $\MR\MP^3$. It is not simply connected,
+and its fundamental group is $\MZ_2$.
+%*******************************************************************
+\section{The Lagrangian for the Skyrme model}
+%********************************************************************
+Let us consider $n$-dimensional Minkowskian space $\MR^{1,n-1}$ with
+Cartesian coordinates $x^\al$, $\al=0,1,\dotsc,n-1$. Let an element
+of the rotational group $\om^i(x)$ be given in each point of the
+Minkowskian space. To describe $\pi$-mesons Skyrme proposed the
+following action \cite{Skyrme61}
+\begin{equation}                                        \label{eskact}
+  S=\int dx L=\int dx\left(-\frac\vr4\tr(l_\al l^\al)
+  -\frac\kappa8\tr([l_\al,l_\bt][l^\al,l^\bt])\right),
+\end{equation}
+where $\vr$ and $\kappa$ are coupling constants, and square brackets
+denote the commutator of matrices. Skyrme considered $l_\al$ as a
+trivial $\MS\MU(2)$-connection and parametrized it by the four vector
+in the isotopic space taking values on a three-dimensional sphere $\MS^3$.
+That is he considered the action (\ref{eskact}) as the $\MS\MU(2)$-model
+or, equivalently, as the $\MS^3$-model. We shall consider the action
+(\ref{eskact}) as the action for the $\MS\MO(3)$-model using the
+parametrization of the rotational group from the previous section.
+Substitution of the expression for $l_\al$ in terms of the group
+parameters (\ref{ealgrs}) yields the following Lagrangian for three
+independent scalar fields $\om^i$
+\begin{equation}                                        \label{eacomi}
+\begin{split}
+  L&=\vr\left(\frac12\pl_\al\om^2
+  +(1-\cos\om)\frac{(\pl_\al\om\pl_\al\om)-\pl_\al\om^2}{\om^2}\right)
+\\
+  &+\kappa\left((1-\cos\om)\frac{(\pl_\al\om\pl_\al\om)\pl_\bt\om^2
+  -(\pl_\al\om\pl_\bt\om)\pl_\al\om\pl_\bt\om}{\om^2}\right.
+\\
+  &+\left.(1-\cos\om)^2\frac{(\pl_\al\om\pl_\al\om)^2
+  -(\pl_\al\om\pl_\bt\om)^2
+  -2(\pl_\al\om\pl_\al\om)\pl_\bt\om^2
+  +2(\pl_\al\om\pl_\bt\om)\pl_\al\om\pl_\bt\om}{\om^4}\right),
+\end{split}
+\end{equation}
+where we introduced notation for the scalar product
+\begin{equation*}
+  (\pl_\al\om\pl_\al\om)=\pl_\al\om^i\pl_\al\om_i\ne\pl_\al\om^2.
+\end{equation*}
+In this expression the summation with Minkowskian metric $\eta_{\al\bt}$
+is assumed over repeated Greek indices, and we do not distinguish
+lower and upper indices for simplicity. Three fields $\om^i(x)$ entering
+the Lagrangian are independent dynamical variables with no imposed
+constraint except the equivalence relation (\ref{eqrsog}). These fields
+are scalars with respect to coordinate transformations in the Minkowskian
+space $\MR^{1,n-1}$ and vector components with respect to global rotations
+of the Euclidean target-space $\MR^3$. One can check that the Lagrangian
+(\ref{eacomi}) is invariant with respect to Poicar\'e group acting in the
+Minkowskian space, global $\MO(3)$ rotations acting in the target space
+$\om^i\in\MR^3$, and local translations (\ref{eqrsog}). The last
+transformation means the following. The length of the vector
+$\om^i\in\MR^3$ at every point $x\in\MR^{1,n-1}$ can be changed on a
+constant value divisible by $2\pi$. At the same time this discreet
+transformation is a local one because direction of vector $\om^i$ changes
+from point to point. Due to this invariance we shall consider a
+vector $\om^i$ taking values inside the ball of radius $\pi$ with the
+center at the coordinates origin on the target space
+$\om^i\in\MB^3_\pi\subset\MR^3$.
+
+For the analysis of the Skyrme model in the form (\ref{eacomi})
+it is convenient to consider four new variables: the length of the
+vector $\om^i$ and its direction instead of the vector $\om^i$ by
+itself
+\begin{equation}                                        \label{enewvs}
+  \om=\sqrt{(\om^1)^2+(\om^2)^2+(\om^3)^2},~~~~k^i=\frac{\om^i}\om.
+\end{equation}
+By definition, vector $k^i$ has unit length $(k,k)=k^ik_i=1$.
+In terms of new variables the Lagrangian (\ref{eacomi}) takes the form
+\begin{equation}                                        \label{elaomn}
+\begin{split}
+  L&=\vr\left(\frac12\pl_\al\om^2+(1-\cos\om)(\pl_\al k\pl_\al k)\right)
+\\
+  &+\kappa\left(\vphantom{\frac12}(1-\cos\om)
+  \left[(\pl_\al k\pl_\al k)\pl_\bt\om^2
+  -(\pl_\al k\pl_\bt k)\pl_\al\om\pl_\bt\om\right]\right.
+\\
+  &\left.\vphantom{\frac12}~~~~~~~~~~~~~~~
+  +(1-\cos\om)^2\left[(\pl_\al k\pl_\al k)^2
+  -(\pl_\al k\pl_\bt k)^2\right]\right).
+\end{split}
+\end{equation}
+Let us remind that $(\pl_\al k\pl_\al k)=\pl_\al k^i\pl_\al k_i$.
+Transformation (\ref{eqrsog}) changes only a length of a vector
+\begin{equation}                                       \label{einomn}
+  \om\rightarrow\om+2\pi,~~~~k^i\rightarrow k^i.
+\end{equation}
+Now the invariance of the Lagrangian (\ref{elaomn}) with respect to
+the transformations (\ref{einomn}) follows immediately. Moreover,
+each of the term is invariant by itself.
+%*******************************************************************
+\section{Comparison with the $\MS\MU(2)$-model}
+%********************************************************************
+The form of the Skyrme model (\ref{eskact}) for group parameters
+depends only on algebra but not on the group which represents the
+target space. To show the dependence of the model on the group let us
+consider the $\MS\MU(2)$-model. An element of the $\Gs\Gu(2)$ algebra
+has the form
+\begin{equation*}
+  \om^k\frac i2(\s_k)_\Sa{}^\Sb~\in\Gs\Gu(2),~~~~\Sa,\Sb=1,2,
+\end{equation*}
+where $\s_k$ denote the Pauli matrices. The factor $i/2$ is chosen to
+give commutators of the basis vectors the same form for algebras
+$\Gs\Gu(2)$ and $\Gs\Go(3)$. The corresponding $\MS\MU(2)$ group
+element has the form
+\begin{equation}                                        \label{esutgr}
+  U_\Sa{}^\Sb=(e^{(i\om\s/2)})_\Sa{}^\Sb
+  =\cos\frac\om2\dl_\Sa^\Sb+i\frac{\om^k\s_{k\Sa}{}^\Sb}\om\sin\frac\om2
+  ~~\in\MS\MU(2).
+\end{equation}
+From this expression for a group element follows the identity
+\begin{equation*}
+  U_\Sa{}^\Sb\left(\om^i+4\pi\frac{\om^i}\om\right)=U_\Sa{}^\Sb(\om^i).
+\end{equation*}
+That is there exists the equivalence relation in the parameter space for
+the $\MS\MU(2)$ group
+\begin{equation}                                        \label{eqrsut}
+  \om^i\approx \om^i+4\pi\frac{\om^i}\om.
+\end{equation}
+In comparison to the equivalence relation (\ref{eqrsog}) for the group
+$\MS\MO(3)$ the shift is performed on a vector having two times greater
+length. It means that the group manifold is parametrized by internal points
+of a ball $\MB^3_{2\pi}$ of radius $2\pi$. In addition all points of
+the boundary sphere must be identified. This is the second equivalence
+relation in the parameter space
+\begin{equation}                                       \label{equspe}
+  \om_1^i|_{\om_1=2\pi}\approx\om_2^i|_{\om_2=2\pi}.
+\end{equation}
+The extra equivalence relation is due to the absence of the third term
+in (\ref{esutgr}) as compared to (\ref{elsogr}). It is the second difference
+from the rotational group for which only antipodal points on the boundary
+sphere are identified, and this is included in the equivalence relation
+(\ref{eqrsog}). It cab be shown that there are no other equivalence
+relations in the parameter space except (\ref{eqrsut}) and (\ref{equspe}).
+
+One can easily check that the Lagrangian for the Skyrme model has the
+same form (\ref{elaomn}) for both groups $\MS\MU(2)$ and $\MS\MO(3)$.
+The difference reduces to the equivalence relations (\ref{eqrsog}) and
+(\ref{eqrsut}) and identification of points on the boundary sphere
+(\ref{equspe}). The last property results in the difference in
+fundamental groups leading to the existence of one-dimensional topologically
+nontrivial solutions in the $\MS\MO(3)$ Skyrme model.
+%*******************************************************************
+\section{$\MS^2$-model}
+%********************************************************************
+The $\MS^2$-model attracts much interest many years. Since both the $\MS\MO(3)$
+Skyrme model and $\MS^2$-model are described by three-dimensional vectors,
+and any vector of fixed length can be represented as a result of rotation
+of some fixed vector of the same length, there arises a question of
+relation between these models.  In spite of nonequivalence of the models
+there is the relationship which we consider in the present section.
+
+Consider how the $\MS\MO(3)$-model from section 3 is linked to the
+$\MS^2$-model. Let unit vector $n^i(x)$, $(n,n)=1$, be given at every
+point of the Minkowskian space $\MR^{1,n-1}$. This means that the target
+space is the two-dimensional sphere $\MS^2$. Cartesian coordinates in the
+target space will be denoted by capital letters $X,Y,Z$. Let us consider
+the Lagrangian proposed by L.~D.~Faddeev for $\MS^2$-model \cite{FadNie99A}
+\begin{equation}                                        \label{ectmfi}
+\begin{split}
+  L_\mathrm{F}&=m^2(\pl_\al n\pl_\al n)
+  +\frac1{e^2}(n^i\ve_{ijk}\pl_\al n^j\pl_\bt n^k)^2,
+\\
+  &=m^2(\pl_\al n\pl_\al n)
+  +\frac1{e^2}\left[(\pl_\al n\pl_\al n)^2-(\pl_\al n\pl_\bt n)^2\right].
+\end{split}
+\end{equation}
+This model has topologically nontrivial solutions related to the third
+homotopic group $\pi_3(\MS^2)=\MZ$ [11--14].
+
+Any unit vector $n\in\MS^2$ can be parametrized by an element of the group
+of three-dimensional rotations
+\begin{equation}                                        \label{emintn}
+  n^i=n^j_0S_j{}^i(\om),
+\end{equation}
+where $n^i_0$ is an arbitrary fixed vector of unit length. This
+correspondence is not one to one because two given vectors $n$ and $n_0$
+do not define the rotational group element uniquely. Looking ahead we
+say that $\MS\MO(3)$- and $\MS^2$-models are not equivalent. The
+Lagrangian (\ref{ectmfi}) in parametrization (\ref{emintn}) takes the form
+\begin{equation*}
+\begin{split}
+  L&=m^2\, n_0^in_0^j\pl_\al S_i{}^k\pl_\al S_{jk}
+\\
+  &+\frac1{e^2}\,n_0^i n_0^j n_0^k n_0^l\left(
+  \pl_\al S_i{}^m\pl_\al S_{jm}\pl_\bt S_k{}^n\pl_\bt S_{ln}
+  -\pl_\al S_i{}^m\pl_\bt S_{jm}\pl_\bt S_k{}^n\pl_\al S_{ln}\right).
+\end{split}
+\end{equation*}
+It depends on three scalar fields $\om^i(x)$ parametrizing rotational
+group and a fixed vector $n_0$. Let us average it over angles
+defining vector $n_0$. To this end we shall use the averaging formulas
+which can be straightforwardly checked
+\begin{equation*}
+\begin{split}
+  \langle n_0^in_0^j\rangle&
+  =\frac1{4\pi}\int d\Theta d\Phi\,\sin\Theta n_0^in_0^j=\frac13\dl^{ij},
+\\
+  \langle n_0^in_0^jn_0^kn_0^l\rangle&
+  =\frac1{4\pi}\int d\Theta d\Phi\,\sin\Theta n_0^in_0^jn_0^kn_0^l
+  =\frac1{15}(\dl^{ij}\dl^{kl}+\dl^{ik}\dl^{jl}+\dl^{il}\dl^{jk}),
+\end{split}
+\end{equation*}
+where $\Theta,\Phi$ are polar coordinates in the target space. After
+averaging we get the new Lagrangian
+\begin{equation*}
+\begin{split}
+  \langle L_\mathrm{F}\rangle=&-\frac{m^2}3\tr(l_\al l_\al)
+\\
+  &-\frac1{15e^2}\left[\frac12\tr([l_\al,l_\bt][l_\al,l_\bt])
+  -\tr^2(l_\al l_\al)+\tr^2(l_\al l_\bt)\right].
+\end{split}
+\end{equation*}
+It contains two additional terms along with the Skyrme model ones
+(\ref{eskact}).
+
+Thus the averaging of $\MS^2$-model over directions of vector $n_0$
+yields the $\MS\MO(3)$-model. Nonequivalence of these models will be
+seen for static solutions considered in the following sections.
+%*******************************************************************
+\section{Static solutions for the two-dimensional $\MS^2$-model}
+%********************************************************************
+Unit vector $n$ in spherical coordinates is parametrized by two
+angles $\Theta$ and $\Phi$
+\begin{equation}                                        \label{epacsh}
+  n^1=\sin\Theta\cos\Phi,~~~~n^2=\sin\Theta\sin\Phi,~~~~n^3=\cos\Theta,
+\end{equation}
+describing two independent degrees of freedom. For simplicity we
+shall analyze static solutions in the two-dimensional $\MS^2$-model.
+In this case the second term in the Lagrangian (\ref{ectmfi}) does
+not contribute to the equations for static solutions. Therefore we
+restrict ourselves by considering only the first term.
+
+In angle variables the action corresponding to the first term in
+(\ref{ectmfi}) takes the form
+\begin{equation}                                        \label{ecphth}
+  S=m^2\int dx(\pl_\al\Theta^2+\sin^2\Theta\pl_\al\Phi^2)
+\end{equation}
+and yields equations of motion
+\begin{align}                                           \label{evarth}
+  \frac1{m^2}\frac{\dl S}{\dl\Theta}=~~~~
+  &-2\square\Theta+2\sin\Theta\cos\Theta\pl_\al\Phi^2=0,
+\\                                                      \label{evaphi}
+  \frac1{m^2}\frac{\dl S}{\dl\Phi}=~~~~
+  &-2\pl_\al(\pl_\al\Phi\sin^2\Theta)=0,
+\end{align}
+where $\square=\pl_\al\pl_\al$ is the d'Alembert operator.
+
+Let us consider a two-dimensional Minkowskian space $\MR^{1,1}$ with
+Cartesian coordinates $t,x$ and analyze static solutions. For
+$\Theta=\Theta(x)$ and $\Phi=\Phi(x)$ equations of motion (\ref{evarth}),
+(\ref{evaphi}) take the form
+\begin{align}                                           \label{estthe}
+  \Theta''-\sin\Theta\cos\Theta\Phi^{\prime 2}&=0,
+\\                                                      \label{estphi}
+  \left(\Phi'\sin^2\Theta\right)'&=0.
+\end{align}
+where prime denotes differentiation with respect to $x$. We consider
+solutions of the system of ordinary differential equations in the class
+of two-times differentiable functions $\CC^2(L)$ on a finite interval
+$x\in[0,L]$. Any solution of this system of equations belongs to one
+of the following four classes. Below constants of integration are
+denoted by $b,c,x_0$ and $\Phi_0$.
+
+{\bf Degenerate solutions I.}
+\begin{equation}                                        \label{efideg}
+  \Theta=0,~~~~\Phi(x)\in\CC(L).
+\end{equation}
+In this case vector $n$ is directed along $Z$ axis, and there is no rotation.
+
+{\bf Degenerate solutions II.}
+\begin{equation}                                        \label{esedeg}
+  \Theta=\frac\pi2,~~~~\Phi=b(x+x_0).
+\end{equation}
+Here vector $n$ uniformly rotates in the $X,Y$ plane as it goes along
+$x$ coordinate.
+
+{\bf Degenerate solutions III.}
+\begin{equation}                                        \label{ethdeg}
+  \Theta=b(x+x_0),~~~~\Phi=\Phi_0.
+\end{equation}
+Here vector $n$ uniformly rotates in the $\Phi=\Phi_0$ plane as it goes
+along $x$. These solutions in essence coincide with degenerate solutions II.
+To show this one can use the freedom in choosing a coordinate system in the
+target space and choose the new axis $Z'$ perpendicular to the plane
+$\Phi=\Phi_0$. Then degenerate solutions III transform to degenerate
+solutions II.
+
+{\bf A general situation.}
+In this case equation (\ref{estphi}) has a solution
+\begin{equation}                                       \label{ephpti}
+  \Phi'\sin^2\Theta=c,~~~~c\ne0.
+\end{equation}
+Then equation (\ref{estthe}) takes the form
+\begin{equation*}
+  \Theta''=c^2\frac{\cos\Theta}{\sin^3\Theta}.
+\end{equation*}
+It is easily integrated
+\begin{equation}                                       \label{esolth}
+  \cos\Theta=\sqrt{1-\frac{c^2}{b^2}}\sin[b(x+x_0)],~~~~|b|>|c|.
+\end{equation}
+After that we integrate equation (\ref{ephpti})
+\begin{equation}                                        \label{esophi}
+  \tg(\Phi+\Phi_0)=\frac cb\tg[b(x+x_0)].
+\end{equation}
+Thus formulas (\ref{esolth}), (\ref{esophi}) yield static solutions in
+a general situation. Constants of integration $x_0$ and $\Phi_0$
+correspond to shifts of coordinates and may be set to zero for simplicity.
+Constant $b$ corresponds to choosing of a scale of $x$ coordinate.
+For fixed length $L$ of the interval it can not be changed. Note that
+degenerate solutions II are obtained from a general situation in the
+limit $|b|=|c|$.
+
+One can show that in a general situation vector $n$ uniformly rotates
+in the plane tilted at the angle $\arctg\sqrt{c^2-1}$ to the $X,Y$
+plane as it moves along $x$. This means that we have in fact only two
+essentially different
+solutions of the Euler--Lagrange equations. First, there are degenerate
+solutions I when vector $n$ does not change in its way along $x$.
+Second, all other solutions describe uniform rotation of vector $n$ in
+arbitrarily fixed plane. In this case the rotational axis is always
+perpendicular to vector $n$. Division of these solutions into degenerate
+ones and a general situation is related to the orientation of coordinate
+system with respect to the rotational plane. Note that in all cases
+orientation of Cartesian coordinates axes $X,Y,Z$ in the target space
+can be arbitrary with respect to space coordinate $x$.
+
+All obtained solutions to the $\MS^2$-model are homotopic to zero because
+the fundamental group is trivial $\pi(\MS^2)=0$. It means that there is
+no one-dimensional topologically nontrivial solutions in $\MS^2$-models.
+
+Energy of two-dimensional $\MS^2$-model for static solutions is equal to
+\begin{equation*}
+  E=\int_0^L dx\left(\Theta^{\prime2}+\sin^2\Theta\Phi^{\prime2}\right).
+\end{equation*}
+Straightforward substitution of solutions into this integral yields the
+following values
+\begin{equation*}
+  E=\left\lbrace
+\begin{aligned}
+  0, &~~~~\text{degenerate solutions I},
+\\
+  b^2L,&~~~~\text{all other solutions}.
+\end{aligned} \right.
+\end{equation*}
+So the energy of static solutions is finite for finite $L$. For
+$bL=2\pi m$, $m=1,2,\dotsc$ solutions are periodic. In this case they
+may be considered as given on a circle.
+
+Let us analyze the stability of the obtained solutions. The second
+variation of the energy has the form
+\begin{equation*}
+  \dl^2 E=\int_0^Ldx\left(\dl\Theta^{\prime2}
+  +\cos(2\Theta)\Phi^{\prime2}\dl\Theta^2
+  +2\sin(2\Theta)\Phi'\dl\Theta\dl\Phi'
+  +\sin^2\Theta\dl\Phi^{\prime2}\right).
+\end{equation*}
+Here variations $\dl\Theta,\dl\Theta',\dl\Phi$ è $\dl\Phi'$ have to be
+considered as independent functions. A simple analysis shows that
+degenerate solutions I yield the absolute minimum, and the remaining
+solutions correspond to saddle points.
+%*******************************************************************
+\section{Static solutions of the two-dimensional $\MS\MO(3)$ \\ Skyrme model}
+%********************************************************************
+The Euler--Lagrange equations for $\MS\MO(3)$ Skyrme model (\ref{elaomn})
+have the form
+\begin{align}                                               \nonumber
+  &\frac{\dl S}{\dl\om}=
+\\                                                          \nonumber
+  &-\vr\square\om+\vr\sin\om(\pl_\al k\pl_\al k)
+\\                                                          \nonumber
+  &-2\kappa(1-\cos\om)\left[(\pl_{\al\bt}^2k\pl_\al k)\pl_\bt\om
+  +(\pl_\al k\pl_\al k)\square\om-(\pl_\al k\square k)\pl_\al\om
+  -(\pl_\al k\pl_\bt k)\pl_\al\om\pl_\bt\om\right]
+\\                                                          \nonumber
+  &-\kappa\sin\om\left[(\pl_\al k\pl_\al k)\pl_\bt\om^2
+  -(\pl_\al k\pl_\bt k)\pl_\al\om\pl_\bt\om\right]
+\\                                                      \label{eskome}
+  &+2\kappa(1-\cos\om)\sin\om\left[(\pl_\al k\pl_\al k)^2
+  -(\pl_\al k\pl_\bt k)^2\right]=0,
+\\                                                         \nonumber
+  &\frac{\dl S}{\dl k_i}=
+\\                                                         \nonumber
+  &-2\vr(1-\cos\om)\square k^i
+  -2\vr\sin\om\pl_\al k^i\pl_\al\om
+  -2\vr(1-\cos\om)(\pl_\al k\pl_\al k)k^i
+\\                                                         \nonumber
+  &-2\kappa(1-\cos\om)\left[\square k^i\pl_\al\om^2
+  +\pl_\al k^i\pl_{\al\bt}^2\om\pl_\bt\om
+  -\pl_{\al\bt}^2 k^i\pl_\al\om\pl_\bt\om
+  -\pl_\al k^i\square\om\pl_\al\om\right]
+\\                                                        \nonumber
+  &-4\kappa(1-\cos\om)^2\left[(\pl_\al k\pl_\al k)\square k^i
+  +(\pl_{\al\bt}^2k\pl_\bt k)\pl_\al k^i
+  -(\square k\pl_\al k)\pl_\al k^i
+  -(\pl_\al k\pl_\bt k)\pl_{\al\bt}^2k^i\right]
+\\                                                        \nonumber
+  &-8\kappa(1-\cos\om)\sin\om\left[(\pl_\bt k\pl_\bt k)\pl_\al k^i
+  -(\pl_\al k\pl_\bt k)\pl_\bt k^i\right]\pl_\al\om
+\\                                                        \nonumber
+  &-2\kappa(1-\cos\om)\left[(\pl_\al k\pl_\al k)\pl_\bt\om^2
+  -(\pl_\al k\pl_\bt k)\pl_\al\om\pl_\bt\om\right]k^i
+\\                                                    \label{esenie}
+  &-4\kappa(1-\cos\om)^2
+  \left[(\pl_\al k\pl_\al k)^2-(\pl_\al k\pl_\bt k)^2\right]k^i=0.
+\end{align}
+For variations of the action with respect to $k_i$ we used the formulae
+which takes into account the constraint $(k,k)=1$,
+\begin{equation*}
+  \frac{\dl S}{\dl k_i}=\frac{\bar\dl S}{\bar\dl k_j}(\dl^i_j-k^ik_j),
+\end{equation*}
+where the variation in the right hand side is taken without constraint.
+
+One easily checks that for static solutions $\om(x)$, $k^i(x)$ in
+two-dimensional Minkowskian space-time $\MR^{1,1}$ all terms depending
+on the coupling constant $\kappa$ are cancelled. It means that for the
+analysis of one-dimensional static solutions in the $\MS\MO(3)$-model
+one may consider the Lagrangian
+\begin{equation}                                        \label{elalth}
+  L=\vr\left[\frac12\pl_\al\om^2
+  +(1-\cos\om)\left(\pl_\al\theta^2+\sin^2\theta\pl_\al\vf^2\right)\right],
+\end{equation}
+where we used the spherical coordinates in the target space
+\begin{equation}                                        \label{epacsn}
+  k^1=\sin\theta\cos\vf,~~~~k^2=\sin\theta\sin\vf,~~~~k^3=\cos\theta.
+\end{equation}
+We use lower case Greek letters for angle coordinates of unit vector $k$
+to distinguish it from vector $n$ considered in the previous section.
+
+Equations of motion in the static case are
+\begin{align}                                           \label{eqomeg}
+  \frac1\vr\frac{\dl S}{\dl\om}=~~~~
+  &-\om''+\sin\om(\theta^{\prime2}+\sin^2\theta\vf^{\prime2})=0,
+\\                                                      \label{eqthet}
+  \frac1\vr\frac{\dl S}{\dl\theta}=~~~~
+  &-2\left((1-\cos\om)\theta'\right)'
+  +2(1-\cos\om)\sin\theta\cos\theta\vf^{\prime2}=0,
+\\                                                      \label{eqphil}
+  \frac1\vr\frac{\dl S}{\dl\vf}=~~~~
+  &-2\left((1-\cos\om)\sin^2\theta\vf'\right)'=0.
+\end{align}
+We look for solutions of this system of differential equations in the
+function space $\CC^2(L)$. Any solution of the system of equations
+(\ref{eqomeg})--(\ref{eqphil}) belongs to one of the following five classes.
+Below constants of integration are denoted by $a,b,c,x_0,\vf_0,\theta_0,$
+and $u_0$.
+
+{\bf Degenerate solutions I}.
+In this case the rotational angle is a linear function
+\begin{equation*}
+  \om=b(x+x_0),
+\end{equation*}
+and the rotational axis is fixed
+\begin{equation*}
+  \theta=\theta_0,~~\vf=\vf_0,~~~~\text{or}~~~~\theta=0,~~\vf(x)\in\CC^2(L).
+\end{equation*}
+For this solution the vector $n^i=n_0^jS_j{}^i(\om)$ uniformly rotates
+around $k$ which may have arbitrary direction as it moves along $x$. In
+contrast to the $\MS^2$-model the vector $n$ is not necessarily perpendicular
+to the rotational axis.
+
+Degenerate solutions I yield an example of static topologically nontrivial
+solutions with topological charge 0 or 1. If the angle $\om$ varies within
+an interval divisible by $4\pi$ then the topological charge is zero because
+the corresponding contour can be always deformed continuously to a point.
+The related deformation of the contour for $0<\om<4\pi$ is shown in
+Fig.~\ref{fsohom}.
+\begin{figure}[htb]%-------------------------------------------------
+ \begin{center} \leavevmode \epsfysize=40mm
+ \epsfbox{so3hom.eps}
+ \end{center}
+ \caption{The continuous deformation of the contour $0<\om<4\pi$ to a point.
+ The deformation is shown in the plane going through the vector $k$ defining
+ the rotation axis. Identification of antipodal points on the boundary
+ circle is shown by dashed lines.
+ \label{fsohom}}
+\end{figure}%---------------------------------------------------------
+If the angle $\om$ takes values in an interval containing the interval
+$2\pi$ odd number of times then the topological charge equals 1.
+
+{\bf Degenerate solutions II}.
+\begin{equation}                                        \label{ethisk}
+  \om=0,~~\theta(x),\vf(x)\in\CC^2(L).
+\end{equation}
+Rotation does not take place for this series of solutions because the
+angle of rotation equals zero.
+
+{\bf Degenerate solutions III}.
+\begin{equation*}
+\begin{split}
+  \cos\frac\om2&=\sqrt{1-\frac{c^2}{4b^2}}\sin[b(x+x_0)],~~~~2|b|\ge|c|\ne0,
+\\
+  \theta&=\frac\pi2,
+\\
+  \tg(\vf+\vf_0)&=\frac c{2b}\tg[b(x+x_0)].
+\end{split}
+\end{equation*}
+Polar angle $\vf$ is a monotonic function of $x$ for these solutions,
+that is the rotational axis $k^i$ rotates in the $X,Y$ plane. Here
+the rotational angle changes inside the finite interval
+\begin{equation*}
+  2\arccos\sqrt{1-\frac{c^2}{4b^2}}<\om
+  <2\pi-2\arccos\sqrt{1-\frac{c^2}{4b^2}}.
+\end{equation*}
+It can be easily checked that these solutions are homotopic to zero.
+
+{\bf Degenerate solutions IV}.
+\begin{equation*}
+\begin{split}
+  \cos\frac\om2&=\sqrt{1-\frac{c^2}{4b^2}}\sin[b(x+x_0)],~~~~2|b|\ge|c|\ne0,
+\\
+  \tg(\theta+\theta_0)&=\frac c{2b}\tg[b(x+x_0)],
+\\
+  \vf&=\vf_0.
+\end{split}
+\end{equation*}
+These solutions coincide essentially with degenerate solutions III,
+but the rotational axis rotates in the $\vf=\vf_0$ plane.
+
+{\bf A general situation}.
+To solve the system of equations (\ref{eqomeg})--(\ref{eqphil}) in a
+general situation we introduce new coordinate
+\begin{equation}                                      \label{eintux}
+  u=\int^x\frac{dy}{1-\cos\om(y)}.
+\end{equation}
+The coordinate $u$ increases with increasing of $x$ because
+$dx/du=1-\cos\om\ge0$. Then equations for $\theta$ and $\vf$ (\ref{eqthet}),
+(\ref{eqphil}) coincide exactly with equations for $\Theta$ and $\Phi$
+(\ref{estthe}), (\ref{estphi}), in which differentiation with respect to
+$x$ has to be changed to the differentiation with respect to $u$. Since
+these equations were analyzed in the previous section, we are left with
+solution of equation (\ref{eqomeg}) only. In a general situation it takes
+the form
+\begin{equation}                                        \label{eqomca}
+  \om''=c^2\frac{\sin\om}{(1-\cos\om)^2},~~~~c\ne0.
+\end{equation}
+A general solution of this equation has the form
+\begin{equation}                                        \label{eqomxc}
+  \cos\frac\om2=\sqrt{1-\frac{c^2}{4b^2}}\sin[b(x+x_0)],~~~~2|b|\ge|c|.
+\end{equation}
+After that the integral (\ref{eintux}) can be easily taken
+\begin{equation}                                        \label{ethuxc}
+  \tg(cu)=\frac c{2b}\tg[b(x+x_0)],
+\end{equation}
+where a constant of integration is inessential.
+A solution of equations (\ref{eqthet}), (\ref{eqphil}) has the form
+\begin{equation*}
+\begin{split}
+  \cos\theta&=\sqrt{1-\frac{a^2}{c^2}}\sin[c(u+u_0)],~~~~|c|>|a|\ne0,
+\\
+  \tg(\vf+\vf_0)&=\frac ac\tg[c(u+u_0)].
+\end{split}
+\end{equation*}
+Elementary geometrical analysis shows that solutions in a general situation
+coincide in essence with degenerate solutions III and IV, but the rotational
+axis rotates in the plane tilted at the angle $\arccos(a/c)$ to the $X,Y$
+plane.
+
+For static solutions the energy of two-dimensional $\MS\MO(3)$-model is
+equal to
+\begin{equation*}
+  E=\int_0^L dx\left(\frac12\om^{\prime2}+(1-\cos\om)
+  \left(\theta^{\prime2}+\sin^2\theta\vf^{\prime2}\right)\right).
+\end{equation*}
+Straightforward substitution of the solutions into this integral yields
+the following values
+\begin{equation*}
+  E=\left\lbrace
+\begin{aligned}
+  0, &~~~~\text{degenerate solutions II},
+\\
+  \frac12b^2L, &~~~~\text{degenerate solutions I},
+\\
+  2b^2L,&~~~~\text{all other solutions}.
+\end{aligned} \right.
+\end{equation*}
+The energy is finite for finite $L$. Degenerate solutions II correspond
+to absolute minimum because the energy is positive definite.
+%*******************************************************************
+\section{Projective $\MR\MP^d$-models}
+%********************************************************************
+The Lagrangian for the Skyrme model written in the form (\ref{elaomn})
+can be naturally generalized to the case when the target space is
+a real projective space of arbitrary dimension $\MR\MP^d$. Let $k^i$,
+$i=1,\dotsc,d$ be a unit vector $k^2=1$ in the Euclidean space $\MR^d$.
+Consider a vector $k^i(x)$ and a scalar $\om(x)$ fields on an arbitrary
+Minkowskian space $x\in\MR^{1,n-1}$. Obviously, the Lagrangian
+\begin{equation}                                        \label{elagep}
+\begin{split}
+  L=A\pl_\al\om^2+B(\pl_\al k\pl_\al k)
+  +C(\pl_\al k\pl_\al k)\pl_\bt\om^2
+  +D&(\pl_\al k\pl_\bt k)\pl_\al\om\pl_\bt\om
+\\
+  +E(\pl_\al k\pl_\al k)^2+F&(\pl_\al k\pl_\bt k)^2+G(\pl_\al\om^2)^2+U,
+\end{split}
+\end{equation}
+where $A(\om),B(\om),C(\om),D(\om),E(\om),F(\om),G(\om),U(\om)$ are
+arbitrary periodic (with period $2\pi$) functions on $\om$ is invariant
+with respect to the transformations (\ref{einomn}). One can introduce
+a vector field $\om^i=\om k^i$ all components of which are independent
+as happen in the Skyrme model. Due to the equivalence relation
+(\ref{eqrsog}) a vector field $\om^i$ can be considered as taking values
+inside a ball of radius $\pi$ with identified antipodal points on the
+boundary sphere. It means that the field $\om^i$ takes values in an
+arbitrary projective space $\MR\MP^d$.
+
+It is the most general invariant Lagrangian depending only on first
+derivatives to a power not exceeding four. It is invariant with respect
+to the Poicar\'e group $\MI\MO(1,n-1)$ acting in Minkowskian space
+$\MR^{1,n-1}$, rotational group $\MO(d)$ acting in the target space
+$\MR^d$, and translations (\ref{einomn}). The rotational group $\MO(d)$
+can be extended to the group $\MO(d+1)$ (maximal symmetry group of the
+projective space $\MR\MP^d$) but additional transformations will act
+nonlinearly on fields $\om^i$.
+%*******************************************************************
+\section{Conclusion}
+%********************************************************************
+We considered the Skyrme model as a $\MS\MO(3)$-model where the target
+space is the group manifold by itself using the explicit parametrization
+of the $\MS\MO(3)$ group by elements of its algebra. Since the
+fundamental group of the rotational group is nontrivial
+$\pi(\MS\MO(3))=\MZ_2$ the model admits existence of one-dimensional
+topologically nontrivial solutions. Corresponding static solutions in the
+two-dimensional Skyrme model are found and analyzed (degenerate
+solutions I from section 7).
+
+The form of the action for $\MS\MU(2)$ and $\MS\MO(3)$ Skyrme models
+coincides because their Lie algebras are isomorphic. The difference
+is in the equivalence relations in the parameter space. Hence to
+construct models in mathematical physics one must specify what
+manifold is a target space besides the action. This is important
+because topologically nontrivial solutions of Euler--Lagrange
+equations may arise. For example, in considering spinors on
+three-dimensional Riemannian manifold the $\MS\MO(3)$-connection enters
+the covariant derivative in spite of the fact that spinors transform
+under the representation of unitary $\MS\MU(2)$ group. It is because
+the $\MS\MO(3)$ group but not $\MS\MU(2)$ acts on an orthogonal vielbein
+in the tangent space to a Riemannian manifold.
+
+The $\MS\MO(3)$-model can be naturally generalized to a projective
+space of arbitrary dimension $\MR\MP^d$ because the group $\MS\MO(3)$
+as a manifold is diffeomorphic to a three-dimensional real projective
+space $\MR\MP^3$. This allows one to define a new class of projective
+models depending on eight arbitrary periodic functions of one argument.
+There is a possibility of existence of one-dimensional topologically
+nontrivial solutions in all these models since $\pi(\MR\MP^d)=\MZ_2$
+for $d\ge2$.
+
+The $\MS\MO(3)$-model may be used in the geometric theory of defects
+\cite{KatVol92,KatVol99}. The Riemann--Cartan geometry is used to
+describe static distribution of dislocations and disclinations in
+elastic media. The corresponding action is invariant under general
+coordinate transformations and local $\MS\MO(3)$ rotations. Recently
+the equations of elasticity theory were used to fix the coordinate
+system \cite{Katana03}. This allowed to include the classical elasticity
+theory in the geometric approach as a limiting case for the absence of
+defects. The $\MS\MO(3)$-model discussed in the present paper can be used
+to fix local $\MS\MO(3)$ rotations because it is not invariant under these
+transformations. In this case the geometric theory of defects will yield
+the $\MS\MO(3)$-model in the absence of disclinations.
+
+The author is very grateful to I.~V.~Volovich, E.~A.~Ivanov, and
+A.~I.~Pashnev for discussion of the paper and useful comments.
+The work is supported by RFBR grants 96-15-96131 and 02-01-01084.
+
+\begin{thebibliography}{1}
+
+\bibitem{Skyrme61}
+T.~H.~R. Skyrme.
+\newblock Nonlinear field theory.
+\newblock {\em Proc.\ Roy.\ Soc. London}, A260:127--138, 1961.
+
+\bibitem{ZaMaNoPi82}
+V.~E.~Zakharov, S.~V.~Manakov, S.~P.~Novikov, and L.~P.~Pitaevsky.
+\newblock {\em Theory of solitons: The inverse scattering method.}.
+\newblock Nauka, Moscow, 1982 [In Russian].
+
+\bibitem{Rajara82R}
+R.~Rajaraman.
+\newblock {\em Solitons and Instantons in Quantum Field Theory}.
+\newblock North--Holland, Amsterdam, 1982.
+
+\bibitem{TakFad86R}
+L.~A.~Takhtajan and L.~D.~Faddeev.
+\newblock {\em Hamiltonian approach to soliton theory}.
+\newblock Nauka, Moskow, 1986 [in Russian].
+
+\bibitem{Zakrze89}
+W.~J. Zakrzewski.
+\newblock {\em Low Dimensional Sigma Models}.
+\newblock Adam Hilger, Bristol -- Philadelphia, 1989.
+
+\bibitem{RybSan01R}
+Yu.~P.~Rybakov and V.~I.~Sanyuk.
+\newblock {\em Multidimensional solitons}.
+\newblock Russian Friendship University, Moscow, 2001 [in Russian].
+
+\bibitem{BelPol75R}
+A.~A.~Belavin and A.~M.~Polyakov.
+\newblock Metastable states of two-dimensional isotropic ferromagnet.
+\newblock {\em ZHETP Letters}, 22(10):503--506, 1975 [in Russian].
+
+\bibitem{EllDaw79}
+J.~P. Elliott and P.~G. Dawber.
+\newblock {\em Symmetry in Physics}, volume 2: Further Applications.
+\newblock The Macmillan Press Ltd, London, 1979.
+
+\bibitem{DuNoFo98R}
+B.~A.~Dubrovin, S.~P.~Novikov, and A.~T.~Fomenko.
+\newblock {\em Contemporary geometry},
+\newblock Nauka, Moscow, 1986, fourth edition [In Russian].
+
+\bibitem{FadNie99A}
+L.~Faddeev and A.~J. Niemi.
+\newblock Partially dual variables in ${\MS\MU(2)}$ {Y}ang--{M}ills theory.
+\newblock {\em Phys.\ Rev.\ Lett.}, 82:1624--1627, 1999.
+
+\bibitem{FadNie97}
+L.~Faddeev, A.~J.~Niemi.
+\newblock Knots and particles.
+\newblock {\em Nature}, 387: 58-66, 1997.
+
+\bibitem{BatSut98}
+R.~A.~Battye, P.~Sutcliffe.
+\newblock Knots as stable soliton solutions in a three-dimensional
+classical field theory.
+\newblock {\em Phys.\ Rev.\ Lett.}, 81: 4798--4801, 1998.
+
+\bibitem{BatSut99}
+R.~A.~Battye, P.~Sutcliffe.
+\newblock Solitons, links and knots.
+\newblock {\em Proc.\ Roy.\ Soc.\ London}, A455: 4305--4331, 1999.
+
+\bibitem{HieSal99}
+J.~Hietarinta, P.~Salo.
+\newblock Faddeev--Hopf knots: dynamics of linked unknots.
+\newblock {\em Phys.\ Lett.}, B451: 60--67, 1999.
+
+\bibitem{KatVol92}
+M.~O.~Katanaev, I.~V.~Volovich.
+\newblock Theory of Defects in Solids and Three-Dimensional Gravity.
+\newblock {\em Ann.\ Phys.}, 216:1--28, 1992.
+g
+\bibitem{KatVol99}
+M.~O.~Katanaev, I.~V.~Volovich.
+\newblock Scattering on Dislocations and Cosmic Strings in the
+Geometric Theory of Defects.
+\newblock {\em Ann.\ Phys.}, 271:203--232, 1999.
+
+\bibitem{Katana03}
+M.~O.~Katanaev.
+\newblock Wedge dislocation in the geometric theory of defects.
+\newblock {\em Teor.\ Mat.\ Fiz. [Russian]}, 135:338--352, 2003.
+
+\end{thebibliography}
+\end{document}

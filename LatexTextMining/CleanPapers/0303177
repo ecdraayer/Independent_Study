@@ -1,0 +1,9421 @@
+
+
+  
+ G ^c 
+   
+   
+   
+    
+   
+   
+  
+
+ G  
+  
+   
+  
+ wiggly_len 1.5mm arrow_len 1.5mm arrow_ang 13 dash_len 1.5mm 0.125mm dot_size 1thick  
+
+
+
+
+
+
+
+ [3]#1 
+* (7,3)
+0.125mm 
+v1 
+v2 
+plain v2,v1 
+decor.size=0,label=#2 ,l.dist=0.5mm v1 
+decor.size=0,label=#3 ,l.dist=0.5mm v2 
+    
+
+ [1]^2 #1 
+* (7,3)
+
+arrow_len 1.5mm 
+0.125mm 
+v1 
+v2 
+plain v2,v1 
+decor.size=0,label=1 ,l.dist=0.5mm v1 
+decor.size=0,label=2 ,l.dist=0.5mm v2 
+  
+* (7,3)
+
+0.125mm 
+v1 
+v2 
+plain v2,v1 
+decor.size=0,label=3 ,l.dist=0.5mm v1 
+decor.size=0,label=4 ,l.dist=0.5mm v2 
+    
+
+
+
+
+ graph1 
+
+Recursive Graphical Solution of Closed Schwinger-Dyson Equations in -Theory -
+Part1: Generation of Connected and One-Particle Irreducible Feynman Diagrams 
+
+Axel Pelster and Konstantin Glaum 
+
+Institut fur Theoretische Physik, Freie Universitat Berlin, 
+Arnimallee 14, 14195 Berlin, Germany
+
+pelster@physik.fu-berlin.de,glaum@physik.fu-berlin.de   
+
+ 
+
+ 
+Using functional derivatives with respect to the free correlation function we derive a closed set of
+Schwinger-Dyson equations in -theory. Its conversion to graphical recursion relations allows us to
+systematically generate all connected and one-particle irreducible Feynman diagrams for the two- and four-point
+function together with their weights. 
+
+05.70.Fh,64.60.-i 
+
+
+Introduction 
+
+Quantum and statistical field theory investigate the influence of field fluctuations on the -point functions.
+Interactions lead to an infinite hierarchy of Schwinger-Dyson equations for the -point functions
+Drell,Amit,Bellac,Zuber,Zinn,Peskin . These integral equations can only be closed approximately,
+for instance, by the well-established the self-consistent method of Kadanoff and Baym Baym .
+
+
+Recently, it has been shown that the Schwinger-Dyson equations of QED can be closed in a certain functional-analytic
+sense SDQED1 . Using functional derivatives with respect to the free propagators and the interaction 
+SDQED1,QED,SYM,ASYM1,ASYM2,GINZ,Devreese   
+two closed sets of equations were derived.
+The first one involves the connected electron and two-point function
+as well as the connected three-point function, whereas the second one determines 
+the electron and photon self-energy as well as the one-particle irreducible
+three-point function. Their conversion to graphical recursion relations leads to a systematic graphical generation of all 
+connected and one-particle irreducible Feynman diagrams in QED, respectively.
+
+
+The purpose of the present paper is to apply this functional-analytic approach to the -theory of second-order phase
+transitions in the disordered, symmetric phase. A short ouline of this program was already published in  Ref..
+To this end we derive in Section  a closed set of equations for the
+connected two- and four-point function. Analogously, we determine in Section  a closed set of Schwinger-Dyson equations
+for the self-energy and the one-particle irreducible four-point function. In both cases, 
+the closed set of Schwinger-Dyson
+equations can be converted into graphical recursion relations for the 
+corresponding connected and one-particle irreducible Feynman diagrams in -theory. 
+From these the respective connected vacuum diagrams follow by short-circuiting external legs. 
+Thus our present approach is complementary to Ref. SYM  which was  
+based on the observation that the complete knowledge of the vacuum energy implies the
+knowledge of the entire theory ("the vacuum is the world").
+In that paper the vacuum diagrams were constructed in a first step, together
+with their weights, as solutions of a graphical recursion relation derived from a nonlinear functional differential equation.
+In a second step, all diagrams with external lines are obtained from functional derivatives of the connected vacuum diagrams
+with respect to the free correlation function.
+
+Scalar -Theory  PHI 
+
+Euclidean -theories in  dimensions are useful models for
+a large family of universality classes of continuous phase transitions Verena . In particular,
+the O-symmetric -theory serves to describe
+the critical phenomena in dilute polymer solutions (), Ising- and
+Heisenberg-like magnets (), and superfluids (). In all these
+systems, the thermal fluctuations of a self-interacting scalar order parameter field  with  components
+are controlled by the Ginzburg-Landau energy functional 
+
+GL 
+E[] =  d^d x  1 2  __  (x) (-^2_x + m^2)  _  (x) + g 24  
+[ _^2_  (x)]^2     ,
+
+where the mass  is proportional to the temperature deviation
+from the critical point, and  denotes the coupling constant. In the following it turns out to be advantageous to rewrite the
+Ginzburg-Landau energy functional () as
+
+EF 
+E [ ] = 1 2  _12  G^-1 _12  _1 _2 
++ 1 24  _1234  V_1234   _1 _2 _3 _4 .
+
+In this short-hand notation, the spatial and tensorial arguments of the order parameter
+field , the bilocal kernel , and the quartic interaction  are indicated by simple number indices, i.e.,
+
+1  x_1 , _1   , 
+_1 __1=1 ^N d^d x_1  , 
+_1 __1  ( x_1 )  .
+
+The kernel  represents the functional matrix
+
+PH1  
+G^-1 _12  G__1 , _2 ^-1  ( x_1 , x_2 )  = 
+__1 , _2   ( - _x_1 ^2 + m^2 
+) ( x_1 - x_2 )  , 
+
+while the interaction  is given by the functional tensor 
+
+PH2 
+V_1234  V__1,_2,_3,_4  ( x_1 , x_2 , x_3 , x_4 ) = g 3  (
+__1 , _2  __3 , _4  +
+__1 , _3  __2 , _4  +
+__1 , _4  __2 , _3  ) 
+( x_1 - x_2 ) ( x_1 - x_3 ) ( x_1 - x_4 )  ,
+
+both being symmetric in their indices. 
+For the purpose of this paper we shall leave the kernel  in the energy functional
+() completely general, 
+except for the symmetry with respect to its indices. By doing so, we regard the energy functional ()
+as a functional of the kernel :
+
+EFF 
+E[] = E[,G^-1 ]  .
+
+As a consequence, all global and local statistical quantities derived from ()
+are also functionals of the bilocal kernel . In particular, we are interested in studying the functional dependence of  
+the partition function, defined by a functional integral over a Boltzmann weight in natural units
+
+PF 
+Z [G^-1 ]= D     e^- E [  ,G^-1  ]   ,
+
+and the (negative) vacuum energy
+
+VAS 
+W [G^-1 ]= Z [G^-1 ]  .
+
+For the sake of simplicity we restrict ourselves in the present paper to study the disordered, symmetric phase 
+of the -theory where the -point functions 
+
+NPO 
+_1 n  [G^-1 ] = 1 Z[G^-1 ]  D     
+_1 _n  e^- E [   ,G^-1 ]   ,
+
+with odd  vanish. Thus the first nonvanishing -point functions are the two-point function
+
+2P 
+_12   [G^-1 ]= 1 Z[G^-1 ] 
+D   _1 _2  e^- E [ , G^-1 ]  
+
+and the four-point function
+
+4P 
+_1234   [G^-1 ]= 1 Z[G^-1 ] 
+D   _1 _2 _3 _4  e^- E [ , G^-1 ]   .
+
+Further important statistical quantities are the correlation functions, i.e. the connected -point functions.
+In the disordered, symmetric phase, the connected two-point function coincides with the two-point function
+
+_12 ^c   [G^-1 ] = _12   [G^-1 ]  ,
+
+whereas the connected four-point function is defined by
+
+C4P 
+_1234 ^c [G^-1 ]
+_1234  [G^-1 ]- _12  [G^-1 ]_34 [G^-1 ]
+- _13  [G^-1 ]_24 [G^-1 ]- _14 [G^-1 ] _23 [G^-1 ]  .
+
+By expanding the functional integrals () and () in powers of the coupling constant , the expansion
+coefficients of the partition function and the -point functions consist of free-field expectation values. These
+are evaluated with the help of Wick's rule as a sum of Feynman integrals, which are pictured as diagrams constructed from
+lines and vertices. Thereby the free correlation function , which is the functional inverse of the kernel  
+in the energy functional ()
+
+FP 
+_2  G_12   G^-1 _23  = _13  
+
+with , is represented by a  line in a Feynman diagram  
+
+PRO 
+G_12     
+
+
+* (8,3)
+v1 
+v2 
+plain,width=0.2mm v2,v1 
+decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+     
+ ,
+
+and the interaction  is pictured as a vertex 
+
+VE 
+
+ -  V_1234      
+ 
+  * (4.5,4.5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  1/2w,1/2h v5 
+  plain v1,v3 
+  plain v2,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5 
+       
+ . 
+ 
+
+The graphical elements () and () are combined by an integral which graphically corresponds to the 
+gluing prescription
+
+
+  - _4 V_1234  G_45 
+   
+
+  
+  * (4.5,4.5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  1/2w,1/2h v5 
+  plain v1,v3 
+  plain v2,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5 
+       
+
+  
+
+  
+  * (6,7.5)
+    0w,0h v1 
+  1w,0h v2 
+  plain,width=0.2mm v2,v1 
+  decor,size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor,size=0, label=, l.dist=1mm, l.angle=0 v2 
+       
+
+     
+
+  
+  * (4.5,4.5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  8/4.5w,-1/4.5h v4 
+  1/2w,1/2h v5 
+  plain v1,v3 
+  plain v2,v5 
+  plain,right=0.15 v5,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-20 v4 
+  v5 
+        .
+
+
+In this paper we analyze the resulting diagrams for the statistical quantities ()-() by using their functional
+dependence on the kernel . To this end we
+introduce the functional derivative with respect to the kernel  whose
+basic rule reflects the symmetry of its indices:
+
+DR1 
+G^-1 _12  G^-1 _34   = 1 2  ( 
+_13  _42  + _14  _32  )  .
+
+From the identity () and the functional product rule
+we find the effect of this derivative on the free correlation function
+
+ACT 
+-  G_12  G^-1 _34   = 1 2  (
+G_13  G_42  + G_14  G_32  )  ,
+
+which has the graphical representation
+
+-   G^-1 _34  
+
+
+* (8,3)
+v1 
+v2 
+plain,width=0.2mm v2,v1 
+decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+    
+
+= 1 2   (
+
+
+* (8,3)
+v1 
+v2 
+plain,width=0.2mm v2,v1 
+decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  
+
+
+* (8,3)
+v1 
+v2 
+plain,width=0.2mm v2,v1 
+decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  
++
+
+* (8,3)
+v1 
+v2 
+plain,width=0.2mm v2,v1 
+decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  
+
+
+* (8,3)
+v1 
+v2 
+plain,width=0.2mm v2,v1 
+decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  
+)  .
+
+Thus a functional derivative with respect to the kernel  is represented by a graphical operation which
+cuts a line of a Feynman diagram in all possible ways SDQED1,QED,SYM,ASYM1,ASYM2,GINZ,Devreese . 
+For practical purposes it is convenient to use also
+functional derivatives with respect to
+the free correlation function  whose basic rule reads
+
+DR2 
+G_12  G_34   
+
+ 
+  
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  plain,width=0.2mm v2,v1 
+  decor,size=0, label=, l.dist=0.5mm, l.angle=-180 v1 
+  decor,size=0, label=, l.dist=0.5mm, l.angle=0 v2 
+       
+ 3 4 
+
+= 1 2  ( 
+_13  _42  + _14  _32  )  .
+
+Such functional derivatives are represented graphically by removing a line
+of a Feynman diagram in all possible ways  SDQED1,QED,SYM,ASYM1,ASYM2,GINZ,Devreese . 
+The functional derivatives with respect to the kernel  and the correlation function   are related via
+the functional chain rule
+
+ G^-1 _12   = - _34  G_13  G_24 
+ G_34     .
+
+These functional derivatives are used in Subsection to derive a closed set of Schwinger-Dyson equations for the connected two- and four-point functions. In
+Subsection  they are converted into graphical recursion relations for the corresponding connected Feynman diagrams.
+Finally, the connected vacuum diagrams contributing to the vacuum energy are constructed in a graphical way in 
+Subsection .
+
+Closed Set of Equations for Connected Two- and Four-Point Function CSE 
+
+In this subsection we apply the functional derivatives introduced so far to a
+functional identity which immediately follows from the definition of the
+functional integral. By doing so, we derive a closed set of Schwinger-Dyson equations
+determining the connected two- and four-point function.
+
+Connected Two-Point Function 
+
+In order to derive an equation for the connected two-point function, we start with the trivial identity
+
+D    _1  ( _2 
+ e^- E [ ]  ) = 0  ,
+
+which follows via direct functional integration from the vanishing of 
+the exponential at infinite fields. Taking
+into account the explicit form of
+the energy functional (), we perform
+the functional derivative with respect to the field
+and obtain
+
+FD1 
+D  ( _12  
+- _3 G^-1 _13  _2 _3
+- 1 6  _345  V_1345   _2 _3 _4 _5 
+) e^- E [ ]  = 0  .
+
+Applying the definitions ()-() and (), this
+equation can be expressed in terms of the connected two- and four-point 
+function as follows
+
+
+_12  - _3 G^-1 _13  _23  = 1 2 
+_345  V_1345  _34  _52  + 1 6  _345 
+V_1345  _2345 ^c   .
+Idy 
+
+Multiplying this equation with  and integrating with respect to the 
+index  finally leads to the Schwinger-Dyson equation which
+determines the connected two-point function:
+
+SD1 
+_12  = G_12  - 1 2 
+_3456  G_13  V_3456  _45  _62  - 1 6  _3456 
+G_13  V_3456  _2456 ^c   .
+
+When the connected two-point function is graphically represented in Feynman diagrams by a double line 
+
+
+_12   
+
+
+* (8,3)
+v1 
+v2 
+double,width=0.2mm v2,v1 
+decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+    
+
+  ,
+
+
+and the connected four-point function is pictured by a vertex with an open dot with four legs
+
+
+
+_1234 ^c   
+
+
+  * (9,9)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  3.5/9w,3.5/9h v5 
+  3.5/9w,5.5/9h v6 
+  5.5/9w,5.5/9h v7 
+  5.5/9w,3.5/9h v8 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+      
+ , 
+ 
+
+this Schwinger-Dyson equation reads graphically:
+
+
+SDG1 
+
+
+* (7,3)
+v1 
+v2 
+double,width=0.2mm v2,v1 
+decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  
+
+ = 
+
+* (7,3)
+v1 
+v2 
+plain v2,v1 
+decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  
+
+ + 1 2   
+
+
+* (10,5)
+0w,0h v1 
+1/2w,0h v2 
+1w,0h v3 
+1/4w,1/2h v4 
+3/4w,1/2h v5 
+plain v2,v1 
+double,width=0.2mm v2,v3 
+plain v2,v1 
+double,width=0.2mm,left=1 v4,v5,v4 
+decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+v2 
+  
+
+ + 1 6  
+
+
+* (18,6)
+0w,1/2h v1 
+5/18w,1/2h v2 
+10/18w,1/2h v3 
+13/18w,1/2h v4 
+1w,1/2h v5 
+11.2/18w,2.2/3h v6 
+11.2/18w,0.8/3h v7 
+plain,width=0.2mm,left=1 v3,v4,v3 
+plain,left=0.8 v2,v6 
+plain,right=0.8 v2,v7 
+plain v2,v3 
+plain v5,v4 
+plain v2,v1 
+decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+decor.size=0, label=, l.dist=1mm, l.angle=0 v5 
+v2 
+    
+ .
+
+
+It represents an integral equation for the connected two-point function on the left-hand side which turns out to
+appear also on the right-hand side. Iteratively solving the integral equation () for the connected 
+two-point function  necessitates, however, the knowledge of the
+connected four-point function . 
+
+Connected Four-Point Function 
+
+In principle, one could determine the connected four-point function () from the connected two-point function ()
+as follows. We obtain from () and ()
+
+_1 _2 = 2  E [ ] G^-1 _12    ,
+
+so that we yield from (), (), and ()
+
+_1234 ^c 
+= - 2  _12  G_34 ^-1   
+- _13  _24 - _14  _23   .
+
+This result reads graphically
+
+
+  
+  * (9,9)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  3.5/9w,3.5/9h v5 
+  3.5/9w,5.5/9h v6 
+  5.5/9w,5.5/9h v7 
+  5.5/9w,3.5/9h v8 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+      
+
+   =  -  2  
+
+    
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  double,width=0.2mm v2,v1 
+  decor,size=0, label=, l.dist=0.5mm, l.angle=-180 v1 
+  decor,size=0, label=, l.dist=0.5mm, l.angle=0 v2 
+      
+   G^-1 _34   
+
+ - 
+
+  
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  double,width=0.2mm v2,v1 
+  decor,size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor,size=0, label=, l.dist=1mm, l.angle=0 v2 
+       
+
+
+
+  
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  double,width=0.2mm v2,v1 
+  decor,size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor,size=0, label=, l.dist=1mm, l.angle=0 v2 
+       
+
+ - 
+
+  
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  double,width=0.2mm v2,v1 
+  decor,size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor,size=0, label=, l.dist=1mm, l.angle=0 v2 
+       
+
+
+
+  
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  double,width=0.2mm v2,v1 
+  decor,size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor,size=0, label=, l.dist=1mm, l.angle=0 v2 
+       
+
+ . GDEb  
+ 
+
+However, such a procedure would have the disadvantage that cutting a line in the diagrams of the
+connected two-point function  would also lead to disconnected
+diagrams which are later on removed by the second and the third term on the right-hand side
+of (). As the number of undesired disconnected diagrams occuring
+at an intermediate step of the calculation increases with the loop
+order, this procedure is quite inefficient to determine the 
+connected four-point function . Therefore we aim
+at deriving another equation for  whose iterative
+solution only involves connected diagrams. To this end we insert the
+Schwinger-Dyson equation () into relation () and obtain
+
+ZW 
+  _1234 ^c  &=& 1 3  _5678  G_15  V_5678   
+  _6782 ^c  G^-1 _34    
+  - _5678  G_15  V_5678  _62  _73  _84 
+  - 1 2  _5678  G_15  V_5678  _6734 ^c  _82  
+  
+  & &
+  - 1 2  _5678  G_15  V_5678  _8234 ^c  _67 
+  + 1 6  _5678  G_15  V_5678  _6784 ^c  _23  
+  + 1 6  _5678  G_15  V_5678  _6783 ^c  _24 
+   .
+  
+
+The last two terms in () are still disconnected and cancel the disconnected
+diagrams which are generated by the functional derivative of the 
+connected four-point function with respect to the kernel
+in the first term. In order to eliminate all disconnected terms from ()
+we use the commutator relation
+
+KO1 
+_1234 ^c  G^-1 _56   - 
+_1256 ^c  G^-1 _34   &=& 
+1 2  ( 
+_13  _2456 ^c  + _14  _2356 ^c  +
+_23  _1456 ^c  + _24  _1356 ^c  
+. 
+ && . - 
+_15  _2346 ^c  - _16  _2345 ^c  -
+_25  _1346 ^c  - _26  _1345 ^c  
+)  ,
+
+which directly follows from () because of the identity that mixed second functional derivatives with respect to the
+kernel  can be interchanged:
+
+^2 _12  G^-1 _56  G^-1 _34   = 
+^2 _12  G^-1 _34  G^-1 _56     .
+
+The commutator relation () states that within the functional derivative of the 
+connected four-point function with respect to the kernel
+indices might be interchanged at the expense of the additional terms on the
+right-hand side. Inserting () in () by taking into account
+the Schwinger-Dyson equation () and the functional chain rule (),
+we yield the following functional integrodifferential equation for the connected four-point function:
+
+  _1234 ^c  &=& -  _5678  G_15  V_5678  _62  _73  
+  _84  - 1 3  _5678  G_15  V_5678  G_69  G_70  
+  _8234 ^c  G_90   
+  - 1 6  _5678  G_15  V_5678  _8234 ^c  _67      
+  & & 
+  - 1 6  _5678  G_15  V_5678  _6723 ^c  _84 
+  - 1 6  _5678  G_15  V_5678  _6724 ^c  _83  
+  - 1 6  _5678  G_15  V_5678  _6734 ^c  _82 
+  .
+SD2  
+
+
+Although Eq. () has the disadvantage of being more complex than
+Eq. (), it has the advantage that it does not lead to disconnected
+diagrams at an intermediate stage of the calculation. This can be immediately
+seen in its graphical representiation which reads
+
+
+  
+  * (9,9)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  3.5/9w,3.5/9h v5 
+  3.5/9w,5.5/9h v6 
+  5.5/9w,5.5/9h v7 
+  5.5/9w,3.5/9h v8 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+       
+
+
+ = 
+
+  
+  * (7,7)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  1/2w,1/2h v5 
+  double,width=0.2mm v2,v4 
+  plain v1,v5 
+  double,width=0.2mm v5,v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5 
+      
+
+ +  1 3   
+
+  
+  * (10,8)
+    0w,4/8h v1 
+  1/2w,4/8h v2 
+  1w,4/8h v3 
+  1w,0h v4 
+  6.5/10w,7/8h v5 
+  plain v1,v2 
+  plain v2,v3 
+  plain,right=0.3 v2,v4 
+  plain v2,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=35 v5 
+  v2 
+       
+
+
+
+
+
+  
+  * (9,9)
+    0w,2.5/9h v1 
+  0w,11.5/9h v2 
+  1w,11.5/9h v3 
+  1w,2.5/9h v4 
+  3.5/9w,6/9h v5 
+  3.5/9w,8/9h v6 
+  5.5/9w,8/9h v7 
+  5.5/9w,6/9h v8 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-45 v4 
+       
+
+ 6 7 
+
+ 
+
+              
++  1 6  
+
+  
+  * (18,13)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  11.5/18w,1h v3 
+  11.5/18w,0h v4 
+  5/18w,1/2h v5 
+  11.5/18w,8/13h v6 
+  13/18w,1/2h v7 
+  11.5/18w,5/13h v8 
+  10/18w,1/2h v9 
+  5/18w,11.5/13h v10 
+  plain v1,v5 
+  double,width=0.2mm,left=1 v5,v10,v5 
+  plain v5,v9 
+  plain v2,v7 
+  plain,width=0.2mm,left=1 v9,v7,v9 
+  plain v3,v6 
+  plain v4,v8 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v4 
+  v5 
+       
+
+
++  1 6  
+
+  
+  * (14.5,9)
+    0w,1/9h v1 
+  0w,8/9h v2 
+  1w,1h v3 
+  1w,0h v4 
+  8.5/14w,3.5/9h v5 
+  8.5/14w,5.5/9h v6 
+  10.5/14w,5.5/9h v7 
+  10.5/14w,3.5/9h v8 
+  3.5/14w,1/2h v9 
+  plain v1,v9 
+  double,width=0.2mm v2,v9 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  plain,left=0.8 v9,v6 
+  plain,right=0.8 v9,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v4 
+  v9 
+       
+
+
++  1 6  
+
+  
+  * (14.5,9)
+    0w,1/9h v1 
+  0w,8/9h v2 
+  1w,1h v3 
+  1w,0h v4 
+  8.5/14w,3.5/9h v5 
+  8.5/14w,5.5/9h v6 
+  10.5/14w,5.5/9h v7 
+  10.5/14w,3.5/9h v8 
+  3.5/14w,1/2h v9 
+  plain v1,v9 
+  double,width=0.2mm v2,v9 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  plain,left=0.8 v9,v6 
+  plain,right=0.8 v9,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v4 
+  v9 
+       
+
++  1 6  
+
+  
+  * (14.5,9)
+    0w,1/9h v1 
+  0w,8/9h v2 
+  1w,1h v3 
+  1w,0h v4 
+  8.5/14w,3.5/9h v5 
+  8.5/14w,5.5/9h v6 
+  10.5/14w,5.5/9h v7 
+  10.5/14w,3.5/9h v8 
+  3.5/14w,1/2h v9 
+  plain v1,v9 
+  double,width=0.2mm v2,v9 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  plain,left=0.8 v9,v6 
+  plain,right=0.8 v9,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v4 
+  v9 
+       
+
+ .  
+              
+
+
+Thus the closed set of Schwinger-Dyson equations for the connected two- and four-point function
+is given by () and ().
+
+Graphical Recursion Relations GRC 
+
+Now we demonstrate how the diagrams of the connected two- and four-point function are recursively generated 
+in a graphical way. To this end we perform for both quantities a perturbative expansion
+
+
+G2P 
+  
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  double,width=0.2mm v2,v1 
+  decor,size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor,size=0, label=, l.dist=1mm, l.angle=0 v2 
+       
+
+ && _p=0 ^   
+
+  
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1/2h v3 
+  double,width=0.2mm v2,v1 
+  decor,size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor,size=0, label=, l.dist=1mm, l.angle=0 v2 
+  decor,size=0, label=, l.dist=1.5mm, l.angle=90 v3 
+       
+
+, 
+  
+
+G4P 
+  
+  * (9,9)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  3.5/9w,3.5/9h v5 
+  3.5/9w,5.5/9h v6 
+  5.5/9w,5.5/9h v7 
+  5.5/9w,3.5/9h v8 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+       
+
+&& _p=0 ^  
+
+  
+  * (10.5,10.5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  1/3w,1/3h v5 
+  1/3w,2/3h v6 
+  2/3w,2/3h v7 
+  2/3w,1/3h v8 
+  1/2w,1/2h v9 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v9 
+       
+
+   ,  
+ && 
+where  denotes the number of interactions  which contribute. With these  we obtain from () and ()
+the following closed set of graphical recursion relations:
+
+
+REK1 
+  
+
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1/2h v3 
+  double,width=0.2mm v2,v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=90 v3 
+    
+
+ =  1 2  _q=0 ^p  
+
+  
+  * (10,5)
+    0w,0h v1 
+  1/2w,0h v2 
+  1w,0h v3 
+  1/2w,1h v4 
+  10/10w,0h v5 
+  plain v2,v1 
+  double,width=0.2mm v2,v3 
+  double,width=0.2mm,left=1 v4,v2,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=2mm, l.angle=90 v4 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=90 v5 
+  v2 
+    
+
+ +  1 6  
+
+  
+  * (20,9)
+    0w,1/2h v1 
+  5/20w,1/2h v2 
+  10/20w,1/2h v3 
+  15/20w,1/2h v4 
+  1w,1/2h v5 
+  12.2/20w,7.1/9h v6 
+  12.2/20w,1.9/9h v7 
+  12.5/20w,1/2h v8 
+  plain v1,v2 
+  plain v4,v5 
+  plain,left=0.65 v2,v6 
+  plain v2,v3 
+  plain,right=0.65 v2,v7 
+  plain,width=0.2mm,right=1 v3,v4,v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v5 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v8 
+  v2 
+      
+
+ , 
+
+REK2 
+  
+  * (11,11)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  3.5/11w,3.5/11h v5 
+  3.5/11w,7.5/11h v6 
+  7.5/11w,7.5/11h v7 
+  7.5/11w,3.5/11h v8 
+  1/2w,1/2h v9 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v9 
+       
+
+
+ =  _q=0 ^p  _r=0 ^q 
+
+  
+  * (7,7)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  1/2w,1/2h v5 
+  1/3w,2/3h v6 
+  2/3w,2/3h v7 
+  1/2w,0h v8 
+  double,width=0.2mm v2,v4 
+  plain v1,v5 
+  double,width=0.2mm v5,v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=180 v6 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=0 v7 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v8 
+  v5 
+      
+
+ +  1 3   
+
+  
+  * (10,8)
+    0w,4/8h v1 
+  1/2w,4/8h v2 
+  1w,4/8h v3 
+  1w,0h v4 
+  6.5/10w,7/8h v5 
+  plain v1,v2 
+  plain v2,v3 
+  plain,right=0.3 v2,v4 
+  plain v2,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=35 v5 
+  v2 
+       
+
+
+
+
+
+  
+  * (10.5,10.5)
+    0w,2/10.5h v1 
+  0w,12.5/10.5h v2 
+  1w,12.5/10.5h v3 
+  1w,2/10.5h v4 
+  1/3w,5.5/10.5h v5 
+  1/3w,9/10.5h v6 
+  2/3w,9/10.5h v7 
+  2/3w,5.5/10.5h v8 
+  1/2w,7.25/10.5h v9 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=180 v2 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-0 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v9 
+       
+
+ 6 7 
+
+ 
+
+ +  1 6  _q=1 ^p 
+
+  
+  * (20,15)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  12.5/20w,1h v3 
+  12.5/20w,0h v4 
+  5/20w,1/2h v5 
+  12.5/20w,10/15h v6 
+  15/20w,1/2h v7 
+  12.5/20w,5/15h v8 
+  10/20w,1/2h v9 
+  5/20w,12.5/15h v10 
+  12.5/20w,1/2h v11 
+  plain v1,v5 
+  double,width=0.2mm,left=1 v5,v10,v5 
+  plain v5,v9 
+  plain v2,v7 
+  plain,width=0.2mm,left=1 v9,v7,v9 
+  plain v3,v6 
+  plain v4,v8 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v4 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=90 v10 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v11 
+  v5 
+       
+
+
+  +  1 6  _q=1 ^p 
+
+  
+  * (15.5,10.5)
+    0w,1.75/10.5h v1 
+  0w,8.75/10.5h v2 
+  1w,1h v3 
+  1w,0h v4 
+  8.5/15.5w,1/3h v5 
+  8.5/15.5w,2/3h v6 
+  12/15.5w,2/3h v7 
+  12/15.5w,1/3h v8 
+  3.5/15.5w,1/2h v9 
+  10.25/15.5w,1/2h v10 
+  plain v1,v9 
+  double,width=0.2mm v2,v9 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  plain,left=0.6 v9,v6 
+  plain,right=0.6 v9,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=4.5mm, l.angle=90 v9 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v10 
+  v9 
+       
+
+ +  1 6  _q=1 ^p 
+
+  
+  * (15.5,10.5)
+    0w,1.75/10.5h v1 
+  0w,8.75/10.5h v2 
+  1w,1h v3 
+  1w,0h v4 
+  8.5/15.5w,1/3h v5 
+  8.5/15.5w,2/3h v6 
+  12/15.5w,2/3h v7 
+  12/15.5w,1/3h v8 
+  3.5/15.5w,1/2h v9 
+  10.25/15.5w,1/2h v10 
+  plain v1,v9 
+  double,width=0.2mm v2,v9 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  plain,left=0.6 v9,v6 
+  plain,right=0.6 v9,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=4.5mm, l.angle=90 v9 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v10 
+  v9 
+       
+
+ +  1 6  _q=1 ^p 
+
+  
+  * (15.5,10.5)
+    0w,1.75/10.5h v1 
+  0w,8.75/10.5h v2 
+  1w,1h v3 
+  1w,0h v4 
+  8.5/15.5w,1/3h v5 
+  8.5/15.5w,2/3h v6 
+  12/15.5w,2/3h v7 
+  12/15.5w,1/3h v8 
+  3.5/15.5w,1/2h v9 
+  10.25/15.5w,1/2h v10 
+  plain v1,v9 
+  double,width=0.2mm v2,v9 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  plain,left=0.6 v9,v6 
+  plain,right=0.6 v9,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=4.5mm, l.angle=90 v9 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v10 
+  v9 
+       
+
+ .
+
+
+  
+This is solved starting from
+
+
+IN1 
+  
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1/2h v3   
+  double,width=0.2mm v2,v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v3 
+    
+
+ &=& 
+
+  
+  * (7,3)
+    v1 
+  v2 
+  plain v2,v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+    
+
+, 
+ [4mm]
+IN2 
+
+  
+  * (10.5,10.5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  1/3w,1/3h v5 
+  1/3w,2/3h v6 
+  2/3w,2/3h v7 
+  2/3w,1/3h v8 
+  1/2w,1/2h v9 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v9 
+       
+
+ &= & 0   . 
+ 
+
+Note that these graphical recursion relations ()-() allow to prove via complete induction that all
+diagrams contributing to the connected two- and four-point function are, indeed,
+connected Glaum .
+
+
+The first few perturbative contributions to  and  are determined as follows. Inserting 
+() and () in () and (), we obtain for  the connected two-point function
+
+
+
+  
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1/2h v3 
+  double,width=0.2mm v2,v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=90 v3 
+    
+
+ =  1 2  
+
+  
+  * (10,5)
+    0w,0h v1 
+  1/2w,0h v2 
+  1w,0h v3 
+  1/2w,1h v4 
+  plain v2,v1 
+  plain v2,v3 
+  plain,left=1 v4,v2,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  v2 
+    
+
+
+and the connected four-point function
+
+
+  
+  * (10.5,10.5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  3.5/10.5w,3.5/10.5h v5 
+  3.5/10.5w,7/10.5h v6 
+  7/10.5w,7/10.5h v7 
+  7/10.5w,3.5/10.5h v8 
+  1/2w,1/2h v9 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v9 
+       
+
+ =   
+
+  
+  * (7,7)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  1/2w,1/2h v5 
+  plain v2,v4 
+  plain v1,v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5 
+      
+
+ .  
+ 
+
+
+With this we get from () the second-order contribution to the connected two-point function
+
+
+
+  
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1/2h v3 
+  double,width=0.2mm v2,v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=90 v3 
+    
+
+ =  1 4    
+
+  
+  * (10,10)
+    0w,2/10h v1 
+  1/2w,2/10h v2 
+  1w,2/10h v3 
+  1/2w,7/10h v4 
+  1/2w,12/10h v5 
+  plain v1,v3 
+  plain,left=1 v2,v4,v2 
+  plain,left=1 v4,v5,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  v2 
+  v4 
+    
+
+ +  1 4  
+
+  
+  * (17,5)
+    0w,0h v1 
+  5/17w,0h v2 
+  12/17w,0h v3 
+  1w,0h v4 
+  5/17w,1h v5 
+  12/17w,1h v6 
+  plain v1,v4 
+  plain,left=1 v2,v5,v2 
+  plain,left=1 v3,v6,v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  v2 
+  v3 
+    
+
+ +  1 6  
+
+ 
+  * (11,6)
+    0w,1/2h v1 
+  2.5/11w,1/2h v2 
+  8.5/11w,1/2h v3 
+  1w,1/2h v4 
+  plain v1,v4 
+  plain,left=1 v2,v3,v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  v2 
+  v3 
+    
+
+ .
+
+
+Amputating one line from (),
+
+
+
+
+  
+  * (10.5,10.5)
+    0w,2/10.5h v1 
+  0w,12.5/10.5h v2 
+  1w,12.5/10.5h v3 
+  1w,2/10.5h v4 
+  1/3w,5.5/10.5h v5 
+  1/3w,9/10.5h v6 
+  2/3w,9/10.5h v7 
+  2/3w,5.5/10.5h v8 
+  1/2w,7.25/10.5h v9 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=180 v2 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-0 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v9 
+       
+
+ 6 7 
+
+ 
+
+&=& 1 2   _26   
+
+  
+  * (10,10)
+    0w,1/2h v1 
+  1/2w,4/5h v2 
+  1w,1/2h v3 
+  1/2w,0h v4 
+  1/2w,1/2h v5 
+  plain v2,v4 
+  plain v1,v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v2 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-90 v4 
+  v5 
+      
+
++ 1 2   _36   
+
+  
+  * (10,10)
+    0w,1/2h v1 
+  1/2w,1h v2 
+  4/5w,1/2h v3 
+  1/2w,0h v4 
+  1/2w,1/2h v5 
+  plain v2,v4 
+  plain v1,v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=90 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-90 v4 
+  v5 
+      
+
++ 1 2   _46   
+
+  
+  * (10,10)
+    0w,1/2h v1 
+  1/2w,1h v2 
+  1w,1/2h v3 
+  1/2w,1/5h v4 
+  1/2w,1/2h v5 
+  plain v2,v4 
+  plain v1,v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=90 v2 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v4 
+  v5 
+      
+
++ 1 2   _27   
+
+  
+  * (10,10)
+    0w,1/2h v1 
+  1/2w,4/5h v2 
+  1w,1/2h v3 
+  1/2w,0h v4 
+  1/2w,1/2h v5 
+  plain v2,v4 
+  plain v1,v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v2 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-90 v4 
+  v5 
+      
+
+
+
+&&  +  1 2   _37   
+
+  
+  * (10,10)
+    0w,1/2h v1 
+  1/2w,1h v2 
+  4/5w,1/2h v3 
+  1/2w,0h v4 
+  1/2w,1/2h v5 
+  plain v2,v4 
+  plain v1,v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=90 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-90 v4 
+  v5 
+      
+
++ 1 2   _47   
+
+  
+  * (10,10)
+    0w,1/2h v1 
+  1/2w,1h v2 
+  1w,1/2h v3 
+  1/2w,1/5h v4 
+  1/2w,1/2h v5 
+  plain v2,v4 
+  plain v1,v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=90 v2 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v4 
+  v5 
+      
+
++ 1 2   _56   
+
+  
+  * (10,10)
+    1/5w,1/2h v1 
+  1/2w,1h v2 
+  1w,1/2h v3 
+  1/2w,0h v4 
+  1/2w,1/2h v5 
+  plain v2,v4 
+  plain v1,v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=90 v2 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-90 v4 
+  v5 
+      
+
++ 1 2   _57   
+
+  
+  * (10,10)
+    1/5w,1/2h v1 
+  1/2w,1h v2 
+  1w,1/2h v3 
+  1/2w,0h v4 
+  1/2w,1/2h v5 
+  plain v2,v4 
+  plain v1,v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=90 v2 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-90 v4 
+  v5 
+      
+
+,   
+ && 
+
+we find the second-order contribution to the connected four-point function from ():
+
+
+
+  
+  * (10.5,10.5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  3.5/10.5w,3.5/10.5h v5 
+  3.5/10.5w,7/10.5h v6 
+  7/10.5w,7/10.5h v7 
+  7/10.5w,3.5/10.5h v8 
+  1/2w,1/2h v9 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v9 
+       
+
+ & = &  1 2  ( 
+
+  
+  * (16,10)
+    0w,1/2h v1 
+  11/16w,1h v2 
+  1w,1/2h v3 
+  11/16w,0h v4 
+  5/16w,1/2h v5 
+  11/16w,1/2h v6 
+  5/16w,1h v7 
+  plain v1,v3 
+  plain,left=1 v5,v7,v5 
+  plain v2,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v4 
+  v5 
+  v6 
+       
+
+ + 
+
+  
+  * (16,10)
+    0w,1/2h v1 
+  11/16w,1h v2 
+  1w,1/2h v3 
+  11/16w,0h v4 
+  5/16w,1/2h v5 
+  11/16w,1/2h v6 
+  5/16w,1h v7 
+  plain v1,v3 
+  plain,left=1 v5,v7,v5 
+  plain v2,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v4 
+  v5 
+  v6 
+       
+
+ + 
+
+  
+  * (16,10)
+    0w,1/2h v1 
+  11/16w,1h v2 
+  1w,1/2h v3 
+  11/16w,0h v4 
+  5/16w,1/2h v5 
+  11/16w,1/2h v6 
+  5/16w,1h v7 
+  plain v1,v3 
+  plain,left=1 v5,v7,v5 
+  plain v2,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v4 
+  v5 
+  v6 
+       
+
+ + 
+
+  
+  * (16,10)
+    0w,1/2h v1 
+  11/16w,1h v2 
+  1w,1/2h v3 
+  11/16w,0h v4 
+  5/16w,1/2h v5 
+  11/16w,1/2h v6 
+  5/16w,1h v7 
+  plain v1,v3 
+  plain,left=1 v5,v7,v5 
+  plain v2,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v4 
+  v5 
+  v6 
+       
+
+  )
+
+
+& & +  1 2  (  
+
+  
+  * (12,7)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  3.5/12w,1/2h v5 
+  8.5/12w,1/2h v6 
+  plain v1,v5 
+  plain v2,v5 
+  plain v3,v6 
+  plain v4,v6 
+  plain,left=1 v5,v6 
+  plain,right=1 v5,v6 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5 
+  v6 
+       
+
++ 
+
+  
+  * (12,7)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  3.5/12w,1/2h v5 
+  8.5/12w,1/2h v6 
+  plain v1,v5 
+  plain v2,v5 
+  plain v3,v6 
+  plain v4,v6 
+  plain,left=1 v5,v6 
+  plain,right=1 v5,v6 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5 
+  v6 
+       
+
++ 
+  
+  * (12,7)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  3.5/12w,1/2h v5 
+  8.5/12w,1/2h v6 
+  plain v1,v5 
+  plain v2,v5 
+  plain v3,v6 
+  plain v4,v6 
+  plain,left=1 v5,v6 
+  plain,right=1 v5,v6 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5 
+  v6 
+       
+
+)   .
+ 
+ && 
+
+
+The results ()-(), and () are listed in Table  and which show all diagrams of the connected two- and four-point function up to the forth perturbative order irrespective of 
+their spatial indices. However, to evaluate the recursion relations in higher orders, it becomes necessary to
+reassign the spatial indices to the end points of the diagrams of the connected two- and four-point function in Table and . This involves a decomposition of the weights shown in Table and  due to symmetry considerations. To this end we characterize a diagram by its symmetry degree .
+Thus reassigning the spatial indices to the 
+end points of the diagrams of the connected two- and four-point function leads to  different diagrams.
+As an example for determining the symmetry degree  we consider diagram 4.5 in Table .
+Successively assigning the indices  to the respective end points leads to :
+
+
+
+& & 24 
+  
+   (12,13)
+    0w,0h i1 
+  0w,1h i2 
+  1w,0h o1 
+  1w,1h o2 
+  3.5/12w,3.5/13h v1 
+  3.5/12w,9.5/13h v2 
+  8.5/12w,9.5/13h v3 
+  8.5/12w,3.5/13h v4 
+  plain i1,v1 
+  plain i2,v2 
+  plain o1,v4 
+  plain o2,v3 
+  plain,left=1 v1,v3,v1 
+  plain,right=0.3 v1,v2 
+  plain,right=0.3 v3,v4 
+  v1,v2,v3,v4 
+      
+
+  24 
+  
+  * (12,13)
+    0w,0h i1 
+  0w,1h i2 
+  1w,0h o1 
+  1w,1h o2 
+  3.5/12w,3.5/13h v1 
+  3.5/12w,9.5/13h v2 
+  8.5/12w,9.5/13h v3 
+  8.5/12w,3.5/13h v4 
+  plain i1,v1 
+  plain i2,v2 
+  plain o1,v4 
+  plain o2,v3 
+  plain,left=1 v1,v3,v1 
+  plain,right=0.3 v1,v2 
+  plain,right=0.3 v3,v4 
+  v1,v2,v3,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 i1 
+      
+
+  8 
+  
+  * (12,13)
+    0w,0h i1 
+  0w,1h i2 
+  1w,0h o1 
+  1w,1h o2 
+  3.5/12w,3.5/13h v1 
+  3.5/12w,9.5/13h v2 
+  8.5/12w,9.5/13h v3 
+  8.5/12w,3.5/13h v4 
+  plain i1,v1 
+  plain i2,v2 
+  plain o1,v4 
+  plain o2,v3 
+  plain,left=1 v1,v3,v1 
+  plain,right=0.3 v1,v2 
+  plain,right=0.3 v3,v4 
+  v1,v2,v3,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 i1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 i2 
+      
+
++  8 
+  
+  * (12,13)
+    0w,0h i1 
+  0w,1h i2 
+  1w,0h o1 
+  1w,1h o2 
+  3.5/12w,3.5/13h v1 
+  3.5/12w,9.5/13h v2 
+  8.5/12w,9.5/13h v3 
+  8.5/12w,3.5/13h v4 
+  plain i1,v1 
+  plain i2,v2 
+  plain o1,v4 
+  plain o2,v3 
+  plain,left=1 v1,v3,v1 
+  plain,right=0.3 v1,v2 
+  plain,right=0.3 v3,v4 
+  v1,v2,v3,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 i1 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 o2 
+      
+
++  8 
+  
+  * (12,13)
+    0w,0h i1 
+  0w,1h i2 
+  1w,0h o1 
+  1w,1h o2 
+  3.5/12w,3.5/13h v1 
+  3.5/12w,9.5/13h v2 
+  8.5/12w,9.5/13h v3 
+  8.5/12w,3.5/13h v4 
+  plain i1,v1 
+  plain i2,v2 
+  plain o1,v4 
+  plain o2,v3 
+  plain,left=1 v1,v3,v1 
+  plain,right=0.3 v1,v2 
+  plain,right=0.3 v3,v4 
+  v1,v2,v3,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 i1 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 o1 
+      
+
+ 
+
+
+& &  4 
+  
+  * (12,13)
+    0w,0h i1 
+  0w,1h i2 
+  1w,0h o1 
+  1w,1h o2 
+  3.5/12w,3.5/13h v1 
+  3.5/12w,9.5/13h v2 
+  8.5/12w,9.5/13h v3 
+  8.5/12w,3.5/13h v4 
+  plain i1,v1 
+  plain i2,v2 
+  plain o1,v4 
+  plain o2,v3 
+  plain,left=1 v1,v3,v1 
+  plain,right=0.3 v1,v2 
+  plain,right=0.3 v3,v4 
+  v1,v2,v3,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 i1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 i2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 o2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 o1 
+      
+
+ +  4 
+  
+  * (12,13)
+    0w,0h i1 
+  0w,1h i2 
+  1w,0h o1 
+  1w,1h o2 
+  3.5/12w,3.5/13h v1 
+  3.5/12w,9.5/13h v2 
+  8.5/12w,9.5/13h v3 
+  8.5/12w,3.5/13h v4 
+  plain i1,v1 
+  plain i2,v2 
+  plain o1,v4 
+  plain o2,v3 
+  plain,left=1 v1,v3,v1 
+  plain,right=0.3 v1,v2 
+  plain,right=0.3 v3,v4 
+  v1,v2,v3,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 i1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 i2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 o2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 o1 
+      
+
+ +  4 
+  
+  * (12,13)
+    0w,0h i1 
+  0w,1h i2 
+  1w,0h o1 
+  1w,1h o2 
+  3.5/12w,3.5/13h v1 
+  3.5/12w,9.5/13h v2 
+  8.5/12w,9.5/13h v3 
+  8.5/12w,3.5/13h v4 
+  plain i1,v1 
+  plain i2,v2 
+  plain o1,v4 
+  plain o2,v3 
+  plain,left=1 v1,v3,v1 
+  plain,right=0.3 v1,v2 
+  plain,right=0.3 v3,v4 
+  v1,v2,v3,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 i1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 i2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 o2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 o1 
+      
+
+ +  4 
+  
+  * (12,13)
+    0w,0h i1 
+  0w,1h i2 
+  1w,0h o1 
+  1w,1h o2 
+  3.5/12w,3.5/13h v1 
+  3.5/12w,9.5/13h v2 
+  8.5/12w,9.5/13h v3 
+  8.5/12w,3.5/13h v4 
+  plain i1,v1 
+  plain i2,v2 
+  plain o1,v4 
+  plain o2,v3 
+  plain,left=1 v1,v3,v1 
+  plain,right=0.3 v1,v2 
+  plain,right=0.3 v3,v4 
+  v1,v2,v3,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 i1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 i2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 o2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 o1 
+      
+
+ +  4 
+  
+  * (12,13)
+    0w,0h i1 
+  0w,1h i2 
+  1w,0h o1 
+  1w,1h o2 
+  3.5/12w,3.5/13h v1 
+  3.5/12w,9.5/13h v2 
+  8.5/12w,9.5/13h v3 
+  8.5/12w,3.5/13h v4 
+  plain i1,v1 
+  plain i2,v2 
+  plain o1,v4 
+  plain o2,v3 
+  plain,left=1 v1,v3,v1 
+  plain,right=0.3 v1,v2 
+  plain,right=0.3 v3,v4 
+  v1,v2,v3,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 i1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 i2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 o2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 o1 
+      
+
+ +  4 
+  
+  * (12,13)
+    0w,0h i1 
+  0w,1h i2 
+  1w,0h o1 
+  1w,1h o2 
+  3.5/12w,3.5/13h v1 
+  3.5/12w,9.5/13h v2 
+  8.5/12w,9.5/13h v3 
+  8.5/12w,3.5/13h v4 
+  plain i1,v1 
+  plain i2,v2 
+  plain o1,v4 
+  plain o2,v3 
+  plain,left=1 v1,v3,v1 
+  plain,right=0.3 v1,v2 
+  plain,right=0.3 v3,v4 
+  v1,v2,v3,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 i1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 i2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 o2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 o1 
+      
+
+ . SYMMM  
+ 
+
+
+Note that the weights of the diagrams of the connected
+two- and four-point function in Table  and  have been determined by solving the graphical recursion relations.
+However, as a cross-check, they also follow from the formula SYM,Neu,Verena 
+
+WEIG 
+w^(n)  = n! 2!^S+D 3!^T P N   ,
+
+where  stands for the number of external legs and
+ denote the number of self-, double, triple connections between vertices. Furthermore,  stands for the number
+of vertex permutations leaving the diagrams unchanged.
+
+Connected Vacuum Diagrams  VAA 
+
+The connected vacuum diagrams of -theory can be generated order by order together with their weights in two
+ways. In this section we show that they follow from short-circuiting the external legs of
+the diagrams of the connected two- and four-point function,
+respectively. Thus our present approach is complementary to Ref. , where a nonlinear functional integrodifferential
+equation for the vacuum energy was recursively solved in a graphical way in order to directly generate the connected vacuum
+diagrams.
+
+Relation to the Diagrams of the Connected Two-Point Function 
+
+Our first approach is based on the connected two-point function . We start with concluding 
+
+GIT 
+_12   = -2  W G^-1 _12    ,
+
+which follows from (), (), and () by taking into account (). We can read off from ()
+that cutting a line of the connected diagrams of the vacuum energy in all possible ways leads to all diagrams of the
+connected two-point function. Here, however, we want to 
+regard () as a functional differential equation for the vacuum energy .
+If the interaction  vanishes, Eq. () is solved by the free contribution of the vacuum energy
+
+W^(0)  = - 1 2  Tr  ln  G^-1    .
+
+Here the trace of the logarithm of the kernel  is defined by the series [p. 16]Kleinert4 
+
+Tr  ln  G^-1  - _n=1 ^  
+1 n  _1...n  (_12  - G^-1 _12 )...
+(_n-1,n  - G^-1 _n-1,n ) (_n1  - G^-1 _n1 )   ,
+
+so that we get
+
+- 2  W^(0)  G^-1 _12   = G_12   .
+
+For a non-vanishing interaction , the functional differential equation () produces
+corrections to (), which we shall denote with . Thus the vacuum energy decomposes according to
+
+W = W^(0)  + W^(int )   ,
+
+and we obtain together with () and ()
+
+-  _12  G^-1 _12  W^(int )  G^-1 _12   = 
+1 2  _12  G^-1 _12  ( _12  - G_12  )  .
+
+In the following, we aim at recursively determining 
+ in a graphical way. To this end we perform a perturbative expansion
+of the interaction part of the vacuum energy
+
+W^(int )  = _p=1 ^  W^(p)   ,
+
+and a corresponding one of the connected two-point function
+
+_12  = G_12  + _p=1 ^ _12 ^(p)   .
+
+Inserting () and () into () and using the functional chain rule (), we obtain for 
+
+_12  G_12   W^(p)    G_12    
+= 1 2  _12  G^-1 _12  ^(p) _12 
+ .
+
+The contributions  of the vacuum energy obey the following eigenvalue problem for 
+
+_12  G_12   W^(p)    G_12    
+= 2 p W^(p)   .
+
+Indeed, in the th perturbative order
+the functional derivative  generates diagrams in each of which one of the  lines of the original
+vacuum diagram is removed and, subsequently, the removed line is again reinserted. Thus the left-hand
+side of () results in counting
+the lines of the vacuum diagrams in , so that we obtain the eigenvalue . 
+With () we can explicitly solve () for
+the respective perturbative contributions of the vacuum energy and obtain for 
+
+W^(p)  = 1 4 p  _12  G^-1 _12  
+^(p) _12    .
+
+Now we supplement the above-mentioned Feynman rules with a graphical representation for the contributions of the vacuum energy 
+
+W^(p)   
+
+
+  * (8,6)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1h v3 
+  1/2w,0h v4 
+  1/2w,1/2h v5 
+  plain,left=0.4 v1,v3,v2,v4,v1 
+  decor.size=0, label=, l.dist=0mm, l.angle=0 v5 
+        
+
+and for the kernel 
+
+
+G^-1 _12    
+ 
+  * (5,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1/2h v3 
+   plain v1,v2 
+  1.5mm v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+        
+
+
+ .    
+
+ 
+ 
+
+The latter graphical element serves for gluing two lines together according to 
+
+
+_12  G_31  G^-1 _12  G_24   
+
+  
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  plain v1,v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+        
+
+
+
+  
+  * (5,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1/2h v3 
+  
+  plain v1,v2 
+  1.5mm v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v2 
+        
+
+
+
+  
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  plain v1,v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+        
+
+ = 
+
+  
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  plain v1,v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+        
+
+ ,
+
+which follows from
+
+_12  G_31   G^-1 _12  G_24  = G_34   .
+
+Thus our result () can be depicted graphically as follows:
+
+
+
+  * (8,6)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1h v3 
+  1/2w,0h v4 
+  1/2w,1/2h v5 
+  plain,left=0.4 v1,v3,v2,v4,v1 
+  decor.size=0, label=, l.dist=0mm, l.angle=0 v5 
+        
+  =  1 4 p  
+
+  
+  * (7,7)
+    1/2w,0h v1 
+  1/2w,1h v2 
+  double,width=0.2mm,left=1 v1,v2,v1 
+  1.5mm v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v1 
+     )   
+
+ .  
+ 
+It states that closing the perturbative contributions of the connected two-point function yields the corresponding
+contributions of the vacuum energy. From () and () we yield for 
+
+
+  * (8,6)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1h v3 
+  1/2w,0h v4 
+  1/2w,1/2h v5 
+  plain,left=0.4 v1,v3,v2,v4,v1 
+  decor.size=0, label=, l.dist=0mm, l.angle=0 v5 
+   )     
+=  1 8  
+
+  
+  ) (10,5)
+    0w,1/2h) v1) 
+  1/2w,1/2h) v2) 
+  1w,1/2h) v3) 
+  plain,left=1) v1,v2,v1) 
+  plain,left=1) v3,v2,v3) 
+  v2) 
+        
+
+ . 
+
+
+Correspondingly, the second-order result follows from () and ():
+
+
+
+  * (8,6)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1h v3 
+  1/2w,0h v4 
+  1/2w,1/2h v5 
+  plain,left=0.4 v1,v3,v2,v4,v1 
+  decor.size=0, label=, l.dist=0mm, l.angle=0 v5 
+         =   1 16  
+
+  
+   (15,5)
+    0w,1/2h v1 
+  1/3w,1/2h v2 
+  2/3w,1/2h v3 
+  1w,1/2h v4 
+  plain,left=1 v1,v2,v1 
+  plain,left=1 v2,v3,v2 
+  plain,left=1 v3,v4,v3 
+  v2 
+  v3 
+        
+
+ +  1 48  
+
+  
+   (8,8)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  plain,left=1 v1,v2 
+  plain,left=0.4 v1,v2 
+  plain,right=0.4 v1,v2 
+  plain,right=1 v1,v2 
+  v1 
+  v2 
+        
+
+ .
+
+
+Relation to the Diagrams of the Connected Four-Point Function 
+
+Now we elaborate a second approach which is based on closing the diagrams of the connected 
+four-point function . 
+To this end we insert () into the left-hand side of the Schwinger-Dyson equation () and use 
+(), () as well as the decomposition () to obtain
+a functional differential equation for the interaction part of the vacuum energy:
+
+_12  G_12  W^(int )  G_12    
+= - 1 12  _1234  V_1234  _1234  - 
+1 4  _1234  V_1234  _12  _34     . 
+
+Combining the perturbation expansions (), () for ,   
+with the corresponding one for , i.e.
+
+_1234  = _p=1 ^  ^c,(p) _1234    ,
+
+we obtain together with the eigenvalue problem () from ()
+
+W^(p+1)    = - 1 24(p+1)  _1234  V_1234  ^c,(p) _1234  - 
+1 8(p+1)  _q=0 ^p  _1234  V_1234  
+_12 ^(q)  _34 ^(p-q)     . 
+
+The graphical representation of this result reads
+
+
+
+  
+  * (9,6.8)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1h v3 
+  1/2w,0h v4 
+  1/2w,1/2h v5 
+  plain,left=0.4 v1,v3,v2,v4,v1 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v5 
+        
+
+ =  1 24(p+1)  
+
+  
+  * (13,10)
+    0w,0.5h v1 
+  10.5/13w,7.5/10h v3 
+  10.5/13w,2.5/10h v4 
+  8.5/13w,6.3/10h v5 
+  8.5/13w,3.7/10h v6 
+  10.5/13w,0.5h v8 
+  plain,left=0.75 v1,v3 
+  plain,left=0.3 v1,v5 
+  plain,right=0.75 v1,v4 
+  plain,right=0.3 v1,v6 
+  plain,width=0.2mm,left=1 v3,v4,v3 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v8 
+  v1 
+      
+
+ +  1 8(p+1)   
+_q=0 ^p  
+
+  
+  * (10,5)
+    0w,1/2h v1 
+  1/2w,1/2h v2 
+  1w,1/2h v3 
+  double,width=0.2mm,left=1 v1,v2,v1 
+  double,width=0.2mm,left=1 v3,v2,v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  v2 
+        
+
+ .
+VRE  
+ 
+Inserting the diagrams of the connected two- and four-point function from Tab.  and , we obtain
+the corresponding vacuum diagrams. For instance, Eq. () reduces for  
+
+
+  
+  * (9,6.8)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1h v3 
+  1/2w,0h v4 
+  1/2w,1/2h v5 
+  plain,left=0.4 v1,v3,v2,v4,v1 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v5 
+        
+
+ =  1 72  
+
+  
+  * (13,10)
+    0w,0.5h v1 
+  10.5/13w,7.5/10h v3 
+  10.5/13w,2.5/10h v4 
+  8.5/13w,6.3/10h v5 
+  8.5/13w,3.7/10h v6 
+  10.5/13w,0.5h v8 
+  plain,left=0.75 v1,v3 
+  plain,left=0.3 v1,v5 
+  plain,right=0.75 v1,v4 
+  plain,right=0.3 v1,v6 
+  plain,width=0.2mm,left=1 v3,v4,v3 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v8 
+  v1 
+      
+
+ +  1 12  
+
+  
+  * (10,5)
+    0w,1/2h v1 
+  1/2w,1/2h v2 
+  1w,1/2h v3 
+  double,width=0.2mm,left=1 v1,v2,v1 
+  double,width=0.2mm,left=1 v3,v2,v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  v2 
+        
+
+ +  1 24  
+
+  
+  * (10,5)
+    0w,1/2h v1 
+  1/2w,1/2h v2 
+  1w,1/2h v3 
+  double,width=0.2mm,left=1 v1,v2,v1 
+  double,width=0.2mm,left=1 v3,v2,v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  v2 
+        
+
+ 
+
+with the respective terms
+
+
+  
+  * (13,10)
+    0w,0.5h v1 
+  10.5/13w,7.5/10h v3 
+  10.5/13w,2.5/10h v4 
+  8.5/13w,6.3/10h v5 
+  8.5/13w,3.7/10h v6 
+  10.5/13w,0.5h v8 
+  plain,left=0.75 v1,v3 
+  plain,left=0.3 v1,v5 
+  plain,right=0.75 v1,v4 
+  plain,right=0.3 v1,v6 
+  plain,width=0.2mm,left=1 v3,v4,v3 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v8 
+  v1 
+      
+
+& = &
+3 2  
+
+
+  
+   (8,8)
+    0.5w,0h v1 
+  0.5w,1h v2 
+  0.066987w,0.25h v3 
+  0.93301w,0.25h v4 
+  plain,left=1 v1,v2,v1 
+  plain v2,v3 
+  plain v3,v4 
+  plain v2,v4 
+  v2,v3,v4 
+     
+
+ +  2 
+
+  
+   (7.5,12.5)
+    0w,0.3h v1 
+  1w,0.3h v2 
+  0.5w,0.6h v3 
+  0.5w,1h v4 
+  plain,left=1 v1,v2,v1 
+  plain,left=0.4 v1,v2,v1 
+  plain,left=1 v3,v4,v3 
+  v1,v2,v3 
+     
+
+ , 
+
+
+  
+  * (10,5)
+    0w,1/2h v1 
+  1/2w,1/2h v2 
+  1w,1/2h v3 
+  double,width=0.2mm,left=1 v1,v2,v1 
+  double,width=0.2mm,left=1 v3,v2,v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  v2 
+        
+
+ &=&  
+1 6  
+
+  
+   (7.5,12.5)
+    0w,0.3h v1 
+  1w,0.3h v2 
+  0.5w,0.6h v3 
+  0.5w,1h v4 
+  plain,left=1 v1,v2,v1 
+  plain,left=0.4 v1,v2,v1 
+  plain,left=1 v3,v4,v3 
+  v1,v2,v3 
+     
+
+ +  1 4  
+
+  
+   (20,5)
+    i1 
+  o1 
+  plain,left=1 i1,v1,i1 
+  plain,left=1 v1,v2,v1 
+  plain,left=1 v2,v3,v2 
+  plain,left=1 o1,v3,o1 
+  v1,v2,v3 
+    
+
+ +  1 4  
+
+
+ (13,11)
+1/2w,1/11h v1 
+1/2w,6/11h v2 
+1/2w,1h v3 
+4.3/13w,2.4/11h v4 
+8.7/13w,2.4/11h v5 
+0w,0h v6 
+1w,0h v7 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v4,v6,v4 
+plain,left=1 v5,v7,v5 
+v2,v4,v5 
+   
+
+ , 
+
+
+  * (10,5)
+    0w,1/2h v1 
+  1/2w,1/2h v2 
+  1w,1/2h v3 
+  double,width=0.2mm,left=1 v1,v2,v1 
+  double,width=0.2mm,left=1 v3,v2,v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  v2 
+        
+
+ &=&1 4   
+
+  
+   (20,5)
+    i1 
+  o1 
+  plain,left=1 i1,v1,i1 
+  plain,left=1 v1,v2,v1 
+  plain,left=1 v2,v3,v2 
+  plain,left=1 o1,v3,o1 
+  v1,v2,v3 
+    
+ .
+
+
+Thus we obtain the connected vacuum diagrams shown in Tab.  for :
+
+
+  
+  * (8,6)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1h v3 
+  1/2w,0h v4 
+  1/2w,1/2h v5 
+  plain,left=0.4 v1,v3,v2,v4,v1 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v5 
+        
+
+ =  1 48   
+
+  
+   (8,8)
+    0.5w,0h v1 
+  0.5w,1h v2 
+  0.066987w,0.25h v3 
+  0.93301w,0.25h v4 
+  plain,left=1 v1,v2,v1 
+  plain v2,v3 
+  plain v3,v4 
+  plain v2,v4 
+  v2,v3,v4 
+     
+
+ +  1 24  
+
+  
+   (7.5,12.5)
+    0w,0.3h v1 
+  1w,0.3h v2 
+  0.5w,0.6h v3 
+  0.5w,1h v4 
+  plain,left=1 v1,v2,v1 
+  plain,left=0.4 v1,v2,v1 
+  plain,left=1 v3,v4,v3 
+  v1,v2,v3 
+     
+
+ +  1 32  
+
+  
+   (20,5)
+    i1 
+  o1 
+  plain,left=1 i1,v1,i1 
+  plain,left=1 v1,v2,v1 
+  plain,left=1 v2,v3,v2 
+  plain,left=1 o1,v3,o1 
+  v1,v2,v3 
+    
+
+ +  1 48  
+
+  
+   (13,11)
+    1/2w,1/11h v1 
+  1/2w,6/11h v2 
+  1/2w,1h v3 
+  4.3/13w,2.4/11h v4 
+  8.7/13w,2.4/11h v5 
+  0w,0h v6 
+  1w,0h v7 
+  plain,left=1 v1,v2,v1 
+  plain,left=1 v2,v3,v2 
+  plain,left=1 v4,v6,v4 
+  plain,left=1 v5,v7,v5 
+  v2,v4,v5 
+     
+
+ .
+
+The results (), (), and () 
+are listed in Table  which shows also one further perturbative order.
+Note that the weights of the connected vacuum diagrams obey a formula similar to ()
+
+WEIGT 
+w = 1 2!^S+D 3!^T 4!^F P   ,
+
+where  denote the number of self-, double, triple, fourfold connections and  stands for the number of
+vertex permutations leaving the vacuum diagram unchanged SYM,Neu,Verena .
+
+
+ graph2 
+
+One-Particle Irreducible Feynman Diagrams IRRED 
+
+So far, we have explained how to generate 
+connected Feynman diagrams of the -theory. We shall now eliminate from them
+the reducible contributions. To this end we derive in Subsection  a closed set of Schwinger-Dyson equations
+for the one-particle irreducible two- and four-point function. In Subsection  they are converted into graphical recursion
+relations for the corresponding one-particle irreducible Feynman diagrams needed for renormalizing the -theory.
+Subsection  discusses how these Feynman diagrams of the one-particle irreducible two- and four-point functions
+are related to the connected vacuum diagrams which are also one-particle-irreducible.
+
+Closed Set of Schwinger-Dyson Equations for One-Particle Irreducible Two- and Four-Point Functions NANU 
+
+In this subsection we revisit the functional identity () which immediately followed from the definition of the functional
+integral. We show that it can be also used to derive a closed set of Schwinger-Dyson equations for the one-particle
+irreducible two- and four-point functions.
+
+Field-Theoretic Definitions 
+
+From Table  we can distinguish two classes of diagrams contributing to the connected two-point function .
+The first one contains one-particle irreducible diagrams which remain connected after amputating one arbitrary line.
+The second one consists of the remaining diagrams which are called reducible. The diagrams  2.1 and  2.2, for instance,
+are one-particle irreducible, whereas  2.3 is reducible. 
+When considering the self-energy
+
+_12   =  G^-1 _12    - ^-1 _12   ,
+
+where  is the functional inverse of :
+
+_3 _13  ^-1 _32    _12    ,
+
+we will see later on that this quantity is graphically represented by all one-particle irreducible
+diagrams of the connected two-point function  where the external legs are omitted.
+Reversely, all connected diagrams of the connected two-point function  are reconstructed from the one-particle
+irreducible ones of the self-energy  according to the Dyson equation  
+
+_12  = G_12  + _34  G_13  _34 
+_42   ,
+
+which immediately follows from () by taking into account () and (). 
+When the self-energy is graphically represented in Feynman diagrams by a big open dot with two legs
+
+
+_12   
+ 
+  * (8,3)
+    0w,1/2h v1 
+  2.5/8w,1/2h v2 
+  5.5/8w,1/2h v3 
+  1w,1/2h v4 
+  1/2w,1h v5 
+  1/2w,0h v6 
+  plain,width=0.2mm v1,v2 
+  plain,width=0.2mm v3,v4 
+  double,width=0.2mm,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+       
+
+ ,
+
+
+the Dyson equation () reads graphically
+
+
+  
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  double,width=0.2mm v2,v1 
+  decor,size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor,size=0, label=, l.dist=1mm, l.angle=0 v2 
+       
+
+ = 
+
+  
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  plain,width=0.2mm v2,v1 
+  decor,size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor,size=0, label=, l.dist=1mm, l.angle=0 v2 
+       
+
+ + 
+
+  
+  * (13,3)
+    0w,1/2h v1 
+  5/13w,1/2h v2 
+  8/13w,1/2h v3 
+  1w,1/2h v4 
+  1/2w,1h v5 
+  1/2w,0h v6 
+  plain,width=0.2mm v1,v2 
+  double,width=0.2mm v3,v4 
+  double,width=0.2mm,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+       
+
+ .
+
+In a similar way, Table  shows that the diagrams of the connected four-point function 
+are either one-particle irreducible, as for instance diagram  2.1, or reducible such as  2.2. Defining
+
+  _1234  = - _5678  _5678 ^c  ^-1 _51 
+  ^-1 _62  ^-1 _73  ^-1 _84    ,
+  
+we will see later on that this quantity consists of all one-particle irreducible diagrams of the connected 
+four-point function  where the external legs are omitted. Therefore this quantity  
+is called the one-particle irreducible four-point function. Inverting relation () yields
+
+  _1234 ^c  = - _5678  _5678  _51  _62 
+  _73  _84    .
+  
+
+When the one-particle four-point function is depicted by using a big open dot with four legs 
+
+
+
+-_1234     
+  
+  * (6,6)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  1/3w,1/3h v5 
+  1/3w,2/3h v6 
+  2/3w,2/3h v7 
+  2/3w,1/3h v8 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+       
+
+  ,
+
+the identity () reads graphically
+
+
+  
+  * (9,9)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  3.5/9w,3.5/9h v5 
+  3.5/9w,5.5/9h v6 
+  5.5/9w,5.5/9h v7 
+  5.5/9w,3.5/9h v8 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  plain,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+       
+
+ =  
+
+  
+  * (9,9)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  3.5/9w,3.5/9h v5 
+  3.5/9w,5.5/9h v6 
+  5.5/9w,5.5/9h v7 
+  5.5/9w,3.5/9h v8 
+  double,width=0.2mm v1,v5 
+  double,width=0.2mm v2,v6 
+  double,width=0.2mm v3,v7 
+  double,width=0.2mm v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+       
+
+ .  
+ 
+
+
+
+
+In the following we determine a closed set of Schwinger-Dyson equations for the self-energy and the one-particle irreducible
+four-point function.
+
+Self-Energy 
+
+Multiplying the identity () with  and integrating with respect to the index , we
+take into account the self-energy ()
+as well as the connected four-point function (). Thus we yield the Schwinger-Dyson equation for the self-energy:
+
+_12  = - 1 2  _34  V_1234  _34  + 1 6  _345678  V_1345  _36  _47  _58 
+_6782     .
+
+Its graphical representation reads
+
+  
+  * (9,3)
+    0w,1/2h v1 
+  3/9w,1/2h v2 
+  6/9w,1/2h v3 
+  1w,1/2h v4 
+  1/2w,1h v5 
+  1/2w,0h v6 
+  plain,width=0.2mm v1,v2 
+  plain,width=0.2mm v3,v4 
+  double,width=0.2mm,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+       
+
+ =  1 2  
+
+  
+  * (6,5)
+    0w,0h v1 
+  1/2w,0h v2 
+  1w,0h v3 
+  1/12w,1/2h v4 
+  11/12w,1/2h v5 
+  plain v1,v3 
+  double,width=0.2mm,left=1 v4,v5,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  v2 
+      
+
+ +  1 6  
+
+  
+  * (14,6)
+    0w,1/2h v1 
+  3/14w,1/2h v2 
+  8/14w,1/2h v3 
+  11/14w,1/2h v4 
+  1w,1/2h v5 
+  9.2/14w,2.2/3h v6 
+  9.2/14w,0.8/3h v7 
+  plain v1,v2 
+  plain v4,v5 
+  double,width=0.2mm,left=0.8 v2,v6 
+  double,width=0.2mm v2,v3 
+  double,width=0.2mm,right=0.8 v2,v7 
+  double,width=0.2mm,right=1 v3,v4,v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v5 
+  v2 
+      
+
+ .  
+ 
+It contains on the right-hand side the connected two-point function which is determined by the Dyson equation ().
+Iteratively solving the integral equations () and () necessitates, however, the knowledge of the one-particle
+irreducible four-point function . 
+
+One-Particle Irreducible Four-Point Function 
+
+In principle, one could determine  from the self-energy .
+To this end we insert relation () into the definition () of the one-particle irreducible four-point function: 
+  _1234  = 2 _5678  _56  
+  G^-1 _78   ^-1 _51  ^-1 _62  ^-1 _73  
+  ^-1 _84  + ^-1 _13  ^-1 _24  +   ^-1 _14  ^-1 _23     .
+  
+The functional derivative on the right-hand side follows from applying a functional derivative with respect to the kernel 
+to the identity ():
+
+  _56  G^-1 _78    = - 
+  _90  _59  ^-1 _90  G^-1 _78   
+  _06   .
+
+Using the definition of the self-energy () and Eq. (), the one-particle irreducible four-point function
+() reduces to
+
+  _1234   =  2 _56  ^-1 _35  
+  _12  G^-1 _56   ^-1 _64   .
+  
+Applying again () and the functional chain rule (), this yields
+
+  -_1234   = 2  _12  G_34   
+   - 2 _56  
+  _35  G_56  _12  G_64   
+  - 2 _56  _12  G_35   
+  G_56  _64   + 2 _5678  _35  G_57  _12  
+  G_78   G_86  _64  
+   ,
+  
+which is represented graphically as
+
+
+
+  
+  * (6,6)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  1/3w,1/3h v5 
+  1/3w,2/3h v6 
+  2/3w,2/3h v7 
+  2/3w,1/3h v8 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+       
+
+& = &  2 
+
+
+
+     * (8,3)
+    0w,3/4h v1 
+  2.5/8w,3/4h v2 
+  5.5/8w,3/4h v3 
+  1w,3/4h v4 
+  1/2w,5/4h v5 
+  1/2w,1/4h v6 
+  plain v1,v2 
+  plain v3,v4 
+  double,width=0.2mm,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v4 
+      
+ 3 4  
+
+ +  2 
+
+  
+  * (11,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  3/11w,1/2h v3 
+  6/11w,1/2h v4 
+  plain v1,v3 
+  plain v2,v4   
+  double,width=0.2mm,left=1 v3,v4,v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+       
+
+  
+
+
+  
+  * (8,3)
+    0w,3/4h v1 
+  2.5/8w,3/4h v2 
+  5.5/8w,3/4h v3 
+  1w,3/4h v4 
+  1/2w,5/4h v5 
+  1/2w,1/4h v6 
+  plain v1,v2 
+  plain v3,v4 
+  double,width=0.2mm,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v4 
+      
+ 5 6 
+
+ 
+
+  
+  * (11,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  5/11w,1/2h v3 
+  8/11w,1/2h v4 
+  plain v1,v3 
+  plain v2,v4   
+  double,width=0.2mm,left=1 v3,v4,v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+        
+
+
+
+
+& &-  2  
+
+  
+  * (11,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  3/11w,1/2h v3 
+  6/11w,1/2h v4 
+  plain v1,v3 
+  plain v2,v4   
+  double,width=0.2mm,left=1 v3,v4,v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+       
+
+  
+
+
+  
+  * (8,3)
+    0w,3/4h v1 
+  2.5/8w,3/4h v2 
+  5.5/8w,3/4h v3 
+  1w,3/4h v4 
+  1/2w,5/4h v5 
+  1/2w,1/4h v6 
+  plain v1,v2 
+  plain v3,v4 
+  double,width=0.2mm,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v4 
+      
+ 5 4  
+
+ -  2   
+
+
+  
+  * (8,3)
+    0w,3/4h v1 
+  2.5/8w,3/4h v2 
+  5.5/8w,3/4h v3 
+  1w,3/4h v4 
+  1/2w,5/4h v5 
+  1/2w,1/4h v6 
+  plain v1,v2 
+  plain v3,v4 
+  double,width=0.2mm,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v4 
+      
+ 3 5  
+
+ 
+
+  
+  * (11,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  5/11w,1/2h v3 
+  8/11w,1/2h v4 
+  plain v1,v3 
+  plain v2,v4   
+  double,width=0.2mm,left=1 v3,v4,v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+       
+
+ .
+
+Thus amputating a line from the self energy  leads to the one-particle irreducible diagrams of . However, this
+procedure has the disadvantage that the first two terms
+yield reducible diagrams which are later on removed in the last two terms in ().
+As the number of undesired one-particle reducible diagrams occuring at an intermediate step of the calculation increases with
+the loop order, the procedure of determining  via relation () is quite inefficient. Therefore we aim at deriving
+another equation for  whose iterative solution only involves one-particle irreducible diagrams.
+
+
+Going back to Eq. (), we insert the Schwinger-Dyson equation () for the self-energy and obtain
+
+  _1234  &=&  V_1234  - g 2  _5678  
+  V_1256  _57  _68  _7834  - 1 2  
+  _5678  V_1356  _57  _68  _7824 
+
+
+  & & - 1 2  _5678  V_1456  _57  _68   
+  _7823   + 1 2  _5678901 2   
+  V_5167  _69  _70  _9021   _1 2  
+  _2 348  _85  
+
+
+  & & + 1 3  _5678901 2   V_1567  _58  
+  _69  _70  
+  _8902   G^-1 _1 2    
+  ^-1 _1 3  ^-1 _2 4  
+   .
+  
+The last term is still problematic, as inserting the definition () of the self-energy would yield again an inefficient
+equation. This time, however, we can circumvent the inefficiency problem by deriving from () the commutator relation
+
+ _78  _1234  G^-1 _78   
+  ^-1 _75  ^-1 _86  - _78  
+  _1256  G^-1 _78   ^-1 _73  
+  ^-1 _84  
+&=& 2 _78901 2   ^-1 _57  ^-1 _68     G^-1 _78    (  ^-1 _39  ^-1 _40 
+  )  _91   _02   _1 2 12 
+
+  & &
+-  2 _78901 2   ^-1 _37  ^-1 _48  
+   G^-1 _78    (  ^-1 _59  ^-1 _60 
+  )  _91   _02   _1 2 12 
+   .
+  
+Applying then
+
+^-1 _12  G^-1 _34   = 1 2  
+(  _13  _24  + _14  _23   )
+- 1 2  _56  _35  _5126  _64 
+ ,
+
+which follows from inserting () in (), the 
+intermediate commutator relation () is converted to the final one
+
+  _78  _1234  G^-1 _78   ^-1 _75 
+  ^-1 _86  - _78  _1256  
+  G^-1 _78   ^-1 _73  ^-1 _84    &=&  
+  1 2  _78  _3457  _78  _8126  + 
+  1 2  _78  _3467  _78  _8125  
+
+
+&&  -  1 2  _78  _5637  _78  _8124   
+  -1 2  _78  _5647  _78  _8123  
+   .
+  
+Note that the present commutator relation () is equivalent to the former one () in Section . Indeed,
+Eq. () follows also from inserting () into () after a lengthy but straight-forward calculation. Now we can
+treat the last problematic term in () with the commutator relation () and thus yield a 
+nonlinear functional integrodifferential equation for the one-particle irreducible four-point function:
+
+
+-  _1234  & = & - V_1234    +  1 3   _567890  
+V_1567  _58  G_69  G_70    _8234   
+G_90   
++  1 2    _5678  V_1256   _57  _68  _7834   
+
+ 
+& & +    1 2  _5678  V_1356   _57  _68  _7824 
++  1 2  _5678  V_1456   _57  _68  _7823  
+-  1 6  _5678901 2     V_5167  _69  _70  _9021   _1 2  
+_2 348  _85   
+
+    & &
+- 1 6    _5678901 2   V_5167   _69  _70  
+_9031   _1 2   _2 248  _85     
+-  1 6  _5678901 2   
+V_5167   _69  _70  _9041   _1 2  
+_2 238  _85    .
+
+Its graphical representation reads
+
+
+  
+  * (6,6)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  1/3w,1/3h v5 
+  1/3w,2/3h v6 
+  2/3w,2/3h v7 
+  2/3w,1/3h v8 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+       
+
+
+ = 
+
+  
+  * (4.5,4.5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  1/2w,1/2h v5 
+  plain v1,v3 
+  plain v2,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5 
+       
+
+ +  1 3  
+
+  
+  * (8,8)
+    0w,4/8h v1 
+  3/8w,4/8h v2 
+  1w,4/8h v3 
+  1w,0h v4 
+  1w,1h v5 
+  plain v1,v2 
+  plain v2,v3 
+  plain,right=0.3 v2,v4 
+  double,width=0.2mm,left=0.3 v2,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v5 
+  v2 
+       
+
+ 
+
+
+
+  
+  * (6,7)
+    0w,2/7h v1 
+  0w,8/7h v2 
+  1w,8/7h v3 
+  1w,2/7h v4 
+  1/3w,4/7h v5 
+  1/3w,6/7h v6 
+  2/3w,6/7h v7 
+  2/3w,4/7h v8 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=180 v2 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v4 
+       
+
+ 6 7 
+
+ 
+
+ +  1 2  
+
+  
+  * (11,6)
+    0w,1/6h v1 
+  0w,5/6h v2 
+  1w,1h v3 
+  1w,0h v4 
+  7/11w,1/3h v5 
+  7/11w,2/3h v6 
+  9/11w,2/3h v7 
+  9/11w,1/3h v8 
+  2/11w,1/2h v9 
+  plain v1,v9 
+  plain v2,v9 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  double,width=0.2mm,left=0.7 v9,v6 
+  double,width=0.2mm,right=0.7 v9,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=25 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-25 v4 
+  v9 
+       
+
+ +  1 2  
+
+  
+  * (11,6)
+    0w,1/6h v1 
+  0w,5/6h v2 
+  1w,1h v3 
+  1w,0h v4 
+  7/11w,1/3h v5 
+  7/11w,2/3h v6 
+  9/11w,2/3h v7 
+  9/11w,1/3h v8 
+  2/11w,1/2h v9 
+  plain v1,v9 
+  plain v2,v9 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  double,width=0.2mm,left=0.7 v9,v6 
+  double,width=0.2mm,right=0.7 v9,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=25 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-25 v4 
+  v9 
+       
+
+
+ +  1 2  
+
+  
+  * (11,6)
+    0w,1/6h v1 
+  0w,5/6h v2 
+  1w,1h v3 
+  1w,0h v4 
+  7/11w,1/3h v5 
+  7/11w,2/3h v6 
+  9/11w,2/3h v7 
+  9/11w,1/3h v8 
+  2/11w,1/2h v9 
+  plain v1,v9 
+  plain v2,v9 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  double,width=0.2mm,left=0.7 v9,v6 
+  double,width=0.2mm,right=0.7 v9,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=25 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-25 v4 
+  v9 
+       
+
+ +  1 6  
+
+  
+  * (11,11)
+    1/11w,0h v1 
+  0w,1h v2 
+  3/11w,2/11h v3 
+  2/11w,9/11h v4 
+  3/11w,6.5/11h v5 
+  1.5/11w,7.5/11h v6 
+  4.5/11w,8.5/11h v7 
+  7/11w,4.5/11h v8 
+  7/11w,6.5/11h v9 
+  9.2/11w,6.7/11h v10 
+  9/11w,4.5/11h v11 
+  1w,8.5/11h v12 
+  1w,2.5/11h v13 
+  plain v1,v3 
+  plain v2,v4 
+  plain v10,v12 
+  plain v11,v13 
+  double,width=0.2mm,left=1 v6,v7,v6 
+  double,width=0.2mm,left=1 v9,v11,v9 
+  double,width=0.2mm v3,v5 
+  double,width=0.2mm,left=0.5 v3,v6 
+  double,width=0.2mm,left=0.3 v7,v9 
+  double,width=0.2mm,right=0.4 v3,v8 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v12 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v13 
+  v3 
+       
+
+ +  1 6  
+
+  
+  * (11,11)
+    1/11w,0h v1 
+  0w,1h v2 
+  3/11w,2/11h v3 
+  2/11w,9/11h v4 
+  3/11w,6.5/11h v5 
+  1.5/11w,7.5/11h v6 
+  4.5/11w,8.5/11h v7 
+  7/11w,4.5/11h v8 
+  7/11w,6.5/11h v9 
+  9.2/11w,6.7/11h v10 
+  9/11w,4.5/11h v11 
+  1w,8.5/11h v12 
+  1w,2.5/11h v13 
+  plain v1,v3 
+  plain v2,v4 
+  plain v10,v12 
+  plain v11,v13 
+  double,width=0.2mm,left=1 v6,v7,v6 
+  double,width=0.2mm,left=1 v9,v11,v9 
+  double,width=0.2mm v3,v5 
+  double,width=0.2mm,left=0.5 v3,v6 
+  double,width=0.2mm,left=0.3 v7,v9 
+  double,width=0.2mm,right=0.4 v3,v8 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v12 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v13 
+  v3 
+       
+
+ +  1 6  
+
+  
+  * (11,11)
+    1/11w,0h v1 
+  0w,1h v2 
+  3/11w,2/11h v3 
+  2/11w,9/11h v4 
+  3/11w,6.5/11h v5 
+  1.5/11w,7.5/11h v6 
+  4.5/11w,8.5/11h v7 
+  7/11w,4.5/11h v8 
+  7/11w,6.5/11h v9 
+  9.2/11w,6.7/11h v10 
+  9/11w,4.5/11h v11 
+  1w,8.5/11h v12 
+  1w,2.5/11h v13 
+  plain v1,v3 
+  plain v2,v4 
+  plain v10,v12 
+  plain v11,v13 
+  double,width=0.2mm,left=1 v6,v7,v6 
+  double,width=0.2mm,left=1 v9,v11,v9 
+  double,width=0.2mm v3,v5 
+  double,width=0.2mm,left=0.5 v3,v6 
+  double,width=0.2mm,left=0.3 v7,v9 
+  double,width=0.2mm,right=0.4 v3,v8 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v12 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v13 
+  v3 
+       
+
+ .
+
+Thus the closed set of Schwinger-Dyson equations for the connected two-point function, the self-energy and the one-particle
+irreducible four-point function is given by (), (), and (). In the subsequent section we show
+that its recursive graphical solution leads to all one-particle irreducible Feynman diagrams needed for renormalizing the 
+-theory.
+
+Graphical Recursion Relations NANA 
+
+To this end we supplement the perturbative expansion () of the connected two-point function with corresponding
+ones for the self-energy
+
+
+  
+  * (9,3)
+    0w,1/2h v1 
+  3/9w,1/2h v2 
+  6/9w,1/2h v3 
+  1w,1/2h v4 
+  1/2w,1h v5 
+  1/2w,0h v6 
+  plain v1,v2 
+  plain v3,v4 
+  double,width=0.2mm,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+      
+
+ =  _p=1  ^ 
+
+  
+  * (11,5)
+    0w,1/2h v1 
+  3/11w,1/2h v2 
+  8/11w,1/2h v3 
+  1w,1/2h v4 
+  1/2w,1h v5 
+  1/2w,0h v6 
+  1/2w,1/2h v7 
+  plain v1,v2 
+  plain v3,v4 
+  double,width=0.2mm,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v7 
+      
+
+
+and for the one-particle irreducible four-point function
+
+
+  * (6,6)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  1/3w,1/3h v5 
+  1/3w,2/3h v6 
+  2/3w,2/3h v7 
+  2/3w,1/3h v8 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+       
+
+ =  _p=1  ^ 
+
+  
+  * (7.5,7.5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  1/4w,1/4h v5 
+  1/4w,3/4h v6 
+  3/4w,3/4h v7 
+  3/4w,1/4h v8 
+  1/2w,1/2h v9 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v9 
+       
+
+ .
+
+As a result we obtain the following closed set of graphical recursion relations: 
+
+
+
+REK4 
+
+  
+  * (11,5)
+    0w,1/2h v1 
+  3/11w,1/2h v2 
+  8/11w,1/2h v3 
+  1w,1/2h v4 
+  1/2w,1h v5 
+  1/2w,0h v6 
+  1/2w,1/2h v7 
+  plain v1,v2 
+  plain v3,v4 
+  double,width=0.2mm,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v7 
+      
+
+ &= & 1 2  
+
+  
+  * (6,5)
+    0w,0h v1 
+  1/2w,0h v2 
+  1w,0h v3 
+  1/2w,1h v4 
+  plain v1,v2 
+  plain v2,v3 
+  double,width=0.2mm,left=1 v4,v2,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v4 
+  v2 
+      
+
+ +  1 6  
+_q=1  ^p-1  _r=1  ^q _s=1  ^r  
+
+  
+  * (24,8)
+    0w,1/2h v1 
+  3/24w,1/2h v2 
+  15/24w,1/2h v3 
+  21/24w,1/2h v4 
+  24/24w,1/2h v5 
+  17.7/24w,6.9/8h v6 
+  17.7/24w,1.1/8h v7 
+  10/24w,1/2h v8 
+  10/24w,1.1h v9  
+  11/24w,-0.1h v10 
+  18/24w,1/2h v11 
+  plain v1,v2 
+  plain v4,v5 
+  double,width=0.2mm,left=0.6 v2,v6 
+  double,width=0.2mm v2,v3 
+  double,width=0.2mm,right=0.6 v2,v7 
+  double,width=0.2mm,right=1 v3,v4,v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v8 
+  decor.size=0, label=, l.dist=2.2mm, l.angle=90 v9 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=90 v10 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v11 
+  v2 
+      
+
+ , 
+
+
+REK5 
+  
+
+  * (7,3)
+    v1 
+  v2 
+  1/2w,1/2h v3 
+  double,width=0.2mm v2,v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=90 v3 
+    
+
+& =&  _q=1  ^p 
+
+  
+  * (15,3)
+    0w,1/2h v1 
+  5/15w,1/2h v2 
+  10/15w,1/2h v3 
+  1w,1/2h v4 
+  1/2w,1/2h v5 
+  13.5/15w,1/2h v6 
+  plain v1,v2 
+  double,width=0.2mm v3,v4 
+  double,width=0.2mm,left=1 v2,v3,v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v5 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=90 v6 
+       
+
+ , 
+
+REK6 
+
+  
+  * (8,8)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  2/8w,2/8h v5 
+  2/8w,6/8h v6 
+  6/8w,6/8h v7 
+  6/8w,2/8h v8 
+  1/2w,1/2h v9 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v9 
+       
+
+
+ =  1 3  
+_q=1  ^p 
+
+  
+  * (8,8)
+    0w,4/8h v1 
+  3/8w,4/8h v2 
+  1w,4/8h v3 
+  1w,0h v4 
+  1w,1h v5 
+  4.5/8w,8.5/8h v6 
+  plain v1,v2 
+  plain v2,v3 
+  plain,right=0.3 v2,v4 
+  double,width=0.2mm,left=0.3 v2,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v5 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=90 v6 
+  v2 
+       
+
+ 
+
+
+
+  
+  * (7.5,7.5)
+    0w,2.5/7.5h v1 
+  0w,10/7.5h v2 
+  1w,10/7.5h v3 
+  1w,2.5/7.5h v4 
+  2/7.5w,4.5/7.5h v5 
+  2/7.5w,8/7.5h v6 
+  5.5/7.5w,8/7.5h v7 
+  5.5/7.5w,4.5/7.5h v8 
+  1/2w,6.25/7.5h v9 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-45 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v9 
+       
+
+ 6 7 
+
+
+ 
+ +  1 2  
+_q=1  ^p _r=1  ^q 
+
+  
+  * (12.5,7.6)
+    0w,1.8/7.6h v1 
+  0w,5.8/7.6h v2 
+  1w,1h v3 
+  1w,0h v4 
+  7/12.5w,2/7.6h v5 
+  7/12.5w,5.6/7.6h v6 
+  10.6/12.5w,5.6/7.6h v7 
+  10.6/12.5w,2/7.6h v8 
+  2/12.5w,1/2h v9 
+  8.8/12.5w,1/2h v10 
+  4.5/12.5w,1h v11 
+  4.5/12.5w,-0.5/7.6h v12 
+  plain v1,v9 
+  plain v2,v9 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  double,width=0.2mm,left=0.6 v9,v6 
+  double,width=0.2mm,right=0.6 v9,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=25 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-25 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=0 v10 
+  decor.size=0, label=, l.dist=0.05mm, l.angle=90 v11 
+  decor.size=0, label=, l.dist=0mm, l.angle=-90 v12 
+  v9 
+       
+
+
+ +  1 2  
+_q=1  ^p _r=1  ^q 
+
+  
+  * (12.5,7.6)
+    0w,1.8/7.6h v1 
+  0w,5.8/7.6h v2 
+  1w,1h v3 
+  1w,0h v4 
+  7/12.5w,2/7.6h v5 
+  7/12.5w,5.6/7.6h v6 
+  10.6/12.5w,5.6/7.6h v7 
+  10.6/12.5w,2/7.6h v8 
+  2/12.5w,1/2h v9 
+  8.8/12.5w,1/2h v10 
+  4.5/12.5w,1h v11 
+  4.5/12.5w,0h v12 
+  plain v1,v9 
+  plain v2,v9 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  double,width=0.2mm,left=0.6 v9,v6 
+  double,width=0.2mm,right=0.6 v9,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=25 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-25 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=0 v10 
+  decor.size=0, label=, l.dist=0.05mm, l.angle=90 v11 
+  decor.size=0, label=, l.dist=0.01mm, l.angle=-90 v12 
+  v9 
+       
+
+
+
+
+ &&+  1 2  
+_q=1  ^p _r=1  ^q 
+
+  
+  * (12.5,7.6)
+    0w,1.8/7.6h v1 
+  0w,5.8/7.6h v2 
+  1w,1h v3 
+  1w,0h v4 
+  7/12.5w,2/7.6h v5 
+  7/12.5w,5.6/7.6h v6 
+  10.6/12.5w,5.6/7.6h v7 
+  10.6/12.5w,2/7.6h v8 
+  2/12.5w,1/2h v9 
+  8.8/12.5w,1/2h v10 
+  4.5/12.5w,1h v11 
+  4.5/12.5w,0h v12 
+  plain v1,v9 
+  plain v2,v9 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  double,width=0.2mm,left=0.6 v9,v6 
+  double,width=0.2mm,right=0.6 v9,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=25 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-25 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=0 v10 
+  decor.size=0, label=, l.dist=0.05mm, l.angle=90 v11 
+  decor.size=0, label=, l.dist=0.01mm, l.angle=-90 v12 
+  v9 
+       
+
++  1 6  
+_q=2  ^p _r=2  ^q _s=2  ^r 
+_t=1  ^s-1  _k=0  ^t-1  
+
+  
+  * (16,13.5)
+    2/16w,0/13.5h v1 
+  0w,14.5/13.5h v2 
+  4/16w,2/13.5h v3 
+  2/16w,12.5/13.5h v4 
+  4/16w,7.5/13.5h v5 
+  1.3/16w,9.5/13.5h v6 
+  6.7/16w,11/13.5h v7 
+  10/16w,4.5/13.5h v8 
+  10/16w,8.5/13.5h v9 
+  14.2/16w,8.7/13.5h v10 
+  14/16w,4.5/13.5h v11 
+  1w,10.5/13.5h v12 
+  1w,2.5/13.5h v13 
+  4/16w,13.5/13.5h v14 
+  4/16w,10.5/13.5h v20 
+  12/16w,6.5/13.5h v21 
+  4/16w,5.5/13.5h v22 
+  -1/16w,5.5/13.5h v23 
+  12/16w,11/13.5h v24 
+  7.5/16w,0h v25 
+  plain v1,v3 
+  plain v2,v4 
+  plain v10,v12 
+  plain v11,v13 
+  double,width=0.2mm,left=1 v5,v14,v5 
+  double,width=0.2mm,left=1 v9,v11,v9 
+  double,width=0.2mm v3,v5 
+  double,width=0.2mm,left=0.6 v3,v6 
+  double,width=0.2mm,left=0.15 v7,v9 
+  double,width=0.2mm,right=0.25 v3,v8 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=180 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v12 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v13 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v20 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v21 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v22 
+  decor.size=0, label=, l.dist=0.1mm, l.angle=180 v23 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=90 v24 
+  decor.size=0, label=, l.dist=0mm, l.angle=-90 v25 
+  v3 
+       
+
+
+
+
+
+
+ && +   1 6  
+_q=2  ^p _r=2  ^q _s=2  ^r 
+_t=1  ^s-1  _k=0  ^t-1  
+
+  
+  * (16,13.5)
+    2/16w,0/13.5h v1 
+  0w,14.5/13.5h v2 
+  4/16w,2/13.5h v3 
+  2/16w,12.5/13.5h v4 
+  4/16w,7.5/13.5h v5 
+  1.3/16w,9.5/13.5h v6 
+  6.7/16w,11/13.5h v7 
+  10/16w,4.5/13.5h v8 
+  10/16w,8.5/13.5h v9 
+  14.2/16w,8.7/13.5h v10 
+  14/16w,4.5/13.5h v11 
+  1w,10.5/13.5h v12 
+  1w,2.5/13.5h v13 
+  4/16w,13.5/13.5h v14 
+  4/16w,10.5/13.5h v20 
+  12/16w,6.5/13.5h v21 
+  4/16w,5.5/13.5h v22 
+  -1/16w,5.5/13.5h v23 
+  12/16w,11/13.5h v24 
+  7.5/16w,0h v25 
+  plain v1,v3 
+  plain v2,v4 
+  plain v10,v12 
+  plain v11,v13 
+  double,width=0.2mm,left=1 v5,v14,v5 
+  double,width=0.2mm,left=1 v9,v11,v9 
+  double,width=0.2mm v3,v5 
+  double,width=0.2mm,left=0.6 v3,v6 
+  double,width=0.2mm,left=0.15 v7,v9 
+  double,width=0.2mm,right=0.25 v3,v8 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=180 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v12 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v13 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v20 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v21 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v22 
+  decor.size=0, label=, l.dist=0.1mm, l.angle=180 v23 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=90 v24 
+  decor.size=0, label=, l.dist=0mm, l.angle=-90 v25 
+  v3 
+       
+
++  1 6  
+_q=2  ^p _r=2  ^q _s=2  ^r 
+_t=1  ^s-1  _k=0  ^t-1  
+
+  
+  * (16,13.5)
+    2/16w,0/13.5h v1 
+  0w,14.5/13.5h v2 
+  4/16w,2/13.5h v3 
+  2/16w,12.5/13.5h v4 
+  4/16w,7.5/13.5h v5 
+  1.3/16w,9.5/13.5h v6 
+  6.7/16w,11/13.5h v7 
+  10/16w,4.5/13.5h v8 
+  10/16w,8.5/13.5h v9 
+  14.2/16w,8.7/13.5h v10 
+  14/16w,4.5/13.5h v11 
+  1w,10.5/13.5h v12 
+  1w,2.5/13.5h v13 
+  4/16w,13.5/13.5h v14 
+  4/16w,10.5/13.5h v20 
+  12/16w,6.5/13.5h v21 
+  4/16w,5.5/13.5h v22 
+  -1/16w,5.5/13.5h v23 
+  12/16w,11/13.5h v24 
+  7.5/16w,0h v25 
+  plain v1,v3 
+  plain v2,v4 
+  plain v10,v12 
+  plain v11,v13 
+  double,width=0.2mm,left=1 v5,v14,v5 
+  double,width=0.2mm,left=1 v9,v11,v9 
+  double,width=0.2mm v3,v5 
+  double,width=0.2mm,left=0.6 v3,v6 
+  double,width=0.2mm,left=0.15 v7,v9 
+  double,width=0.2mm,right=0.25 v3,v8 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=180 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v12 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v13 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v20 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v21 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=0 v22 
+  decor.size=0, label=, l.dist=0.1mm, l.angle=180 v23 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=90 v24 
+  decor.size=0, label=, l.dist=0mm, l.angle=-90 v25 
+  v3 
+       
+
+ . 
+ && 
+
+This is to be solved starting from 
+
+
+G0 
+  
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1/2h v3 
+  double,width=0.2mm v2,v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=90 v3 
+    
+
+ &=& 
+
+  
+  * (7,3)
+    v1 
+  v2 
+  plain v2,v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+    
+
+ ,
+ && 
+
+
+ 
+  * (7.5,7.5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  2/7.5w,2/7.5h v5 
+  2/7.5w,5.5/7.5h v6 
+  5.5/7.5w,5.5/7.5h v7 
+  5.5/7.5w,2/7.5h v8 
+  1/2w,1/2h v9 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v9 
+       
+
+ &=& 
+
+  
+  * (4.5,4.5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  1/2w,1/2h v5 
+  plain v1,v3 
+  plain v2,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5 
+       
+
+ .GAM1  
+ && 
+Note that these graphical recursion relations ()-()
+allow to prove via complete induction that all diagrams which contribute to the
+self-energy and the one-particle irreducible four-point function are, indeed, one-particle irreducible Glaum .
+
+
+The first few perturbative contributions to  and  are determined as follows. Inserting 
+() in () and () yield for  the self-energy
+
+
+  
+  * (11,5)
+    0w,1/2h v1 
+  3/11w,1/2h v2 
+  8/11w,1/2h v3 
+  1w,1/2h v4 
+  1/2w,1h v5 
+  1/2w,0h v6 
+  1/2w,1/2h v7 
+  plain v1,v2 
+  plain v3,v4 
+  double,width=0.2mm,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v7 
+      
+
+ =  1 2  
+
+  
+  * (6,5)
+    0w,0h v1 
+  1/2w,0h v2 
+  1w,0h v3 
+  1/2w,1h v4 
+  plain v1,v2 
+  plain v2,v3 
+  plain,left=1 v4,v2,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  v2 
+      
+
+ ,
+
+and the connected two-point function
+
+
+  
+  * (7,3)
+    v1 
+  v2 
+  1/2w,1/2h v3 
+  double,width=0.2mm v2,v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=90 v3 
+    
+
+ = 
+
+
+  * (15,3)
+    0w,1/2h v1 
+  5/15w,1/2h v2 
+  10/15w,1/2h v3 
+  1w,1/2h v4 
+  1/2w,1/2h v5 
+  13.5/15w,1/2h v6 
+  plain v1,v2 
+  double,width=0.2mm v3,v4 
+  double,width=0.2mm,left=1 v2,v3,v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v5 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=90 v6 
+       
+
+ =  1 2  
+
+  
+  * (10,5)
+    0w,0h v1 
+  1/2w,0h v2 
+  1w,0h v3 
+  1/2w,1h v4 
+  plain v1,v2 
+  plain v2,v3 
+  plain,left=1 v4,v2,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  v2 
+      
+
+ .
+
+As () represent a bare vertex with no line, we read off
+
+
+    6 7  
+
+
+
+  
+  * (7.5,9.5)
+    0w,2/9.5h v1 
+  0w,9.5/9.5h v2 
+  1w,9.5/9.5h v3 
+  1w,2/9.5h v4 
+  2/7.5w,4/9.5h v5 
+  2/7.5w,7.5/9.5h v6 
+  5.5/7.5w,7.5/9.5h v7 
+  5.5/7.5w,4/9.5h v8 
+  1/2w,5.75/9.5h v9 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v9 
+       
+
+ = 0  .
+
+
+the second-order contribution to the one-particle irreducible four-point function follows from () to be 
+
+
+  
+  * (7.5,7.5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  2/7.5w,2/7.5h v5 
+  2/7.5w,5.5/7.5h v6 
+  5.5/7.5w,5.5/7.5h v7 
+  5.5/7.5w,2/7.5h v8 
+  1/2w,1/2h v9 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v9 
+       
+
+ =  1 2  
+
+  
+  * (9,5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  2/9w,1/2h v5 
+  7/9w,1/2h v6 
+  plain v1,v5 
+  plain v2,v5 
+  plain v3,v6 
+  plain v4,v6 
+  plain,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5,v6 
+       
+
+ +  1 2  
+
+  
+  * (9,5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  2/9w,1/2h v5 
+  7/9w,1/2h v6 
+  plain v1,v5 
+  plain v2,v5 
+  plain v3,v6 
+  plain v4,v6 
+  plain,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5,v6 
+       
+
+ +   1 2  
+
+  
+  * (9,5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  2/9w,1/2h v5 
+  7/9w,1/2h v6 
+  plain v1,v5 
+  plain v2,v5 
+  plain v3,v6 
+  plain v4,v6 
+  plain,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5,v6 
+       
+
+ . 
+ 
+The results in (), (), and () are then used to determine for  the self-energy () 
+
+
+  
+  * (11,5)
+    0w,1/2h v1 
+  3/11w,1/2h v2 
+  8/11w,1/2h v3 
+  1w,1/2h v4 
+  1/2w,1h v5 
+  1/2w,0h v6 
+  1/2w,1/2h v7 
+  plain v1,v2 
+  plain v3,v4 
+  double,width=0.2mm,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v7 
+      
+
+  =  1 4    
+
+  
+  * (5,10)
+    0w,2/10h v1 
+  1/2w,2/10h v2 
+  1w,2/10h v3 
+  1/2w,7/10h v4 
+  1/2w,12/10h v5 
+  plain v1,v3 
+  plain,left=1 v2,v4,v2 
+  plain,left=1 v4,v5,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  v2 
+  v4 
+    
+
+ +  1 6  
+
+  
+  * (11,6)
+    0w,1/2h v1 
+  2.5/11w,1/2h v2 
+  8.5/11w,1/2h v3 
+  1w,1/2h v4 
+  plain v1,v4 
+  plain,left=1 v2,v3,v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  v2 
+  v3 
+    
+
+
+and the connected two-point function ()
+
+
+
+  
+  * (7,3)
+    v1 
+  v2 
+  1/2w,1/2h v3 
+  double,width=0.2mm v2,v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=90 v3 
+    
+
+= 
+
+
+  * (15,3)
+    0w,1/2h v1 
+  5/15w,1/2h v2 
+  10/15w,1/2h v3 
+  1w,1/2h v4 
+  1/2w,1/2h v5 
+  13.5/15w,1/2h v6 
+  plain v1,v2 
+  double,width=0.2mm v3,v4 
+  double,width=0.2mm,left=1 v2,v3,v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v5 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=90 v6 
+       
+
++ 
+
+
+  * (15,3)
+    0w,1/2h v1 
+  5/15w,1/2h v2 
+  10/15w,1/2h v3 
+  1w,1/2h v4 
+  1/2w,1/2h v5 
+  13.5/15w,1/2h v6 
+  plain v1,v2 
+  double,width=0.2mm v3,v4 
+  double,width=0.2mm,left=1 v2,v3,v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v5 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=90 v6 
+       
+
+=  1 4    
+
+  
+  * (17,5)
+    0w,0h v1 
+  5/17w,0h v2 
+  12/17w,0h v3 
+  1w,0h v4 
+  5/17w,1h v5 
+  12/17w,1h v6 
+  plain v1,v4 
+  plain,left=1 v2,v5,v2 
+  plain,left=1 v3,v6,v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  v2 
+  v3 
+    
+
+ +  1 4  
+
+  
+  * (10,10)
+    0w,2/10h v1 
+  1/2w,2/10h v2 
+  1w,2/10h v3 
+  1/2w,7/10h v4 
+  1/2w,12/10h v5 
+  plain v1,v3 
+  plain,left=1 v2,v4,v2 
+  plain,left=1 v4,v5,v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  v2 
+  v4 
+    
+
+ +  1 6  
+
+  
+  * (16,9)
+    0w,1/2h v1 
+  5/16w,1/2h v2 
+  11/16w,1/2h v3 
+  1w,1/2h v4 
+  plain v1,v4 
+  plain,left=1 v2,v3,v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  v2 
+  v3 
+    
+
+ . 
+
+Amputating one line from (),
+
+
+
+
+  
+  * (7.5,7.5)
+    0w,2.5/7.5h v1 
+  0w,10/7.5h v2 
+  1w,10/7.5h v3 
+  1w,2.5/7.5h v4 
+  2/7.5w,4.5/7.5h v5 
+  2/7.5w,8/7.5h v6 
+  5.5/7.5w,8/7.5h v7 
+  5.5/7.5w,4.5/7.5h v8 
+  1/2w,6.25/7.5h v9 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=-45 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v9 
+       
+
+ 6 7 
+
+ 
+
+ =  1 2  
+
+    6 7 
+
+  (  
+
+  
+  * (9,5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  2/9w,1/2h v5 
+  7/9w,1/2h v6 
+  plain v1,v5 
+  plain v2,v5 
+  plain v3,v6 
+  plain v4,v6 
+  plain,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5,v6 
+       
+
+ + 
+
+  
+  * (9,5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  2/9w,1/2h v5 
+  7/9w,1/2h v6 
+  plain v1,v5 
+  plain v2,v5 
+  plain v3,v6 
+  plain v4,v6 
+  plain,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5,v6 
+       
+
+ + 
+
+  
+  * (9,5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  2/9w,1/2h v5 
+  7/9w,1/2h v6 
+  plain v1,v5 
+  plain v2,v5 
+  plain v3,v6 
+  plain v4,v6 
+  plain,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5,v6 
+       
+
+  ) 
+
+=  1 2    (   
+
+  
+  * (11,5)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  2.5/11w,1h v3 
+  2.5/11w,0h v4 
+  8.5/11w,1h v5 
+  8.5/11w,0h v6 
+  2.5/11w,1/2h v7 
+  8.5/11w,1/2h v8 
+  plain v1,v2 
+  plain v3,v4 
+  plain v5,v6 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v6 
+  v7,v8 
+       
+
+ +  
+
+  
+  * (11,5)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  2.5/11w,1h v3 
+  2.5/11w,0h v4 
+  8.5/11w,1h v5 
+  8.5/11w,0h v6 
+  2.5/11w,1/2h v7 
+  8.5/11w,1/2h v8 
+  plain v1,v2 
+  plain v3,v4 
+  plain v5,v6 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v6 
+  v7,v8 
+       
+
+ +  
+
+  
+  * (11,5)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  2.5/11w,1h v3 
+  2.5/11w,0h v4 
+  8.5/11w,1h v5 
+  8.5/11w,0h v6 
+  2.5/11w,1/2h v7 
+  8.5/11w,1/2h v8 
+  plain v1,v2 
+  plain v3,v4 
+  plain v5,v6 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v6 
+  v7,v8 
+       
+
+ +  
+
+  
+  * (11,5)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  2.5/11w,1h v3 
+  2.5/11w,0h v4 
+  8.5/11w,1h v5 
+  8.5/11w,0h v6 
+  2.5/11w,1/2h v7 
+  8.5/11w,1/2h v8 
+  plain v1,v2 
+  plain v3,v4 
+  plain v5,v6 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v6 
+  v7,v8 
+       
+
+ +  
+
+  
+  * (11,5)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  2.5/11w,1h v3 
+  2.5/11w,0h v4 
+  8.5/11w,1h v5 
+  8.5/11w,0h v6 
+  2.5/11w,1/2h v7 
+  8.5/11w,1/2h v8 
+  plain v1,v2 
+  plain v3,v4 
+  plain v5,v6 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v6 
+  v7,v8 
+       
+
+ +  
+
+  
+  * (11,5)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  2.5/11w,1h v3 
+  2.5/11w,0h v4 
+  8.5/11w,1h v5 
+  8.5/11w,0h v6 
+  2.5/11w,1/2h v7 
+  8.5/11w,1/2h v8 
+  plain v1,v2 
+  plain v3,v4 
+  plain v5,v6 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=90 v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v6 
+  v7,v8 
+       
+
+  )   ,    
+ && 
+we find the third-order contribution to the one-particle irreducible four-point function from ():
+
+
+
+& & 
+
+  
+  * (7.5,7.5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  2/7.5w,2/7.5h v5 
+  2/7.5w,5.5/7.5h v6 
+  5.5/7.5w,5.5/7.5h v7 
+  5.5/7.5w,2/7.5h v8 
+  1/2w,1/2h v9 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v9 
+       
+
+ =  1 4    
+(   
+
+  
+  * (14,5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  2/14w,1/2h v5 
+  7/14w,1/2h v6 
+  12/14w,1/2h v7 
+  plain v1,v5 
+  plain v2,v5 
+  plain v3,v7 
+  plain v4,v7 
+  plain,left=1 v5,v6,v5 
+  plain,left=1 v7,v6,v7 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5,v6,v7 
+       
+
+ + 
+
+  
+  * (14,5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  2/14w,1/2h v5 
+  7/14w,1/2h v6 
+  12/14w,1/2h v7 
+  plain v1,v5 
+  plain v2,v5 
+  plain v3,v7 
+  plain v4,v7 
+  plain,left=1 v5,v6,v5 
+  plain,left=1 v7,v6,v7 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5,v6,v7 
+       
+
+ + 
+
+  
+  * (14,5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  2/14w,1/2h v5 
+  7/14w,1/2h v6 
+  12/14w,1/2h v7 
+  plain v1,v5 
+  plain v2,v5 
+  plain v3,v7 
+  plain v4,v7 
+  plain,left=1 v5,v6,v5 
+  plain,left=1 v7,v6,v7 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5,v6,v7 
+       
+
+  )
+
+
+& & +  1 2   
+(  
+
+  
+  * (10,7)
+    0w,2.5/7h v1 
+  1/4w,2.5/7h v2 
+  3/4w,2.5/7h v3 
+  1w,2.5/7h v4 
+  1/2w,5/7h v5 
+  3/10w,1h v6 
+  7/10w,1h v7 
+  plain v1,v4 
+  plain v5,v6 
+  plain v5,v7 
+  plain,left=1 v2,v3,v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v6 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v7 
+  v2,v3,v5 
+    
+
+ + 
+
+  
+  * (10,7)
+    0w,2.5/7h v1 
+  1/4w,2.5/7h v2 
+  3/4w,2.5/7h v3 
+  1w,2.5/7h v4 
+  1/2w,5/7h v5 
+  3/10w,1h v6 
+  7/10w,1h v7 
+  plain v1,v4 
+  plain v5,v6 
+  plain v5,v7 
+  plain,left=1 v2,v3,v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v6 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v7 
+  v2,v3,v5 
+    
+
+ + 
+
+  
+  * (10,7)
+    0w,2.5/7h v1 
+  1/4w,2.5/7h v2 
+  3/4w,2.5/7h v3 
+  1w,2.5/7h v4 
+  1/2w,5/7h v5 
+  3/10w,1h v6 
+  7/10w,1h v7 
+  plain v1,v4 
+  plain v5,v6 
+  plain v5,v7 
+  plain,left=1 v2,v3,v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v6 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v7 
+  v2,v3,v5 
+    
+
+ + 
+
+  
+  * (10,7)
+    0w,2.5/7h v1 
+  1/4w,2.5/7h v2 
+  3/4w,2.5/7h v3 
+  1w,2.5/7h v4 
+  1/2w,5/7h v5 
+  3/10w,1h v6 
+  7/10w,1h v7 
+  plain v1,v4 
+  plain v5,v6 
+  plain v5,v7 
+  plain,left=1 v2,v3,v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v6 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v7 
+  v2,v3,v5 
+    
+
+ + 
+
+  
+  * (10,7)
+    0w,2.5/7h v1 
+  1/4w,2.5/7h v2 
+  3/4w,2.5/7h v3 
+  1w,2.5/7h v4 
+  1/2w,5/7h v5 
+  3/10w,1h v6 
+  7/10w,1h v7 
+  plain v1,v4 
+  plain v5,v6 
+  plain v5,v7 
+  plain,left=1 v2,v3,v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v6 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v7 
+  v2,v3,v5 
+    
+
+ + 
+
+  
+  * (10,7)
+    0w,2.5/7h v1 
+  1/4w,2.5/7h v2 
+  3/4w,2.5/7h v3 
+  1w,2.5/7h v4 
+  1/2w,5/7h v5 
+  3/10w,1h v6 
+  7/10w,1h v7 
+  plain v1,v4 
+  plain v5,v6 
+  plain v5,v7 
+  plain,left=1 v2,v3,v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=-180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v4 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v6 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v7 
+  v2,v3,v5 
+    
+
+ )
+
+
+& &  +  1 2    
+(  
+
+  
+  * (9,10)
+    0w,0.3h v1 
+  0w,0.7h v2 
+  1w,0.7h v3 
+  1w,0.3h v4 
+  2/9w,0.5h v5 
+  7/9w,0.5h v6 
+  1/2w,0.75h v7 
+  1/2w,1.25h v8 
+  plain v1,v5 
+  plain v2,v5 
+  plain v3,v6 
+  plain v4,v6 
+  plain,left=1 v5,v6,v5 
+  plain,left=1 v7,v8,v7 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5,v6,v7 
+       
+
+ + 
+
+  
+  * (9,10)
+    0w,0.3h v1 
+  0w,0.7h v2 
+  1w,0.7h v3 
+  1w,0.3h v4 
+  2/9w,0.5h v5 
+  7/9w,0.5h v6 
+  1/2w,0.75h v7 
+  1/2w,1.25h v8 
+  plain v1,v5 
+  plain v2,v5 
+  plain v3,v6 
+  plain v4,v6 
+  plain,left=1 v5,v6,v5 
+  plain,left=1 v7,v8,v7 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5,v6,v7 
+       
+
+ + 
+
+  
+  * (9,10)
+    0w,0.3h v1 
+  0w,0.7h v2 
+  1w,0.7h v3 
+  1w,0.3h v4 
+  2/9w,0.5h v5 
+  7/9w,0.5h v6 
+  1/2w,0.75h v7 
+  1/2w,1.25h v8 
+  plain v1,v5 
+  plain v2,v5 
+  plain v3,v6 
+  plain v4,v6 
+  plain,left=1 v5,v6,v5 
+  plain,left=1 v7,v8,v7 
+  decor.size=0, label=, l.dist=1mm, l.angle=-135 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=135 v2 
+  decor.size=0, label=, l.dist=1mm, l.angle=45 v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=-45 v4 
+  v5,v6,v7 
+       
+
+  )   .
+
+As expected, the diagrams () and () for the connected two-point function 
+coincide with the ones from Section which are shown in Table . Furthermore, the diagrams (), () and (), (), () 
+for the self-energy and
+the one-particle irreducible four-point function are listed in Table  and  which show all one-particle
+irreducible diagrams up to the order  irrespective of their spatial indices (compare the discussion 
+before Eq. ()). Note that
+these one-particle irreducible 
+Feynman diagrams have to be evaluated in order to determine the critical exponents of the -theory
+from renormalizing the field , the coupling constant  and the mass . 
+So far, the results are available up to six and partly to seven loops 
+in   and up
+to five loops in  dimensions  whithin the minimal subtraction scheme.
+
+One-Particle Irreducible Vacuum Diagrams IVVA 
+
+The vacuum diagrams of -theory are not only connected but also one-particle irreducible. In this section we elaborate
+how they can be generated from short-circuiting the external legs of 
+the diagrams of the self-energy and the one-particle irreducible four-point function, respectively.
+
+Relation to the Diagrams of the Self-Energy 
+
+At first, we consider the approach which is based on the self-energy. Combining the Dyson equation ()
+with the perturbative expansion of the connected two-point function
+() and the corresponding one for the self-energy
+
+_12  = _p=1 ^  _12 ^(p)   ,
+
+we obtain
+
+_12  ^(p) _12  G^-1 _12   =  
+_q=1 ^p  _12  ^(q) _12  ^(p-q) _12     .
+
+Thus our previous equation () for determining the contributions of the vacuum energy  from the connected
+two-point function is converted to 
+
+W^(p)   =  1 4p  _q=1 ^p _12  
+^(q) _12  ^(p-q) _12     .
+
+This result reads graphically
+
+
+
+  
+  * (8,6)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1h v3 
+  1/2w,0h v4 
+  1/2w,1/2h v5 
+  plain,left=0.4 v1,v3,v2,v4,v1 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v5 
+        
+
+ =  1 4 p  
+_q=1 ^p  
+
+  
+  * (9,8)
+    2/9w,7/8h v1 
+  7/9w,7/8h v2 
+  2/9w,1/8h v3 
+  7/9w,1/8h v4 
+  1/2w,7/8h v5 
+  1/2w,1/8h v6 
+  double,width=0.2mm,left=0.7 v2,v4 
+  double,width=0.2mm,right=0.7 v1,v3 
+  double,width=0.2mm,right=0.2 v3,v4 
+  double,width=0.2mm,left=1 v1,v2,v1 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v5 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=-90 v6 
+        
+
+ .
+SEV  
+ 
+We consider one example how the diagrams of the self-energy lead to the corresponding diagrams
+of the vacuum energy. For  Eq. () reduces to
+
+
+  
+  * (8,6)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1h v3 
+  1/2w,0h v4 
+  1/2w,1/2h v5 
+  plain,left=0.4 v1,v3,v2,v4,v1 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v5 
+        
+
+ =  1 12   
+
+  
+  * (9,8)
+    2/9w,7/8h v1 
+  7/9w,7/8h v2 
+  2/9w,1/8h v3 
+  7/9w,1/8h v4 
+  1/2w,7/8h v5 
+  1/2w,1/8h v6 
+  double,width=0.2mm,left=0.7 v2,v4 
+  double,width=0.2mm,right=0.7 v1,v3 
+  double,width=0.2mm,right=0.2 v3,v4 
+  double,width=0.2mm,left=1 v1,v2,v1 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v5 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=-90 v6 
+        
+
+ +  1 12  
+
+  
+  * (9,8)
+    2/9w,7/8h v1 
+  7/9w,7/8h v2 
+  2/9w,1/8h v3 
+  7/9w,1/8h v4 
+  1/2w,7/8h v5 
+  1/2w,1/8h v6 
+  double,width=0.2mm,left=0.7 v2,v4 
+  double,width=0.2mm,right=0.7 v1,v3 
+  double,width=0.2mm,right=0.2 v3,v4 
+  double,width=0.2mm,left=1 v1,v2,v1 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v5 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=-90 v6 
+        
+
+ +  1 12   
+
+  
+  * (9,8)
+    2/9w,7/8h v1 
+  7/9w,7/8h v2 
+  2/9w,1/8h v3 
+  7/9w,1/8h v4 
+  1/2w,7/8h v5 
+  1/2w,1/8h v6 
+  double,width=0.2mm,left=0.7 v2,v4 
+  double,width=0.2mm,right=0.7 v1,v3 
+  double,width=0.2mm,right=0.2 v3,v4 
+  double,width=0.2mm,left=1 v1,v2,v1 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v5 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=-90 v6 
+        
+
+ 
+
+with the respective terms
+
+  
+  * (9,8)
+    2/9w,7/8h v1 
+  7/9w,7/8h v2 
+  2/9w,1/8h v3 
+  7/9w,1/8h v4 
+  1/2w,7/8h v5 
+  1/2w,1/8h v6 
+  double,width=0.2mm,left=0.7 v2,v4 
+  double,width=0.2mm,right=0.7 v1,v3 
+  double,width=0.2mm,right=0.2 v3,v4 
+  double,width=0.2mm,left=1 v1,v2,v1 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v5 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=-90 v6 
+        
+
+&=&
+1 12  
+
+  
+   (8,11)
+    0w,3/11h v1 
+  1w,3/11h v2 
+  0.5w,7/11h v3 
+  0.5w,12/11h v4 
+  plain,left=1 v1,v2,v1 
+  plain,left=0.4 v1,v2,v1 
+  plain,left=1 v3,v4,v3 
+  v1,v2,v3 
+     
+
+ +  1 8  
+
+  
+   (20,3)
+    i1 
+  o1 
+  plain,left=1 i1,v1,i1 
+  plain,left=1 v1,v2,v1 
+  plain,left=1 v2,v3,v2 
+  plain,left=1 o1,v3,o1 
+  v1,v2,v3 
+    
+
+ +  1 8  
+
+
+ (13,9)
+1/2w,0h v1 
+1/2w,5/9h v2 
+1/2w,10/9h v3 
+4.3/13w,1.4/9h v4 
+8.7/13w,1.4/9h v5 
+0w,-1/9h v6 
+1w,-1/9h v7 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v4,v6,v4 
+plain,left=1 v5,v7,v5 
+v2,v4,v5 
+   
+
+ ,
+ 
+
+
+
+  * (9,8)
+    2/9w,7/8h v1 
+  7/9w,7/8h v2 
+  2/9w,1/8h v3 
+  7/9w,1/8h v4 
+  1/2w,7/8h v5 
+  1/2w,1/8h v6 
+  double,width=0.2mm,left=0.7 v2,v4 
+  double,width=0.2mm,right=0.7 v1,v3 
+  double,width=0.2mm,right=0.2 v3,v4 
+  double,width=0.2mm,left=1 v1,v2,v1 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v5 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=-90 v6 
+        
+
+&=&
+1 12  
+
+  
+   (8,11)
+    0w,3/11h v1 
+  1w,3/11h v2 
+  0.5w,7/11h v3 
+  0.5w,12/11h v4 
+  plain,left=1 v1,v2,v1 
+  plain,left=0.4 v1,v2,v1 
+  plain,left=1 v3,v4,v3 
+  v1,v2,v3 
+     
+
+ +  1 8  
+
+  
+   (20,3)
+    i1 
+  o1 
+  plain,left=1 i1,v1,i1 
+  plain,left=1 v1,v2,v1 
+  plain,left=1 v2,v3,v2 
+  plain,left=1 o1,v3,o1 
+  v1,v2,v3 
+    
+
+ , 
+
+
+
+
+  * (9,8)
+    2/9w,7/8h v1 
+  7/9w,7/8h v2 
+  2/9w,1/8h v3 
+  7/9w,1/8h v4 
+  1/2w,7/8h v5 
+  1/2w,1/8h v6 
+  double,width=0.2mm,left=0.7 v2,v4 
+  double,width=0.2mm,right=0.7 v1,v3 
+  double,width=0.2mm,right=0.2 v3,v4 
+  double,width=0.2mm,left=1 v1,v2,v1 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v5 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=-90 v6 
+        
+
+&=&
+1 4  
+
+  
+   (8,6)
+    0.5w,-1/6h v1 
+  0.5w,7/6h v2 
+  0.066987w,1/6h v3 
+  0.93301w,1/6h v4 
+  plain,left=1 v1,v2,v1 
+  plain v2,v3 
+  plain v3,v4 
+  plain v2,v4 
+  v2,v3,v4 
+    
+
+ +  1 3  
+
+  
+   (8,11)
+    0w,3/11h v1 
+  1w,3/11h v2 
+  0.5w,7/11h v3 
+  0.5w,12/11h v4 
+  plain,left=1 v1,v2,v1 
+  plain,left=0.4 v1,v2,v1 
+  plain,left=1 v3,v4,v3 
+  v1,v2,v3 
+     
+
+ +  1 8  
+
+  
+   (20,3)
+    i1 
+  o1 
+  plain,left=1 i1,v1,i1 
+  plain,left=1 v1,v2,v1 
+  plain,left=1 v2,v3,v2 
+  plain,left=1 o1,v3,o1 
+  v1,v2,v3 
+    
+
+ +  1 8  
+
+  
+   (13,9)
+    1/2w,0h v1 
+  1/2w,5/9h v2 
+  1/2w,10/9h v3 
+  4.3/13w,1.4/9h v4 
+  8.7/13w,1.4/9h v5 
+  0w,-1/9h v6 
+  1w,-1/9h v7 
+  plain,left=1 v1,v2,v1 
+  plain,left=1 v2,v3,v2 
+  plain,left=1 v4,v6,v4 
+  plain,left=1 v5,v7,v5 
+  v2,v4,v5 
+     
+
+ .
+ 
+ 
+Thus we reobtain the connected vacuum diagrams () shown in Tab.  for .
+
+Relation to the Diagrams of the One-Particle Irreducible Four-Point Function 
+
+For the sake of completeness we also mention that the vacuum diagrams can be generated from closing the diagrams of the
+one-particle irreducible four-point function. To this end we insert in the equation ()
+determining the contributions of the vacuum energy the recursion relation () for the self-energy and yield
+
+
+
+
+  
+  * (9,6.8)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1h v3 
+  1/2w,0h v4 
+  1/2w,1/2h v5 
+  plain,left=0.4 v1,v3,v2,v4,v1 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v5 
+        
+
+ =  1 8(p+1)  
+_q=0 ^p  
+
+  
+  * (10,5)
+    0w,1/2h v1 
+  1/2w,1/2h v2 
+  1w,1/2h v3 
+  double,width=0.2mm,left=1 v1,v2,v1 
+  double,width=0.2mm,left=1 v3,v2,v3 
+  decor.size=0, label=, l.dist=1mm, l.angle=180 v1 
+  decor.size=0, label=, l.dist=1mm, l.angle=0 v3 
+  v2 
+        
+
+ +  1 24(p+1)  
+_q=1 ^p  _r=1 ^q  _s=1 ^r  _t=1 ^s  
+
+  
+  * (16,10)
+    -1/16w,5/10h v1 
+  13.5/16w,7.5/10h v3 
+  13.5/16w,2.5/10h v4 
+  11.5/16w,6.3/10h v5 
+  11.5/16w,3.7/10h v6 
+  13.5/16w,0.5h v8 
+  7/16w,12/10h v10 
+  7/16w,8/10h v11 
+  7/16w,2/10h v12 
+  7/16w,-2/10h v13 
+  double,width=0.2mm,left=0.8 v1,v3 
+  double,width=0.2mm,left=0.28 v1,v5 
+  double,width=0.2mm,right=0.8 v1,v4 
+  double,width=0.2mm,right=0.28 v1,v6 
+  double,width=0.2mm,width=0.2mm,left=1 v3,v4,v3 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v8 
+  decor.size=0, label=, l.dist=1.3mm, l.angle=90 v10 
+  decor.size=0, label=, l.dist=0.5mm, l.angle=90 v11 
+  decor.size=0, label=, l.dist=0.3mm, l.angle=-90 v12 
+  decor.size=0, label=, l.dist=1mm, l.angle=-90 v13 
+  v1 
+      
+
+ .
+ 
+  
+Note that this equation follows also directly from the previous recursion relation () by taking into account
+the identity () and the perturbative expansions (), ().
+
+
+Summary and Outlook 
+
+In this paper we have derived a closed set of Schwinger-Dyson equations in the 
+disordered, symmetric phase of the -theory. In particular, we supplemented the well-known integral equations
+() and () for the connected two-point function and the self-energy by the new 
+functional integrodifferential equations () and ()
+for the connected and one-particle irreducible four-point function. 
+Their conversion to graphical recursion relations has allowed us to
+systematically generate the corresponding connected and one-particle irreducible Feynman diagrams. Furthermore,
+we have discussed how the short-circuiting of their external legs 
+leads to the associated connected vacuum diagrams. In the subsequent paper new 
+we shall elaborate how tadpoles and, more generally, corrections to the connected two-point function as well as the vertex
+can be successively eliminated by introducing higher Legendre transformations Kleinert1,Kleinert2,Vasiliev . 
+This will lead to graphical recursion
+relations for the skeleton Feynman diagrams in -theory.
+
+
+
+The recursive graphical solution of our closed set of Schwinger-Dyson equations in -theory is straightforward and
+has been carried out in this paper up to the forth perturbative order by hand. Our iterative
+procedure can easily be automatized by computer algebra. In Ref. SYM  it was demonstrated that the basic graphical
+operations as amputating a line or gluing two lines together can be formulated with the help of a unique matrix notation for
+Feynman diagrams. It would be interesting to compare the efficiency of our Schwinger-Dyson approach of generating Feynman
+diagrams of -point functions together with their weights with already existing computer programs such as 
+FEYNARTS FeynArts1,FeynArts2,FeynArts3  and QGRAF QGRAF1,QGRAF2 . 
+Some of them are based on a combinatorial enumeration of all possible ways of
+connecting vertices by lines according to Feynman's rules. Others use a systematic generation of homeomorphically
+irreducible star graphs. The latter approach is quite efficient and popular 
+at higher orders. It has, however,  the conceptual disadvantage that it renders at an intermediate stage 
+numerous superfluous diagrams with different vertex degrees which have to be discarded at the end.
+Further promising methods have been proposed in Refs. VERSCHELDE,Schroeder . Whereas the first one is based on a
+bootstrap equation that uses only the free field value of the energy as an input, the second one
+combines Schwinger-Dyson equations with the two-particle irreducible ("skeleton") expansion.
+
+
+We believe that our closed set of Schwinger-Dyson equations for the connected and one-particle irreducible two- and four-point
+function will turn out to be useful for developing nonperturbative approximations. 
+This may proceed, for instance, as in Ref. Bray  which
+proposes a self-consistent solution of the Dyson equation in -theory
+by using a scaling ansatz for the connected two-point function near the phase transition. A similar consideration
+in Ginzburg-Landau theory has allowed Ref. Radzikovsky  to analyze the influence of the thermal fluctuations of the 
+order parameter and the vector potential on the superconducting phase transition. A self-consistent solution of our
+closed Schwinger-Dyson equation may be found via a phenomenological ansatz for the connected and one-particle
+irreducible two- and four-point function, respectively. Within such an ansatz
+one has to find how the functional derivative with respect to the free correlation function is approximated,
+as this operation is crucial in the new Schwinger-Dyson equations () and ().
+
+Acknowledgement 
+
+We thank Hagen Kleinert for stimulating discussions and for reading the manuscript.
+
+ 199 
+
+ 
+J.D. Bjorken and S.D. Drell, 
+Vol. I Relativistic Quantum Mechanics , 
+Vol. II Relativistic Quantum Fields  
+(McGraw-Hill, New York, 1965).
+
+ 
+D.J. Amit, 
+Field Theory, the Renormalization Group and Critical Phenomena  
+(McGraw-Hill, New York, 1978).
+
+ 
+M. Le Bellac, 
+Quantum and Statistical Field Theory 
+(Oxford Science Publications, Oxford, 1991).
+
+ 
+C. Itzykson and J.-B. Zuber, 
+Quantum Field Theory 
+(McGraw-Hill, New York, 1985).
+
+ 
+J. Zinn-Justin, 
+Quantum Field Theory and Critical Phenomena , Third Edition
+(Oxford University Press, Oxford, 1996).
+
+ 
+M.E. Peskin and D.V. Schroeder, 
+Introduction to Quantum Field Theory  
+(Addison-Wesley, Reading, 1995). 
+
+L.P. Kadanoff and G. Baym, 
+Quantum Statistical Mechanics  
+(Benjamin, Menlo Park, 1962).
+
+A. Pelster, H. Kleinert, and M. Bachmann,
+Ann. of Phys. (N.Y.)  297 , 363 (2002).
+
+M. Bachmann, H. Kleinert, and A. Pelster, 
+Phys. Rev. D 61 , 085017 (2000).
+
+H. Kleinert, A. Pelster, B. Kastening, and M. Bachmann,
+Phys. Rev. E 62 , 1537 (2000).
+
+B. Kastening, 
+Phys. Rev. E 61 , 3501 (2000).
+
+A. Pelster and H. Kleinert, 
+Physica A  (in press); e-print: hep-th/0006153 .
+
+H. Kleinert, A. Pelster, and B. Van den Bossche, 
+Physica A 312 , 141 (2002).
+
+A. Pelster and K. Glaum, 
+Phys. Stat. Sol. B  (in press), eprint: cond-mat/0211361 .
+
+A. Pelster and K. Glaum, Recursive Graphical Construction of
+Tadpole-Free Feynman Diagrams and Their Weights in -Theory ;
+in W. Janke, A. Pelster, H.-J. Schmidt, and M. Bachmann (Editors):
+Fluctuating Paths and Fields - Dedicated to Hagen Kleinert
+on the Occasion of His 60th Birthday  (World Scientific, Singapore, 2001), p. 269;
+eprint: hep-th/0105193 .
+
+ 
+R.F. Streater and A.S. Wightman, 
+PCT, Spin and Statistics, and All That  
+(W.A. Benjamin, Reading, Massachusetts, 1964).
+
+ 
+J. Schwinger, Particles, Sources, and Fields ,
+Vols. I and II (Addison-Wesley, Reading, 1973).
+
+H. Kleinert and V. Schulte-Frohlinde, 
+Critical Properties of -Theories  
+(World Scientific, Singapore, 2001).
+
+K. Glaum, 
+MS Thesis (in German), FU-Berlin (2001).
+
+J. Neu, 
+MS Thesis (in German), FU-Berlin (1990).
+
+A. Pelster, K. Glaum, and H. Kleinert, 
+to be published.
+
+ 
+H. Kleinert, 
+Gauge Fields in Condensed Matter ,
+Vol. I, Superflow and Vortex Lines  
+(World Scientific, Singapore, 1989).
+
+B.G. Nickel, D.I. Meiron, and G.B. Baker Jr., 
+University of Guelph, preprint (1977), 
+http://www.physik.fu-berlin.de/ kleinert/kleinerreb8/programs/programs.html .
+
+S.A. Antonenko and A.I. Sokolov,
+Phys. Rev. E 51 , 1894 (1995).
+
+D.B. Murray and B.G. Nickel, 
+University of Guelph, preprint (1998).
+
+ 
+H. Kleinert, J. Neu, V. Schulte-Frohlinde, K.G. Chetyrkin, and S.A. Larin, 
+Phys. Lett. B 272 , 39 (1991); 319 , 545 (E) (1993).
+
+ 
+H. Kleinert, 
+Fortschr. Phys. 30 , 187 (1982).
+
+ 
+H. Kleinert, 
+Fortschr. Phys. 30 , 351 (1982).
+
+A.N. Vasiliev, 
+Functional Methods in Quantum Field Theory and Statistical Physics 
+(Gordon and Breach Science Publishers, New York, 1998); 
+translation from the Russian edition
+(St. Petersburg University Press, St. Petersburg, 1976).
+
+ 
+J. Kulbeck, M. Bohm, and A. Denner, 
+Comp. Phys. Comm. 60 , 165
+(1991).
+
+ 
+T. Hahn, 
+Comp. Phys. Comm. 140 , 418 (2001).
+
+ 
+http://www.feynarts.de . 
+
+P. Nogueira, 
+J. Comput. Phys. 105 , 279 (1993).
+
+ftp://gtae2.ist.utl.pt/pub/qgraf . 
+
+B.R. Heap, 
+J. Math. Phys. 7 , 1582 (1966).
+
+J.F. Nagle, 
+J. Math. Phys. 7 , 1588 (1966).
+
+S. Schelstraete and H. Verschelde, 
+Z. Phys. C 67 , 343 (1995). 
+
+K. Kajantie, M. Laine, and Y. Schroder, 
+Phys. Rev. D 65 , 045008 (2002).
+
+A.J. Bray, 
+Phys. Rev. Lett. 32 , 1413 (1974).
+
+L. Radzikovsky, 
+Europhys. Lett. 29 , 227 (1995).
+
+
+
+ tabelle1 
+
+
+
+ 
+ 
+
+  
+  * (7,3)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1/2h v3 
+  double,width=0.2mm v1,v2 
+  decor.size=0, label=, l.dist=1.5mm, l.angle=90 v3 
+        
+
+
+
+ &
+
+   
+
+ 
+ (7,3)
+0w,1/2h v1 
+1w,1/2h v2 
+plain v1,v2 
+   
+
+
+
+ &
+
+[-10pt]
+
+   
+
+ 
+ (10,5)
+0w,0h v1 
+0.5w,0h v3 
+1w,0h v2 
+0.5w,1h v4 
+plain v1,v2 
+plain,left=1 v3,v4,v3 
+v3 
+   
+
+
+
+ &
+
+[-10pt]
+
+   
+
+ 
+ (15,5)
+0w,0.5h v1 
+1/3w,0.5h v2 
+2/3w,0.5h v3 
+1w,0.5h v4 
+plain v1,v4 
+plain,left=1 v3,v2,v3 
+v2,v3 
+   
+
+
+
+   
+
+ 
+ (10,10)
+0w,0h v1 
+0.5w,0h v2 
+1w,0h v3 
+0.5w,0.5h v4 
+0.5w,1h v5 
+plain v1,v3 
+plain,left=1 v2,v4,v2 
+plain,left=1 v4,v5,v4 
+v2,v4 
+  
+
+ 
+
+   
+
+ 
+ (17,5)
+0w,0h i1 
+5/17w,0h v1 
+5/17w,1h v2 
+12/17w,0h v3 
+12/17w,1h v4 
+1w,0h o1 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+v1,v3 
+  
+
+
+
+ &  
+
+ &
+
+[-10pt]
+
+   
+
+ 
+ (17,8)
+0w,0.25h i1 
+1w,0.25h o1 
+0.5w,0h v1 
+0.5w,1h v2 
+5/17w,0.25h v3 
+12/17w,0.25h v4 
+plain,left=1 v1,v2,v1 
+plain i1,v3 
+plain o1,v4 
+plain v2,v3 
+plain v2,v4 
+v2,v3,v4 
+   
+
+
+
+   
+
+ 
+ (8,8)
+0w,0.5h v1 
+1w,0.5h v2 
+0.5w,0h v4 
+-1/8w,0h i1 
+9/8w,0h o1 
+plain,left=1 v1,v2,v1 
+plain,left=0.4 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain i1,o1 
+v1,v2,v3 
+   
+
+
+
+   
+
+ 
+ (15,10)
+0w,0.25h i1 
+1w,0.25h o1 
+1/3w,0.25h v1 
+2/3w,0.25h v2 
+0.5w,0.5h v3 
+0.5w,1h v4 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+v1,v2,v3 
+    
+
+
+
+   
+
+ 
+ (10,15)
+0w,0h i1 
+0.5w,0h v1 
+1w,0h o1 
+0.5w,1/3h v2 
+0.5w,2/3h v3 
+0.5w,1h v4 
+plain i1,v1 
+plain v1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v3,v4,v3 
+v1,v2,v3 
+   
+
+
+
+ & 
+
+
+
+   
+
+ 
+ (14,8)
+1/7w,0h i1 
+6/7w,0h o1 
+1/2w,0h v1 
+1/2w,5/8h v2 
+5/14w,4.25/8h v4 
+9/14w,4.25/8h v5 
+1.5/14w,7.75/8h v6 
+12.5/14w,7.75/8h v7 
+plain,left=1 v1,v2,v1 
+plain i1,o1 
+plain,left=1 v4,v6,v4 
+plain,left=1 v5,v7,v5 
+v1,v4,v5 
+  
+
+
+
+   
+
+ 
+ (24,5)
+0w,0h i1 
+5/24w,0h v1 
+5/24w,1h v2 
+1/2w,0h v3 
+1/2w,1h v4 
+19/24w,0h v5 
+19/24w,1h v6 
+1w,0h o1 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v5,v6,v5 
+v1,v3,v5 
+   
+
+
+
+   
+
+ 
+ (20,7.5)
+0w,1/3h i1 
+5/20w,1/3h v1 
+10/20w,1/3h v2 
+15/20w,1/3h v3 
+15/20w,1h v4 
+1w,1/3h o1 
+plain i1,o1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v1,v2,v1 
+v1,v2,v3 
+   
+
+
+
+   
+
+ 
+ (17,10)
+0w,0h i1 
+5/17w,0h v1 
+5/17w,0.5h v2 
+5/17w,1h v5 
+12/17w,0h v3 
+12/17w,0.5h v4 
+1w,0h o1 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v2,v5,v2 
+v1,v2,v3 
+   
+
+
+
+
+
+ &
+
+
+   
+
+ 
+ (16,9)
+0w,1/6h i1 
+5/16w,1/6h v1 
+5/16w,5/6h v2 
+11/16w,5/6h v3 
+11/16w,1/6h v4 
+1w,1/6h o1 
+plain,left=1 v1,v3,v1 
+plain v1,v2 
+plain v2,v3 
+plain v3,v4 
+plain i1,v1 
+plain v4,o1 
+v1,v2,v3,v4 
+   
+
+ 
+
+   
+
+ 
+ (19,9)
+0w,5/9h i1 
+1w,5/9h o1 
+5.1/19w,5/9h v1 
+13.9/19w,5/9h v2 
+1/2w,0h v3 
+1/2w,5/9h v4 
+1/2w,1h v5 
+plain i1,o1 
+plain,left=1 v5,v3,v5 
+plain,left=1 v3,v4,v3 
+v1,v2,v3,v4 
+ 
+
+
+
+   
+
+ 
+ (16,9)
+0w,4/5h i1 
+5/18w,4/5h v1 
+13/18w,4/5h v2 
+5/18w,1/5h v3 
+13/18w,1/5h v4 
+1w,1/5h o1 
+plain i1,v2 
+plain v3,o1 
+plain,left=1 v4,v1,v4 
+plain v2,v3 
+v1,v2,v3,v4 
+ 
+
+
+
+   
+
+ 
+ (15,12.5)
+1/3w,1/5h v1 
+2/3w,1/5h v2 
+1/3w,4/5h v3 
+2/3w,4/5h v4 
+0w,1/5h i1 
+1w,1/5h o1 
+plain i1,v1 
+plain v2,o1 
+plain,left=1 v1,v2,v1 
+plain v3,v4 
+plain,left=1 v3,v4,v3 
+plain,left=0.5 v1,v3 
+plain,right=0.5 v2,v4 
+v1,v2,v3,v4 
+  
+
+
+
+
+ 
+ &
+
+   
+
+ 
+ (8,8)
+-1/8w,0h i1 
+9/8w,0h o1 
+0.5w,0h v1 
+0.5w,1h v2 
+1/16w,2.7/8h v3 
+15/16w,2.7/8h v4 
+plain,left=1 v1,v2,v1 
+plain i1,v1 
+plain o1,v1 
+plain v2,v3 
+plain v2,v4 
+plain v3,v4 
+v1,v2,v3,v4 
+   
+
+
+
+   
+
+ 
+ (10,13)
+0.5w,0h v5 
+0w,0h i1 
+1w,0h o1 
+0.1w,9/13h v1 
+0.9w,9/13h v2 
+0.5w,5/13h v4 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=0.4 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v5,v4,v5 
+plain i1,o1 
+v1,v2,v3,v5 
+   
+
+
+
+   
+
+ 
+ (18,13)
+0w,4/13h i1 
+1w,4/13h o1 
+5/18w,4/13h v1 
+13/18w,4/13h v2 
+6.5/18w,7.5/13h v3 
+11.5/18w,7.5/13h v4 
+3/18w,11/13h v5 
+15/18w,11/13h v6 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v5,v3 
+plain,left=1 v4,v6,v4 
+v1,v2,v3,v4 
+    
+
+
+
+   
+
+ 
+ (15,15)
+0w,0.5h i1 
+1w,0.5h o1 
+1/3w,0.5h v1 
+2/3w,0.5h v2 
+0.5w,1h v4 
+0.5w,0h v5 
+0.5w,1/3h v6 
+0.5w,2/3h v7 
+plain,left=1 v5,v6,v5 
+plain,left=1 v7,v4,v7 
+plain,left=1 v1,v2,v1 
+plain i1,o1 
+v1,v2,v6,v7 
+    
+
+
+
+
+  &
+
+   
+
+ 
+ (17,13)
+0.5w,0h v1 
+0.5w,8/13h v2 
+5/17w,6/13h v3 
+12/17w,6/13h v4 
+0.5w,1h v5 
+0w,6/13h i1 
+1w,6/13h o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v5,v2 
+plain v1,v3 
+plain i1,v3 
+plain o1,v4 
+plain v1,v4 
+v1,v2,v3,v4 
+ 
+
+
+
+   
+
+ 
+ (17,8)
+0w,1/8h i1 
+5/17w,1/8h v1 
+12/17w,1/8h v2 
+1w,1/8h o1 
+1/2w,-1/8h v3 
+1/2w,7/8h v5 
+5.2/17w,5/8h v4 
+1.7/17w,8.5/8h v6 
+plain,left=1 v3,v5,v3 
+plain i1,v1 
+plain v2,o1 
+plain v1,v5 
+plain v5,v2 
+plain,left=1 v4,v6,v4 
+v1,v2,v5,v4 
+ 
+
+
+
+   
+
+ 
+ (10,13)
+0w,0h i1 
+1w,0h o1 
+0.1w,4/13h v1 
+0.9w,4/13h v2 
+0.5w,8/13h v3 
+0.5w,1h v4 
+0.5w,0h v5 
+0.5w,1h v6 
+plain i1,o1 
+plain,left=1 v3,v6,v3 
+plain,left=1 v1,v2,v1 
+plain,left=0.4 v1,v2,v1 
+v1,v2,v3,v5 
+    
+
+
+
+   
+
+ 
+ (18,13)
+5/18w,4/13h v1 
+13/18w,4/13h v2 
+6.5/18w,7.5/13h v3 
+11.5/18w,7.5/13h v4 
+3/18w,11/13h v5 
+16.5/18w,7.5/13h i1 
+11.5/18w,12.5/13h o1 
+plain,left=0.4 v1,v2,v1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v5,v3 
+plain v4,i1 
+plain v4,o1 
+v1,v2,v3,v4 
+    
+
+
+
+
+ & 
+
+[-10pt]
+
+   
+
+ 
+ (15,15)
+0w,1/6h i1 
+1w,1/6h o1 
+1/3w,1/6h v1 
+2/3w,1/6h v2 
+1/2w,1/3h v3 
+1/2w,2/3h v4 
+1/2w,1h v5 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v4,v5,v4 
+v1,v2,v3,v4 
+   
+
+
+
+   
+
+ 
+ (15,20)
+1/6w,1/4h i1 
+5/6w,1/4h o1 
+1/2w,1/4h v1 
+1/2w,1/2h v8 
+1/2w,3/4h v2 
+1/2w,1h v3 
+0.355662432w,0.6975h v4 
+0.64433568w,0.6975h v5 
+plain,left=1 v8,v2,v8 
+plain i1,v1 
+plain v1,o1 
+plain reverse fullcircle scaled 0.33w shifted (0.225w,0.765h) 
+plain reverse fullcircle scaled 0.33w shifted (0.775w,0.765h) 
+plain,left=1 v1,v8,v1 
+v1,v4,v5,v8 
+   
+
+
+
+   
+
+
+ 
+ (14,11.5)
+3.75/14w,0h i1 
+1w,0h o1 
+8.75/14w,0h v1 
+8.75/14w,5/11.5h v2 
+3/4w,4.25/11.5h v3 
+1w,7.75/11.5h v4 
+1/2w,4.25/11.5h v5 
+1/4w,7.75/11.5h v6 
+0w,11.25/11.5h v7 
+plain,left=1 v1,v2,v1 
+plain i1,o1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v5,v6,v5 
+plain,left=1 v6,v7,v6 
+v1,v3,v5,v6 
+   
+
+
+
+   
+
+ 
+ (15,10)
+3.5/15w,-0.2h i1 
+11.5/15w,-0.2h o1 
+1/3w,1/4h v1 
+2/3w,1/4h v2 
+1/2w,0h v3 
+1/2w,1/2h v4 
+1/2w,1h v5 
+0w,1/4h v7 
+1w,1/4h v8 
+plain i1,v3 
+plain v3,o1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v4,v5,v4 
+plain,left=1 v1,v7,v1 
+plain,left=1 v2,v8,v2 
+v1,v2,v3,v4 
+   
+
+
+
+
+
+
+ 
+ 
+
+ 
+ (10,20)
+0w,0h i1 
+0.5w,0h v1 
+1w,0h o1 
+0.5w,1/4h v2 
+0.5w,1/2h v3 
+0.5w,3/4h v4 
+0.5w,1h v5 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v3,v4,v3 
+plain,left=1 v5,v4,v5 
+v1,v2,v3,v4 
+  
+
+
+
+   
+
+ 
+ (23,5)
+0w,0.5h i1 
+5/23w,0.5h v1 
+10/23w,0.5h v2 
+13/23w,0.5h v3 
+18/23w,0.5h v4 
+1w,0.5h o1 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+v1,v2,v3,v4 
+  
+
+
+
+   
+
+ 
+ (20,10)
+0w,0.25h i1 
+1w,0.25h o1 
+1/4w,0.25h v1 
+1/2w,0.25h v2 
+3/8w,0.5h v3 
+3/8w,1h v4 
+3/4w,0.25h v5 
+3/4w,0.75h v6 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v5,v6,v5 
+v1,v2,v3,v5 
+   
+
+
+
+   
+
+ 
+ (23,5)
+0w,0.5h i1 
+5/23w,0.5h v1 
+9/23w,0.5h v2 
+14/23w,0.5h v3 
+18/23w,0.5h v4 
+5/23w,1.5h v5 
+18/23w,1.5h v6 
+1w,0.5h o1 
+plain i1,o1 
+plain,left=1 v1,v5,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v4,v6,v4 
+v1,v2,v3,v4 
+  
+
+
+
+  
+ &
+
+
+   
+
+ 
+ (19,8)
+5/19w,0h v5 
+5/19w,5/8h v6 
+10/19w,0.5h v1 
+18/19w,0.5h v2 
+14/19w,0h v4 
+0w,0h i1 
+1w,0h o1 
+plain,left=1 v1,v2,v1 
+plain,left=0.4 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v5,v6,v5 
+plain i1,o1 
+v1,v2,v3,v5 
+   
+
+
+
+   
+
+ 
+ (19,12.5)
+0w,1/5h i1 
+5/19w,1/5h v1 
+10/19w,1/5h v2 
+14/19w,1/5h v3 
+14/19w,3/5h v4 
+14/19w,1h v5 
+1w,1/5h o1 
+plain i1,o1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v1,v2,v1 
+plain,left=1 v4,v5,v4 
+v1,v2,v3,v4 
+  
+
+
+
+   
+
+ 
+ (18,10)
+0w,0h i1 
+5/18w,0h v1 
+5/18w,0.5h v2 
+5/18w,1h v5 
+13/18w,0h v3 
+13/18w,0.5h v4 
+13/18w,1h v6 
+1w,0h o1 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v2,v5,v2 
+plain,left=1 v4,v6,v4 
+v1,v2,v3,v4 
+  
+
+
+
+   
+
+ 
+ (18,15)
+0w,0h i1 
+5/18w,0h v1 
+1w,0h o1 
+5/18w,1/3h v2 
+5/18w,2/3h v3 
+5/18w,1h v4 
+13/18w,0h v5 
+13/18w,1/3h v6 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v3,v4,v3 
+plain,left=1 v5,v6,v5 
+v1,v2,v3,v5 
+  
+
+
+
+  &
+
+   
+
+ 
+ (20,8)
+0w,0h i1 
+1w,0h o1 
+3/4w,0h v8 
+3/4w,5/8h v9 
+1/4w,0h v1 
+1/4w,5/8h v2 
+3/20w,1/2h v3 
+-0.5/20w,7.5/8h v4 
+7/20w,1/2h v5 
+10.5/20w,7.5/8h v6 
+plain,left=1 v1,v2,v1 
+plain,left=1 v8,v9,v8 
+plain i1,o1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v5,v6,v5 
+v1,v3,v5,v8 
+   
+
+
+
+   
+
+ 
+ (26,5)
+0w,0.5h i1 
+5/26w,0.5h v1 
+10/26w,0.5h v2 
+14/26w,0.5h v3 
+14/26w,1.5h v4 
+21/26w,0.5h v5 
+21/26w,1.5h v6 
+1w,0.5h o1 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v5,v6,v5 
+v1,v2,v3,v5 
+   
+
+
+
+   
+
+ 
+ (22,8)
+0w,0.25h i1 
+5/22w,0.25h v1 
+5/22w,7/8h v5 
+1w,0.25h o1 
+10/22w,0.25h v2 
+13.5/22w,0h v3 
+13.5/22w,1h v4 
+17/22w,0.25h v6 
+plain,left=1 v3,v4,v3 
+plain,left=1 v1,v5,v1 
+plain i1,v2 
+plain v2,v4 
+plain v4,v6 
+plain v6,o1 
+v1,v2,v4,v6 
+   
+
+
+
+
+  &
+
+   
+
+ 
+ (24,10)
+0w,0h i1 
+5/24w,0h v1 
+5/24w,1/2h v2 
+1/2w,0h v3 
+1/2w,1/2h v4 
+1/2w,1h v7 
+19/24w,0h v5 
+19/24w,1/2h v6 
+1w,0h o1 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v5,v6,v5 
+plain,left=1 v4,v7,v4 
+v1,v3,v5,v4 
+   
+
+
+
+   
+
+ 
+ (24,10)
+0w,0h i1 
+5/24w,0h v1 
+5/24w,0.5h v2 
+5/24w,1h v5 
+1/2w,0h v3 
+1/2w,0.5h v4 
+19/24w,0h v7 
+19/24w,0.5h v8 
+1w,0h o1 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v2,v5,v2 
+plain,left=1 v7,v8,v7 
+v1,v2,v3,v7 
+   
+
+
+
+   
+
+ 
+ (31,5)
+0w,0h i1 
+5/31w,0h v1 
+5/31w,1h v2 
+12/31w,0h v3 
+12/31w,1h v4 
+19/31w,0h v5 
+19/31w,1h v6 
+26/31w,0h v7 
+26/31w,1h v8 
+1w,0h o1 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v5,v6,v5 
+plain,left=1 v7,v8,v7 
+v1,v3,v5,v7 
+   
+
+
+
+
+
+
+tab1  Diagrams of the connected two-point function and their 
+weights of the -theory up to four loops characterized by the vector ).
+Its components  specify the number of self-, double,
+triple connections,  stands for the number of vertex permutations leaving the diagram unchanged, and  denotes the symmetry
+degree. 
+
+
+
+
+
+
+
+
+ 
+ 
+
+  
+  * (10.5,10.5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  3.5/10.5w,3.5/10.5h v5 
+  3.5/10.5w,7/10.5h v6 
+  7/10.5w,7/10.5h v7 
+  7/10.5w,3.5/10.5h v8 
+  1/2w,1/2h v9 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  plain,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v9 
+      
+
+
+
+
+ &
+
+
+   
+
+ 
+ (7,7)
+0w,0h i1 
+0w,1h i2 
+1w,0h o1 
+1w,1h o2 
+0.5w,0.5h v1 
+plain i1,o2 
+plain i2,o1 
+v1 
+ 
+
+
+ 
+ &
+
+
+   
+
+ 
+ (12,7)
+0w,0h i1 
+0w,1h i2 
+1w,0h o1 
+1w,1h o2 
+3.5/12w,0.5h v1 
+8.5/12w,0.5h v2 
+plain i1,v1 
+plain v2,o1 
+plain i2,v1 
+plain v2,o2 
+plain,left=1 v1,v2,v1 
+v1,v2 
+ 
+
+
+   
+
+ 
+ (15,10)
+0w,1/2h i1 
+1/3w,1h i2 
+1/3w,0h i3 
+1w,1/2h o1 
+2/3w,1/2h v1 
+2/3w,1h v2 
+1/3w,1/2h v3 
+plain i1,o1 
+plain i2,v3 
+plain i3,v3 
+plain,left=1 v1,v2,v1 
+v1,v3 
+ 
+
+
+ 
+ & 
+
+ &
+
+[-10pt]
+
+   
+
+ 
+ (17,7)
+0w,0h i1 
+0w,1h i2 
+1w,0h o1 
+1w,1h o2 
+3.5/17w,0.5h v1 
+1/2w,0.5h v2 
+13.5/17w,0.5h v3 
+plain i1,v1 
+plain v3,o1 
+plain i2,v1 
+plain v3,o2 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+v1,v2,v3 
+  
+
+
+   
+
+ 
+ (15,8.5)
+0w,2.5/8.5h i1 
+1w,2.5/8.5h o1 
+1/3w,2.5/8.5h v1 
+2/3w,2.5/8.5h v2 
+1/2w,5/8.5h v3 
+11/15w,1h i2 
+4/15w,1h o2 
+plain i1,o1 
+plain i2,v3 
+plain o2,v3 
+plain,left=1 v1,v2,v1 
+v1,v2,v3 
+  
+
+
+
+
+   
+
+ 
+ (12,10)
+0w,-0.1h i1 
+0w,0.6h i2 
+1w,-0.1h o1 
+1w,0.6h o2 
+3.5/12w,1/4h v1 
+8.5/12w,1/4h v2 
+1/2w,1/2h v3 
+1/2w,1h v4 
+plain i1,v1 
+plain v2,o1 
+plain i2,v1 
+plain v2,o2 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+v1,v2,v3 
+  
+
+
+
+   
+
+ 
+ (18,10)
+0w,1/2h i1 
+5/18w,0h i2 
+5/18w,1h i3 
+1w,1/2h o1 
+5/18w,1/2h v1 
+8/18w,1/2h v2 
+13/18w,1/2h v3 
+plain i1,o1 
+plain i2,v1 
+plain i3,v1 
+plain,left=1 v2,v3,v2 
+v1,v3,v2 
+   
+
+
+   &
+
+   
+
+ 
+ (18,5)
+0w,0h i1 
+1w,0h o1 
+1.5/18w,8.5/5h i2 
+8.5/18w,8.5/5h o2 
+5/18w,0h v1 
+5/18w,1h v2 
+13/18w,0h v3 
+13/18w,1h v4 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain i1,o1 
+plain i2,v2 
+plain o2,v2 
+v1,v2,v3 
+  
+
+
+
+   
+
+ 
+ (20,10)
+0w,1/2h i1 
+1/2w,1h i2 
+1/2w,0h o1 
+1w,1/2h o2 
+1/4w,1/2h v1 
+1/4w,1h v2 
+3/4w,1/2h v3 
+3/4w,1h v4 
+1/2w,1/2h v5 
+plain i1,o2 
+plain i2,v5 
+plain o1,v5 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+v1,v3,v5 
+  
+
+
+   
+
+ 
+ (22,10)
+0w,1/2h i1 
+5/22w,1h i2 
+5/22w,0h i3 
+1w,1/2h o1 
+10/22w,1/2h v1 
+10/22w,1h v2 
+5/22w,1/2h v3 
+17/22w,1/2h v4 
+17/22w,1h v5 
+plain i1,o1 
+plain i2,v3 
+plain i3,v3 
+plain,left=1 v1,v2,v1 
+plain,left=1 v4,v5,v4 
+v1,v3,v4 
+  
+
+
+
+   
+
+ 
+ (15,15)
+0w,1/3h i1 
+1/3w,2/3h i2 
+1/3w,0h i3 
+1w,1/3h o1 
+2/3w,1/3h v1 
+2/3w,2/3h v2 
+1/3w,1/3h v3 
+2/3w,1h v4 
+plain i1,o1 
+plain i2,v3 
+plain i3,v3 
+plain,left=1 v1,v2,v1 
+plain,left=1 v4,v2,v4 
+v1,v2,v3 
+  
+
+ 
+ 
+
+ &
+
+
+   
+
+ 
+ (22,7)
+0w,0h i1 
+0w,1h i2 
+1w,0h o1 
+1w,1h o2 
+3.5/22w,0.5h v1 
+8.5/22w,0.5h v2 
+13.5/22w,0.5h v3 
+18.5/22w,0.5h v4 
+plain i1,v1 
+plain v4,o1 
+plain i2,v1 
+plain v4,o2 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v4,v3,v4 
+v1,v2,v3,v4 
+  
+
+
+   
+
+ 
+ (12.5,12.5)
+0w,0h i1 
+0w,1h i2 
+1w,1h o1 
+1w,0h o2 
+3.5/12.5w,3.5/12.5h v1 
+3.5/12.5w,9/12.5h v2 
+9/12.5w,9/12.5h v3 
+9/12.5w,3.5/12.5h v4 
+plain i1,o1 
+plain i2,o2 
+plain,left=1 v1,v3,v1 
+v1,v2,v3,v4 
+  
+
+
+
+   
+
+ 
+ (17,13)
+0.5w,0h v1 
+0.5w,8/13h v2 
+5/17w,6/13h v3 
+12/17w,6/13h v4 
+0w,6/13h i1 
+1w,6/13h i2 
+5.5/17w,11.5/13h o1 
+11.5/17w,11.5/13h o2 
+plain,left=1 v1,v2,v1 
+plain v2,o1 
+plain v2,o2 
+plain v1,v3 
+plain i1,v3 
+plain i2,v4 
+plain v1,v4 
+v1,v2,v3,v4 
+  
+
+
+
+   
+
+ 
+ (15,8)
+0w,0.5/8h i1 
+0w,7.5/8h i2 
+1w,0.5/8h o1 
+1w,7.5/8h o2 
+3.5/15w,1/2h v1 
+1/2w,0h v2 
+1/2w,1h v3 
+11.5/15w,1/2h v4 
+plain i1,v1 
+plain i2,v1 
+plain o1,v4 
+plain o2,v4 
+plain,left=1 v1,v4,v1 
+plain,left=0.4 v2,v3,v2 
+v1,v2,v3,v4 
+   
+
+
+  
+ &
+
+   
+
+ 
+ (12,13)
+0w,0h i1 
+0w,1h i2 
+1w,0h o1 
+1w,1h o2 
+3.5/12w,3.5/13h v1 
+3.5/12w,9.5/13h v2 
+8.5/12w,9.5/13h v3 
+8.5/12w,3.5/13h v4 
+plain i1,v1 
+plain i2,v2 
+plain o1,v4 
+plain o2,v3 
+plain,left=1 v1,v3,v1 
+plain,right=0.3 v1,v2 
+plain,right=0.3 v3,v4 
+v1,v2,v3,v4 
+  
+
+
+   
+
+ 
+ (16.5,11.5)
+11.5/16.5w,5.5/11.5h v1 
+3.5/16.5w,4/11.5h v2 
+5/16.5w,7.7/11.5h v3 
+6.5/16.5w,1/11.5h v4 
+1.5/16.5w,11/11.5h i1 
+1w,5.5/11.5h i2 
+0w,0.5/11.5h o1 
+0w,7.5/11.5h o2 
+plain,left=1 v1,v2,v1 
+plain v2,o1 
+plain v2,o2 
+plain i1,v3 
+plain i2,v1 
+plain v1,v4 
+plain v3,v4 
+v1,v2,v3,v4 
+ 
+
+ 
+
+   
+
+ 
+ (15,13.5)
+0w,2.5/13.5h i1 
+1w,2.5/13.5h o1 
+1/3w,2.5/13.5h v1 
+2/3w,2.5/13.5h v2 
+1/2w,5/13.5h v3 
+1/2w,10/13.5h v4 
+4/15w,1h i2 
+11/15w,1h o2 
+plain i1,o1 
+plain i2,v4 
+plain o2,v4 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+v1,v2,v3,v4 
+  
+
+
+   
+
+ 
+ (14,12)
+3/14w,4/12h v1 
+11/14w,4/12h v2 
+4.5/14w,7.5/12h v3 
+9.5/14w,7.5/12h v4 
+0w,7.5/12h i1 
+4.5/14w,1h i2 
+1w,7.5/12h o1 
+9.5/14w,1h o2 
+v1,v2 
+plain,left=1 v1,v2,v1 
+plain,left=0.4 v1,v2,v1 
+plain i1,v3 
+plain i2,v3 
+plain o1,v4 
+plain o2,v4 
+v1,v2,v3,v4 
+  
+
+
+  &
+
+ 
+
+   
+
+ 
+ (15,13.5)
+0w,7.5/13.5h i1 
+1w,7.5/13.5h o1 
+1/3w,7.5/13.5h v1 
+2/3w,7.5/13.5h v2 
+1/2w,10/13.5h v3 
+1/2w,5/13.5h v4 
+1/2w,0h v5 
+4/15w,1h i2 
+11/15w,1h o2 
+plain i1,o1 
+plain i2,v3 
+plain o2,v3 
+plain,left=1 v1,v2,v1 
+plain,left=1 v4,v5,v4 
+v1,v2,v3,v4 
+  
+
+
+
+   
+
+ 
+ (17,10)
+0w,-0.1h i1 
+0w,0.6h i2 
+1w,-0.1h o1 
+1w,0.6h o2 
+3.5/17w,1/4h v1 
+1/2w,1/4h v2 
+13.5/17w,1/4h v3 
+11/17w,1/2h v4 
+11/17w,1h v5 
+plain i1,v1 
+plain v3,o1 
+plain i2,v1 
+plain v3,o2 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v4,v5,v4 
+v1,v2,v3,v4 
+  
+
+
+   
+
+ 
+ (18,12)
+0w,1/3h i1 
+1w,1/3h o1 
+5/18w,1/3h v1 
+13/18w,1/3h v2 
+6.5/18w,7/12h v3 
+11.5/18w,7/12h v4 
+15/18w,10.5/12h v5 
+1.5/18w,7/12h i2 
+6.5/18w,1h o2 
+plain i1,o1 
+plain i2,v3 
+plain o2,v3 
+plain,left=1 v4,v5,v4 
+plain,left=1 v1,v2,v1 
+v1,v2,v3,v4 
+  
+
+
+   
+
+ 
+ (15,10.5)
+0w,0.5/10.5h i1 
+0w,7.5/10.5h i2 
+1w,0.5/10.5h o1 
+1w,7.5/10.5h o2 
+3.5/15w,4/10.5h v1 
+11.5/15w,4/10.5h v2 
+5.5/15w,7.5/10.5h v3 
+9.5/15w,7.5/10.5h v4 
+2/15w,11/10.5h v5 
+13/15w,11/10.5h v6 
+plain i1,v1 
+plain i2,v1 
+plain o1,v2 
+plain o2,v2 
+plain,left=1 v4,v6,v4 
+plain,left=1 v3,v5,v3 
+plain,left=1 v1,v2,v1 
+v1,v2,v3,v4 
+  
+
+
+
+ & 
+
+   
+
+ 
+ (12,15)
+0w,-1/15h i1 
+0w,6/15h i2 
+1w,-1/15h o1 
+1w,6/15h o2 
+3.5/12w,1/6h v1 
+8.5/12w,1/6h v2 
+1/2w,1/3h v3 
+1/2w,2/3h v4 
+1/2w,1h v5 
+plain i1,v1 
+plain v2,o1 
+plain i2,v1 
+plain v2,o2 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v5,v4,v5 
+v1,v2,v3,v4 
+   
+
+
+
+   
+
+ 
+ (12,15)
+0w,4/15h i1 
+0w,11/15h i2 
+1w,11/15h o1 
+1w,4/15h o2 
+1/2w,0h v1 
+1/2w,1/3h v2 
+1/2w,2/3h v3 
+1/2w,1h v4 
+3.5/12w,1/2h v5 
+8.5/12w,1/2h v6 
+plain i1,v5 
+plain v6,o1 
+plain i2,v5 
+plain v6,o2 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v3,v4,v3 
+v2,v3,v5,v6 
+   
+
+
+   
+
+ 
+ (22,8)
+0w,0.25h i1 
+5/22w,0.25h v1 
+5/22w,7/8h v5 
+5/22w,-3/8h v7 
+1w,0.25h o1 
+10/22w,0.25h v2 
+13.5/22w,0h v3 
+13.5/22w,1h v4 
+17/22w,0.25h v6 
+plain,left=1 v3,v4,v3 
+plain v1,v5 
+plain v1,v7 
+plain i1,v2 
+plain v2,v4 
+plain v4,v6 
+plain v6,o1 
+v1,v2,v4,v6 
+   
+
+
+
+   
+
+ 
+ (20,11)
+0w,2.5/11h i1 
+1w,2.5/11h o1 
+1/4w,2.5/11h v1 
+1/4w,7.5/11h v2 
+1.5/20w,1h i2 
+8.5/20w,1h o2 
+1/2w,2.5/11h v3 
+3/4w,2.5/11h v4 
+plain i1,o1 
+plain v2,i2 
+plain v2,o2 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+v1,v2,v3,v4 
+  
+
+
+
+
+
+ & 
+
+   
+
+ 
+ (20,7.5)
+0w,1/3h i1 
+1w,1/3h o1 
+1/4w,1/3h v1 
+1/2w,1/3h v2 
+3/8w,2/3h v3 
+3/4w,1/3h v4 
+3/4w,1h v5 
+1/5w,8.5/7.5h i2 
+11/20w,8.5/7.5h o2 
+plain i1,o1 
+plain i2,v3 
+plain o2,v3 
+plain,left=1 v1,v2,v1 
+plain,left=1 v4,v5,v4 
+v1,v2,v3,v4 
+   
+
+
+
+   
+
+ 
+ (17.5,10)
+0w,1/4h i1 
+15/17.5w,1/4h o1 
+5/17.5w,1/4h v1 
+10/17.5w,1/4h v2 
+7.5/17.5w,1/2h v3 
+12.5/17.5w,1/2h v5 
+12.5/17.5w,1h v6 
+2.5/17.5w,1/2h i2 
+1w,1/2h o2 
+plain i1,o1 
+plain i2,o2 
+plain,left=1 v1,v2,v1 
+plain,left=1 v5,v6,v5 
+v1,v2,v3,v5 
+   
+
+
+
+   
+
+ 
+ (20,8)
+0w,0h i1 
+1w,0h o1 
+3/4w,0h v8 
+3/4w,5/8h v9 
+1/4w,0h v1 
+1/4w,5/8h v2 
+3/20w,1/2h v3 
+-2/20w,1/2h v4 
+3/20w,9/8h v7 
+7/20w,1/2h v5 
+10.5/20w,7.5/8h v6 
+plain,left=1 v1,v2,v1 
+plain,left=1 v8,v9,v8 
+plain i1,o1 
+plain v3,v4 
+plain v3,v7 
+plain,left=1 v5,v6,v5 
+v1,v3,v5,v8 
+   
+
+
+
+   
+
+ 
+ (17,13.5)
+0w,0h i1 
+1w,0h o1 
+1.5/17w,1h i2 
+1/2w,1h o2 
+5/17w,0h v1 
+5/17w,5/13.5h v2 
+12/17w,0h v3 
+12/17w,5/13.5h v4 
+5/17w,10/13.5h v5 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v2,v5,v2 
+plain i1,o1 
+plain i2,v5 
+plain o2,v5 
+v1,v2,v3,v5 
+   
+
+
+
+
+ 
+ 
+ 
+
+ 
+ (18,10)
+0w,0h i1 
+1w,0h o1 
+1.5/18w,8.5/10h i2 
+8.5/18w,8.5/10h o2 
+5/18w,0h v1 
+5/18w,1/2h v2 
+13/18w,0h v3 
+13/18w,1/2h v4 
+13/18w,1h v5 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v4,v5,v4 
+plain i1,o1 
+plain i2,v2 
+plain o2,v2 
+v1,v2,v3,v4 
+  
+
+
+
+   
+
+ 
+ (24,8.5)
+0w,0h i1 
+1w,0h o1 
+1.5/24w,1h i2 
+8.5/24w,1h o2 
+5/24w,0h v1 
+5/24w,5/8.5h v2 
+1/2w,0h v3 
+1/2w,5/8.5h v4 
+19/24w,0h v5 
+19/24w,5/8.5h v6 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v5,v6,v5 
+plain i1,o1 
+plain i2,v2 
+plain o2,v2 
+v1,v2,v3,v5 
+  
+
+
+
+   
+
+ 
+ (24,8.5)
+0w,0h i1 
+5/24w,0h v1 
+5/24w,5/8.5h v2 
+1/2w,0h v3 
+1/2w,5/8.5h v4 
+19/24w,0h v5 
+19/24w,5/8.5h v6 
+1w,0h o1 
+8.5/24w,1h i2 
+15.5/24w,1h o2 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v5,v6,v5 
+plain i1,o1 
+plain i2,v4 
+plain o2,v4 
+v1,v3,v4,v5 
+  
+
+
+
+   
+
+
+
+ 
+ (18,12.5)
+0w,5/12.5h i1 
+5/18w,10/12.5h i2 
+5/18w,0h o1 
+1w,5/12.5h o2 
+8/18w,5/12.5h v1 
+13/18w,5/12.5h v2 
+10.5/18w,3/5h v4 
+10.5/18w,1h v7 
+5/18w,5/12.5h v6 
+plain i1,o2 
+plain i2,o1 
+plain v2,o2 
+plain,left=1 v7,v4,v7 
+plain,left=1 v1,v2,v1 
+v1,v2,v4,v6 
+   
+
+
+
+ 
+ &
+
+
+   
+
+ 
+ (19,10.5)
+0w,1h i1 
+1w,1h o1 
+3.5/19w,0h i2 
+15.5/19w,0h o2 
+3.5/19w,2/3h v1 
+0w,1/3h v5 
+7/19w,1/3h v2 
+12/19w,1/3h v3 
+15.5/19w,2/3h v4 
+1w,1/3h v6 
+plain i1,v2 
+plain v3,o1 
+plain i2,v2 
+plain o2,v3 
+plain,left=1 v1,v5,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v4,v6,v4 
+v1,v3,v2,v4 
+   
+
+
+
+   
+
+ 
+ (19,13)
+0w,5/13h i1 
+1w,5/13h o1 
+14/19w,5/13h v8 
+14/19w,10/13h v9 
+14/19w,0h v10 
+5/19w,5/13h v1 
+5/19w,10/13h v2 
+3/19w,9/13h v3 
+-0.5/19w,12.5/13h v4 
+7/19w,9/13h v5 
+10.5/19w,12.5/13h v6 
+plain,left=1 v1,v2,v1 
+plain i1,o1 
+plain,left=1 v3,v4,v3 
+plain v9,v10  
+plain,left=1 v5,v6,v5 
+v1,v3,v5,v8 
+   
+
+
+   
+
+ 
+ (20,15)
+0w,2/3h i1 
+1/2w,1h i2 
+1w,2/3h o1 
+1/2w,0h o2 
+1/4w,2/3h v1 
+1/4w,1h v2 
+1/2w,2/3h v3 
+1/2w,1/3h v4 
+3/4w,1/3h v5 
+3/4w,2/3h v6 
+3/4w,1h v7 
+plain i1,o1 
+plain i2,o2 
+plain,left=1 v1,v2,v1 
+plain,left=1 v4,v5,v4 
+plain,left=1 v6,v7,v6 
+v1,v3,v4,v6 
+  
+
+
+
+   
+
+
+
+ 
+ (17,13)
+8/17w,9/13h v1 
+16/17w,9/13h v2 
+12/17w,5/13h v4 
+0w,5/13h i1 
+5/17w,10/13h i2 
+5/17w,0h o2 
+1w,5/13h o1 
+5/17w,5/13h v5 
+plain,left=1 v1,v2,v1 
+plain,left=0.4 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain i1,o1 
+plain i2,o2 
+v1,v2,v3,v5 
+   
+
+
+
+  &
+
+   
+
+ 
+ (23,10)
+0w,1/2h i1 
+5/23w,0h i2 
+5/23w,1h i3 
+1w,1/2h o1 
+5/23w,1/2h v1 
+8/23w,1/2h v2 
+13/23w,1/2h v3 
+18/23w,1/2h v4 
+18/23w,1h v5 
+plain i1,o1 
+plain i2,v1 
+plain i3,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v4,v5,v4 
+v1,v3,v2,v4 
+  
+
+
+
+   
+
+ 
+ (27,10)
+0w,1/2h i1 
+10/27w,1h i2 
+10/27w,0h o1 
+1w,1/2h o2 
+5/27w,1/2h v1 
+5/27w,1h v2 
+15/27w,1/2h v3 
+15/27w,1h v4 
+10/27w,1/2h v5 
+22/27w,1/2h v6 
+22/27w,1h v7 
+plain i1,o2 
+plain i2,v5 
+plain o1,v5 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v6,v7,v6 
+v1,v3,v5,v6 
+  
+
+
+
+   
+
+ 
+ (20,15)
+0w,1/3h i1 
+1/2w,2/3h i2 
+1/2w,0h o1 
+1w,1/3h o2 
+1/4w,1/3h v1 
+1/4w,2/3h v2 
+3/4w,1/3h v3 
+3/4w,2/3h v4 
+1/2w,1/3h v5 
+3/4w,1h v6 
+plain i1,o2 
+plain i2,v5 
+plain o1,v5 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v6,v4,v6 
+v1,v3,v5,v4 
+  
+
+
+ &
+
+   
+
+ 
+ (22,15)
+0w,1/3h i1 
+5/22w,2/3h i2 
+5/22w,0h i3 
+1w,1/3h o1 
+10/22w,1/3h v1 
+10/22w,2/3h v2 
+5/22w,1/3h v3 
+17/22w,1/3h v4 
+17/22w,2/3h v5 
+17/22w,1h v6 
+plain i1,o1 
+plain i2,v3 
+plain i3,v3 
+plain,left=1 v1,v2,v1 
+plain,left=1 v4,v5,v4 
+plain,left=1 v6,v5,v6 
+v1,v3,v4,v5 
+  
+
+
+
+   
+
+ 
+ (23,10)
+0w,1/2h i1 
+1w,1/2h o1 
+10/23w,1h i2 
+10/23w,0h o2 
+5/23w,1/2h v1 
+5/23w,1h v5 
+10/23w,1/2h v2 
+13/23w,1/2h v3 
+18/23w,1/2h v4 
+plain i1,o1 
+plain i2,o2 
+plain,left=1 v4,v3,v4 
+plain,left=1 v1,v5,v1 
+v1,v3,v2,v4 
+  
+
+
+
+   
+
+ 
+ (22,15)
+0w,1/3h i1 
+5/22w,2/3h i2 
+5/22w,0h i3 
+1w,1/3h o1 
+10/22w,1/3h v1 
+10/22w,2/3h v2 
+5/22w,1/3h v3 
+17/22w,1/3h v4 
+17/22w,2/3h v5 
+10/22w,1h v6 
+plain i1,o1 
+plain i2,v3 
+plain i3,v3 
+plain,left=1 v1,v2,v1 
+plain,left=1 v4,v5,v4 
+plain,left=1 v6,v2,v6 
+v1,v3,v4,v2 
+  
+
+
+ &
+
+   
+
+ 
+ (25,10)
+0w,1/2h i1 
+1/5w,0h i2 
+1/5w,1h i3 
+1w,1/2h o1 
+1/5w,1/2h v1 
+2/5w,1/2h v2 
+3/5w,1/2h v3 
+4/5w,1/2h v4 
+2/5w,1h v5 
+plain i1,o1 
+plain i2,v1 
+plain i3,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v2,v5,v2 
+v1,v3,v2,v4 
+   
+
+
+
+   
+
+ 
+ (29,10)
+0w,1/2h i1 
+5/29w,1h i2 
+5/29w,0h i3 
+1w,1/2h o1 
+10/29w,1/2h v1 
+10/29w,1h v2 
+5/29w,1/2h v3 
+17/29w,1/2h v4 
+17/29w,1h v5 
+24/29w,1/2h v6 
+24/29w,1h v7 
+plain i1,o1 
+plain i2,v3 
+plain i3,v3 
+plain,left=1 v1,v2,v1 
+plain,left=1 v4,v5,v4 
+plain,left=1 v6,v7,v6 
+v1,v3,v4,v6 
+  
+
+
+
+   
+
+ 
+ (15,20)
+0w,1/4h i1 
+1/3w,1/2h i2 
+1/3w,0h i3 
+1w,1/4h o1 
+2/3w,1/4h v1 
+2/3w,2/4h v2 
+1/3w,1/4h v3 
+2/3w,3/4h v4 
+2/3w,1h v5 
+plain i1,o1 
+plain i2,v3 
+plain i3,v3 
+plain,left=1 v1,v2,v1 
+plain,left=1 v4,v2,v4 
+plain,left=1 v4,v5,v4 
+v1,v2,v3,v4 
+  
+
+
+
+
+tab2  Diagrams of the connected four-point function and their weights of the -theory
+up to three loops characterized by the vector ).
+Its components  specify the number of self-, double,
+triple connections,  stands for the number of vertex permutations leaving the diagram unchanged, and  denotes the symmetry
+degree. 
+
+
+
+
+
+ 
+
+
+ 
+
+  
+  * (8,6)
+    0w,1/2h v1 
+  1w,1/2h v2 
+  1/2w,1h v3 
+  1/2w,0h v4 
+  1/2w,1/2h v5 
+  plain,left=0.4 v1,v3,v2,v4,v1 
+  decor.size=0, label=, l.dist=0mm, l.angle=0 v5 
+        
+
+
+
+ &
+
+[-10pt]
+
+   
+
+ 
+ (10,5)
+0w,1/2h v1 
+1/2w,1/2h v2 
+1w,1/2h v3 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v2,v3 
+v2 
+ 
+
+
+
+ &
+
+[-10pt]
+
+   
+
+ 
+ (7.5,5)
+0w,0.5h v1 
+1w,0.5h v2 
+plain,left=1 v1,v2,v1 
+plain,left=0.4 v1,v2,v1 
+v1,v2 
+  
+
+
+   
+
+ 
+ (15,5)
+i1 
+o1 
+plain,left=1 i1,v1,i1 
+plain,left=1 v1,v2,v1 
+plain,left=1 o1,v2,o1 
+v1,v2 
+ 
+
+
+
+ &
+
+   
+
+ 
+ (8,8)
+0.5w,0h v1 
+0.5w,1h v2 
+0.066987w,0.25h v3 
+0.93301w,0.25h v4 
+plain,left=1 v1,v2,v1 
+plain v2,v3 
+plain v3,v4 
+plain v2,v4 
+v2,v3,v4 
+  
+
+   
+
+ 
+ (7.5,12.5)
+0w,0.3h v1 
+1w,0.3h v2 
+0.5w,0.6h v3 
+0.5w,1h v4 
+plain,left=1 v1,v2,v1 
+plain,left=0.4 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+v1,v2,v3 
+  
+
+   
+
+ 
+ (15,15)
+1/2w,1/3h v1 
+1/2w,2/3h v2 
+1/2w,1h v3 
+0.355662432w,0.416666666h v4 
+0.64433568w,0.416666666h v5 
+0.067w,1/4h v6 
+0.933w,1/4h v7 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v4,v6,v4 
+plain,left=1 v5,v7,v5 
+v2,v4,v5 
+  
+
+   
+
+ 
+ (20,5)
+i1 
+o1 
+plain,left=1 i1,v1,i1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 o1,v3,o1 
+v1,v2,v3 
+ 
+
+
+
+
+
+& 
+
+&
+
+    
+
+ 
+* (10,10)
+0.1464466w,0.1464466h v1 
+0.1464466w,0.8535534h v2 
+0.8535534w,0.8535534h v3 
+0.8535534w,0.1464466h v4 
+1/2w,0h v5 
+1/2w,1h v6 
+plain,left=1 v5,v6,v5 
+plain v1,v2 
+plain v2,v3 
+plain v3,v4 
+plain v4,v1 
+v1,v2,v3,v4 
+  
+
+   
+
+ 
+* (10,10)
+0w,1/2h v1 
+1w,1/2h v2 
+1/2w,1/4h v3 
+1/2w,3/4h v4 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,right=0.5 v1,v2,v1 
+v1,v2,v3,v4 
+  
+
+   
+
+ 
+* (10,12.5)
+1/4w,1/5h v1 
+3/4w,1/5h v2 
+1/4w,4/5h v3 
+3/4w,4/5h v4 
+plain v1,v2 
+plain,left=1 v1,v2,v1 
+plain v3,v4 
+plain,left=1 v3,v4,v3 
+plain,left=0.5 v1,v3 
+plain,right=0.5 v2,v4 
+v1,v2,v3,v4 
+  
+
+   
+
+ 
+* (8,13)
+0.5w,0h v1 
+0.5w,8/13h v2 
+0.0669873w,0.46154h v3 
+0.933w,0.46154h v4 
+0.5w,1h v5 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v5,v2 
+plain v1,v3 
+plain v3,v4 
+plain v1,v4 
+v1,v2,v3,v4 
+ 
+
+
+
+   &  
+
+ 
+* (8,13)
+0w,0.3h v1 
+1w,0.3h v2 
+0.2w,0.55h v3 
+0.8w,0.55h v4 
+plain,left=1 v1,v2,v1 
+plain,left=0.4 v1,v2,v1 
+plain reverse fullcircle scaled 0.625w shifted (1w,0.7h) 
+plain reverse fullcircle scaled 0.625w shifted (0w,0.7h) 
+v1,v2,v3,v4 
+ 
+
+
+   
+
+ 
+* (7.5,17.5)
+0w,0.5h v1 
+1w,0.5h v2 
+0.5w,h v3 
+0.5w,1h v4 
+0.5w,0h v5 
+0.5w,0.2857h v6 
+0.5w,0.71429h v7 
+plain,left=1 v5,v6,v5 
+plain,left=1 v7,v4,v7 
+plain,left=1 v1,v2,v1 
+plain,left=0.4 v1,v2,v1 
+v1,v2,v6,v7 
+  
+
+   
+
+ 
+* (7.5,17.5)
+0w,0.21429h v1 
+1w,0.21429h v2 
+0.5w,0.42857h v3 
+0.5w,0.71429h v4 
+0.5w,1h v5 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v4,v5,v4 
+plain,left=0.4 v1,v2,v1 
+v1,v2,v3,v4 
+  
+
+   
+
+ 
+* (15,20)
+1/2w,1/4h v1 
+1/2w,1/2h v2 
+1/2w,3/4h v3 
+1/2w,1h v4 
+0.36w,0.3125h v5 
+0.64w,0.3125h v6 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v3,v4,v3 
+plain reverse fullcircle scaled 0.333333w shifted (0.21132w,0.25h) 
+plain reverse fullcircle scaled 0.333333w shifted (0.78868w,0.25h) 
+v2,v3,v5,v6 
+  
+
+
+
+
+& 
+   
+
+ 
+* (15,15)
+1/3w,1/2h v1 
+2/3w,1/2h v2 
+1/2w,1/3h v3 
+1/2w,2/3h v4 
+1/2w,1h v5 
+1/2w,0h v6 
+0w,0.5h v7 
+1w,0.5h v8 
+plain,left=1 v3,v4,v3 
+plain,left=1 v4,v5,v4 
+plain,left=1 v3,v6,v3 
+plain,left=1 v1,v7,v1 
+plain,left=1 v2,v8,v2 
+v1,v2,v3,v4 
+  
+
+
+   
+
+ 
+* (25,5)
+i1 
+o1 
+plain,left=1 i1,v1,i1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v3,v4,v3 
+plain,left=1 o1,v4,o1 
+v1,v2,v3,v4 
+  
+
+
+
+& 
+  
+
+
+tab3  Vacuum diagrams and their 
+weights of the -theory
+up to five loops. Each diagram is characterized by the
+vector ) whose components specify the number of self-, double,
+triple and fourfold connections, and of the vertex permutations leaving the
+vacuum diagram unchanged, respectively. 
+
+
+
+  
+
+
+
+ tabelle2 
+
+
+
+ 
+ 
+
+  
+  * (11,5)
+    0w,1/2h v1 
+  3/11w,1/2h v2 
+  8/11w,1/2h v3 
+  1w,1/2h v4 
+  1/2w,1h v5 
+  1/2w,0h v6 
+  1/2w,1/2h v7 
+  plain v1,v2 
+  plain v3,v4 
+  double,width=0.2mm,left=1 v5,v6,v5 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v7 
+      
+
+
+
+ &
+
+[-10pt]
+
+   
+
+ 
+ (6,5)
+0w,0h v1 
+0.5w,0h v3 
+1w,0h v2 
+0.5w,1h v4 
+plain v1,v2 
+plain,left=1 v3,v4,v3 
+v3 
+   
+
+
+
+ &
+
+[-10pt]
+
+   
+
+ 
+ (10,5)
+0w,0.5h v1 
+1/4w,0.5h v2 
+3/4w,0.5h v3 
+1w,0.5h v4 
+plain v1,v4 
+plain,left=1 v3,v2,v3 
+v2,v3 
+   
+
+
+
+   
+
+ 
+ (5,10)
+0w,0h v1 
+0.5w,0h v2 
+1w,0h v3 
+0.5w,0.5h v4 
+0.5w,1h v5 
+plain v1,v3 
+plain,left=1 v2,v4,v2 
+plain,left=1 v4,v5,v4 
+v2,v4 
+  
+
+
+
+
+ &
+
+[-10pt]
+
+   
+
+ 
+ (13,8)
+0w,0.25h i1 
+1w,0.25h o1 
+0.5w,0h v1 
+0.5w,1h v2 
+3/13w,0.25h v3 
+10/13w,0.25h v4 
+plain,left=1 v1,v2,v1 
+plain i1,v3 
+plain o1,v4 
+plain v2,v3 
+plain v2,v4 
+v2,v3,v4 
+   
+
+
+
+   
+
+ 
+ (8,10)
+0w,0.6h v1 
+1w,0.6h v2 
+0.5w,0.2h v4 
+2/8w,0h i1 
+6/8w,0h o1 
+plain,left=1 v1,v2,v1 
+plain,left=0.4 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain i1,v4 
+plain o1,v4 
+v1,v2,v3 
+   
+
+
+
+   
+
+ 
+ (10,10)
+0w,0.25h i1 
+1w,0.25h o1 
+1/4w,0.25h v1 
+3/4w,0.25h v2 
+0.5w,0.5h v3 
+0.5w,1h v4 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+v1,v2,v3 
+    
+
+
+
+   
+
+ 
+ (6,15)
+0w,0h i1 
+0.5w,0h v1 
+1w,0h o1 
+0.5w,1/3h v2 
+0.5w,2/3h v3 
+0.5w,1h v4 
+plain i1,v1 
+plain v1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v3,v4,v3 
+v1,v2,v3 
+   
+
+ 
+
+   
+
+ 
+ (12,8)
+3/12w,0h i1 
+9/12w,0h o1 
+1/2w,0h v1 
+1/2w,5/8h v2 
+4/12w,4.25/8h v4 
+8/12w,4.25/8h v5 
+0.5/12w,7.75/8h v6 
+11.5/12w,7.75/8h v7 
+plain,left=1 v1,v2,v1 
+plain i1,o1 
+plain,left=1 v4,v6,v4 
+plain,left=1 v5,v7,v5 
+v1,v4,v5 
+  
+
+
+
+ 
+
+ &
+
+[-10pt]
+
+   
+
+ 
+ (12,9)
+0w,1/6h i1 
+3/12w,1/6h v1 
+3/12w,5/6h v2 
+9/12w,5/6h v3 
+9/12w,1/6h v4 
+1w,1/6h o1 
+plain,left=1 v1,v3,v1 
+plain v1,v2 
+plain v2,v3 
+plain v3,v4 
+plain i1,v1 
+plain v4,o1 
+v1,v2,v3,v4 
+   
+
+ 
+
+   
+
+ 
+ (14,9)
+0w,5/9h i1 
+1w,5/9h o1 
+2.6/14w,5/9h v1 
+11.4/14w,5/9h v2 
+1/2w,0h v3 
+1/2w,5/9h v4 
+1/2w,1h v5 
+plain i1,o1 
+plain,left=1 v5,v3,v5 
+plain,left=1 v3,v4,v3 
+v1,v2,v3,v4 
+ 
+
+
+
+   
+
+ 
+ (12,9)
+0w,4/5h i1 
+3/12w,4/5h v1 
+9/12w,4/5h v2 
+3/12w,1/5h v3 
+9/12w,1/5h v4 
+1w,1/5h o1 
+plain i1,v2 
+plain v3,o1 
+plain,left=1 v4,v1,v4 
+plain v2,v3 
+v1,v2,v3,v4 
+ 
+
+
+
+   
+
+ 
+ (10,12.5)
+1/4w,1/5h v1 
+3/4w,1/5h v2 
+1/4w,4/5h v3 
+3/4w,4/5h v4 
+0w,1/5h i1 
+1w,1/5h o1 
+plain i1,v1 
+plain v2,o1 
+plain,left=1 v1,v2,v1 
+plain v3,v4 
+plain,left=1 v3,v4,v3 
+plain,left=0.5 v1,v3 
+plain,right=0.5 v2,v4 
+v1,v2,v3,v4 
+  
+
+
+
+   
+
+ 
+ (8,10)
+2/8w,0h i1 
+6/8w,0h o1 
+0.5w,0.2h v1 
+0.5w,1h v2 
+1/16w,4.2/10h v3 
+15/16w,4.2/10h v4 
+plain,left=1 v1,v2,v1 
+plain i1,v1 
+plain o1,v1 
+plain v2,v3 
+plain v2,v4 
+plain v3,v4 
+v1,v2,v3,v4 
+   
+
+
+
+
+ 
+ &
+
+   
+
+ 
+ (8,13)
+0.5w,0h v5 
+1/8w,0h i1 
+7/8w,0h o1 
+0w,9/13h v1 
+1w,9/13h v2 
+0.5w,5/13h v4 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=0.4 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v5,v4,v5 
+plain i1,o1 
+v1,v2,v3,v5 
+   
+
+
+
+   
+
+ 
+ (14,13)
+0w,4/13h i1 
+1w,4/13h o1 
+3/14w,4/13h v1 
+11/14w,4/13h v2 
+4.6/14w,7.4/13h v3 
+9.4/14w,7.4/13h v4 
+1/14w,11/13h v5 
+13/14w,11/13h v6 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v5,v3 
+plain,left=1 v4,v6,v4 
+v1,v2,v3,v4 
+    
+
+
+
+   
+
+ 
+ (10,15)
+0w,0.5h i1 
+1w,0.5h o1 
+1/4w,0.5h v1 
+3/4w,0.5h v2 
+0.5w,1h v4 
+0.5w,0h v5 
+0.5w,1/3h v6 
+0.5w,2/3h v7 
+plain,left=1 v5,v6,v5 
+plain,left=1 v7,v4,v7 
+plain,left=1 v1,v2,v1 
+plain i1,o1 
+v1,v2,v6,v7 
+    
+
+
+
+   
+
+ 
+ (13,13)
+0.5w,0h v1 
+0.5w,8/13h v2 
+3/13w,6/13h v3 
+10/13w,6/13h v4 
+0.5w,1h v5 
+0w,6/13h i1 
+1w,6/13h o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v5,v2 
+plain v1,v3 
+plain i1,v3 
+plain o1,v4 
+plain v1,v4 
+v1,v2,v3,v4 
+ 
+
+
+
+  & 
+
+   
+
+ 
+ (15,10)
+2/15w,0.2h i1 
+5/15w,0.2h v1 
+12/15w,0.2h v2 
+1w,0.2h o1 
+8.5/15w,0h v3 
+8.5/15w,0.8h v5 
+5.2/17w,0.6h v4 
+1.7/17w,9.5/10h v6 
+plain,left=1 v3,v5,v3 
+plain i1,v1 
+plain v2,o1 
+plain v1,v5 
+plain v5,v2 
+plain,left=1 v4,v6,v4 
+v1,v2,v5,v4 
+ 
+
+
+
+   
+
+ 
+ (8,15)
+2/8w,0h i1 
+6/8w,0h o1 
+0w,6/15h v1 
+1w,6/15h v2 
+0.5w,10/15h v3 
+0.5w,1h v4 
+0.5w,2/15h v5 
+0.5w,1h v6 
+plain i1,v5 
+plain o1,v5 
+plain,left=1 v3,v6,v3 
+plain,left=1 v1,v2,v1 
+plain,left=0.4 v1,v2,v1 
+v1,v2,v3,v5 
+    
+
+
+
+   
+
+ 
+ (12,11)
+3/12w,4/11h v1 
+11/12w,4/11h v2 
+4.5/12w,7.5/11h v3 
+9.5/12w,7.5/11h v4 
+1/12w,11/11h v5 
+12.5/12w,7.5/11h i1 
+9.5/12w,10.5/11h o1 
+plain,left=0.4 v1,v2,v1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v5,v3 
+plain v4,i1 
+plain v4,o1 
+v1,v2,v3,v4 
+    
+
+
+
+   
+
+ 
+ (10,15)
+0w,1/6h i1 
+1w,1/6h o1 
+1/4w,1/6h v1 
+3/4w,1/6h v2 
+1/2w,1/3h v3 
+1/2w,2/3h v4 
+1/2w,1h v5 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v4,v5,v4 
+v1,v2,v3,v4 
+   
+
+
+  &
+
+   
+
+ 
+ (15,20)
+4.5/15w,1/4h i1 
+10.5/15w,1/4h o1 
+1/2w,1/4h v1 
+1/2w,1/2h v8 
+1/2w,3/4h v2 
+1/2w,1h v3 
+0.355662432w,0.6975h v4 
+0.64433568w,0.6975h v5 
+plain,left=1 v8,v2,v8 
+plain i1,v1 
+plain v1,o1 
+plain reverse fullcircle scaled 0.33w shifted (0.225w,0.765h) 
+plain reverse fullcircle scaled 0.33w shifted (0.775w,0.765h) 
+plain,left=1 v1,v8,v1 
+v1,v4,v5,v8 
+   
+
+
+
+   
+
+
+ 
+ (14,11.5)
+5.75/14w,0h i1 
+11.25/14w,0h o1 
+8.75/14w,0h v1 
+8.75/14w,5/11.5h v2 
+3/4w,4.25/11.5h v3 
+1w,7.75/11.5h v4 
+1/2w,4.25/11.5h v5 
+1/4w,7.75/11.5h v6 
+0w,11.25/11.5h v7 
+plain,left=1 v1,v2,v1 
+plain i1,o1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v5,v6,v5 
+plain,left=1 v6,v7,v6 
+v1,v3,v5,v6 
+   
+
+
+
+   
+
+ 
+ (15,12)
+5.5/15w,0h i1 
+9.5/15w,0h o1 
+1/3w,4.5/12h v1 
+2/3w,4.5/12h v2 
+1/2w,2/12h v3 
+1/2w,7/12h v4 
+1/2w,1h v5 
+0w,4.5/12h v7 
+1w,4.5/12h v8 
+plain i1,v3 
+plain v3,o1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v4,v5,v4 
+plain,left=1 v1,v7,v1 
+plain,left=1 v2,v8,v2 
+v1,v2,v3,v4 
+   
+
+
+
+   
+
+ 
+ (6,20)
+0w,0h i1 
+0.5w,0h v1 
+1w,0h o1 
+0.5w,1/4h v2 
+0.5w,1/2h v3 
+0.5w,3/4h v4 
+0.5w,1h v5 
+plain i1,o1 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v3,v4,v3 
+plain,left=1 v5,v4,v5 
+v1,v2,v3,v4 
+  
+
+
+
+
+ &
+
+
+
+tab4  One-particle irreducible iagrams of the self-energy and their 
+weights of the -theory
+up to four loops characterized by the vector ).
+Its components  specify the number of self-, double,
+triple connections,  stands for the number of vertex permutations leaving the diagram unchanged, and  denotes the symmetry
+degree. 
+
+
+
+
+
+
+
+ 
+ 
+
+  
+  * (7.5,7.5)
+    0w,0h v1 
+  0w,1h v2 
+  1w,1h v3 
+  1w,0h v4 
+  1/4w,1/4h v5 
+  1/4w,3/4h v6 
+  3/4w,3/4h v7 
+  3/4w,1/4h v8 
+  1/2w,1/2h v9 
+  plain v1,v5 
+  plain v2,v6 
+  plain v3,v7 
+  plain v4,v8 
+  double,width=0.2mm,left=1 v5,v7,v5 
+  decor.size=0, label=, l.dist=0mm, l.angle=90 v9 
+       
+
+
+
+
+ &
+
+
+   
+
+ 
+ (5,5)
+0w,0h i1 
+0w,1h i2 
+1w,0h o1 
+1w,1h o2 
+0.5w,0.5h v1 
+plain i1,o2 
+plain i2,o1 
+v1 
+ 
+
+
+ 
+ &
+
+
+   
+
+ 
+ (9,4)
+0w,0h i1 
+0w,1h i2 
+1w,0h o1 
+1w,1h o2 
+2/9w,0.5h v1 
+7/9w,0.5h v2 
+plain i1,v1 
+plain v2,o1 
+plain i2,v1 
+plain v2,o2 
+plain,left=1 v1,v2,v1 
+v1,v2 
+  
+
+
+ 
+ &
+
+[-10pt]
+
+   
+
+ 
+ (14,4)
+0w,0h i1 
+0w,1h i2 
+1w,0h o1 
+1w,1h o2 
+2/14w,0.5h v1 
+1/2w,0.5h v2 
+12/14w,0.5h v3 
+plain i1,v1 
+plain v3,o1 
+plain i2,v1 
+plain v3,o2 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+v1,v2,v3 
+  
+
+
+
+   
+
+ 
+ (10,7)
+0w,2.5/7h i1 
+1w,2.5/7h o1 
+1/4w,2.5/7h v1 
+3/4w,2.5/7h v2 
+1/2w,5/7h v3 
+0.3w,1h i2 
+0.7w,1h o2 
+plain i1,o1 
+plain i2,v3 
+plain o2,v3 
+plain,left=1 v1,v2,v1 
+v1,v2,v3 
+  
+
+
+
+   
+
+ 
+ (9,10)
+0w,0.05h i1 
+0w,0.45h i2 
+1w,0.05h o1 
+1w,0.45h o2 
+2/9w,1/4h v1 
+7/9w,1/4h v2 
+1/2w,1/2h v3 
+1/2w,1h v4 
+plain i1,v1 
+plain v2,o1 
+plain i2,v1 
+plain v2,o2 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+v1,v2,v3 
+  
+
+
+
+
+ &
+
+
+   
+
+ 
+ (19,4)
+0w,0h i1 
+0w,1h i2 
+1w,0h o1 
+1w,1h o2 
+2/19w,0.5h v1 
+7/19w,0.5h v2 
+12/19w,0.5h v3 
+17/19w,0.5h v4 
+plain i1,v1 
+plain v4,o1 
+plain i2,v1 
+plain v4,o2 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v4,v3,v4 
+v1,v2,v3,v4 
+  
+
+
+
+   
+
+ 
+ (9.5,9.5)
+0w,0h i1 
+0w,1h i2 
+1w,1h o1 
+1w,0h o2 
+2/9.5w,2/9.5h v1 
+2/9.5w,7.5/9.5h v2 
+7.5/9.5w,7.5/9.5h v3 
+7.5/9.5w,2/9.5h v4 
+plain i1,o1 
+plain i2,o2 
+plain,left=1 v1,v3,v1 
+v1,v2,v3,v4 
+  
+
+
+
+   
+
+ 
+ (13,10)
+0.5w,0h v1 
+0.5w,0.8h v2 
+3/13w,0.6h v3 
+10/13w,0.6h v4 
+0w,0.6h i1 
+1w,0.6h i2 
+4.5/13w,1h o1 
+8.5/13w,1h o2 
+plain,left=1 v1,v2,v1 
+plain v2,o1 
+plain v2,o2 
+plain v1,v3 
+plain i1,v3 
+plain i2,v4 
+plain v1,v4 
+v1,v2,v3,v4 
+  
+
+
+
+   
+
+ 
+ (12,8)
+0w,2/8h i1 
+0w,6/8h i2 
+1w,2/8h o1 
+1w,6/8h o2 
+2/12w,1/2h v1 
+1/2w,0h v2 
+1/2w,1h v3 
+10/12w,1/2h v4 
+plain i1,v1 
+plain i2,v1 
+plain o1,v4 
+plain o2,v4 
+plain,left=1 v1,v4,v1 
+plain,left=0.4 v2,v3,v2 
+v1,v2,v3,v4 
+   
+
+
+
+  
+ &
+
+   
+
+ 
+ (9,10)
+0w,0h i1 
+0w,1h i2 
+1w,0h o1 
+1w,1h o2 
+2/9w,0.2h v1 
+2/9w,0.8h v2 
+7/9w,0.8h v3 
+7/9w,0.2h v4 
+plain i1,v1 
+plain i2,v2 
+plain o1,v4 
+plain o2,v3 
+plain,left=1 v1,v3,v1 
+plain,right=0.3 v1,v2 
+plain,right=0.3 v3,v4 
+v1,v2,v3,v4 
+  
+
+
+
+   
+
+ 
+ (13,9.5)
+10/13w,4/9.5h v1 
+2/13w,4/9.5h v2 
+4/13w,7.5/9.5h v3 
+4/13w,0.5/9.5h v4 
+2/13w,1h i1 
+1w,4/9.5h i2 
+0w,2/9.5h o1 
+0w,6/9.5h o2 
+plain,left=1 v1,v2,v1 
+plain v2,o1 
+plain v2,o2 
+plain i1,v3 
+plain i2,v1 
+plain v1,v4 
+plain v3,v4 
+v1,v2,v3,v4 
+ 
+
+ 
+
+   
+
+ 
+ (10,12)
+0w,2.5/12h i1 
+1w,2.5/12h o1 
+1/4w,2.5/12h v1 
+3/4w,2.5/12h v2 
+1/2w,5/12h v3 
+1/2w,10/12h v4 
+0.3w,1h i2 
+0.7w,1h o2 
+plain i1,o1 
+plain i2,v4 
+plain o2,v4 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+v1,v2,v3,v4 
+  
+
+
+
+   
+
+ 
+ (11,10)
+1.5/11w,0.4h v1 
+9.5/11w,0.4h v2 
+3/11w,7.5/10h v3 
+8/11w,7.5/10h v4 
+0w,7.5/10h i1 
+3/11w,10.5/10h i2 
+1w,7.5/10h o1 
+8/11w,10.5/10h o2 
+v1,v2 
+plain,left=1 v1,v2,v1 
+plain,left=0.4 v1,v2,v1 
+plain i1,v3 
+plain i2,v3 
+plain o1,v4 
+plain o2,v4 
+v1,v2,v3,v4 
+  
+
+
+
+   
+
+ 
+ (10,12)
+0w,7.5/12h i1 
+1w,7.5/12h o1 
+1/4w,7.5/12h v1 
+3/4w,7.5/12h v2 
+1/2w,10/12h v3 
+1/2w,5/12h v4 
+1/2w,0h v5 
+0.3w,1h i2 
+0.7w,1h o2 
+plain i1,o1 
+plain i2,v3 
+plain o2,v3 
+plain,left=1 v1,v2,v1 
+plain,left=1 v4,v5,v4 
+v1,v2,v3,v4 
+  
+
+
+
+ &
+
+   
+
+ 
+ (14,10)
+0w,0.05h i1 
+0w,0.45h i2 
+1w,0.05h o1 
+1w,0.45h o2 
+2/14w,1/4h v1 
+1/2w,1/4h v2 
+12/14w,1/4h v3 
+9.5/14w,1/2h v4 
+9.5/14w,1h v5 
+plain i1,v1 
+plain v3,o1 
+plain i2,v1 
+plain v3,o2 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v4,v5,v4 
+v1,v2,v3,v4 
+  
+
+
+
+   
+
+ 
+ (13,10)
+0w,0.4h i1 
+1w,0.4h o1 
+2.5/13w,0.4h v1 
+10.5/13w,0.4h v2 
+4/13w,0.7h v3 
+9/13w,0.7h v4 
+12.5/13w,10.5/10h v5 
+1/13w,0.7h i2 
+4/13w,1h o2 
+plain i1,o1 
+plain i2,v3 
+plain o2,v3 
+plain,left=1 v4,v5,v4 
+plain,left=1 v1,v2,v1 
+v1,v2,v3,v4 
+  
+
+ 
+
+   
+
+ 
+ (12,10.5)
+0w,2/10.5h i1 
+0w,6/10.5h i2 
+1w,2/10.5h o1 
+1w,6/10.5h o2 
+2/12w,4/10.5h v1 
+10/12w,4/10.5h v2 
+4/12w,7.5/10.5h v3 
+8/12w,7.5/10.5h v4 
+0.5/12w,11/10.5h v5 
+11.5/12w,11/10.5h v6 
+plain i1,v1 
+plain i2,v1 
+plain o1,v2 
+plain o2,v2 
+plain,left=1 v4,v6,v4 
+plain,left=1 v3,v5,v3 
+plain,left=1 v1,v2,v1 
+v1,v2,v3,v4 
+  
+
+
+
+   
+
+ 
+ (9,15)
+0w,0.5/15h i1 
+0w,4.5/15h i2 
+1w,0.5/15h o1 
+1w,4.5/15h o2 
+2/9w,1/6h v1 
+7/9w,1/6h v2 
+1/2w,1/3h v3 
+1/2w,2/3h v4 
+1/2w,1h v5 
+plain i1,v1 
+plain v2,o1 
+plain i2,v1 
+plain v2,o2 
+plain,left=1 v1,v2,v1 
+plain,left=1 v3,v4,v3 
+plain,left=1 v5,v4,v5 
+v1,v2,v3,v4 
+   
+
+
+
+   
+
+ 
+ (9,15)
+0w,5.5/15h i1 
+0w,9.5/15h i2 
+1w,9.5/15h o1 
+1w,5.5/15h o2 
+1/2w,0h v1 
+1/2w,1/3h v2 
+1/2w,2/3h v3 
+1/2w,1h v4 
+2/9w,1/2h v5 
+7/9w,1/2h v6 
+plain i1,v5 
+plain v6,o1 
+plain i2,v5 
+plain v6,o2 
+plain,left=1 v1,v2,v1 
+plain,left=1 v2,v3,v2 
+plain,left=1 v3,v4,v3 
+v2,v3,v5,v6 
+   
+
+
+
+ 
+
+tab5  Diagrams of the one-particle four-point function
+and their weights of the -theory
+up to four loops characterized by the vector ).
+Its components  specify the number of self-, double,
+triple connections,  stands for the number of vertex permutations leaving the diagram unchanged, and  denotes the symmetry
+degree. 
+
+

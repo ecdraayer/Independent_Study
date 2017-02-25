@@ -1,0 +1,1788 @@
+
+22.5cm-0.4 in
+16.8cm0in0in
+1.0 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+plain 
+thm Theorem 
+lemma [thm]Lemma 
+prop [thm]Proposition 
+cor [thm]Corollary 
+conj [thm]Conjecture 
+ 
+defn [thm]Definition 
+remark [thm]Remark 
+rem [thm]Reminder 
+eg [thm]Example 
+ceg [thm]Counterexample 
+fact [thm]Fact 
+cordef [thm]Corollary/Definition  
+
+
+
+
+
+
+
+The geodesic approximation for lump dynamics
+and coercivity of the Hessian for harmonic maps 
+M. HaskinsE-mail: mhaskin@math.jhu.edu   
+
+Department of Mathematics, Johns Hopkins University
+
+Baltimore, MD 21218, U.S.A.
+ 
+
+J.M. SpeightE-mail: j.m.speight@leeds.ac.uk  
+
+Department of Pure Mathematics, University of Leeds
+
+Leeds LS2 9JT, England 
+
+
+
+ 
+ 
+The most fruitful approach to studying low energy soliton dynamics in field
+theories of Bogomol'nyi type is the geodesic approximation of Manton. In the
+case of vortices and monopoles, Stuart has obtained rigorous estimates
+of the errors in this approximation, and hence proved that it is valid in the
+low speed regime. His method employs energy estimates which rely on a key
+coercivity property of the Hessian of the energy functional of the theory
+under consideration. In this paper we prove an analogous coercivity property
+for the Hessian of the energy functional of a general sigma model with
+compact Kahler domain and target. We go on to prove a continuity property
+for
+our result, and show that, for the  model on , the Hessian
+fails to be globally coercive in the degree  sector. We present numerical
+evidence which suggests that the Hessian is globally coercive in a certain
+equivariance class of the degree  sector for . We also prove
+that, within the geodesic approximation, a single  lump moving on
+ does not generically travel on a great circle.
+
+
+
+Introduction 
+Many field theories arising naturally in theoretical high energy physics may
+be said to be of Bogomol'nyi type. For such theories there is a topological
+lower bound on the energy of field configurations, and this bound is attained
+only by solutions of a first order "self-duality" equation, the so-called
+solitons of the theory. The solitons are stable by virtue of their
+energy-minimizing property, and are generically spatially localized lumps of
+energy with strongly particle-like characteristics. When static they exert
+no net force on one another, so the structure of the space of static
+multisoliton solutions is rather rich. Examples within the context of gauge
+theory are given by the Yang-Mills-Higgs and abelian-Higgs models, whose
+solitons are called monopoles and vortices respectively. In both these cases,
+the static models are very well understood and the structure of ,
+the
+moduli space of static -soliton solutions, is known in great detail.
+For monopoles, in particular, the static system is integrable and there are
+several constructions which generate exact solutions of various degrees of
+explicitness. Once one introduces time dependence, however, things get much
+more difficult. No Bogomol'nyi type field theory (indeed, no Lorentz
+invariant
+field theory) in more than  dimensions is integrable, and the
+construction of nontrivial exact time-dependent solutions seems
+impossible.
+
+How then is one to understand the dynamics of moving solitons in
+these models?
+The most fruitful approach
+has turned out to be the geodesic approximation of Manton
+. Here one argues
+on physical grounds that the solution of
+any initial value problem in the -soliton
+sector whose initial field is a static solution, and whose initial kinetic
+energy is small, should be forced to stay close to 
+ by energy conservation. Manton suggested that the
+dynamics should be well approximated by a solution of the reduced
+variational problem where the field configuration is constrained  to
+lie on  at all times. This reduced dynamics turns out to be geodesic
+flow on  with respect to a natural metric called the  metric, so
+one has the appealing suggestion that low energy soliton dynamics in
+Bogomol'nyi type theories may be understood by studying the Riemannian
+geometry of their moduli spaces. This is still a highly nontrivial problem,
+and it was some time before the  metrics on the 2-monopole and 2-vortex
+moduli spaces were well understood
+. Since first being proposed, the method
+of Manton has been extended to deal with dynamical issues other than
+classical multisoliton scattering. Quantum soliton states
+ are thought to be
+well approximated by eigenstates of the Laplacian on , for example,
+and the thermodynamics of soliton gaseshas been analyzed in terms of the
+geometry of .
+
+Not all Bogomol'nyi type field theories are gauge theories. Another class is
+given by nonlinear sigma models with Kahler target space, for example the
+ models. These models are nonlinear in the most fundamental way: the
+field takes values in a space with no linear structure. However they have
+many features in common with the gauge theories mentioned above. There is
+again a topological lower bound on energy, attained only by solutions of
+a first order partial differential equation, namely the -holomorphic
+maps - the Cauchy-Riemann conditions play the role of the self-duality
+equation. The static model is integrable and the structure of  is
+again well understood. The solitons in this case are usually called
+"lumps."
+
+Given the similarities between lumps and their gauge theoretic
+counterparts, it was natural for Ward to suggest, in the specific context of
+the  model on the plane, that the geodesic approximation should be
+applicable to classical lump dynamics too. A detailed numerical
+analysis of 2-lump scattering within the geodesic approximation followed
+, as well as generalizations to the  models.
+One technical problem encountered in all these studies is that  lumps
+have -infinite zero modes on , so the  metric is only
+well-defined on the leaves of a foliation of , rather than 
+itself. One interprets this physically as saying that certain parameters in
+the static -lump solution are frozen to constant values by infinite
+inertia. For example, the width of a single  lump is a free
+parameter, but is frozen in this fashion. Unfortunately, this freezing
+appears to be an artifact of the approximation - numerical solutions suggest
+that a single lump may expand or contract according to the genuine field
+dynamics. So the geodesic approximation is rather pathological for these
+models. It is therefore interesting to consider situations where physical
+space is compact, since the  metric is then guaranteed to be
+well-defined.
+In particular,  lumps on  and  have been studied, and quite
+a lot is known about the corresponding  geometries
+.
+
+The question remains, of course, whether geodesic flow in  really does
+closely approximate low-energy -lump dynamics in these theories. For
+2-vortex and 2-monopole dynamics, rigorous results supporting the geodesic
+approximation have been proved by Stuart. He has shown that
+the solution with initial data , 
+ of order  (where  is small), stays
+pointwise close (order )
+to its corresponding geodesic in  for a time of order .
+The key idea in Stuart's analysis is to separate the dynamics into slow
+and fast time-varying modes by means of the following projection: the
+true solution  is projected onto  to obtain a slow
+trajectory 
+1 
+(t)= (t)+^2 V(t)
+and a fast varying "error" , the projection being chosen so that
+ is always  orthogonal to . Stuart
+goes on to prove that an appropriate Sobolev norm of  remains bounded
+for times of order  by bounding this norm in terms of
+, the quadratic form associated with the second variation
+of the potential energy functional of the model, which is slowly varying by
+virtue of energy conservation. It follows that, as expected, the true
+solution remains close to .
+That the projected trajectory 
+remains close to geodesic is proved as a separate step.
+
+The whole analysis relies on one's ability to control Sobolev norms of the
+error in terms of the Hessian. More precisely, the following
+coercivity property of  is crucial:
+
+
+There exists a constant  such that for all 
+and all  with ,
+. 
+
+
+This turns out to be slightly easier to prove for vortices than monopoles
+since the  spectrum of small oscillations about a static vortex has a
+mass gap due to the Higgs mechanism. No such gap occurs for monopoles.
+
+How much of this framework carries over to sigma models? Since the target
+space has no linear structure, equation () makes no sense as it
+stands, and must be replaced. We suggest here that the correct replacement
+is
+(t)=_ (t) ^2 V(t)
+where  is the exponential map on the target space . Once
+again, we should choose  always to be  orthogonal to
+. In this context, we will prove an analogue
+of Stuart's coercivity lemma for any holomorphic map  between
+compact Kahler manifolds, namely, there exists  such
+that
+for all
+, 
+,
+_  (V,V)( )
+V_H^1 ^2.
+The important difference from Stuart's result is that the constant 
+depends on , that is, varies with position in . We may
+define the optimal constant
+( )=
+_  (V,V) V_H^1 ^2 : V0,
+V_L^2 T_  >0.
+We prove a result (Theorem ) which gives sufficient conditions
+that  depend continuously on , and verify that those
+conditions hold
+in the main examples of interest to us. It turns out that
+ for sigma models is generically non-compact, so continuity of
+ does not guarantee a global bound.
+ In fact, we will show by means of an explicit counterexample, that
+ is not  necessarily bounded away from zero. The
+counterexample occurs in the simplest nontrivial case, namely the one-lump
+moduli space of the  model on , but we believe it is indicative
+of a generic phenomenon for the  models on any compact Riemann
+surface. Roughly speaking,  as the lump 
+shrinks to zero size. One would expect this to happen quite generically in
+, wherever a family of holomorphic maps degenerates so that a single
+isolated lump collapses. This suggests we are never likely to have a global
+bounding constant  on   as obtained by Stuart for
+vortices and monopoles. Consequently, the best result one could hope for
+from an analysis of this type for lumps is that the geodesic approximation
+is good for a time of order , where  is some increasing
+function of . In this case, the
+approximation would work well (in the usual sense)
+so long as the projected geodesic stays away from
+, the
+boundary at infinity of ,
+ where . In particular it seems very unlikely that geodesic
+flow provides a good approximation to the process of single lump collapse
+itself. Two independent numerical studies of singularity formation in the
+ model on the plane
+ support this pessimistic assessment.
+
+If we impose extra symmetry on our system, in other words, restrict attention
+to an admissible equivariance class,
+then the projected
+map  is confined to a totally geodesic submanifold  of
+,
+and the error  is confined
+to an infinite dimensional subspace  of .
+We may define an equivariant version  of  by taking
+the infimum only over sections . Clearly 
+. For a certain equivariance class for
+-lump dynamics in the  model on , one can prove that
+ is
+continuous on , which is again noncompact.
+We will present numerical evidence
+ that  is  globally bounded
+away from zero for  in this class.
+The point is that only coincident 
+-lump collapse can
+occur within this particular
+equivariance class, and the problem of vanishing 
+does not appear to happen for such collapse. It is possible, therefore,
+that the geodesic approximation does give a good model of equivariant
+multilump collapse, though one should be cautious: there is ample scope for
+other aspects of Stuart's method to break down as singularities form. There
+are some grounds for optimism. A recent careful numerical study of lump
+collapse by Linhart and Sadun found that single lump collapse on the plane
+differed significantly from that predicted by a truncated geodesic
+approximation, while coincident 2-lump collapse did not.
+
+The rest of this paper is structured as follows. In section we introduce the nonlinear sigma models of interest and briefly review
+some of their standard properties. We focus in particular on the 
+model
+on , describing what is known about the  geometry on  in this
+case, especially for . We present a new result on generic behaviour of
+the geodesic flow in  which implies that (within the geodesic
+approximation) a single lump generically does not  travel along great
+circles on . Precise restrictions on the set of non-generic initial
+data are given. In section  we formulate and prove
+the main result of the
+paper, that the Hessian for these models is coercive on , in the sense
+described above. In section  we establish a simple sufficient
+condition for  to depend continuously on .
+In section  we show that this condition is met in the case of
+ for the  model on . We go on to prove that 
+as  approaches , so global coercivity fails in
+this
+case. Finally, in section  we consider the case of the -lump
+sector of the  model on  within a given equivariance class,
+showing that  is continuous. We conjecture that  is
+globally coercive for  and present some numerical results in support
+of this conjecture.
+
+The  model on  
+For our purposes, a nonlinear sigma model consists of a single field
+, where  and  are compact Kahler
+manifolds,  represents physical space,  is spacetime, equipped
+with the Lorentzian pseudometric  and  is the target space.
+Solutions of the model are local extremals of the action
+S[]=1 2 _M 
+_dE_^2 E_^2 =_(_M
+ ^2-E[])
+where  is an orthonormal basis of vector
+fields on  and  is the harmonic map energy functional
+for maps . Such solutions are called wave maps in the geometric
+analysis literature, by analogy with harmonic maps
+. Indeed, static wave
+maps are precisely harmonic maps and hence have been the focus of intense
+study. In particular, Lichnerowicz showed that if a homotopy class 
+contains -holomorphic representatives, then these minimize energy within
+that class
+. So the moduli space of interest within a given class is
+. For the sake of generality, we will state
+and prove the coercivity lemma for the Hessian in this general context.
+
+It is important when using the geodesic approximation  to know that
+
+is a finite dimensional smooth manifold. This is not always true in the
+general case of holomorphic maps between Kahler manifolds.
+We discuss this question in more
+detail in section ,
+briefly summarizing some results in the harmonic maps and algebraic geometry
+literature which allow us to identify classes of sigma model whose
+moduli spaces are smooth manifolds.
+For the moment we note that
+ the particular case we have most directly in mind,
+namely , the  model on the two-sphere, certainly does have
+this property.
+
+We now consider the case  in more detail.
+Each homotopy class  is labelled by the degree of
+, an integer , which without loss of generality we may assume is
+non-negative. The degree  is interpreted physically as the net lump
+number of the configuration . The space  of degree 
+holomorphic maps  is easily constructed explicitly. Choosing
+stereographic coordinates  on both  and , such a map is
+rational of degree ,
+:zW=a_1z^n++a_n+1  a_n+2 z^n++a_2n+2  
+where  are  complex constants,  and  do not both
+vanish, and the numerator and denominator have no common roots. Since
+ and  give the same
+map for all , we have a natural identification of
+ with a dense open subset of , whence it inherits a natural
+topology and complex structure.
+
+The metric of interest , does not descend from the inclusion
+ however. To define it, one must think of a tangent
+vector  as a zero mode of the Cauchy-Riemann equations for
+maps  at the map . Such a zero mode is a smooth section of
+, the pullback of the tangent bundle of  by the map ,
+that is, a rule which assigns to each  a vector
+.
+We may define the  inner product between any pair of sufficiently
+regular sections  of  by taking their fibrewise inner product
+in , then integrating over ,
+X,Y_L^2  =_M h(X,Y).
+The  metric on  is simply the restriction of 
+
+to zero modes. In more concrete terms, one can in principle compute
+explicit formulae for  by choosing local coordinates  on
+ (for example, the real and imaginary parts of , on the
+chart where ) and expressing the map  as an
+explicit
+function , so that
+ij _ij dq^idq^j,_ij =_dzdz  (1+z^2)^2 1 (1+W^2)^2 
+W q^i W  q^j .
+In practice, of course, the integrals involved are almost always intractable.
+
+Certainly, the  metric is a natural way of geometrizing . More
+importantly, it is the Riemannian metric descending from the restriction of
+the kinetic energy functional  to , and
+hence
+the metric whose geodesics are thought to model slow lump dynamics. We shall
+briefly review what is known about the Riemannian manifold ,
+and prove a new result about the generic behaviour of geodesics in 
+.
+
+First,  is manifestly Hermitian, and is in fact Kahler. This
+was long suspected, owing to a rather general formal argument of Ruback
+, and
+has recently been proved rigorously. It is also known that
+ is geodesically incomplete. For odd ,
+ contains a totally geodesic Lagrangian submanifold
+naturally identified with the moduli space of static  -lumps on
+; for  this submanifold is also incomplete.
+
+There is an
+isometric action of  on , induced by the natural
+ actions on the domain and target spheres, which on  has
+cohomogeneity 1 (generic  orbits have codimension 1), and in fact, almost
+completely determines . Consequently, an explicit formula for
+ is known in this case, and the geometry is particularly well
+understood. For , the no common roots condition on the rational map
+ is , so we may identify each
+map with a projective equivalence class 
+of  matrices. Hence
+. By identifying  with the unit sphere in
+ in the usual way, we may identify the  action on
+ with the adjoint  action, so that  regarded as a metric
+on  is invariant under the left and right  actions:
+([U_1],[U_2]):[L][U_1LU_2].
+Now every  has a unique polar decomposition
+[L]=[U(1+^2 _2+)]
+where ,
+, and  are the
+Pauli spin matrices. Hence .
+Physically, the lump corresponding to  has maximum
+energy density
+ at , sharpness proportional to  and
+internal orientation . The  lumps have uniform energy
+density. The  action in this coordinate system is
+([U_1],[U_2]):([U],)([U_1UU_2],Ad_U_2 )
+where again we have used  to identify the fundamental
+
+action on  with the adjoint  action on . From this we
+see that the -orbits are level sets of , generically
+diffeomorphic
+to  (when ), the only exception being
+,
+which is diffeomorphic to .
+
+In it was proved that every  invariant Kahler metric on
+ may be written
+dd+A_2(d)^2+
+A_3 +A_4()^2+A_1(d)
+where  are smooth functions of  only, all determined
+from the single function  by the relations
+A_2=A() 1+^2 +A'()  ,
+A_3=1 4 (1+2^2)A(),
+A_4=1 4 (1+^2)A'().
+Here  are the left invariant one forms on
+ dual to the basis  for 
+.  For the  metric, one finds that
+Adef 
+A=4[^4-4^2(^2-1)^3 ,
+1+^2 +)^2.
+It follows from these formulae that  has finite volume and
+diameter, is Ricci positive and has unbounded scalar and holomorphic
+sectional curvatures. Examining the large  behaviour of ,
+one finds that , the boundary at infinity of  is
+. This is natural in two ways: a point in 
+should be thought of as a collapsed lump whose width has shrunk to zero.
+Such a lump is specified by a pair of points  in  because
+every point except one, , in the domain gets mapped to the same point
+ in the codomain, while  gets mapped to the antipodal point .
+Second, the complex codimension 1 algebraic variety 
+complementary to  in  is biholomorphic to ,
+being the image of the holomorphic embedding
+([x_1,x_2],[y_1,y_2])[x_1y_2,x_1y_1,x_2y_2,x_2y_1].
+Since ,  lies at finite
+proper distance, so geodesics may reach it in finite time, the origin of the
+incompleteness already noted. Given that  has (real)
+codimension
+2, however, one would expect geodesics to miss  generically.
+More precisely, one would expect the subset of  consisting of initial
+data of geodesics which do  escape to infinity to have zero measure
+with respect to the natural measure inherited from .
+
+Geodesic flow in  was studied in detail in. It
+turns out to be surprisingly complicated given the homogeneity and isotropy
+of the domain of the sigma model, . Geodesics were found for which the
+lump spins internally and oscillates between antipodal points. Other
+geodesics were found where the lump travels along a great circle in
+, its speed and shape undergoing complicated periodic oscillations.
+Geodesics do exist for which the lump simply traverses a great circle at
+constant speed and shape, but the initial data to generate such motion must
+be chosen very carefully. Nevertheless, all the geodesics found in
+ confined the lump's position  to  some
+great circle for all time. More precisely, they all confined  to
+some plane through the origin. The geodesics themselves were obtained by
+reducing the geodesic problem to  low dimensional totally geodesic
+submanifolds, the fixed point sets of discrete isometries. The question
+arises, then, whether this "planar property" of the geodesic flow
+is an artifact of the exceptional symmetries enjoyed by these geodesics,
+or is a general feature of the dynamics.
+We shall now prove that the former is the case.
+
+By the  invariance of the metric, it suffices to determine which initial
+velocities 
+ at the point 
+ tangent to the hypersurface
+ generate geodesics which remain in .
+We shall call such an initial velocity  a "good" vector.
+Clearly the set of good initial velocities is conical
+by time-scaling
+invariance of geodesic flow. By this, we mean that if  is
+good, so is every vector , , on the
+ray containing . The question is then whether the link  of this
+ cone of good velocity vectors, that is, its intersection with the unit
+4-sphere in , has non-vanishing measure in .
+
+  Let  generate a geodesic through  which
+remains in . Then  lies in a codimension 1 cone in .
+For generic , the link of this cone
+is the suspension of a two-torus. There is at most a nowhere dense subset
+of  on which the link of the cone is , two three-spheres
+intersecting in an equatorial two-sphere.
+
+Proof:  Let  be a nonvanishing (but not necessarily unit)
+normal on . Then if
+ remains in ,  for all .
+Differentiating this at  and using the fact that  is
+parallel for a geodesic, one finds that
+
+, where  is the Levi-Civita connexion.
+Hence,  must lie in the null space of the symmetric
+bilinear form
+B(u,v)=(u,_vN),
+that is . Clearly this null space is conical.
+We seek to understand the link of this cone.
+In this case (), we may choose
+N=A_3  _2 +1 2 A_1(-_3_1+
+_1_3)
+as our normal field, where  are the left-invariant vector fields
+on  dual to .
+We may compute  by extending  to vector
+fields  on , then using the usual formula for 
+and symmetry of , to yield
+B(u,v)=1 2 
+.N[(U,V)]_x(0) +1 2 (.[U,N]
+_x(0) ,v)+1 2 (.[V,N]_x(0) ,u).
+A straightforward but lengthy calculation then shows that
+B=f_1()d_1_3+f_2()d_3_1+
+f_3()_2_3
+where
+f_1=1 8 (1+^2)(2A+A'),f_2=-1 4 (1+2^2)A(A+A'),f_3=1 16 (1+^2)AA',
+at the specific point . By computing
+eigenvalues, one sees that, with respect to some orthonormal basis for
+,
+B(u,u)=f_2()(u_2^2-u_3^2)+f_1()^2+f_3()^2 (u_4^2
+-u_5^2).
+Note that
+8f_1() 1+^2 =2A+A'>
+2^1+1 ^2+1 A+A'=
+(  _3 ,  _3 )>0
+so  never vanishes. Consider the set 
+. If  were dense at , then by continuity of
+, there would be an open interval containing  such
+that . Given the formula () 
+clearly does not coincide with  on any
+interval,
+so no such  exists. Hence the set  is nowhere dense.
+
+Let . By means of
+a  dependent rescaling of the basis, we see that the null space is
+the locus of the equation
+u _2^2+u _4^2=u _3^2+u _5^2.
+Clearly  may take any value, while
+ lies on a cone in
+ whose link is a two-torus. Alternatively, we may think of the
+unit sphere in  as the suspension of the unit sphere in  along
+the  direction. Then the intersection of the link of the
+null space with each 3 sphere of constant  is a
+scaled two-torus. Assembling the slices together we see that the whole null
+space has a link which is topologically the suspension of a two-torus
+. Either
+way of viewing the null set, it is clearly a codimension 1 cone in
+
+as claimed.
+
+It remains to consider the non-generic case, , for which
+. In this case, since ,
+ the cone consists of all vectors for which
+. The link is the intersection of  with the union of the
+two orthogonal hyperplanes , which is manifestly a union of
+two three-spheres intersecting in an equatorial two sphere ().
+
+
+
+We should point out that  is a necessary but not
+sufficient
+condition for the geodesic with initial velocity  to stay in . It is
+not certain that the cone of good velocities is all of 
+,
+therefore.
+Given the explicit formula for , one would expect to be able to
+improve the characterization of the non-generic subset of 
+(on which  has link ) from nowhere dense to
+discrete or finite. Indeed, one may check graphically that 
+has only one solution ( to 3 decimal places), so
+the nongeneric set consists of a single  orbit, , in
+.
+
+  Generically geodesics in  do not confine
+
+ to a plane through .
+Consequently, single lumps generically do not stay on
+great circles while moving on .
+
+Of course, this corollary refers to the lump dynamics within the geodesic
+approximation. The question remains: does this give a good model of the full
+field dynamics?
+
+Coercivity of the Hessian 
+We wish to consider the wave map problem for maps 
+, where  are compact Kahler, and the initial data have
+a certain Sobolev regularity and are close to holomorphic, in a sense to be
+made precise. The eventual aim is to prove that such wave maps stay close
+to  and that their closest trajectory in
+ is close to a geodesic. In this section we will prove
+the main analytic ingredient needed for such a programme, along the lines
+of Stuart's work on vortices.
+
+The first thing to note is that the Cauchy problem for such wave maps with
+initial data  on the time slice
+ is well posed, that is, has a unique solution in the
+same Sobolev space, with  continuous,
+at least on some open time interval,  by
+work of Choquet-Bruhat. Here  denotes the space of
+maps  which are  in the usual sense (
+ are all ) and which take values on 
+(isometrically embedded in ) almost everywhere.
+For our purposes, it is convenient to use an alternative intrinsic
+definition of , which is only well-defined
+for . With this restriction
+on ,  naturally has the structure of a Hilbert manifold.
+Below we give a brief treatment of both the intrinsic definition
+and the Hilbert manifold structure of . For a complete treatment
+we refer the reader to Palais.
+
+A map  is said to belong to  if for any
+ and any chart  containing , and any chart
+ containing , the map 
+ belongs to . For this
+notion to be well-defined we need to ensure that
+composition by  diffeomorphisms on the left and on the right
+takes an  map to an  map. For composition on the
+right this is true without any restriction on . However, for
+left composition the same result only holds if we assume
+ (for a discussion of
+both points see B.1.7 and B.1.9, p182).
+From now on we make a standing assumption that 
+, so that the intrinsic definition of 
+given above makes sense.
+
+We now exhibit the structure of an infinite
+dimensional Hilbert manifold on .
+Standard facts on embeddings of Sobolev spaces and the density of
+smooth maps in Sobolev spaces prove the following:
+There are continuous inclusions  and
+the first inclusion has dense image. From the latter fact it follows that it is sufficient
+to exhibit charts for  around only the  maps.
+
+
+Given  the pullback bundle 
+(i.e. the vector bundle over  whose fibre at  is the vector space )
+comes equipped with a natural inner product  and compatible connexion ,
+the pullback of the Levi-Civita connexion on . For any vector bundle  over compact 
+equipped with an inner product  and compatible connection  there is a natural  inner product
+on smooth sections of :
+<V,W>_H^k =_M <V,W> +_M <V, W> ++
+_M <^k V, ^kW>.
+ is then defined as the set of finite  norm elements of the
+completion of  with respect to the norm .
+For  compact, this definition of  is equivalent
+to the following alternative definition: given any choice
+of local coordinates on  and associated bundle trivializations for ,
+a section belongs to  if it is represented by locally
+ functions in these trivializations. The difference
+is that the connexion-dependent definition gives a preferred
+inner product on , i.e.  is naturally
+a Hilbert space.
+
+The point is that  is the local model space for the
+Hilbert manifold . For each , there is
+a map  given by
+,
+where  is the exponential map on .
+It can be shown that  maps a neighbourhood of  in the Hilbert space
+ bijectively to a neighbourhood of  in .
+Hence for each  there exists some ,
+so that one can define a chart  based at  where
+
+The local homeomorphism
+ is simply given by . So we identify  maps close to 
+with  sections of  by deforming : the deformed map
+ maps each  to the point in  reached by travelling for
+unit time along the geodesic with initial data .
+
+It can be shown that for any two maps , 
+the change of charts map
+
+
+is a diffeomorphism between open sets in the Hilbert spaces  and .
+It follows that the collection of charts 
+defines a differentiable structure on  with local model a Hilbert space, i.e. 
+is a Hilbert manifold. In fact, the differentiable structure can be shown
+to be independent of the metric  on  used to define .
+
+Given
+ 
+a holomorphic map
+ and
+sections , such that
+ are  orthogonal to , and
+
+
+and  small, the initial value problem with
+initial data
+_0=_ _0 ^2V_0 , _0=X_0+^3 Y_0
+has a unique solution in . The idea is to decompose this solution into
+ and 
+ by
+(t)=_ (t) ^2V(t)
+and then show that  remains bounded for times of order
+. The starting point is to show that  is controlled
+by
+. From now on, all quantities will be considered at
+a fixed time, and we will denote the holomorphic base map of our local
+chart in  by  rather than , to simplify notation.
+
+ is the second variation of the harmonic map energy
+ at the holomorphic (hence harmonic) map . Precisely, given a
+two-parameter variation  of the map  through smooth maps,
+with 
+,
+_(X,Y)=.^2 E[_s,t ] st _s=t=0 .
+There are two useful explicit formulae for 
+. The first uses only
+compactness of , not the Kahler property. To write it down we must
+introduce two new objects. Let  be a local frame of
+smooth orthonormal vector fields on . Then the rough Laplacian on
+sections of  is the second order linear elliptic differential
+operator
+roughlap 
+^V=-(^^V)
+=-_i=1 ^m(^^V)(E_i,E_i).
+Like the usual Laplacian (on functions or forms)  is a
+positive self-adjoint operator. Positivity follows from the identity
+pos 
+_M h(V,^V)=_M_i h(_E_i ^V,
+_E_i ^V).
+We may define a (fibrewise linear) bundle map  on  by
+^V=_i=1 ^m R^N(V,d E_i)d E_i
+where  is the curvature tensor on . Given these, the
+Hessian is
+hess1 
+_(X,Y)=_M h(X,^Y)=
+X,^_L^2 ,^The operator , called the Jacobi operator,
+ is itself second order, linear, elliptic and self-adjoint.
+ It follows immediately from
+this formula that every harmonic map into a manifold of nonpositive sectional
+curvature is weakly stable (meaning ).
+
+In the case of interest to us, namely  compact Kahler,
+and  holomorphic, one can obtain
+a more useful and rather simpler formula for . First one defines
+the Urakawa connexion on ,
+(^V)(X):=^_J^MX V-J^N^_XV,
+ being the almost complex structures on  and . Then
+* 
+_ (V,V)=1 2 ^V_L^2 ^2.
+Weak stability of holomorphic maps follows immediately from ().
+
+ should be thought of as the linearized Bogomol'nyi equation,
+so every  is a zero mode of the
+holomorphic map . For the geodesic approximation to make sense, the
+space of holomorphic maps close to  must be a smooth manifold whose
+tangent space at  equals .
+Sections of  in the kernel of 
+are called Jacobi fields along .
+A Jacobi field is said to be integrable if it may
+be generated by a variation of  through harmonic maps, and the map
+itself is said to be Jacobi integrable if all its Jacobi fields have this
+property.
+A fundamental theorem of Adams and Simon
+ states that a harmonic map 
+between real analytic manifolds
+is Jacobi integrable if and only if the space of  harmonic maps
+ close to  is a smooth manifold with tangent space
+ at . Similar results hold in suitable Sobolev spaces
+of maps also.
+ In the case where  are Kahler
+(hence real analytic),
+Lichnerowicz showed that all harmonic deformations of a holomorphic
+map  are holomorphic, so the space of interest to us, the
+space of
+holomorphic  maps close to , is a smooth manifold with
+tangent space  at , if and only if  is Jacobi
+integrable. Jacobi integrability of harmonic maps is an active
+ field of research whose current state is summarized in
+. Particularly relevant to the present paper is a theorem of
+Wood and Lemaire which states that every holomorphic map  is
+Jacobi integrable. So the moduli space of holomorphic maps for the 
+model on  is smooth with tangent space , as we
+require. A similar result holds for degree  holomorphic maps
+,  being a compact Riemann surface of genus ,
+provided , by a standard application of the Riemann-Roch
+theorem. So the -lump moduli space of the  model on  also
+has the required property, with some low degree exceptions.
+
+We may now state and prove our main result.
+
+ [Coercivity of the Hessian] Let 
+be a holomorphic
+map between compact Kahler manifolds and  be the Hessian of
+the harmonic map energy functional at . Then there exists a constant
+ such that for all  with
+,
+
+
+
+
+Proof:  Both  and  are Hilbert spaces. We will use
+ and  to denote strong and weak convergence respectively, the
+space concerned being explicitly specified.
+ Define the subset 
+ and the quantity
+()=_VS _(V,V)=_VS ^V
+_L^2 ^2
+0.
+We claim that . Assume this is false. Then there exists
+a sequence  such that .
+We will repeatedly extract (nested) subsequences from , which we will
+always denote by the same symbol, .
+ Now
+ is bounded in  so by the Alaoglu theorem, there exists a
+subsequence , to some weak limit . Since
+ is a bounded linear map, it is continuous with
+respect to the weak (and strong) topologies on . It follows that
+. But 
+
+
+ by uniqueness of weak limits. Hence 
+.
+
+Now the inclusion  is compact
+by Rellich's lemma, so the bounded set  is compact
+in . Hence, any sequence in , for example  itself, has
+ a subsequence which is strongly convergent in . Once again,
+denoting this
+subsequence by , we have
+. But then 
+
+so
+0=V_i,^_L^2 V ,^_L^2 .
+Hence .
+
+But  is continuous, so 
+, and so 
+by uniqueness of weak limits. So  and 
+, and hence , so .
+Then, by () and (),
+1&=& V_i_H^1 ^2=V_i_L^2 ^2+__E_ ^V_i_L^2 ^2
+
+&=&2_(V_i,V_i)+V_i_L^2 ^2+_2R^N(dE_, V_i)dE_,V_i_L^2 
+
+&&2_(V_i,V_i)+V_i_L^2 ^2+C_V_i_L^2 ^2
+where  is a constant,
+by compactness of  and the tensorial property of . Taking limits
+of both sides of ()
+ and using  and 
+, one sees that , a contradiction.
+
+
+
+We remark that the  version of this result, that there exists a constant
+ such that  for
+all , is much easier to prove. Since 
+is elliptic, self adjoint and positive definite (for weakly stable ),
+and  is compact, we know immediately that the spectrum of 
+is discrete and, normal to its kernel, bounded away from . The result
+immediately follows. In fact the optimal constant  in
+this case is just the lowest nonvanishing eigenvalue of . Hence
+the optimal bound is attained in this case, by any eigensection with this
+eigenvalue.
+We remark also that the spectrum of  is
+of independent physical interest since it gives the semiclassical
+meson spectrum of the sigma model in the topological sector .
+
+Continuity of  Let  be a sequence of smooth holomorphic maps between
+compact
+Kahler manifolds, converging
+in  to a smooth holomorphic map . From Theorem
+ we have for each  a positive constant 
+and the positive constant , which give lower bounds for the
+ratio  for any
+ section of the pullback bundle  orthogonal to all Jacobi fields.
+In this section we will establish
+conditions sufficient to guarantee that 
+. In subsequent sections
+we will show that these conditions are met in the cases of interest to us.
+
+In order to compare various quantities (especially the Hessian and 
+norm)
+ at different maps, it is convenient to make
+various identifications so that we can treat all geometric quantities and
+operators as being defined on the fixed bundle .
+Since , for sufficiently large  each pullback bundle
+ is topologically equivalent to
+. However, since each bundle  comes naturally equipped with both an
+inner product and a compatible connexion (both of which
+occur in the Hessian and the -norm of a section) we would also like to
+transfer these geometric structures to the bundle .
+
+Again since , for each  (and for each sufficiently
+large ) there is a unique minimizing geodesic joining 
+to . By parallel transporting vectors along this unique geodesic we
+construct a canonical isometry between the fibres of  and the fibres
+of  at each point , and hence a natural  isometry between
+ and . Using this isometry we can interpret the
+natural connexion on each  as a connexion on , which we shall write
+. Using the connexion  and the (fixed)  metric
+on  we can now interpret each of the Jacobi operators 
+(and
+hence also the associated symmetric bilinear form ) as an
+operator on sections of the fixed bundle .
+Similarly, for each  we get an  norm on sections of , by
+using the connection  and the fixed  metric.
+Since the difference of any two connexions on  is tensorial, it is clear
+that for each  (sufficiently large) the  norm is equivalent
+to the  norm
+on sections of .
+
+Suppose now that the difference between the connexions  and
+ tends to zero in the the following pointwise sense
+V - _n V a_n V where each  is a positive number,  as , and
+ refers to the natural pointwise norms on the bundles
+ and , and  is a smooth section of .
+
+ 
+Suppose that () holds, then the following inequalities also hold:
+
+(i) 
+
+
+(ii) 
+
+
+(iii) 
+
+
+where ,  are positive numbers which tend to zero as ,
+and
+ is the  norm on ,
+ is the  norm on 
+defined using the connection  and 
+
+ is the  norm on 
+defined using the connection .
+
+Proof:  (i) Elementary manipulations involving the triangle
+inequality, inequality () and the Cauchy-Schwarz inequality
+yield the following chain of inequalities
+ _M (^2 - ^2)    &&
+_M 
+ ^2 -^2   
+
+&& _M   -    .     +
+      
+
+&& _M   -    .  (   2 +
+   )   
+
+&& 2a_n_MV     + a_n^2 _MV^2   
+
+&& 2a_n  V  .   + a_n^2
+V^2 
+
+&& ( 2a_n + a_n^2)  V _1^2 . Hence the result follows with .
+
+(ii) This is immediate from the definition of the  norm and part (i).
+
+(iii) The definition of  (see equation ), together
+with
+the compactness of  and the fact that
+ in  implies that
+_n ^ -^_n  =0.
+Using part (i) and the definition of  we have
+ (V,V) - (V,V)  &=&  1 2 ^2 - 1 2 ^2
+-^ V,V+ ^_n V,V
+
+
+&& 1 2 
+ ^2 - ^2 
++  ^ V,V- ^_n V,V 
+
+&& b_n V ^2_1 + (^ -^_n )V
+  V 
+
+&& b_n V ^2_1 + ^ -^_n 
+ V ^2. The result now follows from (). 
+
+
+We will also need the following simple proposition on the continuity of
+ orthogonal projection operators.
+
+
+ 
+Let  denote the  sections of . Let  be a sequence of
+finite
+dimensional vector subspaces of  of constant dimension 
+which converge to another -dimensional subspace  of ,
+in the following sense: there exists an -orthonormal basis 
+
+ of  and an -orthonormal basis  of  so
+that for
+each ,  in  as .
+Denote by  and  the  orthogonal projections onto
+ and  respectively. Then  in
+the operator norm on , the bounded linear maps between
+ and itself.
+
+Proof: 
+In this proof, norms and inner products without subscripts will refer to
+ norms and inner products, while 
+norms and inner products will be referred to with the subscript .
+Since  and 
+
+we have
+P_n v - Pv _k &=& _iv,e_i^n e^n_i  -
+_iv,e_i e_i  _k _iv,e_i^n e^n_i - v,e_i e_i  _k
+  
+
+&& _iv,e_i^n e^n_i - v,e_i^n e_i +
+v,e_i^n e_i -v,e_i e_i _k  
+
+&& _iv,e_i^n    e_i^n-e_i_k + e_i_k 
+v,e_i^n-e_i   
+
+&& v (_ie_i^n e_i^n-e_i_k + e_i_k
+e_i^n-e_i ) 
+
+&& v (_i(1+ e_i_k) e_i^n - e_i_k ).
+So for all  we have,
+(P_n-P)v_k v_k  (P_n-P)v_k v  (_i(1+ e_i_k) e_i^n - e_i_k ). Since by assumption  strongly in  for each ,
+() implies that
+_n _v0 (P_n-P)v_k v_k   =0
+as required.
+
+
+
+We now state the main result of this section, a theorem giving
+sufficient conditions for  to depend continuously on the
+holomorphic map . The analogous result in Stuart's analysis
+of slowly moving abelian Higgs vortices is Lemma 3.2 of. Our
+proof of Theorem is inspired by Stuart's argument.
+
+ 
+Let  be a sequence of smooth holomorphic maps between
+compact
+Kahler manifolds converging in  to the
+smooth holomorphic map . Suppose all the Jacobi fields of
+ are integrable and that the conclusions of Lemma hold. Then
+
+
+Proof: 
+Let ,  denote  orthogonal projection onto
+ and  respectively.
+Since  is Jacobi integrable, the space of sufficiently -close
+holomorphic maps is a  manifold of
+dimension equal to . This also holds for all
+ for all  sufficiently large.
+In particular, the subspaces  satisfy the hypotheses of
+the previous proposition for any , and in particular
+for . Hence by the previous proposition we have 
+for some positive numbers  tending to  as .
+
+
+We will prove (i) 
+and (ii) . From (i) and
+(ii) it
+follows that  exists and equals
+.
+
+
+Proof of (i): consider for any 
+, the section 
+.
+Since 
+
+we get
+ V_n,V_n _H^1_   -  V-V_n_H^1_ (V_H^1_ +V_n_H^1_ )
+d_n(d_n + 2) .Using the previous inequality and inequality (ii) of Lemma  we
+have
+  -  &&  - V_n,V_n
+_H^1_    +
+ V_n,V_n _H^1_   -  
+
+&& b_n V_n,V_n _H^1_   +  d_n(d_n + 2) 
+
+&& f_n where  is another sequence of
+positive numbers tending to zero as .
+
+Since  for some
+, we have 
+. Hence
+ (V,V)   - (V_n,V_n)   
+=  (V,V)   - (V,V)    
+
+
+&& (V,V)  -  +  (V,V) -
+(V,V)    
+
+&& f_n (V,V) + c_n    f_n 1-f_n 
+(V,V)   + c_n 1-f_n . Let  be a
+minimizing sequence for  with unit  norm, that is
+
+
+Hence there exists a positive constant  and numbers  tending
+to zero as , such that
+
+and
+
+for all  and . Define 
+. The two previous facts together with
+() imply that
+
+
+holds for all  and . For any fixed , taking the limit as 
+ we see that
+
+Hence for any limit point  of the sequence
+ we have . In particular
+ we
+have 
+as required.
+
+
+Proof of (ii): Since the proof of (ii) is very similar in
+character to the proof of (i) we shall omit some details.
+Consider the projection  of an element 
+ into .
+Several applications of the triangle inequality, together with the
+inequalities
+in Lemma  and the fact that  in , show that
+there
+exist two sequences of positive numbers  and  with
+ so that
+- PV_n,PV_n _H^1_   g_n PV_n,PV_n
+_H^1_  
+and
+V_n,V_n _H^1_  - PV_n,PV_n
+_H^1_   h_n V_n,V_n
+_H^1_  
+hold for any 
+. These two inequalities,
+combined with the inequalities of Lemma  and the fact
+that  prove that
+ (PV_n,PV_n) PV_n,PV_n
+_H^1_    - (V_n,V_n)    =
+ (V_n,V_n) PV_n,PV_n _H^1_    -
+(V_n,V_n)     
+
+&& (V_n,V_n) - PV_n,PV_n _H^1_   +
+ (V_n,V_n) - (V_n,V_n)  
+PV_n,PV_n _H^1_    
+
+&& g_n (V_n,V_n)  PV_n,PV_n _H^1_   + c_n
+V_n, V_n _H^1_   
+PV_n,PV_n _H^1_    
+
+&& g_n (V_n,V_n)   + c_n V_n,V_n
+_H^1_   PV_n,PV_n _H^1_   
+g_n (V_n,V_n)   + c_n 1-h_n  holds for any .
+
+Let 
+be
+a minimizing sequence for  with unit  norm,
+that is
+
+
+
+Hence there exists a positive constant  and numbers 
+tending
+to zero as , such that
+
+and
+
+for all  and .
+Consider the sequence 
+.
+The two previous facts together with () imply that
+
+
+
+holds for all  and . For any fixed , taking the limit as 
+ we see that
+
+Hence for any limit point  of the sequence
+ we have . In particular
+ as claimed.
+
+
+
+
+
+The case of  
+ It is interesting
+to consider the simplest nontrivial case, namely 
+, in
+detail. Although  in this case, it is often helpful to distinguish
+between domain and codomain by continuing to denote them 
+respectively. We
+shall do this when clarity requires.
+The  action on  introduced in section
+ extends naturally to , and leaves
+ invariant. It follows that  is constant on
+ orbits in . Since  acts with cohomogeneity 1 on
+, it suffices to consider  for the one-parameter
+family of maps _:zz,[1,) lying on the curve
+ in  (so
+ as in section ).
+We may think of  as a
+positive function  on .
+We will first use the results of section  to prove that 
+is continuous. Positivity and continuity of  ensure that it is bounded
+away from zero on any compact set.
+The domain of   (whether thought of
+as a function on  or on )
+is noncompact, however, so we cannot conclude
+that  is globally bounded away from zero.
+ The
+essential question is, then, how does  behave as
+, that is, as the lump collapses to zero width? We
+will prove that .
+
+First we address the issue of continuity. By symmetry,
+it suffices to consider a
+sequence of degree 1 holomorphic maps  in the curve ,
+labelled by a sequence  in .
+If  then the corresponding maps 
+converge
+in  to . Since
+every holomorphic map  is Jacobi integrable, we may apply the
+results of section . We merely need to prove that the pointwise
+inequality () on the pullback connexions 
+(
+transfered
+to )
+ holds for any such
+sequence . Then Lemma  applies, and continuity of
+ follows from Theorem .
+
+We must first construct the canonical isometry between each  bundle
+ and the fixed bundle 
+equipped with their  inner products. To this end, it is convenient
+to define an orthonormal frame ,
+ on , where  are the
+usual polar coordinates, and the corresponding sections 
+
+, , .
+Note that varying  within the family  sends each fixed 
+along a geodesic of constant  in . Note also that the frame 
+is parallel along geodesics of constant , so the canonical isometry
+between  and  is simply given by the
+identification
+ident 
+E _1^nE _1,E _2^nE _2.
+It is this property which makes polar coordinates particularly natural
+for our purposes.
+
+
+In this coordinate system, a holomorphic map  is
+(,)(f_(),),f_()=2^-1 (
+ 2  ).
+We will construct the pullback connexion
+ by computing its action on 
+, .
+The Levi-Civita
+connexion on  is
+1x 
+E_1 = e_2E_2,E_2 =- e_2E_1,
+or equivalently,
+e_1= e_2e_2,e_2 =- e_2e_1,
+where  is the coframe dual to .
+The following properties
+of  are essential for computations:
+ 
+[(a)] if ,  and
+, then ;
+[(b)]
+ if  may locally be identified with a vector field
+ on  (i.e. , on a neighbourhood of ), then
+.
+Now  and 
+, where  denotes differentiation with respect to . Hence
+&&
+^ _E_1 E _1=
+^ _E_1 E _2=0
+
+
+^ _E_2 E _1&=&f_  
+_E _2 E _1=f_  f_E _2=
+f_   E _2
+
+ ^ _E_2 E _2&=&f_  
+_E _2 E _2=-f_  f_E _2=
+-f_   E _2.
+Note that when , , and ,
+so () should reduce
+to (), which it does.
+
+Any section of  may be written
+W=V+J^NU,V=(,)E _1,U=(,)E _1.
+Note that  commutes with  by the Kahler property. By the
+defining property (a),  above, and (), one sees that
+5x 
+^V=_ e_1E _1+1  _
+e_2E _2+f_   e_2E _2,
+where subscripts  denote partial derivatives.
+This gives us explicit formulae for  and
+. Using the identification () we may transfer
+a section 
+of  to , act with 
+, then transfer back using the same identification, calling the result
+. The difference between  and 
+ is, by (),
+6x 
+( -_n)W=f_  -f__n   
+(e_2E _2 -e_2E _1)
+=f_  -f__n   J^NW.
+An elementary calculation shows that
+f_  
+-f__n   &=&
+( ^2-_n^2)2 2( ^2^2 2 +
+^2 2 )(_n^2^2 2 +
+^2 2 ) 
+
+f_  
+-f__n   &&1 2 (1+
+1  ^2 +1 _n^2 +1  ^2_n^2 )
+ ^2-_n^2.Hence, we have a pointwise bound of the form (),
+( -_n)Wa_n W
+where
+a_n=1 2 (1+
+1  ^2 +1 _n^2 +1  ^2_n^2 )
+ ^2-_n^20
+as , as required.
+
+
+
+
+
+Having shown that  is continuous, we now address its behaviour
+as . In particular, we will
+ prove that .
+To do this, it suffices to consider only sections of
+ of
+a certain type, which we will call
+"irrotational," namely those of the form
+V=()E _1.
+It is straightforward to compute  for such sections,
+and hence obtain
+ as an explicit
+integral functional of .  It follows from () that
+^ V=-(f_  )
+(e_1E _2+e_2E _1).
+The Hessian for irrotational sections is
+_ (V,V)=^ V_L^2 ^2=
+2_0^d(f_  )^2.
+We seek to compare this quantity, for irrotational
+sections  orthogonal to , with .
+Note that  is six-dimensional, and is spanned by
+K_^m=-2^m(/2) 1+^2^2 (/2) [
+(1-m) E _1+(1-m) E _2],m=-1,0,1
+and their images under . This basis is obtained by considering
+curves in  through  generated by altering the real part
+ of one of the
+coefficients of the rational map.
+Every irrotational section  is automatically  orthogonal to
+ and , so we need
+only insist that  is  orthogonal to the one and only irrotational
+section in the basis, , which we will henceforth denote .
+Explicitly, we require that
+V,K__L^2 =-2_0^d
+() ^2 2 +
+^2^2 2  =0,
+having rearranged  slightly.
+
+We shall also need an explict formula for .
+Equation () implies that
+^ V=e_1E _1+f_  
+e_2E _2,
+so
+V_H^1 ^2&=&^ V_L^2 ^2+V_L^2 ^2=
+2_0^d( (+^2f_ ^2 ^2+^2)
+
+&=&_ (V,V)+V_L^2 ^2
++2_0^d 2f_
+
+&=& _ (V,V)+V_L^2 ^2
++V,_V_L^2 where  is the energy density of the map .
+To see the last equality, note that  is holomorphic, hence
+conformal, so
+4x 
+f_E_1=dE_2=f_  .
+Equation () follows from () and integration by parts.
+
+
+
+It also proves useful to write down the formulae above using cylindrical
+coordinates instead of spherical polar coordinates on the domain.
+That is in place of  we use  where
+. First notice, that with respect to these
+cylindrical coordinates  arises by translating one fixed
+profile by a  dependent amount. More precisely,
+ f_ (s) = f_1(s+  )
+where
+f_1(s) = 2 ^-1 (s ) .
+We have an analogous formula for  the irrotational part of the
+kernel of 
+K_ (s) = (s+  )  E _1.
+It is a routine computation to obtain the following formulae for
+,  and the
+,  norms of an irrotational section  from the corresponding
+formulae using spherical polars already presented
+V,V _L^2  = _- ^  ds  ^2s   ^2
+V,_V_L^2  = _- ^  ds ^2(s +
+ )^2 V,V _H^1  = _- ^  ds
+((d ds )^2 + ^2(s +  )   ^2  +
+^2s   ^2 )
+__  (V,V) = _- ^  ds (
+d ds  + (s +  )    )^2.
+We may now state and prove the main result of this section.
+We shall denote the
+map  by  to emphasize its parametric dependence.
+
+
+  [global coercivity of the Hessian fails on ]
+
+
+Proof:  Define the following sequence of smooth irrotational sections
+ of 
+where
+_ (s) = s  - c_  K_ (s)
+and  is a constant determined by the requirement that
+.
+By our previous remarks, this suffices to ensure that  is orthogonal
+to 
+Since  it suffices to prove that
+_  __  (,) ,_H^1 ^2 =0. In fact, we will show that
+_  __  (,) ,__L^2  =0, which implies () since
+
+
+
+
+To prove (), first notice that since  we have
+
+Using the explicit expression for the Hessian in cylindrical coordinates we
+find
+
+
+where . Since 
+ holds for all ,
+
+
+holds for all . Since  is bounded for
+all , () is implied by
+_ ,__L^2  = +.
+To establish (), first introduce for each nonnegative pair of
+integers  the positive function
+
+Clearly, the function  is bounded above by the constant
+.
+From the definition of  we have
+
+
+and from equation () and the definition of  we have
+
+
+
+Since  is a positive constant and ,  are
+positive and bounded above, ()  will follow
+if we can establish that . In fact,
+one can explicitly evaluate the
+integrals which appear in the definition of  to obtain
+
+
+
+
+Clearly, this implies that  as
+required.
+
+
+
+
+
+The case of  
+Staying in the context of the  model on , but generalizing to
+any degree sector, , things become rather more difficult. The
+reason is that the isometric action of  on  does not have
+cohomogeneity 1, except for . In general, then, to understand the
+global behaviour of  one must consider the  dimensional
+orbifold , not simply a curve, as in section .
+Reduction to a curve
+ is  possible, however, provided we restrict attention
+to dynamics within a certain equivariance class.
+Employing stereographic coordinates  on domain and codomain as usual,
+and defining polar coordinates such that , one may write the
+field equation for the  model on spacetime  as
+W_tt  (1+r^2)^2 -(W_rr +1 r W_r+1 r^2 W_ 
+)-2W  1+W^2 (W_t^2 (1+r^2)^2 -W_r^2-
+1 r^2 W_^2)=0.
+This supports equivariant solutions within the ansatz
+an 
+W(r,,t)=r^nq(r,t)e^in .
+Provided  is nowhere vanishing
+and has suitable boundary behaviour, solutions within this ansatz have degree
+. Substituting () into () one obtains a
+-dimensional
+hyperbolic partial differential equation for . The space of static
+solutions is simply , a complex constant. So the
+equivariant moduli space is 
+, the punctured
+complex plane. Note that  is one connected component of
+the fixed point set in  of
+the isometry group 
+, so we are assured
+that  is totally geodesic. Both the true wave map
+flow and its geodesic approximant stay within the equivariance
+ class, therefore,
+and one can again ask to what extent the analytic method of Stuart applies.
+The equivariant configuration space enjoys a residual  symmetry,
+namely , and the discrete symmetry 
+,
+both of which leave the harmonic map energy unchanged, so we may again
+restrict attention to a curve in , namely
+.
+The situation is actually simpler  than in the full degree 1 case,
+because
+now the error, that is, the section of  along which we exponentiate
+to get from the holomorphic approximant to the true solution at time ,
+must
+also lie within the equivariance class. The only sections of relevance,
+therefore, are irrotational sections and their  images. We may
+define a new optimal constant , again the infimium
+of the Hessian for  unit sections  orthogonal to ,
+but now
+we include only equivariant sections. Since these form a subset of all
+sections, we have trivially that  by
+Theorem .
+
+Once again, we may think of  as a function
+of . We first show that  is continuous.
+Since the setup is very similar to section  we
+use equivalent notation and conventions, and omit several details.
+In spherical polar coordinates, the map  is
+(,)(f_(),n),
+f_()=2^-1 (^n
+ 2  ),
+so  and 
+. It follows that
+^E _1=nf_  e_2E_2 ,^E _2=-nf_  e_2E_1 .
+Hence, on an irrotational section ,
+^V=V'e_1E _1+Vnf_  
+e_2E _2.
+Given a general equivariant section , where  are irrotational,
+we may transfer  to a neighbouring bundle  (where
+) using the canonical isometry (),
+act with , then transfer back again, to obtain
+. The difference between this and  is
+(^ )W=nf_f_    
+J^NW.
+Now
+()=f_f_    &=&
+(^2- ^2)((/2)(/2))^2n-1  
+(^2n (/2)+^2^2n (/2))
+(^2n (/2)+ ^2^2n (/2)) 
+
+()&&
+(1+
+1  ^2 +1 ^2 +1  ^2^2 )
+ ^2-^2.
+So the pullback connexion satisfies a pointwise bound of the correct type
+( where  as
+) and we may conclude from the results of section that  is continuous.
+
+As for , the interesting issue is the large  behaviour of
+. We are so far unable to prove anything rigorous about
+ (if, indeed, it exists). However, we
+make the following conjecture:
+
+  For all , 
+exists and is finite. For all , this limit is not zero.
+
+If true, the equivariant Hessian is globally coercive for degree 
+greater than
+unity. One could at least hope, therefore, to model equivariant lump collapse
+accurately within the geodesic approximation in the case .
+
+To motivate this conjecture, we should describe some numerical work which led
+directly to the proof of its  counterpart, Theorem . It is
+straightforward to write the Jacobi operator on irrotational sections as an
+explicit ordinary differential operator acting on . The
+eigenvalue problem for  then reduces to a singular
+Sturm-Liouville problem on , namely
+-2 f_ ^2 Here  is the eigenvalue.
+The eigenfunctions of this problem form an  orthogonal basis for the
+space of irrotational sections. In particular, the eigenfunctions outside the
+kernel, which we shall refer to as "excited states", in analogy with
+quantum mechanics,
+ form a basis for the irrotational sections orthogonal to
+. If we could prove that 
+ is bounded uniformly away from zero for
+all 
+and all excited states , global coercivity of  would follow.
+Conversely, if for one of the excited states, 
+ as , global coercivity must fail: the
+one parameter family of excited states itself provides a counterexample.
+Unfortunately, the ( families) of eigensections are rather inaccessible
+analytically (except in the special case , where they are known
+exactly). However, they are quite easy to construct numerically, either by
+employing a specialist Sturm-Liouville solver package, or by using a
+shooting method. We have tried both strategies, obtaining compatible
+results from each.
+
+ 
+ 
+figure.eps 
+Plots of the ratio  against
+ for the first excited state  of the Sturm-Liouville problem
+() with , . To facilitate
+comparison of the curves, in each case the ratio has been normalized by its
+value at  (, ,  and  respectively, to 2
+decimal places). Note that only for  does the ratio tend to 0 as
+.
+ 
+
+The pertinent results may be summarized as follows.
+For  and for all excited states from 2nd to 6th (ordered by
+increasing ), the ratio  appears
+to remain bounded away from zero as . More interesting is the
+first excited state. Here the ratio remains bounded away from zero for
+, but not for . It was by examining the
+graphs of the 
+first excited eigenstates that the explicit family  of the proof of
+Theorem  was devised: the family is designed to have the same
+qualitative behaviour as the numerically generated eigenstates.
+In figure 1 we present a graph showing the ratio
+ as a function of  for the first excited
+states for .
+These data were generated by a shooting method using a 4th order Runge-Kutta
+scheme with variable 
+step. The singularities at  were handled
+by series expansions, so the scheme shot forwards from  and
+backwards from , applying a matching condition at 
+ ( being a small positive number, typically ).
+The difference between  and the other cases is
+quite clear. Although it is impossible to be exhaustive numerically, the
+results suggest that  is bounded away from
+zero for , as we have conjectured.
+Linhart and Sadun in a recent numerical study
+of lump collapse in the
+ model on  imposed the analogous equivariance
+condition on their field equation. It is an intriguing
+coincidence that they found that single lump collapse differs greatly from
+the predictions of the geodesic approximation (truncated to a finite disk in
+), whereas the collapse of two coincident lumps is quite well modelled by
+the geodesic flow.
+
+
+
+
+
+
+
+
+ 99 
+
+ D. Adams and L. Simon,
+"Rates of asymptotic convergence near isolated singularities of geometric
+extrema"
+Indiana J. Math.  37  (1988) 225-54.
+
+ M.F. Atiyah and N.J. Hitchin,
+The Geometry and Dynamics of Magnetic Monopoles 
+(Princeton University Press, Princeton, USA, 1988).
+
+ P. Bizon, T. Chmaj and Z. Tabor,
+"Formation of singularities for equivariant -dimensional wave maps
+into the 2-sphere"
+Nonlinearity  14  (2001) 1041-53.
+
+ Y. Choquet-Bruhat, "Global existence of wave maps"
+Rendiconti del Circolo Matematico di Palermo, Serie II  Suppl.
+57  (1998) 143-52.
+
+ G.W. Gibbons and N.S. Manton,
+"Classical and quantum dynamics of BPS monopoles"
+Nucl. Phys.  B274  (1986) 183-224.
+
+ A. Hatcher,
+Algebraic Topology 
+(Cambridge University Press, Cambridge, UK, 2002) p8.
+
+ R.A. Leese, "Low energy scattering of solitons in the
+ model" Nucl. Phys.  B344  (1990) 33-72.
+
+ L. Lemaire and J.C. Wood,
+"Jacobi fields along harmonic 2-spheres in  are integrable"
+J. London Math. Soc.  66  (2002) 329-40.
+
+ A. Lichnerowicz,
+"Applications harmoniques et varietes kahleriennes"
+Symp. Math. Bologna  3  (1970) 341-402.
+
+ J.M. Linhart and L.A. Sadun,
+"Fast and slow blowup in the   model and the
+-dimensional
+Yang-Mills model"
+Nonlinearity  15  (2002) 219-38.
+
+ N.S. Manton,
+"A remark on the scattering of BPS monopoles"
+Phys. Lett.  110B  (1982) 54-6.
+
+ N.S. Manton and S.M. Nasir,
+"Volume of vortex moduli spaces"
+Commun. Math. Phys.  199  (1999) 591-604.
+
+ D. McDuff and D. Salamon,
+-holomorphic curves and quantum cohomology 
+(American Mathematical Society, Providence, RI, USA 1994) p182.
+
+ R.S. Palais,
+Foundations of global non-linear analysis 
+(W. A. Benjamin, Inc., New York-Amsterdam, 1968).
+
+ P.J. Ruback, "Sigma model solitons and their moduli space
+metrics" Commun. Math. Phys.  116  645-58.
+
+ L. Sadun and J.M. Speight, "Geodesic incompleteness in
+the  model on a compact Riemann surface" Lett. Math. Phys. 
+43  (1998) 329-34.
+
+ T.M. Samols,
+"Vortex scattering"
+Commun. Math. Phys.  145  (1992) 149-79.
+
+ J. Shatah and M. Struwe,
+Geometric Wave Equations 
+(American Mathematical Society, Providence RI, USA, 1998).
+
+ J.M. Speight, "Low energy dynamics of a  lump on
+the sphere" J. Math. Phys.  36  (1995) 796-813.
+
+ J.M. Speight, "Lump dynamics in the  model on the
+torus" Commun. Math. Phys.  194  (1998) 513-39.
+
+ J.M. Speight, "The  geometry of spaces of harmonic
+maps  and "
+to appear in J. Geom. Phys. 
+
+ I. Stokoe and W.J. Zakrzewski,
+"Dynamics of solutions of the  models in  dimensions"
+Z. Phys. C - Particles and Fields  34  (1987) 491-6.
+
+ D. Stuart, "Dynamics of abelian Higgs vortices in the
+near Bogomolny regime" Commun. Math. Phys.  159  (1994) 51-91.
+
+ D. Stuart, "The geodesic approximation for the
+Yang-Mills-Higgs
+equations" Commun. Math. Phys.  166  (1994) 149-90.
+
+ H. Urakawa,
+Calculus of Variations and Harmonic Maps 
+(American Mathematical Society, Providence RI, USA, 1993) chap. 5.
+
+ R.S. Ward, "Slowly moving lumps in the  model in
+ dimensions" Phys. Lett.  158B  (1985) 424-8.
+
+ T.J. Willmore,
+Riemannian Geometry 
+(Clarendon Press, Oxford, UK, 1993) p57.
+
+
+

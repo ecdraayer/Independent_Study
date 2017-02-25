@@ -1,0 +1,557 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^2 
+
+G^t _ t  
+G^r _ r  
+G^r _ z  
+G^z _ z  
+G^ _   
+(G^r _ r +G^z _ z ) 
+G^r _ z  
+(G^r _ r -G^z _ z ) 
+S  
+
+ 
+
+
+
+
+
+Evidence that highly non-uniform black strings have a conical waist 
+
+Barak Kol 
+
+barak_kol@phys.huji.ac.il 
+
+ The Racah Institute of Physics, Hebrew University of
+  Jerusalem 91904 Israel  
+
+Toby Wiseman 
+
+T.A.J.Wiseman@damtp.cam.ac.uk 
+
+ DAMTP, CMS, University of Cambridge, Wilberforce Road,
+  Cambridge CB3 0WA, UK  
+
+April 2003 
+
+
+
+ 
+
+
+
+  Numerical methods have allowed the construction of vacuum
+  non-uniform strings. For sufficient non-uniformity, the local
+  geometry about the minimal horizon sphere (the "waist") was
+  conjectured to be a cone metric.  We are able to test this
+  conjecture explicitly giving strong evidence in favour of it.
+  We also show how to extend the conjecture to weakly charged strings.
+
+   hep-th/0304070  
+
+
+
+
+
+
+
+
+Introduction and Summary 
+
+
+
+In the presence of compact dimensions massive solutions of vacuum
+General Relativity may take one of several forms including the
+black-hole and the black-string. For concreteness, consider the
+simplest case -  extended space-time dimensions and a compact
+dimension of radius , which is denoted here by the 
+coordinate. Any  may be considered, and here we
+specialise to  for numerical convenience.  The transition
+between the black hole and string phases, which can be defined by
+their distinct horizon topologies, must depend on the sole
+dimensionless parameter of the problem, namely the ratio of the
+typical curvature radius of the horizon and . The picture we
+advocate here is that black objects with curvature radius much
+smaller than  are expected to closely resemble a 6d
+Schwarzschild black hole, with a nearly round  horizon,
+while very massive black objects will have a horizon size much
+larger than  and will be extended over the  axis wrapping it
+completely. Such objects will have  horizon
+topology and will be referred to as "black strings".  The
+simplest black string is a product of the 5d Schwarzschild
+solution with the spectator  coordinate line and we refer to it
+as the "uniform string". Other string solutions which are 
+dependent we refer to as "non-uniform".  Gregory and Laflamme
+(GL) discovered that neutral uniform black strings
+develop a perturbative -dependent instability (tachyon) for
+masses below a critical mass . Consequently the marginally
+tachyonic mode generates a branch of static solutions which we
+call the "GL non-uniform strings". Interesting links to
+thermodynamic stability were explored in
+, and the instability was
+further studied in.
+
+One of the authors (BK) used qualitative tools to
+analyse the phase structure of the static solutions. The emerging
+picture consists of exactly two stable phases - the black hole
+and the (stable) uniform black string connected through the
+unstable GL non-uniform solutions in a first order phase
+transition. These two stable solutions have not only different
+horizon topologies, but the total topology of the Euclidean
+solutions is different as well.  Thus a continuous topology change
+(much like the conifold transition in Calabi-Yau 3-folds) occurs,
+which was argued to centre around the cone over 
+.
+
+This conjecture addresses two questions. Firstly it conjectures that
+there is only one solution for large mass objects. This question is
+clearly essential for understanding how astrophysical black holes are
+manifested, and whether there are potentially observable consequences.
+Secondly, based on Gubser's higher order perturbative construction of
+the GL non-uniform strings, it predicts all strings in
+this branch have higher mass than the unstable uniform strings, and so
+these  solutions are unlikely to be the end state for GL decay
+as suggested by Horowitz and Maeda(It is important
+  to understand this decay end state as a stable string will always
+  lose mass by Hawking radiation until it becomes unstable.) .  For
+another approach to the phase structure see.  For
+implications to black hole uniqueness and for a description of the
+explosive transitions with Planck-scale power see.
+
+Let us recall the reason for the appearance of the cone and some
+more details. One considers a highly non-uniform string as well as
+a large black hole (a black hole which hardly fits in the compact
+dimension) and focuses on the vicinity of the "waist" - the
+minimal sphere in the black string, and on the "gap" between
+"north" and "south" poles in the black hole. Then one finds
+that the topology at some distance away from the waist is 
+ where the second sphere comes simply from the
+spherical symmetry and the first includes the Euclidean time.
+Moreover the spatial  is topologically trivial in the
+black hole (it can shrink) and correspondingly the  for the
+black string. Hence a topology change analogous to the "pyramid
+picture" of the conifold suggests itself where the cone here is
+over the metrically round .  The isometry
+of the cone is enhanced (relative to the rest of the solution) and
+in particular the geometry near the waist depends on only one
+variable - the distance  from the waist. Not only does this
+enhanced symmetry realize the topology change in a simple setting,
+but the equations of motion actually forbid some more general
+ansatze which were tried.
+
+Analytic solutions are not available, despite some attempts
+ and some relevant constructions in 4-d
+ (where the proper size of the
+compact dimension does not asymptote to a constant, and there are
+no black string solutions), which do not generalise to 
+. One of the authors (TW)
+ showed that in general the numerical
+method of relaxation could be applied to gravitostatics by
+overcoming the conceptual issues (largely related to imposing the
+constraint equations and boundary conditions) and in particular
+was able to trace numerically the GL branch of non-uniform strings
+in the case .  Large amounts of non-uniformity were reached
+() exposing the asymptotic
+behaviour for the GL non-uniform branch including limiting mass
+and temperature. Moreover, it was found that the whole branch has
+a mass higher than the critical string and therefore cannot serve
+as an endpoint for decay of unstable uniform strings. The
+agreement with the theoretical predictions of were
+further strengthened in where global properties of
+the solutions were studied and shown to behave in accord with the
+conjecture.
+
+In this paper we perform a much stronger test of the conjecture in
+ by comparing the numerical geometries with the predicted
+cone. A summary of the method and results follows.
+
+First one is required to identify the transformation from cone
+coordinates to the numerical metric, and then to compare the two
+metrics. The cleanest coordinate to extract is , and the
+"smoking gun" test involves comparing the numerical Kretschmann
+curvature invariant  with the cone prediction,
+, which due to the symmetry properties of the cone, only
+depends on . A quantitative test shows that over a region
+where  changes by orders of magnitude agreement is found and
+ changes only by a factor of about two, which we
+consider to be a sub-leading effect.  Next we infer the azimuthal
+angle  from the numerical solution.  Actually, comparison of
+the metric gives  and so we must test that the maximum
+of the expression for  is consistent with 1, and we
+see this is the case.  Three metric functions remain to be
+compared, and indeed show good agreement. This agreement is
+particularly satisfying given the low resolution of the grid over
+the relevant region, and the finite value of non-uniformity which
+can be achieved.
+
+In summary, we conclude that the numerical 6-d (It would be
+  interesting to check numerically the prediction of a critical
+  dimension .  For  the cone is unstable
+  while it is stable for  (see also
+ ). Thus there is the
+  possibility that for  a large black hole will be stable up to
+  the point where its horizon self-intersects, whereas for lower
+  dimensions a tachyonic instability must kick in earlier. ) 
+geometry at the vicinity of the waist reveals what is essentially
+a cone structure, supporting the analysis of.
+Sub-leading deviations from the cone remain and may hold further
+clues and refinements. We conclude with an argument that the waist
+cone geometry remains a good approximation if the string carries a
+small electric charge, and construct the behaviour of the electric
+potential near the cone tip.
+
+
+
+
+
+Numerical string solutions 
+
+
+
+Following Gubser, we define,
+ 
+where  are the maximum and minimum sphere radii in the
+horizon. Non-uniform strings were constructed non-linearly in
+ in using the methods developed in
+. For technical reasons, the computation was performed
+in 6 dimensions, although it was shown that 6-dimensional strings have
+the same qualitative thermodynamic behaviour as 5 dimensional strings
+to leading order in .  The numerical method uses the metric,
+ 
+where  are functions of  and  is the
+periodic coordinate of the  on which the string wraps. Due to
+reflection symmetry we actually consider the half period 
+ with . We have Euclideanised time and now the
+usual Euclidean constraint makes  periodic, 
+ with,
+ 
+with  the horizon temperature of the string. Furthermore 
+ as  is chosen.  Choosing units so
+that , we take  as a convenient initial condition
+for the relaxation, so  and  decay exponentially
+for small . The metric components are then solved by
+relaxation, and  is attainable. The method
+unfortunately is limited by resolution, and to proceed to higher
+ would require much computation time, and we suspect that it
+is more fruitful to attempt to improve the method itself before more
+detailed calculations are performed.
+
+For large  the waist shrinks, compatible with vanishing as
+, whilst the maximal sphere radius
+ appears to asymptote to a constant radius.
+Other global properties of the solution were also measured to check
+compatibility with the black string/hole transition conjecture, namely
+that the horizon temperature, mass, and the proper distance along the
+horizon appear to asymptote to constants for large .
+Assuming the conjecture to be true, this is intuitively explained by
+the fact that at large  the geometry hardly changes with
+varying , except near the very cone tip. As this region is
+small, it is only the very massive Kaluza-Klein states that
+participate, and these are strongly exponentially damped away from the
+waist, and therefore do not contribute much to variation of global
+properties.
+
+As in any numerical GR context, it is difficult to assess the physical
+significance of constraint violations. For small  we may
+compare non-linear solutions with Gubser's perturbation theory method.
+However, for large  where we become resolution limited, it is
+harder to assess error. In this was done by direct
+observation of the constraints, and furthermore using the first law to
+compare mass asymptotically measured with that integrated from the
+horizon geometry. Good agreement was found, but any additional tests
+of numerical accuracy are obviously important.  The cone conjecture is
+a perfect example of such a test; at large , if the geometry
+is indeed a cone at the waist, we may explicitly check that the
+numerical metric does indeed reproduce this. That is exactly what we
+do here. Furthermore, if the conjecture is correct it may allow
+numerical methods to start relaxation about the cone geometry, for
+either the black string or black hole branch, and therefore improve
+numerical stability.
+
+
+
+Testing the cone 
+
+
+
+
+In 6-dimensions we may now write the Euclidean cone metric over the
+base ,
+ 
+where  are the same coordinates as for the Euclidean
+string eq:num_metric . For the metric to be smooth away from
+the apex,  is an angle coordinate with range .
+Furthermore,  must be chosen as  to ensure 
+ behaves correctly as an angle in the .  We note, as
+emphasised in, that there are no physical free parameters
+once one has postulated this cone base.
+
+We may now directly compare the numerical metric eq:num_metric 
+and the cone eq:cone_metric . Comparison of 
+ give,
+ 
+Thus  and  are completely determined and there is no
+residual coordinate freedom to complicate the comparison. Knowing
+ and , we may simply compute the remaining components of
+the metric eq:cone_metric  and explicitly compare to
+eq:num_metric . Then,
+ 
+where
+ 
+
+There are two complicating factors in executing this comparison.
+Firstly we cannot reach  but only 
+ and thus we do not expect perfect agreement with the cone.
+Secondly, numerical resolution is limited, and we only expect good
+agreement in the region near the waist. For the maximum 
+computed the  lattice resolution is  and 
+. We will find good agreement with the cone is a region of
+coordinate width , restricting us
+to a 20*20 sub-grid of the whole lattice. Considering large gradients
+are present, it is unclear how satisfactory this resolution is
+(Bear in mind that we cannot compare with a lower resolution
+  as this does not allow  as large as this to be computed.
+  Furthermore we are unable to compute higher resolutions in a
+  reasonable time.) .  Both of these factors add considerable
+uncertainty in assessing agreement.  However, we will see that the
+agreement is sufficient that the cone is clearly a good approximation,
+even though it is difficult to make the statement more precise at this
+time.
+
+Comparisons of curvature invariant 
+
+
+file=figcone/rho.ps,width=3in 
+ Plot of  measured from the  string solution.
+ 
+
+
+  file=figcone/K.ps,width=3in 
+  file=figcone/K2.ps,width=3in 
+  file=figcone/K3.ps,width=3in 
+ Plot showing , the scalar curvature invariant, measured from the string () compared to the cone prediction. The ratio is also shown, and we see good agreement slightly away from the apex, where finite  'resolves' the cone. Moving far from the cone ie.  or  the cone is no longer a good approximation, the actual curvature becoming more homogeneous in .
+ 
+
+In figure  we plot the function  against  for
+the most non-uniform solution found numerically, with .
+We see very clearly the correct qualitative behaviour of  for a
+cone near to the minimal sphere at , where  has
+its minimum. The degree to which the cone is 'resolved' can be
+estimated from this minimum value. For the value of  plotted
+in the figure, . This indicates that the cone will
+be a good approximation for , but , the
+characteristic scale of the compactification.
+
+Quantities involving only  provide the easiest numerical
+comparisons. In the next section we see that computing  from
+ involves further processing, and thus tests only involving
+ should be more robust. A non-trivial test of the cone
+conjecture, simply involving  is a comparison of the Kretschmann
+curvature scalar with the cone prediction.  For the cone metric
+eq:cone_metric  one finds,
+ 
+One can compute the same quantity for the numerical solutions
+directly from  and the two are plotted in figure
+ for the region near the waist.  We also plot the ratio
+of these quantities in the same figure. We see that at the waist
+agreement is lost, as we expect because we are at finite
+. However, moving away from the apex, agreement seems to
+be good, considering the relatively low numerical resolution
+available over such a small subregion of the string solution. The
+ratio is close to one, and we also see a possible sub-leading
+behaviour in , and less strongly in  as we move away from
+the 'apex'. Moving further from the waist we see the curvature
+contribution from the cone decays sufficiently that a more
+homogeneous curvature emerges, as expected for a string.
+
+
+Full metric comparison 
+
+
+file=figcone/chimaxlow.ps,width=2.5in 
+file=figcone/chimaxhigh.ps,width=2.5in 
+ Plots of  on the  axis measured from string solutions with . For the larger  we see the curve become more 'constant', and furthermore, the value is remarkably consistent with one, the cone prediction.
+ 
+
+
+file=figcone/sinchi.ps,width=3in 
+ Plot of  computed from  string, including normalisation correction to ensure  at , so that  can be meaningfully extracted.
+ 
+
+
+  file=figcone/exp2B.ps,width=2.8in 
+  file=figcone/c1.ps,width=2.8in 
+  file=figcone/c2.ps,width=2.8in 
+ Plots of remaining metric components  computed from the numerical solution with  using the 'corrected' . The cone predicts that  which is also plotted for comparison. Very good agreement is seen, given that the underlying data is on a lattice of only approximately  and resolution effects may give significant numerical errors.
+ 
+
+
+
+file=figcone/c3.ps,width=3in 
+
+  The off-diagonal metric component  which the cone predicts to be
+  zero. Away from the resolved apex, we see it is indeed much smaller
+  than the values of  in the previous plot, again being
+  consistent with the cone ansatz.
+ 
+
+This curvature invariant indicates the size of the region where we
+expect good agreement. Now we perform a full metric comparison using
+ as well as . However, use of  is subtle. For the
+cone obviously  for . However, we are
+measuring  directly, not , and due to finite
+ resolving of the cone, and limited numerical resolution, we
+no longer can expect that  exactly at . In
+figure  we plot  for two values of
+ at , over the range of  indicated in
+the previous section to yield good agreement. Not only do we clearly
+see that for the larger  value  on the axis 
+ appears to be more constant, but moreover this constant is indeed
+consistent with one.  Bearing in mind the low resolution we regard
+this as remarkably good agreement. For the lower value of , a
+constant behaviour is still seen at large , again consistent with
+one, but there is a larger region near the apex where  is
+clearly not a constant, being approximately linear in .
+
+
+In order to compute eq:rzmetric  we must compute  from
+the  and obviously this may lead to pathologies, as we see
+above that the  measured at  is larger than one
+at its peak. Therefore, we normalise the  measured by
+its value on the  axis (which 'should' be one, and we have
+seen does well approximate one) as,
+ 
+so we use contours of  to find the value on the axis  to
+normalise by. This tidies up  at , and it is difficult to
+see how to extract  without dealing with this issue.
+
+Now we plot  in figure . We
+see exactly the type of behaviour we would expect, with contours of
+ parameterising an angle near the apex.  Then in figure
+ we plot the  and  components of the metric
+() eq:rzmetric  calculated using the corrected .
+According to the cone conjecture, these components should be equal to
+each other, and to , which we also plot in this figure.
+We see rather remarkable consistency with the cone prediction. The
+remaining test is that the measured  component () should be
+zero, or numerically speaking, much smaller than the 
+components.  This is finally plotted in figure , and again
+we see that the prediction is indeed true.
+
+
+
+
+
+Charged strings 
+
+
+
+Uniform strings electrically charged under a Maxwell field can be
+constructed from black hole solutions of Einstein-Maxwell-Dilaton
+theory.  For
+small charges non-uniform deformations will exist since the GL
+instability persists.  As the string horizon is an equipotential
+surface which is "dented" we expect the field to be reduced in the
+waist region - this is the complementary effect to the appearance of
+high fields near a "pointed protrusion".  Here we consider whether
+we can quantify this further, using our concrete example .
+
+Unfortunately at this time we know of no generalisation of the cone to
+include an electric flux. Therefore we simply consider putting a small
+charge on the cone and neglecting its back-reaction. Making the
+electric ansatz that the vector potential 
+with other components being zero, one finds,
+ 
+The solution can be separated,  and
+the resulting equations solved in terms of a separation constant ,
+which we may chose to be positive. The radial equation is easily
+solved giving,
+ 
+and since we wish the back-reaction to be small, we may only take
+solutions that are regular as .
+
+Now we consider the angular equation. The horizon, at ,
+must be an equipotential surface.  Due to the separable form, we see
+this may either be achieved by  being constant (ie. k = 1), or by
+ at . The first case yields only the trivial
+solution .  The second is more subtle, and we find the
+solution,
+ 
+where  is the hyper-geometric function. Additionally
+we add the geometric boundary condition at , where
+the differential equation is singular, that  be
+reflection symmetric. The hyper-geometric function is a finite
+degree polynomial in  if  with integer
+, and hence has the required reflection symmetry.  Indeed
+we may Taylor expand  about  giving,
+ 
+which confirms that only for these values of  is the reflection
+boundary condition obeyed.
+
+If we consider the exact cone geometry these modes with 
+clearly blow up at large , far from the apex.  However, for the
+non-uniform string, it is unclear what the geometry will be for large
+ and therefore we cannot specify precisely the remaining
+boundary condition for the radial equation. Instead we assume that the
+leading order term is not absent in the solution, so the dominant
+contribution to the potential near the apex is from the lowest , 
+, giving,
+ 
+for constant , the higher corrections coming from .
+Therefore we see the electric field vanishes on the cone horizon
+confirming our expectation of a reduced field near the apex.
+
+To conclude, we still expect the cone to describe the limiting waist
+geometry for a weakly charged string.  Obviously it would be
+interesting to understand how this picture changes as the charge is
+increased to extremality where one expects the GL instability to
+disappear.
+
+
+
+Acknowledgements 
+
+
+
+We would like to thank Adam Ritz for useful discussions.  The work of
+BK is supported in part by the Israeli Science Foundation. TW is
+supported by Pembroke College, Cambridge, and would like to thank YITP
+for hospitality during completion of this work.  Computations were
+performed on COSMOS at the National Cosmology Supercomputing Centre in
+Cambridge.
+
+
+
+
+
+
+
+
+
+
+
+
+

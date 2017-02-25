@@ -1,0 +1,700 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    INSTITUTE OF PHYSICS PUBLISHING                                   %
+%                                                                      %
+%   `Preparing an article for publication in an Institute of Physics   %
+%    Publishing journal using LaTeX'                                   %
+%                                                                      %
+%    LaTeX source code `ioplau2e.tex' used to generate `author         %
+%    guidelines', the documentation explaining and demonstrating use   %
+%    of the Institute of Physics Publishing LaTeX preprint files       %
+%    `iopart.cls, iopart12.clo and iopart10.clo'.                      %
+%                                                                      %
+%    `ioplau2e.tex' itself uses LaTeX with `iopart.cls'                %
+%                                                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+% First we have a character check
+%
+% ! exclamation mark    " double quote  
+% # hash                ` opening quote (grave)
+% & ampersand           ' closing quote (acute)
+% $ dollar              % percent       
+% ( open parenthesis    ) close paren.  
+% - hyphen              = equals sign
+% | vertical bar        ~ tilde         
+% @ at sign             _ underscore
+% { open curly brace    } close curly   
+% [ open square         ] close square bracket
+% + plus sign           ; semi-colon    
+% * asterisk            : colon
+% < open angle bracket  > close angle   
+% , comma               . full stop
+% ? question mark       / forward slash 
+% \ backslash           ^ circumflex
+%
+% ABCDEFGHIJKLMNOPQRSTUVWXYZ 
+% abcdefghijklmnopqrstuvwxyz 
+% 1234567890
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\documentclass[12pt]{iopart}
+% Uncomment next line if AMS fonts required
+%\usepackage{iopams}  
+
+\def\hF{\hat F}
+\def\tA{\widetilde A}
+\def\tcA{{\widetilde{\cal A}}}
+\def\tcF{{\widetilde{\cal F}}}
+\def\hA{\hat{\cal A}}
+\def\cF{{\cal F}}
+\def\cA{{\cal A}}
+\def\sA{{\sst A}}
+\def\sB{{\sst B}}
+\def\sC{{\sst C}}
+\def\sD{{\sst D}}
+\def\hE{{\hat E}}
+\def\cM{{\cal M}}
+\def\cL{{\cal L}}
+
+
+\def\ca{{\cal I}}
+\def\caj{{\cal J}}
+\def\caP{{\cal P}}
+
+\def\caWp{$\W_{\it{+}}$}
+
+\def\sm#1{{\sst{(#1)}}}
+\def\p{{\sst{(p)}}}
+\def\0{{\sst{(0)}}}
+\def\1{{\sst{(1)}}}
+\def\2{{\sst{(2)}}}
+\def\3{{\sst{(3)}}}
+\def\4{{\sst{(4)}}}
+\def\5{{\sst{(5)}}}
+\def\6{{\sst{(6)}}}
+\def\7{{\sst{(7)}}}
+\def\8{{\sst{(8)}}}
+\def\n{{\sst{(n)}}}
+\def\bA{\bar{\cal A}}
+\def\bF{\bar{\cal F}}
+\def\tG{\widetilde G}
+\def\tT{\widetilde T}
+%\def\Z{\rlap{\ssr Z}\mkern3mu\hbox{\ssr Z}}
+\def\Z{\rlap{\sf Z}\mkern3mu{\sf Z}}
+%\def\Z{\rlap{\rm Z}\mkern3mu\hbox{\rm Z}}
+\def\R{\rlap{\rm I}\mkern3mu{\rm R}}
+\def\CS{{\cal S}}
+\def\P{{\cal P}}
+\def\ep{\epsilon}
+\def\td{\tilde}
+\def\wtd{\widetilde}
+\def\half{{\textstyle{1\over2}}}
+\def\qu{{\textstyle{1\over 4}}}
+\def\tq{{\textstyle{3\over 4}}}
+\def\eig{{\textstyle{1\over 8}}}
+\let\a=\alpha \let\b=\beta \let\g=\gamma \let\d=\delta \let\e=\epsilon
+\let\z=\zeta \let\h=\eta \let\q=\theta \let\i=\iota \let\k=\kappa
+\let\l=\lambda \let\m=\mu \let\n=\nu \let\x=\xi \let\r=\rho
+\let\s=\sigma \let\t=\tau  \let\f=\phi \let\c=\chi \let\y=\psi
+\let\w=\omega  \let\D=\Delta \let\Q=\Theta \let\L=\Lambda
+\let\X=\Xi  \let\U=\Upsilon \let\F=\Phi \let\Y=\Psi
+\let\C=\Chi \let\W=\Omega   \let\G=\Gamma
+\let\la=\label \let\ci=\cite \let\re=\ref
+\def\nn{\nonumber} 
+\let\na=\nabla
+\let\pa=\partial \let\ov=\overline 
+\newcommand{\be}{\begin{equation}} 
+\newcommand{\ee}{\end{equation}}
+\def\ba{\begin{array}}
+\def\ea{\end{array}}
+\def\ft#1#2{{\textstyle{{\scriptstyle #1}\over {\scriptstyle #2}}}}
+\def\fft#1#2{{#1 \over #2}}
+\def\del{\partial}
+\def\sst#1{{\scriptscriptstyle #1}}
+ \def\oneone{\rlap 1\mkern4mu{\rm l}}
+
+\def\vac{ \left | 0 \right \rangle }
+\def\kvac{ \left | k \right \rangle }
+\def\lb {\left .}
+\def\rb {\right |}
+\def\sp{\; \; \;}
+
+\newcommand{\hsp}{\hspace{0.5cm}}
+
+\newcommand{\ho}[1]{$\, ^{#1}$}
+\newcommand{\hoch}[1]{$\, ^{#1}$}
+\newcommand{\bea}{\begin{eqnarray}} 
+\newcommand{\eea}{\end{eqnarray}} 
+\newcommand{\ra}{\rightarrow}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\Lra}{\Leftrightarrow}
+\newcommand{\ap}{\alpha^\prime}
+\newcommand{\bp}{\tilde \beta^\prime}
+
+
+
+\begin{document}
+
+\title{The scientific work of Sonia Stanciu}
+
+\author{Constantin Bachas
+}
+
+\address{ Laboratoire de Physique Th{\'e}orique de l' Ecole
+Normale Sup{\'e}rieure \\
+24 rue Lhomond, 75231 Paris cedex, France}
+
+
+\begin{abstract}
+The Leuven workshop on the `Quantum Structure of Space-time and the 
+Geometrical  Nature of the Fundamental Interactions'
+had a special session
+dedicated to the memory of Sonia Stanciu. This is the  summary of
+a talk delivered by the author on this  occasion.
+\end{abstract}
+
+%Uncomment for PACS numbers title message
+%\pacs{00.00, 20.00, 42.10}
+
+% Uncomment for Submitted to journal title message
+%\submitto{\JPA}
+
+% Comment out if separate title page not required
+%\maketitle
+
+%\section{Introduction}
+
+  I was  asked by the organizers  to say a 
+few words about the scientific life  of Sonia Stanciu, a young string 
+theorist and  active member of this European Network, who passed away a 
+few months ago after a short but devastating illness.
+
+    Sonia started her scientific  career  in Bonn, where she arrived from her
+native Romania  to work on a doctoral degree under the supervision of
+Vladimir  Rittenberg. Her thesis \cite{thesis} was on  
+ hierarchies of integrable equations,     
+in  relation with what are  nowdays refered to as  `old 
+matrix models'.  These describe certain types of matter fields
+living  on random triangulated surfaces, {\it i.e.}
+interacting with regularized  2d quantum gravity. 
+The models simplify considerably
+in the  continuum  or `double scaling'   limit \cite{mm}, in which
+their  partition and correlation functions 
+can be obtained  as solutions of differential equations. 
+Matrix models thus raised the  hope
+  of a non-perturbative approach to string theory, but this  
+was quickly  frustrated by  two important and 
+still open  problems: the  approach  is  
+restricted to  bosonic
+strings, and to  `spacetimes' with at most two dimensions.  
+
+
+Sonia studied supersymmetric extensions of the KdV hierarchy
+as a possible road towards lifting the above restrictions. Her thesis 
+begins with Scott-Russel's remarkable description  
+of his first  encounter with  a solitary wave in
+ the Union canal \cite{jsr}  and
+continues with  a nice  introduction to 
+the history of classical integrability. She  then goes on to describe her
+own research,  initiated  in  two  articles  with Jose
+Figueroa-O'Farrill \cite{skdv}. Jose was in fact the real scientific mentor
+of Sonia's thesis. He would also  become her life-long collaborator,
+and  her husband. 
+ 
+  Sonia spent  the last  year of her graduate studies visiting
+  Queen Mary College in London, and  then moved on to a
+ postdoctoral position  
+at  the ICTP in Trieste. During this time she continued to collaborate
+ with Jose,
+first on possible obstructions to  gaugings  of Wess-Zumino-Witten
+ models \cite{wzw},
+and then on $\sigma$-models based on non-semi-simple Lie algebras \cite{nappi}
+which   generalized   the Nappi-Witten plane-wave background \cite{Nap}. 
+As with  most of their other joint work, these articles were characterized by
+mathematical precision  and by a special affinity for algebraic
+structures.
+They  prepared the ground for the next class of problems  that
+Sonia attacked, now as a mature  physicist: the embedding of
+D-branes in exact curved-spacetime backgrounds. This is the subject on
+which she had the highest impact, and the one on which she
+worked until the end. 
+
+
+    String theory predicts two kinds  of quantum corrections to 
+classical geometry:
+string-loop corrections and $\alpha^\prime$ corrections. Though dualities may
+in some cases  exchange the  two, the $\alpha^\prime$ effects are  more
+accessible thanks to  the powerful algebraic techniques of conformal
+field theory. This is illustrated  by the success of 
+boundary CFT in describing the D-branes of certain exact (super)string
+backgrounds. In the semiclassical regime, D-branes are submanifolds
+which may  carry a non-trivial gauge connection, and are solutions of the 
+Dirac-Born-Infeld equations \cite{Dai}. 
+These equations, together with an
+infinite series of $\alpha^\prime$ corrections are, on the other hand, 
+equivalent to  the condition of
+conformal invariance on the  boundary of a string worldsheet, 
+\be
+T_{zz} = T_{\bar z \bar z} \ \ \ {\rm at}\ \ \ {\rm Re} z = 0 \ . 
+\label{tt}
+\ee     
+Here $T_{ab}$ is the energy-momentum tensor, and (\ref{tt})
+says that the net flow of  energy to the boundary of the half-plane
+must be zero. 
+The  point  is that in  many exact
+CFTs,  such as  minimal models  or WZW models, 
+one can bypass  the geometric intuition  
+and  solve the above equation algebraically. 
+ In this approach one must
+supplement the  condition (\ref{tt})  with certain consistency or
+ `sewing' constraints \cite{Car,Lew,Aug}  
+that translate  the locality of the  
+underlying field theory.  
+
+  
+  Sonia was among the first to realize that this was a very fertile
+and worth-pursuing  direction.  I remember listening to  her
+talk  at a  meeting of Dutch particle theorists, at NIKHEF
+in the Fall of 1999.  She  was moving from Imperial College to 
+the Spinoza Institute in Utrecht at that time, and was invited to present her 
+results. I came out  thinking that these were interesting, but that
+I would not want  to work on the  subject myself. Surely  enough, 
+this is what I was doing   for the next  couple of years. It  gave
+me the opportunity to discuss with Sonia on many occasions, 
+at conferences, via email,  and during  the Fall 2000  semester 
+at the Institut Henri Poincar{\'e}.
+
+  I will not attempt  to summarize  the applications of BCFT,  and
+the interplay of geometric and 
+ algebraic techniques,  in  the study of curved-spacetime
+D-branes in string theory. There  exist already   many 
+complimentary  reviews on this  subject [12--16]. 
+Here I will limit myself    to some
+comments on Sonia's contributions in the field. 
+
+The simplest but
+rich example of quantum geometry, which  has served as  prototype for
+many studies,  is the WZW model based on the 
+manifold of SU(2). The algebraic construction of  D-branes in this model
+has been
+known essentially since the pioneering work of Cardy \cite{Car}, while their
+geometric interpretation was  only 
+clarified in recent years \cite{Ale,Juerg,Bac}. The algebraic construction
+proceeds by first imposing the  symmetry-preserving
+boundary conditions on the affine currents~:
+\be 
+ J^a_z = - \Omega^a_{\ b} J_{\bar z} \ \ \ {\rm at}\ \ \ {\rm Re} z = 0 \ , 
+\label{jj}
+\ee
+where $\Omega$ is an automorphism of the  SU(2) algebra. 
+Because of  the Sugawara form of the energy-momentum tensor, 
+eqs.~(\ref{jj})  imply   automatically eq.~(\ref{tt}).  
+The sewing constraints
+can  then   be solved by  Cardy's prescription, valid 
+for   any rational CFT. In the semiclassical 
+regime these Cardy states correspond to D-branes which 
+wrap spherical  conjugacy classes,  and 
+are stabilized against shrinking by a non-trivial magnetic flux. 
+
+    In a series   of articles
+Sonia tried  to extend these considerations in several 
+directions~:   to general compact semi-simple Lie groups \cite{s4}, 
+to  N=2 coset models \cite{s1},   to the Nappi-Witten plane-wave
+background \cite{s2},  and to the WZW model based on the
+non-compact group SL(2,R) \cite{s3}. Each of them 
+presents  technical and conceptual  challenges,  which are still 
+the subject of active research today (see for instance the talks of 
+Angelos Fotopoulos, Lennaert Huiszoon and 
+Marika Taylor  in these proceedings). 
+The SL(2,R) WZW model is especially
+interesting because it is part of  the near-horizon geometry  of
+the stringy NS5/F1 black hole \cite{Mas}. Sonia was the first to study
+the supersymmetric D-branes of this background   from the 
+CFT point of view. We  continued her  work with
+Marios Petropoulos, adding
+a new type of D-brane with anti-de-Sitter geometry to 
+her list \cite{pet}. These new branes span  twisted conjugacy classes of
+SL(2,R), and are obtained when $\Omega$ is a  non-trivial 
+outer automorphism. The extension of the 
+argument in \cite{Ale} to the case of an outer automorphism  was 
+in fact also one 
+of Sonia's nice  remarks \cite{s4,Juerg}. 
+The dual holographic description of these  D-branes, and the
+construction of the corresponding  boundary states,
+are challenging  problems that are still only partially resolved 
+(see for instance \cite{boer,pon} and references therein). 
+
+One of the last problems to interest Sonia was the  
+definition of  D-brane charge. In the  SU(2) WZW model
+   this  takes values in the finite
+group $Z_{k+2}$ ,  where $k$ is the level of the current algebra. 
+Roughly speaking, the charge is the magnetic flux through the D-brane,  
+ defined modulo   large gauge tranformations of the 
+Neveu-Schwarz $B$-field (see \cite{phy,phy1} for  various related 
+`physicist' arguments). 
+A mathematically more precise formulation,  in terms of relative
+cohomology,  was given  in the last paper of Sonia with Jose
+\cite{s5}  (see also  \cite{Kli,Gaw,Fre} for earlier  work).
+In this approach one considers topological 
+obstructions to defining the  $\sigma$-model on open worldsheets. 
+With hindsight,   the appropriate  mathematical framework in which to define
+the invariant  D-brane charge 
+is  most likely  some  twisted version of K-theory \cite{Kth}. 
+It is,  however, not yet  clear how  this ties together  with the 
+boundary-state CFT approach, even for the next example in the list,
+{\it i.e.}
+the WZW model on the group manifold of
+SU(3) \cite{fs,phy1,s6}. Sonia might have talked
+about this today,  had illness not cut her life so short. 
+
+
+\vskip 0.2cm 
+  Most of us will remember Sonia as a quiet colleague, sharing a real
+passion for the  field to which she has contributed in her own
+discreet  and elegant way. She will be greatly missed in this and in all 
+future network  meetings. 
+
+
+
+
+%\bea  \label{ppwvmet}
+%ds^2 &=& 2 dx^{+} dx^{-} + \sum_{I=1}^{8} 
+%( dx^{I} dx^{I} - \mu^2 (x^I)^2 (dx^{+})^2), \\ 
+%F_{+1234} &=& F_{+5678} = 4 \mu. \nn
+%\eea
+
+\section*{References}
+
+\begin{thebibliography}{99}
+
+
+\bibitem{thesis}
+S.~Stanciu,
+``Supersymmetric integrable hierarchies and string theory,''
+arXiv:hep-th/9407189.
+%%CITATION = HEP-TH 9407189;%%
+
+\bibitem{mm}
+E.~Brezin and V.~A.~Kazakov,
+``Exactly Solvable Field Theories Of Closed Strings,''
+Phys.\ Lett.\ B {\bf 236} (1990) 144~; 
+D.~J.~Gross and A.~A.~Migdal,
+``Nonperturbative Two-Dimensional Quantum Gravity,''
+Phys.\ Rev.\ Lett.\  {\bf 64}, 127 (1990)~; 
+M.~R.~Douglas and S.~H.~Shenker,
+``Strings In Less Than One-Dimension,''
+Nucl.\ Phys.\ B {\bf 335}, 635 (1990).
+
+\bibitem{jsr} J.~ Scott-Russel, ``Report on waves,'' Report
+of the 14th Meeting of the British Association for the Advancement
+of Science, John Murray, London, 1844, p.p. 311-390.  
+
+\bibitem{skdv}
+J.~M.~Figueroa-O'Farrill and S.~Stanciu,
+``On a new supersymmetric KdV hierarchy in 2-d quantum supergravity,''
+Phys.\ Lett.\ B {\bf 316}, 282 (1993)
+[arXiv:hep-th/9302057]~;
+``New supersymmetrizations of the generalized KdV hierarchies,''
+Mod.\ Phys.\ Lett.\ A {\bf 8}, 2125 (1993)
+[arXiv:hep-th/9303168].
+
+
+\bibitem{wzw}
+J.~M.~Figueroa-O'Farrill and S.~Stanciu,
+``Equivariant Cohomology And Gauged Bosonic Sigma Models,''
+arXiv:hep-th/9407149~;`
+`Gauged Wess-Zumino terms and equivariant cohomology,''
+Phys.\ Lett.\ B {\bf 341}, 153 (1994)
+[arXiv:hep-th/9407196]. 
+
+\bibitem{nappi}
+J.~M.~Figueroa-O'Farrill and S.~Stanciu,
+``Nonreductive WZW models and their CFTs,''
+Nucl.\ Phys.\ B {\bf 458}, 137 (1996)
+[arXiv:hep-th/9506151]~; 
+%%CITATION = HEP-TH 9506151;%%
+``Nonreductive WZW models and their CFTs, II: N=1 and N=2 cosets,''
+Nucl.\ Phys.\ B {\bf 484}, 583 (1997)
+[arXiv:hep-th/9605111].
+
+\bibitem{Nap}
+C.~R.~Nappi and E.~Witten,
+``A WZW model based on a nonsemisimple group,''
+Phys.\ Rev.\ Lett.\  {\bf 71}, 3751 (1993)
+[arXiv:hep-th/9310112].
+%%CITATION = HEP-TH 9310112;%%
+
+\bibitem{Dai}
+J.~Dai, R.~G.~Leigh and J.~Polchinski,
+``New Connections Between String Theories,''
+Mod.\ Phys.\ Lett.\ A {\bf 4}, 2073 (1989)~; 
+%%CITATION = MPLAE,A4,2073;%%
+R.~G.~Leigh,
+``Dirac-Born-Infeld Action From Dirichlet Sigma Model,''
+Mod.\ Phys.\ Lett.\ A {\bf 4}, 2767 (1989).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\cite{Cardy:ir}
+\bibitem{Car}
+J.~L.~Cardy,
+``Boundary Conditions, Fusion Rules And The Verlinde Formula,''
+Nucl.\ Phys.\ B {\bf 324}, 581 (1989).
+%%CITATION = NUPHA,B324,581;%%
+
+%\cite{Cardy:tv}
+\bibitem{Lew}
+J.~L.~Cardy and D.~C.~Lewellen,
+``Bulk And Boundary Operators In Conformal Field Theory,''
+Phys.\ Lett.\ B {\bf 259}, 274 (1991)~; 
+%%CITATION = PHLTA,B259,274;%%
+D.~C.~Lewellen,
+``Sewing constraints for conformal field theories
+ on surfaces with boundaries,''
+Nucl.\ Phys.\ B {\bf 372}, 654 (1992).
+%%CITATION = NUPHA,B372,654;%%
+
+%\cite{Pradisi:1995qy}
+\bibitem{Aug}
+G.~Pradisi, A.~Sagnotti and Y.~S.~Stanev,
+``Planar duality in SU(2) WZW models,''
+Phys.\ Lett.\ B {\bf 354}, 279 (1995)
+[arXiv:hep-th/9503207].
+%%CITATION = HEP-TH 9503207;%%
+``Completeness Conditions for Boundary Operators
+ in 2D Conformal Field Theory,''
+Phys.\ Lett.\ B {\bf 381}, 97 (1996)
+[arXiv:hep-th/9603097].
+%%CITATION = HEP-TH 9603097;%%
+
+
+
+
+\bibitem{Dou}
+M.~R.~Douglas,
+``Lectures on D-branes on Calabi-Yau manifolds,''
+{\it Prepared for ICTP Spring School on Superstrings 
+and Related Matters, Trieste, Italy, 2-10 Apr 2001}~; 
+see also ``D-branes on Calabi-Yau manifolds,''
+arXiv:math.ag/0009209.
+
+\bibitem{Schw}
+C.~Schweigert, J.~Fuchs and J.~Walcher,
+``Conformal field theory, boundary conditions 
+and applications to string  theory,''
+arXiv:hep-th/0011109.
+%%CITATION = HEP-TH 0011109;%%
+
+\bibitem{Rec} A. Recknagel, ``Boundary conformal field theory
+and the world-sheet approach to D-branes,'' Habilitation
+thesis, unpublished. 
+
+
+\bibitem{Ang}
+C.~Angelantonj and A.~Sagnotti,
+``Open strings,''
+Phys.\ Rept.\  {\bf 371}, 1 (2002)
+[arXiv:hep-th/0204089].
+%%CITATION = HEP-TH 0204089;%%
+
+\bibitem{Scho}
+V.~Schomerus,
+``Lectures on branes in curved backgrounds,''
+Class.\ Quant.\ Grav.\  {\bf 19}, 5781 (2002)
+[arXiv:hep-th/0209241].
+%%CITATION = HEP-TH 0209241;%%
+
+\bibitem{Ale}
+A.~Y.~Alekseev and V.~Schomerus,
+``D-branes in the WZW model,''
+Phys.\ Rev.\ D {\bf 60}, 061901 (1999)
+[arXiv:hep-th/9812193].
+%%CITATION = HEP-TH 9812193;%%
+
+\bibitem{Juerg}
+G.~Felder, J.~Frohlich, J.~Fuchs and C.~Schweigert,
+``The geometry of WZW branes,''
+J.\ Geom.\ Phys.\  {\bf 34}, 162 (2000)
+[arXiv:hep-th/9909030].
+%%CITATION = HEP-TH 9909030;%%
+
+
+%\cite{Bachas:2000ik}
+\bibitem{Bac}
+C.~Bachas, M.~R.~Douglas and C.~Schweigert,
+``Flux stabilization of D-branes,''
+JHEP {\bf 0005}, 048 (2000)
+[arXiv:hep-th/0003037].
+%%CITATION = HEP-TH 0003037;%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\cite{Stanciu:1999id}
+\bibitem{s4}
+S.~Stanciu,
+``D-branes in group manifolds,''
+JHEP {\bf 0001}, 025 (2000)
+[arXiv:hep-th/9909163].
+%%CITATION = HEP-TH 9909163;%%
+
+\bibitem{s1}
+S.~Stanciu,
+``D-branes in Kazama-Suzuki models,''
+Nucl.\ Phys.\ B {\bf 526}, 295 (1998)
+[arXiv:hep-th/9708166]~;
+%%CITATION = HEP-TH 9708166;%%
+
+\bibitem{s2}
+S.~Stanciu and A.~A.~Tseytlin,
+``D-branes in curved spacetime: Nappi-Witten background,''
+JHEP {\bf 9806}, 010 (1998)
+[arXiv:hep-th/9805006]~; 
+%%CITATION = HEP-TH 9805006;%%
+J.~M.~Figueroa-O'Farrill and S.~Stanciu,
+``More D-branes in the Nappi-Witten background,''
+JHEP {\bf 0001}, 024 (2000)
+[arXiv:hep-th/9909164].
+
+
+%\cite{Stanciu:1999nx}
+\bibitem{s3}
+S.~Stanciu,
+``D-branes in an AdS(3) background,''
+JHEP {\bf 9909}, 028 (1999)
+[arXiv:hep-th/9901122]~; 
+%%CITATION = HEP-TH 9901122;%%
+J.~M.~Figueroa-O'Farrill and S.~Stanciu,
+``D-branes in AdS(3) x S(3) x S(3) x S(1),''
+JHEP {\bf 0004}, 005 (2000)
+[arXiv:hep-th/0001199].
+%%CITATION = HEP-TH 0001199;%%
+
+\bibitem{Mas}
+J.~Maldacena and A.~Strominger,
+``AdS(3) black holes and a stringy exclusion principle,''
+JHEP {\bf 9812}, 005 (1998)
+[arXiv:hep-th/9804085].
+%%CITATION = HEP-TH 9804085;%%
+
+%\cite{Bachas:2000fr}
+\bibitem{pet}
+C.~Bachas and M.~Petropoulos,
+``Anti-de-Sitter D-branes,''
+JHEP {\bf 0102}, 025 (2001)
+[arXiv:hep-th/0012234].
+%%CITATION = HEP-TH 0012234;%%
+
+\bibitem{boer}
+C.~Bachas, J.~de Boer, R.~Dijkgraaf and H.~Ooguri,
+``Permeable conformal walls and holography,''
+JHEP {\bf 0206}, 027 (2002)
+[arXiv:hep-th/0111210].
+%%CITATION = HEP-TH 0111210;%%
+
+\bibitem{pon}
+B.~Ponsot, V.~Schomerus and J.~Teschner,
+``Branes in the Euclidean AdS(3),''
+JHEP {\bf 0202}, 016 (2002)
+[arXiv:hep-th/0112198].
+%%CITATION = HEP-TH 0112198;%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibitem{phy}
+W.~Taylor,
+``D2-branes in B fields,''
+JHEP {\bf 0007}, 039 (2000)
+[arXiv:hep-th/0004141]~; 
+%%CITATION = HEP-TH 0004141;%%
+A.~Alekseev, A.~Mironov and A.~Morozov,
+``On B-independence of RR charges,''
+Phys.\ Lett.\ B {\bf 532}, 350 (2002)
+[arXiv:hep-th/0005244]~;
+%%CITATION = HEP-TH 0005244;%%
+D.~Marolf,
+``Chern-Simons terms and the three notions of charge,''
+arXiv:hep-th/0006117.
+%%CITATION = HEP-TH 0006117;%%
+
+\bibitem{phy1}
+J.~M.~Maldacena, G.~W.~Moore and N.~Seiberg,
+``D-brane instantons and K-theory charges,''
+JHEP {\bf 0111}, 062 (2001)
+[arXiv:hep-th/0108100].
+%%CITATION = HEP-TH 0108100;%%
+
+\bibitem{s5}
+J.~M.~Figueroa-O'Farrill and S.~Stanciu,
+``D-brane charge, flux quantization and relative (co)homology,''
+JHEP {\bf 0101}, 006 (2001)
+[arXiv:hep-th/0008038]~;
+%%CITATION = HEP-TH 0008038;%%
+S.~Stanciu,
+``A note on D-branes in group manifolds: Flux quantization and D0-charge,''
+JHEP {\bf 0010}, 015 (2000)
+[arXiv:hep-th/0006145].
+
+\bibitem{Kli}
+C.~Klimcik and P.~Severa,
+``Open strings and D-branes in WZNW models,''
+Nucl.\ Phys.\ B {\bf 488}, 653 (1997)
+[arXiv:hep-th/9609112].
+%%CITATION = HEP-TH 9609112;%%
+
+\bibitem{Gaw}
+K.~Gawedzki,
+``Conformal field theory: A case study,''
+arXiv:hep-th/9904145.
+%%CITATION = HEP-TH 9904145;%%
+
+%\cite{Fre}
+\bibitem{Fre}
+D.~S.~Freed and E.~Witten,
+``Anomalies in string theory with D-branes,''
+arXiv:hep-th/9907189.
+%%CITATION = HEP-TH 9907189;%%
+
+
+%\cite{Minasian:1997mm}
+\bibitem{Kth}
+R.~Minasian and G.~W.~Moore,
+``K-theory and Ramond-Ramond charge,''
+JHEP {\bf 9711}, 002 (1997)
+[arXiv:hep-th/9710230]~; 
+%%CITATION = HEP-TH 9710230;%%
+E.~Witten,
+``D-branes and K-theory,''
+JHEP {\bf 9812}, 019 (1998)
+[arXiv:hep-th/9810188].
+%%CITATION = HEP-TH 9810188;%%
+P.~Bouwknegt and V.~Mathai,
+``D-branes, B-fields and twisted K-theory,''
+JHEP {\bf 0003}, 007 (2000)
+[arXiv:hep-th/0002023].
+%%CITATION = HEP-TH 0002023;%%
+
+\bibitem{fs}
+S.~Fredenhagen and V.~Schomerus,
+``Branes on group manifolds, gluon condensates, and twisted K-theory,''
+JHEP {\bf 0104}, 007 (2001)
+[arXiv:hep-th/0012164].
+%%CITATION = HEP-TH 0012164;%%
+
+%\cite{Stanciu:2001vw}
+\bibitem{s6}
+S.~Stanciu,
+``An illustrated guide to D-branes in SU(3),''
+arXiv:hep-th/0111221.
+%%CITATION = HEP-TH 0111221;%%
+
+
+
+
+\end{thebibliography}
+
+\end{document}
+
+

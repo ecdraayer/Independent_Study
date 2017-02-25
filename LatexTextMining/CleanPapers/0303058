@@ -1,0 +1,651 @@
+
+          
+             
+          
+
+
+           
+         
+            
+           
+
+
+
+
+
+
+
+
+
+
+
+
+Interaction Between Kink and Radiation in 
+ Model Work performed under auspices of ESF Programme
+ "Coslab"  
+Tomasz Romanczukiewicztrom@th.if.uj.edu.pl 
+       
+Institute of Physics,
+
+       Jagiellonian University, Reymonta 4, Krakow, Poland 
+
+ 
+The radiation from oscillating kink in (1+1) dimensional
+relativistic   model is considered. Both analytical and
+numerical approaches are presented and the comparison between
+these methods is discussed. Acceleration of the kink in external
+radiation is calculated and numerical results are also presented.
+
+
+
+
+Introduction  
+
+
+Kink is a simple example of topological defect. Topological
+defects i.e. monopoles, vortices, domain walls play very important
+role in modern physics starting from flux tubes in QCD,
+vortices in liquid helium and superconductors, domain walls in
+magnetics, various defects in liquid crystals to strings in
+cosmology (although recently it has been found
+cosmological strings are not as important as they had appeared to
+be). Although these objects were studied for many
+years there are still many unanswered questions, mostly concerning
+their dynamics. There are some open problems about their
+interactions with other topological defects and external fields
+. Even dynamics of their internal degrees of freedom
+is not fully understood and needs a lot of examinations
+,. In most cases we built our knowledge
+from experiments and numerical calculations. In theory, topological
+defects are described by nonlinear partial differential equations.
+Most of them one can solve exactly only in special cases, for
+the rest of them one can apply only approximations.
+
+In this paper we focus on perturbation method around a well known
+analytical static solution namely the kink. The results will be
+compared with numerical calculations. Very similar problems were
+discussed in, and.
+
+Manton in considered problem of kink and antikink
+creation and annihilation process and its relationship with the
+vibrational mode. He presented theory concerning the behavior of
+that mode and its decay. In this paper we develop methods
+presented in and apply to different initial
+conditions, more suitable for computer simulations. We verify
+Manton's and our predictions via numerical calculations. In
+ there are another methods for calculating the
+radiation presented in a context of domain wall. The radiation
+from squeezed kink is investigated in.
+
+Usually when one wants to find out whether the system is stable,
+one adds small perturbation and study its evolution. If the
+perturbation does not grow in time it means the solution is
+stable. Otherwise it is unstable. The problems of stability and
+relaxation process is well examined for dissipative systems (for
+example systems described by diffusion equations or wave equations
+with damping). The model considered in the present paper is energy
+conserving and therefore we can use stability only in a local
+sense. The relaxation process must be based upon radiation of the
+redundant energy into infinity. The static kink solution has the
+lowest possible energy in its topological sector (Bogomolny
+bound). This is a reason for us to treat kink as an attractor. The
+system with localized perturbation will tend to our kink solution
+in finite regions of the one-dimensional space.
+
+In the sections 4 and 5  of our paper we apply methods presented in the
+sections 2 and 3 to kink interacting with external
+radiation. Because the kink is transparent to radiation in linear
+order of approximation our usual intuition fails. For small
+amplitudes, the kink instead of being pushed away by radiation
+pressure is accelerating toward the source of radiation.
+
+In literature there are considered mostly kinks interacting
+with a constant external force or a force oscillating in time
+ or.
+
+The model 
+Let us consider one dimension real scalar field theory described by the
+equation:      -rI 
+We use natural unit system ().
+There exist well known static solutions:
+   _s(x) = (x-x_o) rII 
+which will be referred to as kink (with  sign) and antikink
+(with ). Without loosing generality one can choose  due
+to translational invariance. Let us add a small perturbation to
+the kink solution:    (t,x)=_s(x)+(t,x) rIII .
+Eq. rI  can
+be rewritten in the form:
+    ++N()=0,
+   rIV 
+where linear operator  has the form:
+   ^2    x^2 +[4-6(1-_s^2)],  rV 
+and  denotes the  part nonlinear in:
+   N() = 6_s^2+2^3.
+   rVI 
+In the first approximation we assume that  is small
+enough to neglect the term rVI . We seek solutions of the
+linearized eq. rIV  in the form 
+. We obtain the  eigenvalue problem (very similar to the
+Schrodinger equation): rVII . The above equation has two solutions vanishing in infinity. One of
+them for 
+  _t(x)=1 ^2 x  rVIII 
+is called translational zero-mode because it is responsible
+for small translations of the kink: 
+. This mode
+plays a very important role when one considers the evolution of a
+system with an external force or evolution of a
+system itself in more dimensions (domain wall) or
+interaction between two or more kinks. The other normalizable
+solution is a vibrational mode with :
+  _d(x)=x ^2x . rIX 
+It is very
+important that in linear approximation this mode oscillates
+without loosing energy. It is a quasistationary solution because
+only couplings in higher orders  re responsible for decaying of this solution
+due to radiation. The energy is carried away by scattering modes
+in continuous spectrum:
+ _k(x)=e^ikx (3^2x-3ikx-1-k^2), rX 
+where  is a wave
+vector: k^2=^2-4. We want to find the evolution of
+the system when initially only the discrete oscillating mode is
+excited. Let us construct a solution of the equation rIV 
+substituting  and assuming
+that  and  are small we obtain the equation for 
+in  order:  ++6_sA_d^2_d^2=0. rXI  This is
+an inhomogeneous linear equation for  with the source term
+ where  and . Notice that it is proportional to the square of vibrational mode. We can make a time Fourier transform of the
+equation rXI  and obtain: -^2(,x)+(,x)+()g(x)=0.
+rXII  It is an  inhomogeneous linear equation for the spatial
+part but since we know the solutions rX  of the homogeneous equation
+we can easily construct appropriate Green's function in a
+standard manner: G_k(x,y)= 
+-1 W _k(y)_-k (x)&x<y
+
+-1 W _-k (y)_k (x)&x>y
+where  is Wronskian of eq.
+rXII . Therefore the solution has a form:
+  (,x)=-() W 
+  (_-k (x)_- ^xdy_k(y)g(y)+
+  _k (x)^ _xdy _-k (y)g(y)).
+  rXIII 
+We can use an asymptotic form of 
+ for large  and obtain
+(the source is well localized around 0):
+  (,x)=-() 2ik(2-k^2-3ik) e^(-ikx) 
+  _- ^ dy _k(y)g(y).
+After calculating this integral analytically we get:
+  (,x)=-k(k^2+4)(k^2-2)() 
+  16(k 2 )(2-k^2-3ik) (-ikx)
+  rXIV 
+Following Manton we consider an
+oscillating mode . Square of the
+amplitude is given by
+. Since
+constant solution carries no energy we take into account only the
+time dependent part: . Fourier
+transform has a form: 
+, where .
+Substituting the source term into rXIV  and calculating
+inverted Fourier transform we obtain:
+  (t,x)=  k_o(k_o^2+4)(k_o^2-2)  32(k_o 2 )
+  (2-k_o^2-3ik_o)  a^2[i(_ot-k_ox)].rXV 
+Since we are only interested in real part of the above
+equation the radiation has a form:
+  (t,x)=Qa^2(_ot-k_ox+),rXVI 
+where
+
+
+
+  Q=k_o(k_o^2-2)  32(  k_o 2 )   k_o^2+4 k_o^2+1  =0.0453,
+and
+ is a phase which we are not interested in. The same
+radiation goes also to . We have made numerical simulations
+for various , where  is initial amplitude of the
+oscillating mode (in the following section we show that the amplitude decreases due to the radiation). In large distance from the kink we
+measure the outgoing field. The difference from the kink solution is
+sketched in figures  and  for  and 
+respectively (for the clarity we have plotted only the local extrema
+of the field instead of whole oscillations). The amplitude
+predicted by eq. rXVI  seem to fit very well in the first figure.
+On the second Figure one can also see the damping which will be
+explained in the next section.
+
+As we can see from eq. rXVI  the outgoing radiation has only
+one single frequency which is twice the frequency of oscillating
+mode. This is true only in approximation, because the
+coupling in cubic term in rVI  will result in frequency
+. If one wants to test this procedure numerically one
+has to be very careful. The first idea is to pose initial
+conditions in the form  and
+. That means there is no radiation in , so
+there can be no source for . Source must have a form
+, where  is
+a Heaviside function. Fourier transform:
+  ()=3a^2(-(  Pi The field we calculate is equal to
+(t,x)=a^2 2 P.V. _- ^d   k(k^2+4)(k^2-2)(i(t-kx)) 
+  32(  k 2 )(2-k^2-3ik) (-(  i rXVII 
+Let us consider the second part of the integral in rXVII 
+containing factor :
+
+  I(t,x)=i_- ^  d
+  F()e^it  If  is a real number we have oscillations of the integrand
+along  axis (because of the  term), but
+when  is imaginary we have exponential decay, therefore for
+large  we need to take into account only  for which 
+is real, that is , where . We can rewrite
+the above integral in a form:   I(t, x)=ie^i_ot _ ^  dF()e^i(  After introducing  we obtain:
+  I(t,x)=
+  ie^i_ot _(  dF( t +_o)
+  e^i   
+For large times we can expand  in :
+  I(t,x)=
+  ie^i_ot _(  dF(_o)
+  e^i   +F'(_o)e^i  t +Because  and  tends to infinity the first term
+is equal to:
+  _t _(  dF(_o)
+  e^i   =F(_o)_- ^ 
+  de^i   =iF(_o)
+The second term we can integrate immediately after adding a
+term  to the exponent and obtain:   I(t,x) = -e^i_ot [  F(_o)+e^i(t F'(_o)].
+But  therefore
+
+
+
+
+For large  we can neglect the second term:
+  I(t,x)=-e^i_ot [  -ix_o k_o e^i(t 
+  ]F(_o).
+Finally the radiating part in our approximation has a form
+  (t,x)=Qa^2
+  [1-i_o k_o 
+  e^i(2t/x ]
+  [i(_ot-k_ox+)].
+Apart from oscillation with frequency  we have some
+decaying modulations with frequency .
+Speed of the decay is determined by the point of observation .
+The larger  the slower decay. Figure 3 shows the Fourier's
+transform of the numerically computed field in . As one can
+see there are three easily visible peaks. The largest one is at
+. The next one is at another harmonic
+frequency . There is also one peak for
+ which is responsible for decaying
+modulations of the field. On the next Figure we have plotted
+envelope of oscillations evaluated from eq. rXVII . On Figure
+5 one can see the behavior of the envelope for large times which
+seems to be well approximated by eq. (30). The measured frequency
+is really . We also present the growth
+of the field for small times  on figures 6 and 7. On the next
+pictures we have sketched numerically evaluated field (from eq.
+rXVII ) and, for comparison, numerically calculated solution
+of the full partial equation (1). Because of the numerical errors
+there are only the largest modulations visible.
+
+Backreaction 
+In the above approximation we have found the field radiated to the
+infinity. We assumed that amplitude of the oscillating mode does
+not change in time. This is not true if the system is isolated. Radiation carries away energy and that leads to a decrease of the amplitude since the system
+is energy conserving. Let us calculate the rate at which the energy is being
+lost during radiation. For scalar field the energy escaping from a
+segment  is equal to
+
+. After taking
+
+ and averaging over a period we obtain the energy
+change inside large segment: dE dt =-Q^2k_o_oa^4=-0.020a^4 and since energy of
+the vibrational mode is  we find a differential equation
+for the amplitude of that mode: da^2 dt =-Q^2k_o_oa^4. We can easily find a
+solution with an initial condition : a(t)=a_o 1+Q^2k_o_o a_o^2t  . rXVIII  From the above we obtain time dependence of radiation amplitude:
+A(t)=1 C(x,a_o)+Qk_o_ot ,r1XVIII  where
+C(x,a_o)=1 Qa_o^2 -Qk_o_o t_o(x)RXVIII  is constant in time.  is the time it takes for the field
+to travel from origin to point  where it is observed.
+
+
+
+
+This very precise prediction we can compare with purely numerical
+results. Maxima and minima of the field with initial 
+measured for  are shown on Figure . There are also
+two hyperbolic function fitted to these data. The same procedure
+was applied for other amplitudes. The factor that stands besides
+ in eq. r1XVIII  in the theory is equal to 0.444. Numerical
+results show that its average value is 0.449 which is not
+significantly different. The value does not change much (within
+2) for different  (0.05).
+
+In Figure  we have sketched fitted  versus . As
+one can see the fitted function in the form RXVIII  is a very
+good approximation of the results. We find . In the
+theory above we have 0.0453 but it is still within numerical
+error. The last parameter in numerics is equal to . The
+group velocity of the field is equal to
+
+ and hence the
+distance  than theoretical value of . In fact
+we actually can observe that the radiation cames to  in
+this time (figure  and ). If one plots the fitted
+function and the theoretical one on one graph one can find they
+are almost  indistinguishable, especially for small  where
+our theory is the most accurate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Anharmonic corrections 
+As we saw in previous section, the field radiated from oscillating
+kink is of order  (eq. rXVI ,
+). The oscillating mode reaction to scattering
+modes will be of order  (in eq. rXVIII 
+). But there is still
+nontrivial behavior of amplitude in the order .
+Let us consider only the discrete mode. Substituting
+ in eq. rIV  in order
+ we obtain the following equation:
+   (A_d +3A_d)_d+6A^2_d_s^2_d=0.
+We are interested only in evolution of .We can rewrite the
+source term in a form . To
+get rid of the orthogonal term  we project this
+equation onto . In order to do that we integrate both sides of
+the above equation with  and we obtain an ordinary
+differential second order equation (neglecting the perpendicular
+part):
+
+  A_d +3A_d+9 16 A_d^2=0.
+We solve this using standard series method:
+. We take initial conditions:
+. In order  we obtain
+
+A ^(1)  +3A^(1) =0,and the solution is
+. In second order we have:
+
+A ^(2) +3A^(2) +9 16 a^2^23 t=0.The whole solution has a form:
+
+A_d(t)=-3 32 a^2+(1+a 16 )a(3
+ t)+
+ 32 a^2(23 t). This function's maxima are equal to  and minima
+.
+Figure  shows the oscillating mode evolution calculated
+numerically for . The field was measured in
+, where the function
+ has maximum equal . The dashed lines represent
+ and  calculated for that
+amplitude. As one can see our prediction works very well.
+
+Because the radiation depends on the square of the oscillating
+mode one can expect that minima are on more or less the same level
+while the maxima are changing (one is higher and the next one is
+lower and the following one is higher again). This effect is
+actually seen on Figure .
+ 
+
+Conclusions  
+In this paper we have investigated the behavior of excited oscillating
+mode and its decay using both analytical and numerical methods. We
+have proved conformity between these two methods. We have studied
+the interaction of the kink with external radiation field. We have found that in most cases the kink will be pulled by the radiation.
+We have explained the peculiar behavior of this system.
+Finally we presented numerical results for large amplitudes of the
+source wave when the kink is pushed away by the wave.
+
+
+
+
+ 25 
+ See eg. M.Baker, J.S. Ball, F. Zachariasen, Phys.Rep.
+209 , 73 (1991).
+ T.W.B. Kibble, J.Phys. A9 , 1387 (1979).
+ F.R. Bouchet, P. Peter, A. Riazuelo, M. Sakellariadou,
+ Phys.Rev. D65 , 021301 (2002).
+ V.G. Kiselev, Ya,M. Shnir, Phys. Rev. D57 , 5174
+(1998).
+ H. Arodz, Nucl. Phys. B450 , 189 (1995).
+ H. Arodz, Acta Phys.Polon. B29 , 3725-3737
+(1998).
+ N.S. Manton, H. Merabet, Nonlinearity 12 , 851
+(1997).
+ R. Pelka, Acta Phys.Polon. B28 , 1981 (1997).
+ M. Slusarczyk, Acta Phys.Polon. B31 , 617-635
+(2000).
+ R. Rajarshi, S. Sengupta, Phys. Rev. D65 ,
+063521 (2002).
+F.J. Alexander, S. Habib, A. Kovner, Phys. Rev. E48 ,
+4284-4296 (1993).
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+Extrema of the outgoing radiation for .  
+ 
+ 
+ 
+
+Extrema of the decaying radiation for  with fitted
+functions r1XVIII . 
+
+ 
+ 
+ 
+
+Fourier transform of the radiation ().  
+ 
+ 
+ 
+
+Envelope of the radiation  
+ 
+ 
+ 
+
+Envelope for large times  
+ 
+ 
+ 
+
+Envelope for small times 
+
+ 
+ 
+ 
+
+Envelope for very small times 
+
+ 
+ 
+ 
+
+Radiation calculated from integral (7)  
+
+ 
+ 
+
+Radiation computed from the full partial equation (1) 
+
+
+
+ 
+ 
+ 
+
+ defined by eq. RXVIII  vs initial amplitude
+of the discrete mode; numerical data and fitted function. 
+
+ 
+ 
+ 
+
+Anharmonical oscillation of the discrete mode.
+Dashed lines are calculated theoretically.  
+ 
+ 
+ 
+
+Pulling force of the radiation vs frequency  
+
+ 
+ 
+ 
+
+Zeros of the field for different frequencies of the source wave and for the amplitude   
+ 
+ 
+ 
+
+Zeros of the field for  and for different amplitudes  
+
+Kink in external radiation 
+Let us now consider quite opposite process when kink is exposed to
+external radiation coming from :  
+. Let us consider small amplitude limit. In the
+linear approximation there is no reflection in the
+potential of the soliton and therefore one cannot expect the
+system will behave as other similar systems in other branches of
+physics (there is no analogy to  a particle exposed to an
+electromagnetic wave). In the first order the solution has a form
+rXIII , where 
+and . The correction oscillates with
+frequency . For  we can
+approximate the solution to form:
+ 
+ &(,x)=-() W (
+ _-k (x)^_- 
+ dy_k(y)_q^2(y)_s(y).
+
+&.-_-k (x)^_x 
+ dy_k(y)_q^2(y)_s(y)+_k (x)^_x 
+ dy_-k (y)_q^2(y)_s(y))
+and
+ 
+ &(,x() W (
+ _k (x)^_- 
+ dy_-k (y)_q^2(y)_s(y).
+
+&.-_k (x)_- ^x 
+ dy_-k (y)_q^2(y)_s(y)+_-k (x)_- ^x 
+ dy_k (y)_q^2(y)_s(y))
+
+
+
+
+
+where . In order to calculate the
+integrands with one finite but large limit we can use once again
+the asymptotic form of . Integrands with both infinite
+limits can be calculated analytically via residua and finally we
+can write a simply expression for asymptotic behavior of the first
+correction:  _+ (t,x)=b_+(_q)(_kt-kx+_1)+c(_q)
+ (_kt+2qt+_2)
+and
+ _- (t,x)=b_-(_q)(_kt+kx-_1)-c(_q)
+ (_kt+2qt-_2).
+where
+  b_(_q)=3  a^2-60480+82224_q^2-31620_q^4+3707_q^6  qk(15120-11115_q^2+1851_q^4) 
+  10(k2q 2 )(4_q^2-3)
+  _q^2k ,
+c(_q)=3 2k (q^2+1)_q^2 and
+ are phases. The reflected part  for small
+frequencies is more or less the same order as , but for large
+frequencies decays exponentially
+
+. The transition part
+.  is an amplitude of a wave
+coming from  and going to . This wave has exactly
+the same form at both sides and hence passes no energy nor
+momentum to the kink as one can see in details in the following
+calculations.
+
+For small  we do not know an analytical solution. The solution
+(which for small  can differ from ) oscillates
+around the kink solution with a frequency of the source wave
+. Because of the energy gathered in these oscillations
+kink as seen from a distance  gains some extra mass. In following
+calculations we will be refering to that effect mass as . The
+bare mass of the soliton equals .
+
+As mentioned in a section 3 the change of energy  inside a segment
+ equals 
+. In our case we have from
+the right side
+. The
+energy flowing into the segment averaged over a period is
+
+
+From the left side the field is
+
+.
+The energy is equal than:
+
+
+The energy conservation takes a form: 1 2 q_qA^2-1 2 q_qB^2-1 2 k_k
+(b_-^2+b_+^2)= M^*d dt . Where
+ is an energy of the soliton.
+Apart from  which is probably different from  we have two
+unknown  kinetic variables  and . The second one
+is responsible for the acceleration of the kink due to interaction
+with the radiation. We need one more equation. We can use the
+momentum conservation law:
+
+and from the left side
+
+
+and hence the second equation
+  1 2 _q^2A^2-1 2 _q^2B^2-1 2 _k^2
+ (b_-^2-b_+^2) = M^*d dt (v)=F^*
+
+
+
+These equations are correct only for  because the moving kink
+experiences the Doppler's effect and there should be corrections
+in ,  and . But substituting  to above
+equations we obtain the solutions very easily:  
+B^2&=A^2-2k q (b_-^2+b_+^2)
+
+
+
+F^*&=_q^2 q 
+((k-2q)b_-^2+(k+2q)b_+^2)
+We used the relation . The factor before
+ is
+
+is always positive and therefore the soliton accelerates in the direction from which radiation comes. The radiation presure is negative! The force desribed by above equation is shown on Figure .
+
+Because  is usually very small, for certain   when
+ the acceleration derived in this order of
+approximation vanishes and nonlinearities of higher orders  play
+the crucial role. Numerical results show the soliton will be pushed by the radiation.
+The conclusion is that the soliton in most cases will stem the current.
+If the soliton reaches the speed
+when the frequency of the source wave due to the Doppler's effect
+ is the
+frequency for which acceleration vanishes the soliton moves with
+more or less constant velocity. Figure  shows the paths
+of zeros of the field (kinks) for frequencies around the minimum
+of the pulling force.
+
+If the source wave has a frequency very close
+to the minimum of the force the kink's acceleration is small and
+the soliton moves with the current.
+
+If the source wave amplitude is large the above approximation
+fails. There exists certain critical amplitude, depending on a frequency, for which the soliton is pushed away by the incoming wave (Figure ).
+
+
+

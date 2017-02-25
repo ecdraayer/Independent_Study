@@ -1,0 +1,1937 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+    #1 
+         #1       
+
+  #1 1em 
+
+            #1   
+
+  1ememail: #1   .5em 
+
+      second 
+  
+    #1  
+
+  1em(#1) 2em 
+
+Acknowledgments  
+PACS: #1  
+keywords: #1  
+
+
+
+definition 
+theorem Theorem [section]
+lemma [theorem]Lemma 
+corollary [theorem]Corollary 
+proposition [theorem]Proposition 
+definition [theorem]Definition 
+remark [theorem]Remark 
+example [theorem]Example 
+conjecture [theorem]Conjecture 
+
+
+
+C  
+N  
+R  
+Z  
+
+
+
+SO  
+SP  
+SU  
+SL  
+Spin  
+O  
+U  
+
+
+
+g   
+gl   
+sl   
+so   
+sp   
+su   
+
+
+
+i.e.  
+e.g.  
+E.g.  
+etc.  
+c.f.  
+et al.  
+vs.  
+
+
+
+
+
+tr  
+Tr  
+ad  
+ev  
+coev  
+rank  
+diag  
+Re  
+Im  
+dim  
+Stab  
+id  
+span  
+End  
+Hom  
+Aut  
+Mor  
+ker  
+im  
+Res  
+max  
+min  
+qdet  
+
+
+
+
+
+
+
+
+equation section 
+
+
+
+
+
+
+#1 
+
+
+
+ 
+ 
+#1  
+#1  
+
+
+
+dvips  
+
+
+
+Higher gauge theory   
+         Higher gauge theory   
+ 
+
+
+
+
+
+DAMTP-2003-27 
+
+Higher gauge theory and a non-Abelian generalization
+
+       of -form electrodynamics 
+
+Hendryk Pfeiffer 
+hpfeiffer@perimeterinstitute.ca 
+Perimeter Institute for Theoretical Physics, 35 King Street N, Waterloo, Ontario, N2J 2W9, Canada 
+Emmanuel College, St Andrew's Street, Cambridge CB2 3AP, United Kingdom 
+DAMTP, Wilberforce Road, Cambridge CB3 0WA, United Kingdom 
+
+April 16, 2003 
+
+
+
+ 
+
+
+
+In conventional gauge theory, a charged point particle is described by
+a representation of the gauge group. If we propagate the particle
+along some path, the parallel transport of the gauge connection acts
+on this representation. The Lagrangian density of the gauge field
+depends on the curvature of the connection which can be calculated
+from the holonomy around (infinitesimal) loops. For Abelian symmetry
+groups, say , there exists a generalization, known as
+-form electrodynamics, in which -dimensional charged objects
+can be propagated along -surfaces and in which the Lagrangian
+depends on a generalized curvature associated with (infinitesimal)
+closed -surfaces. In this article, we use Lie -groups and ideas
+from higher category theory in order to formulate a discrete gauge
+theory which generalizes these models at the level  to possibly
+non-Abelian symmetry groups. An important feature of our model is that
+it involves both parallel transports along paths and generalized
+transports along surfaces with a non-trivial interplay of these two
+types of variables. Our main result is the geometric picture, namely
+the assignment of non-Abelian quantities to geometrical objects in a
+coordinate free way. We construct the precise assignment of variables
+to the curves and surfaces, the generalized local symmetries and gauge
+invariant actions and we clarify which structures can be non-Abelian
+and which others are always Abelian. A discrete version of connections
+on non-Abelian gerbes is a special case of our construction. Even
+though the motivation sketched so far suggests applications mainly in
+string theory, the model presented here is also related to spin foam
+models of quantum gravity and may in addition provide some insight
+into the role of centre monopoles and vortices in lattice QCD.
+
+
+04.60.Pp, 11.15.Ha  
+Lattice Gauge Theory, Spin Foam Model, Fibre Bundle, Gerbe,
+Kalb-Ramond field, Category 
+
+
+
+Introduction 
+
+
+
+In the present article, we are concerned with gauge theories in a
+discretized formulation on some sort of lattice, triangulation or
+cellular decomposition. This includes the standard formulation of
+lattice gauge theory, see, for example , but we can
+also think of a smooth manifold with a large collection of embedded
+curves and surfaces on which we place the variables of the theory. The
+main point is that we keep group elements for the parallel transports
+along the curves, but that we do not pass to the differential picture
+and do not replace the group by its Lie algebra. The discrete
+structure is represented by an abstract simplicial complex,  a
+collection of vertices, edges, triangles,  which we call
+lattice . We do not discuss here how these simplices are mapped
+to or embedded in some given manifold.
+
+The theory can be classical, in this case we have to define some
+action and the variables in the Lagrangian picture, or it can be a
+quantum theory in the path integral formulation whose path integral is
+the sum or integral over all classical configurations.
+
+Let us consider a gauge theory whose gauge group is any Lie group
+. We concentrate on pure gauge fields. There are no dynamical
+matter fields. The fundamental variables are taken to be the parallel
+transports of the gauge connection along the edges (links) of the
+lattice,  one associates a group element  with each edge
+. We call the source and target vertices of the edge  and
+, respectively.
+
+The gauge connection encodes what happens to charged point particles
+if we propagate them on the lattice. A charged particle is a vector
+ in some representation  of . If we propagate such a
+particle from  along the edge  to , then the parallel
+transport  acts on the vector, . Observe
+that composition and orientation reversal of the edges correspond
+precisely to the group structure of . Since the choice of internal
+reference frame, essentially the choice of basis of , is arbitrary,
+all physically meaningful quantities are required to be invariant
+under local gauge transformations ,
+ 
+for each edge . The generating function   assigns a group
+element  to each vertex  and thus parameterizes the local
+changes of basis. The action of the theory is a physical quantity and
+therefore gauge invariant. It turns out that the easiest way to obtain
+a gauge invariant expression is to calculate the product of group
+elements around a closed loop and then to evaluate a character of
+. The action originally proposed by Wilson makes use of the loop
+around an elementary square (plaquette) and calculates the real part
+of the character of the fundamental representation of .
+
+Now let us try to generalize the setting. The charged particles are
+replaced by line-like objects which are to be propagated along
+surfaces. We therefore need additional variables associated with the
+faces (plaquettes) of the lattice. As the faces are two-dimensional
+objects, we have to deal with various ways of composing individual
+faces to larger surfaces, for example putting them below each other
+(vertical composition ) or next to each other (horizontal
+composition ). The algebraic structure we use has to reflect these
+geometrical conditions.
+
+It is known that one possible solution is to label the faces with
+elements of an Abelian group  and to consider these as the
+fundamental variables. The edges are not labeled. For , such
+a model is called -form electrodynamics , or more generally
+-form electrodynamics if the fundamental variables are associated
+with the -cells of the lattice (vertices, edges, faces,
+). The continuum formulation of the theory for  involves
+so-called Kalb-Ramond fields . The higher level models
+were originally introduced in the language of lattice models in
+statistical mechanics  where they correspond to the
+-model (), -lattice gauge theory (), a theory for
+an antisymmetric rank- tensor field () and so on. Their
+continuum counterparts have been studied in .
+
+Consider the case . Can we do any better than just using an
+Abelian symmetry group? As long as we insist on colouring only faces,
+this is not possible as a classic argument from algebraic topology
+shows. But a generalization is possible if we colour both edges and
+faces with suitable algebraic structures. The main result of the
+present article is the construction of such a generalized -form
+gauge theory with its local gauge transformations and gauge invariant
+expressions.
+
+We emphasize the geometrical properties of our model, namely that we
+have an assignment of non-Abelian quantities to geometrical objects in
+a coordinate free way. There exists a considerable literature on the
+interplay of Lie algebra valued - and -forms and their extended
+'gauge' symmetries, but there is usually  no geometrical
+interpretation for the non-Abelian -form comparable to the parallel
+transport along curves which can be constructed from a connection
+-form. In this article, we pursue a complementary approach. We
+require a consistent geometrical picture and then deduce how much
+freedom we have in choosing the structure of our model.
+
+At the technical level, the only thing we do is to combine two recent
+ideas. The first  is the construction of Lie
+-groups  which serve as the algebraic structure in order to label
+edges and faces in a consistent way with non-Abelian quantities. The
+second  is the use of ideas from category theory in order
+to rephrase lattice gauge theory in a way that does admit the desired
+generalization.
+
+A related construction was presented in  where the discrete
+framework is used in order to derive the corresponding continuum
+expressions. One can say that the construction presented here is
+somewhat more general than a discrete version of a theory of the -
+and -connections of non-Abelian gerbes. For mathematical background
+on gerbes, see . Although we do not use the most general
+setting and restrict ourselves to strict Lie -groups, we still have
+plenty of examples and our construction includes a discrete version of
+non-Abelian gerbes as a special case.
+
+The motivation sketched so far, namely to replace a theory for charged
+point particles by a theory for both charged point and charged
+line-like particles, seems to be mainly related to string theory. In
+fact, the simplest case, Abelian -form electrodynamics or
+Kalb-Ramond fields  play an important role in string
+theory so that it is interesting to understand possible
+generalizations.
+
+In the context of quantum field theory, one might naively claim that
+in four dimensions any theory with a local non-Abelian symmetry is a
+gauge theory. Of course, this is not the full truth, and it is of
+general interest to understand in conceptual terms which other
+theories can have local symmetries.
+
+Beyond these general ideas, we sketch how the model constructed here
+might provide further insight into the refined state sum models of
+quantum gravity and into the role of centre monopoles and vortices in
+lattice QCD. We also comment on the hierarchy of models that
+generalize -form electrodynamics to non-Abelian symmetries.
+
+We try to keep the present article self-contained and to make it
+readable by physicists who are not yet familiar with category theory.
+Therefore we carefully review the required background material. The
+article is organized as follows. In Section , we
+rephrase conventional lattice gauge theory in the language of category
+theory in order to prepare for the generalization. In
+Section , we recall the argument which forces the
+symmetry group to be Abelian if we colour only the faces, and we
+present the relevant algebraic structures in order to circumvent
+it. The construction of our non-Abelian -form lattice gauge theory
+is presented in
+Section . Section  contains
+some examples and comments on their physical relevance. Finally, in
+Section , we discuss open questions and the
+relationship with other approaches.
+
+
+
+Conventional lattice gauge theory 
+
+
+
+In this section, we review the basic structures of lattice gauge
+theory for pure gauge fields and rephrase everything in the language
+of category theory. This might seem to be much too complicated at
+first sight, but it turns out that the category theoretic language is
+the key to the generalization to higher level, including dynamical
+variables both at the edges and at the faces of the lattice.
+
+The idea to rephrase lattice gauge theory in the language of category
+theory was, to our knowledge, first proposed by Baez  and
+then generalized by Grosse and Schlesinger . Here we
+review this construction in a language adapted to the examples we are
+going to present.  For a mathematical introduction to category theory,
+see, for example .
+
+Informally speaking, a category is a collection of points
+(objects ) and arrows between these points (morphisms )
+with enough structure so that we can compose arrows and that we have
+identities ,  arrows that behave like neutral elements under
+composition. The precise definition is as follows. We restrict
+ourselves to small  categories,  the collections of objects
+and morphisms form proper sets.
+
+ 
+A small category  
+consists of a set  of objects , a set  of
+morphisms  and maps 
+(source ),  (target ),
+ (identity ) and
+
+(composition ) such that the following axioms hold,
+ 
+  s(_g)=g=t(_g),
+
+  s(gg^)=s(g),t(gg^)=t(g^),
+
+  _s(f) f=f=f_t(f) ,
+
+  (f_1f_2)f_3=f_1(f_2f_3),
+for all objects  and morphisms 
+and  where composable. We have denoted by
+ 
+the set of all pairs of composable morphisms. We write 
+ for a morphism  from the source  to the
+target . Notice that we read the composition () from
+left to right.
+
+A morphism  is called isomorphism  if it has
+a two-sided inverse,  if there exists a morphism 
+ such that
+ 
+A category in which every morphism is an isomorphism, is called
+groupoid .
+
+It is instructive to visualize all this using diagrams. For a morphism
+ we draw an arrow,
+ 
+Composition of morphisms and the identity morphisms are shown in the
+following diagram,
+ 
+
+We will make use of categories for two purposes. First, the gauge
+group gives rise to a category and second, the lattice forms a
+category as well. This is stated in the following two examples.
+
+ 
+Let  be a Lie group. Then there is a groupoid 
+associated with  which has only one object, ,
+and whose morphisms are the group elements,
+. Composition is the multiplication in . Obviously,
+the source and target maps  are trivial, and
+the identity map associated with the object  is the unit in ,
+.
+
+ 
+Let  be a directed graph, given by a set  of vertices 
+and a set  of edges  together with maps  and
+ indicating the source and target of each edge. Then
+there is a category  whose objects 
+are the vertices. The set of morphisms  comprises
+ 
+  all edges , 
+  for each edge  its orientation reversed counterpart 
+  (such that  and ),
+  for each vertex  one morphism  such that
+   and
+  all formal compositions of these edges, subject to the relations
+ 
+  ee^= _s(e) ,
+
+  e^e = _t(e) ,
+
+  _s(e) e = e = e_t(e) ,
+  for all .
+The maps  and  are given by the directed graph and extended to
+compositions such that eq_catsource  holds.
+
+This construction looks complicated at first sight, but the only thing
+we have done is to take vertices as objects and edges as morphisms and
+make everything else fit the picture.
+
+So far we have introduced two categories. One of them,
+, encodes the information about the lattice while the
+other one, , is the gauge group. We will see that
+configurations of lattice gauge theory are maps from the former to the
+latter. Structure preserving maps between categories are known as
+functors  and are defined as follows.
+
+ 
+Let  and
+
+be small categories. A functor 
+ is a pair  of maps,
+ and
+, sending objects to objects
+and morphisms to morphisms such that
+ 
+  F_0s(f)=s^(F_1f),F_0t(f)=t^(F_1f),
+
+  F_1_g=^_F_0g ,
+
+  F_1(f_1f_2)=F_1f_1^F_1f_2,
+for all objects  and morphisms  and
+. We are going to
+omit the indices  of ,  if it is obvious from the
+context which map we refer to.
+
+ 
+Let  be a directed graph and  be a Lie group. A functor
+ is a pair of maps, 
+ and . The edges are therefore labeled
+by group elements whereas the vertices are not labeled at all so that
+a functor  is just a configuration of
+lattice gauge theory.
+
+Observe that the identity edges  at each vertex 
+(see Example ) are labeled by the group unit . This
+implies that orientation reversed edges are assigned the inverse group
+element, . 
+
+So far we have said in the new category theoretic language what a
+configuration of lattice gauge theory is, namely a functor
+. From category theory, we know how
+to compare two functors, and this concept naturally leads to the
+familiar local gauge symmetry.
+
+ 
+Let ,  be small categories and 
+ be functors. A natural transformation 
+ is a map
+ that associates with each object
+ a morphism  in 
+such that
+ 
+holds for all morphisms  in . This means
+that the following diagram commutes,
+ 
+A natural transformation is called natural equivalence  if
+ is an isomorphism for any .
+
+Natural equivalences can now be used in order to compare two
+configurations of lattice gauge theory. Let us specialize the
+preceding definition to our situation.
+
+ 
+Let  be two functors. A
+natural equivalence  is a map
+ such that for each edge , the
+following diagram commutes,
+ 
+In the category  in which composition is the group product,
+this means that
+ 
+so that the configuration of lattice gauge theory given by 
+is locally gauge equivalent to the configuration given by ,
+ eq_localgauge . The map  in the
+definition of the natural equivalence plays the role of the generating
+function.
+
+
+ 
+ 
+
+The holonomy  around some triangle
+. The inner triangle is labeled by a functor
+, the outer triangle by 
+. The functors  and  are related by a natural
+equivalence .   
+
+Which expressions are gauge invariant and can therefore correspond to
+physically meaningful quantities? We know that the simplest such
+expressions are Wilson loops, group characters evaluated at the
+holonomy around loops.
+
+Consider Figure . It shows a triangle 
+labeled in two ways. The inner triangle is labeled by a functor
+, the outer one by . We
+have set  where  are the edges such that
+ and  and similarly 
+. The figure contains three commutative squares of the
+form eq_natlgt . Commutativity implies that
+ 
+so that any group character of the holonomy,
+, is a gauge invariant
+quantity.
+
+Of course, in standard lattice gauge theory, the properties mentioned
+so far are much easier to verify in direct computations. The category
+theoretic language presented here, however, provides a structural
+framework which would have allowed us to derive all these properties
+in a systematic fashion even if we had not known them in advance. We
+will exploit this conceptual advantage when we generalize lattice
+gauge theory to the next level, colouring both edges and faces with
+dynamical variables. In Section , we will
+encounter the higher level analogues of all the diagrams used here.
+Without any help from category theory it would hardly be possible to
+guess the appropriate assignment of variables and the relevant
+symmetries.
+
+Our plan for the following section is to review suitable generalizations
+for the notions of category, functor and natural transformation in
+order to pass on to the next level, including interesting examples for
+which we can perform explicit computations. The higher level
+generalizations are known as -categories, -functors, .
+
+
+
+Mathematical background 
+
+
+
+
+The Eckmann-Hilton argument 
+
+
+
+ 
+ 
+
+  (a) Horizontal composition of faces is denoted by a dot
+  (). (b) Vertical composition is indicated by a little circle
+  () which is read from left to right in our equations. (c)
+  Parentheses are not necessary provided the exchange
+  law eq_exchange  holds. 
+
+Let us first review the argument of Eckmann and Hilton which explains why we are forced to use Abelian groups as long as we
+colour only the faces.
+
+We assume that the plaquettes of the lattice are labeled by the
+elements  of some algebraic structure . We further assume
+that there are two composition laws as illustrated in
+Figure . Horizontal composition  is denoted by
+a dot (), vertical composition  by a circle
+(). Finally, we assume that both compositions have two-sided
+units, denoted by  and . On larger lattices, there
+will occur mixed compositions such as that shown in
+Figure (c). We require that this composition is well
+defined without parentheses,  it does not depend on the ordering
+by which horizontal and vertical compositions are performed. This
+means that the exchange law ,
+ 
+is satisfied.
+
+This implies first that the units actually agree because
+ 
+Therefore we can write . The exchange law further
+implies that both compositions agree because for any ,
+ 
+and finally that this composition is Abelian,
+) 
+Drawing the diagrams corresponding to eq_abelian) , it becomes
+obvious that the two-dimensionality of the situation allows  and
+ to move around in the plane and thereby to change places.
+
+If we wish to escape this Abelianness, we have to change some of the
+initial assumptions. There are a priori)  various conceivable
+approaches. Since we aim for a setting similar to lattice gauge
+theory, we have to require that Figure (c) is
+well-defined without parentheses so that the exchange
+law eq_exchange)  is not in question. It turns out that it is a
+viable strategy to colour both edges and faces with different
+algebraic structures in such a way that there is a non-trivial
+interplay and that the identities no longer agree.
+
+An observation related to the Eckmann-Hilton argument was made
+independently by Teitelboim  in a physical context. The
+idea is as follows. In conventional gauge theory, there is the notion
+of a 'path ordered product' by which one defines the parallel
+transport along some curve and which is independent of the
+parameterization and thus a geometrical quantity. At higher level,
+however, one is forced to use Abelian labels because it seems to be
+impossible to define a 'surface ordered product' for generic
+non-Abelian quantities in a way that is independent of the choice of
+coordinates.
+
+
+Lie -groups) 
+
+
+In order to sidestep the Eckmann-Hilton argument, we follow ideas
+from higher category theory as explained in . The picture
+is as follows. The edges, going from one vertex to another, are
+labeled with elements  from one algebraic
+structure. Composition of edges has to be reflected in this algebraic
+structure,
+ 
+We therefore require an associative product . In
+addition to this, there are faces, going from one edge to another,
+which are labeled with elements  from another algebraic
+structure. Here we use bi-gons  as the fundamental faces, 
+their boundary consists of only two edges that have the same source
+and target vertex,
+ 
+These bi-gons can then be composed horizontally,
+ 
+and vertically,
+ 
+The mixed composition,
+ 
+is required to be independent of the ordering of the horizontal and
+vertical compositions which is precisely stated by the exchange law,
+ 
+
+Lie -groups as introduced by Baez  form a suitable
+structure with these properties. Note that the Eckmann-Hilton
+argument can be avoided here because we have labeled the edges by
+ and we perform some sort of computation 
+whenever edges are composed. The units for the vertical composition
+() will in general depend on the  and therefore need not
+agree. When we list examples below, we mention in which cases the
+Eckmann-Hilton argument applies and in which it does not.
+
+Strict Lie -groups can be obtained by a standard construction in
+category theory. A strict Lie -group is an internal category 
+in the category of Lie groups. This means that we take the definition
+of a small category (Definition ) and systematically
+replace the word 'set' by 'Lie group' and 'map' by 'Lie group
+homomorphism'.
+
+ 
+A strict Lie -group 
+ consists of two Lie
+groups  and  with Lie group homomorphisms
+, ,
+ and
+ such
+that the axioms eq_catid -eq_catassoc  hold.
+
+ 
+ 
+  For elements  we write single arrows while
+  elements ,  are
+  visualized by double arrows,  eq_bigon .
+  In a strict Lie -group, we have two composition laws for the set
+  . One of them is the group product as  is now
+  a Lie group. We call it horizontal composition 
+  (see eq_horizontal ) and write a dot () which we
+  sometimes even omit. Observe that the source of a horizontal
+  composition is the product of the sources because
+   is a group homomorphism, . The
+  other composition law is denoted by a circle (). It
+  originates from the definition of a category and is explicitly
+  listed in Definition . This is called vertical
+  composition  (see eq_vertical ).
+  Notice that the exchange law eq_exchange2  holds because the
+  composition map
+   is a
+  Lie group homomorphism.
+  A generalization of strict -groups is is provided by weak 
+  and coherent -groups  . We restrict ourselves to
+  the strict case.
+
+Concerning the structure of strict Lie -groups, we quote the
+following results from .
+
+ 
+Let  be a strict Lie -group. In particular we have Lie
+group homomorphisms  and
+ such that  for all
+,
+ 
+
+ 
+  Each element  has a unique decomposition of the form
+   where  and 
+(The notation  indicates that
+   is a normal subgroup of .) .
+  There is an isomorphism of Lie groups 
+, given by 
+. The semi-direct product  is
+  defined so that
+ 
+  for  and , where we set
+  .
+  The vertical composition of elements of  is already fixed
+  by the structure described so far. In the notation of the
+  semi-direct product, it reads
+ 
+  for  and , whenever
+  composable.
+
+
+Lie crossed modules 
+
+
+For an introduction to internal categories in the category of groups,
+see . One can prove  (also see
+Chapter XII.8 of ) that strict Lie -groups are in
+one-to-one correspondence (up to isomorphism) with Lie crossed
+modules . The language of Lie crossed modules is most convenient in
+order to construct interesting examples of Lie -groups. They are
+defined as follows.
+
+ 
+A Lie crossed module   consists of two Lie
+groups  and  with Lie group homomorphisms  and
+ (  is an action of  on 
+that is compatible with the group structure of ; we write it as
+ for , ), such that
+ 
+t((g)[h])=g t(h) g^-1 ,
+
+(t(h))[h^]=h h^h^-1 ,
+for all  and .
+
+ [see]
+ 
+  Let  be a strict Lie -group. Then there is a Lie crossed
+  module  defined as follows. Define 
+  and  to be the kernel of the source homomorphism. The map
+   is defined to be the restriction  of the
+  target homomorphism. Finally, .
+  Let  be a Lie crossed module. Then there is a strict
+  Lie -group  defined as follows. Set  and
+  , the semi-direct product given
+  by eq_semimult  using the map  provided by the Lie
+  crossed module. The source, target, identity and composition maps
+  are defined as follows,
+ 2 
+  s&HGG,&& (h,g)g,
+
+  t&HGG,&& (h,g)t(h)g,
+
+  &GHG,&& g(1,g),
+ 
+  for  and , whenever composable.
+
+ 
+Let us now assume that we have constructed a strict Lie -group from
+a Lie crossed module  as in the preceding theorem.
+ 
+  Horizontal composition is given by the product in . In
+  particular, horizontal composition has the identity  and
+  inverses
+ 
+  Any pair of elements of  can be composed horizontally.
+  Elements  are vertically
+  composable to  if and only if
+  .
+  Vertical composition has the units , , and is
+  always invertible,
+ 
+  where we write a star () for the inverse with respect to
+  .
+  The group  parameterizes all morphisms that have
+  the unit  as their source. All morphisms whose source and
+  target agree, are parameterized by .
+
+For proofs and more technical details, see . A
+list of examples can be found in  some of which we mention
+here.
+
+ 
+ 
+  The trivial -group .  is any Lie group and  is
+  trivial. This example is uninteresting except for the fact that it
+  confirms that ordinary Lie groups form a special case of strict Lie
+  -groups.
+  The purely Abelian -group .  is trivial. In this case
+   is Abelian by the Eckmann-Hilton argument. This example gives
+  rise to Abelian -form electrodynamics.
+   is an Abelian Lie group on which  acts by some action
+  . The map  is
+  trivial(Triviality of  already implies that  is
+  Abelian by the Eckmann-Hilton argument. This example nevertheless
+  provides a non-trivial generalization of -form electrodynamics
+  because it involves an interplay of  and  via the action
+  .) , .
+  The Euclidean -groups . As a special case of (3.) we can
+  choose  to be some -vector space (translations) equipped
+  with a non-degenerate symmetric bilinear form . The group
+   (rotations) acts on . From this we obtain the
+  Poincare -group   which is employed in the
+  refined state sum model of  if we choose 
+  with the scalar product of Minkowski space.
+  The automorphism -group . This is finally an example with
+  non-trivial . Choose any Lie group  and  to be its
+  group of automorphisms. The action of  on  is the action by
+  the particular automorphism, and  assigns the inner
+  automorphism, conjugation by , to each element . This
+  example gives rise to the lattice version of a theory involving the
+  connections on non-Abelian gerbes. This Lie -group is related to
+  the bi-torsors that are usually employed in the study of non-Abelian
+  gerbes, see  for details.
+  Many examples of finite and discrete crossed modules are known in
+  algebraic topology where crossed modules are a standard tool. For a
+  recent survey, see, for example .
+
+Summarizing this section, we can say that the notion of a strict Lie
+-group is useful in order make the categorical structure
+transparent while the notion of a Lie crossed module provides us with
+particular examples and allows us to perform calculations.
+
+
+Suitable -categories 
+
+
+We have already seen that Lie -groups provide two compositions with
+the required identities such that the relevant diagrams
+( eq_mixed ) can be drawn and such that the Eckmann-Hilton
+argument can be avoided. Before we can generalize the constructions of
+Section , however, we need higher level analogues
+of category, functor and natural equivalence. We therefore have to
+climb up by one level and introduce the notion of -categories.
+
+A -category  is a category 'enriched in Cat',  for
+each pair of objects , we have now a category 
+rather than just the set of all morphisms . The objects in
+ are the morphisms of  and the morphisms of
+ are new data. They are called -morphisms . The
+definition of Mac Lane  is of this type. We restrict
+ourselves to the strict  case,  equalities of morphisms are
+satisfied exactly and are not weakened  to hold only up to
+-isomorphism. For more details on -categories, see Chapter XII.3
+of  and . In the following, we remove one level
+of abstraction from this definition and write down the conditions in
+detail.
+
+ 
+A small strict -category  consists of sets 
+(objects ),  (morphisms ) and 
+(-morphisms ) together with various maps satisfying axioms as
+follows.
+ 
+  Maps ,
+  ,
+   and
+  
+  such that 
+  forms a small category (Definition ). We have
+  denoted by
+ 
+  the pairs of horizontally composable morphisms. Compositions in this
+  category are visualized by diagrams such as eq_compose .
+  Maps ,
+  ,
+   and
+   such
+  that  forms
+  a small category. We have denoted by
+ 
+  the pairs of vertically composable -morphisms.
+  Axioms
+ 
+  stating that source  and target  of any
+  -morphism  are parallel morphisms,  that
+  -morphisms are bi-gons as in eq_bigon . The composition
+  () listed under item (2.) is therefore visualized by diagrams
+  such as eq_vertical .
+  A map
+  
+  (horizontal composition of -morphisms), where
+ 
+  denotes the set of all pairs of horizontally composable
+  -morphisms. This composition is shown in
+  diagram eq_horizontal .
+  Further axioms(In more abstract terms they state that
+  
+ forms a small category and
+  that ,  and  give rise to functors
+  between this category and the one formed by  and
+  .) ,
+ 
+  s^(2) (f_1f_2) = s^(2) (f_1)s^(2) (f_2),
+
+  t^(2) (f_1f_2) = t^(2) (f_1)t^(2) (f_2),
+
+  ^(2) (^(1) (s^(1) (s^(2) (f))))f = f =
+    f^(2) (^(1) (t^(1) (t^(2) (f)))),
+
+  (f_1f_2)f_3 = f_1(f_2f_3),
+  for any  and horizontally composable
+  , as well as,
+ 
+  ^(2) (g_1)^(2) (g_2)=^(2) (g_1g_2),
+
+  (f_1f_1^)(f_2f_2^)
+  = (f_1f_2)(f_1^f_2^),
+  for any  and
+   whenever they are
+  composable.
+ A -morphism  is called
+ -isomorphism  if it has a two-sided inverse,  if there
+ exists a -morphism  such that,
+ 
+A strict -category in which all morphisms and all -morphisms are
+isomorphisms, is called a strict -groupoid .
+
+Recall that a group gives rise to a groupoid with one object
+(Example ). In a similar way, a strict Lie -group
+provides us with a strict -groupoid with one object. In the
+following, we use the language of Lie crossed modules in order to
+explicitly describe this strict Lie -group.
+
+ 
+Let  be a Lie crossed module with the definitions used
+in Theorem , item (2.). Then there is a small
+strict -groupoid  defined as
+follows(Strictly speaking, we should call it
+.) . Set ,
+ and , the
+semi-direct product given by eq_semimult .
+
+The maps  and  are trivial, 
+and the composition of morphisms  is the multiplication in
+. This agrees precisely with Example .
+
+The other maps are defined as follows,
+ 2 
+  s^(2) &HGG,&& (h,g)g,
+
+  t^(2) &HGG,&& (h,g)t(h)g,
+
+  ^(2) &GHG,&& g(1,g),
+and, whenever composable,
+ 
+for all  and . The horizontal
+composition of -morphisms () is the product in ,
+ eq_semimult .
+
+This -groupoid with one object, obtained from a strict Lie
+-group, is our generalized notion of gauge group. In order to
+specify configurations and local gauge transformations, we have to
+introduce structure preserving maps between -categories, called
+-functors , and suitable natural equivalences.
+
+ 
+Let  and  be small strict -categories. A
+strict -functor   is a triple of maps
+,
+, and
+, sending objects to objects,
+morphisms to morphisms and -morphisms to -morphisms, such that
+the following conditions hold,
+ 
+   is a functor
+  
+,
+   is a functor
+  
+,
+   for any
+  .
+
+Given any two parallel -functors between -categories, we seek
+the notion of a natural transformation in order to compare these
+-functors. There are various flavours of these defined in the
+literature. We need what is usually called pseudo-natural
+transformation . It is a quasi-natural transformation in the
+terminology of  in which all -morphisms are isomorphisms.
+
+ 
+Let ,  be small strict -categories and 
+ be parallel strict -functors. A
+pseudo-natural transformation  
+is a pair of maps  and
+ associating a morphism 
+ to each object  and a -isomorphism
+ to
+each morphism , such that the following three
+conditions hold,
+ 
+  For any -morphism  in 
+  between morphisms , the diagram
+ 
+  -commutes (this means it commutes for -morphisms),  we
+  have the following equality of -morphisms,
+ 
+  In eq_bigcan , the -morphism 
+ is
+  located at the front face of the diagram while 
+ is at the back.
+  For any two composable morphisms  and 
+ in , the diagram
+ 
+  which has the equalities  at the top
+  and  at the bottom, -commutes,
+  
+ 
+  For each object , we have .
+
+
+
+2-form lattice gauge theory 
+
+
+
+In the previous section, we have generalized the notions of category,
+functor and natural transformation to the next level and we have seen
+how one can construct explicit examples using Lie crossed modules. Let
+us now generalize the ideas of Section  step by
+step in order to obtain a higher level lattice gauge theory,
+lattice -gauge theory , to be precise. Some key ideas of this
+section are taken from  which deals with -categories
+constructed from monoidal categories rather than from Lie -groups.
+
+
+Lattice 
+
+
+First we have to define a small strict -category which represents
+the lattice. It is most convenient to do this for a triangulation
+rather than for a cubic lattice(The material presented here
+can be seen as a simplified version of a special case of Street's
+construction .) .
+
+ 
+A simplicial -complex  consists of sets 
+(vertices ),  (edges ) and  (faces ) together
+with maps ,  and
+ such that  with  and 
+forms a directed graph (Example ). The maps
+ indicate the three edges in the boundary of
+each triangular face,
+ 
+and are required to satisfy for each ,
+ 
+
+ 
+Let  be a simplicial -complex. Then there is a small
+strict -category  defined as follows. The sets
+ of objects and  of morphisms
+are defined as in Example . The maps ,
+,  and  are the same as  and
+ in Example . This defines a small category which
+describes the edges and their compositions. The set
+ of -morphisms consists of
+ 
+  All faces . We set  and
+  ,
+  For each face  another face  with the double arrow
+  reversed,
+ 
+  such that  and
+  ,
+  For each face  another face  with all single
+  arrows reversed,
+ 
+  such that
+   and
+  ,
+  For each edge  a -morphism  with
+  ,
+  All formal horizontal  and vertical  compositions
+  of faces, subject to the following relations,
+ 
+   and 
+,
+  ,
+   and
+  ,
+  
+,
+   for
+  all composable edges ,
+  the exchange law, 
+,
+  whenever faces  are composable.
+
+
+Configurations 
+
+
+Let us now study the configurations of our generalized lattice gauge
+theory. By analogy with Section , these are the
+-functors from the generalized lattice  to the
+generalized gauge group .
+
+ 
+A strict -functor  is a
+triple of maps
+ 
+ the edges are coloured by group elements of  while the
+triangular faces are coloured by elements of .
+
+Let us assume there is such a strict -functor which is used to
+label the triangle ,
+ 
+We denote by  the group element
+associated with the triangle and by ,
+ and  the elements of 
+associated with the edges. Then we can derive a number of useful
+properties of such a labeled triangle.
+
+ 
+  Write . We know that
+   and  so that
+   which is just the holonomy
+  around the triangle.
+  We can horizontally compose the -morphism  with
+  identities,
+ 
+  which can be visualized as follows,
+ 
+  We have thus obtained another triangle on which the arrow for the
+  -morphism has been 'rotated'. On our generalized lattice
+   (Example ), this new 'rotated'
+  triangle is considered different from the original one. At first
+  sight, it seems that triangles proliferate if we 'rotate' them in
+  this way. In our generalized gauge group , one can
+  show, however, that 'triple rotation' does not change the associated
+  -morphism because
+ 
+  From the conditions on the identities in Example   and the properties of the strict -functor, we know that for each
+  vertex , the identity edge  is mapped to the
+  unit in ,
+ 
+  while for any edge , labeled by , the unit 
+  is mapped to,
+ 
+  These conditions imply that for each -morphism , the
+  -morphism  (Example ) is given by
+  its inverse with respect to vertical composition,
+ 
+  while the other -morphism  is the inverse
+  with respect to horizontal composition,
+ 
+  Finally, these two ways of reversing the orientation of triangles
+  are related in the following way,
+ 
+  A careful analysis shows that this is exactly what one expects from
+  the geometry of the triangle if these operations are combined.
+
+Starting from the labeled triangle eq_labeled , we can obtain
+other -morphisms for the same triangle by 'rotating' or reversing
+the orientation using either  or
+. The relations listed above make sure that one
+obtains only six distinct -morphisms by combining these
+operations. The -groupoid  has therefore all the
+properties which one expects from the combinatorics of the
+triangle eq_labeled . While edges come in two different
+orientations, there are six different versions of each triangle.
+
+
+Local gauge transformations 
+
+
+Given two configurations of our generalized lattice gauge theory,
+represented by strict -functors from  to
+, the analogy with Section  suggests
+that the local gauge transformations are given by pseudo-natural
+transformations. In our situation, this reads as follows.
+
+ 
+Let  be parallel
+strict -functors. A pseudo-natural transformation 
+ is a pair of maps
+ 2 
+  &VG,&& v_v,
+
+  &EHG,&& e
+    _eF_1e_t(e) _s(e) F_1e,
+visualized for an edge  by
+ 
+
+The special case in which , corresponds to
+an ordinary local gauge transformation because source and target of
+ agree and therefore the diagram commutes for
+morphisms. Compare this with Example . The
+appearance of a non-trivial -morphism  can be viewed as a
+way of parameterizing how 'non-commuting' the diagram is. This is the
+way in which the local gauge symmetry is generalized here. We call the
+pseudo-natural transformations of the above example the local
+-gauge transformations .
+
+Let us now visualize how a generic local -gauge transformation acts
+on the labeled triangle eq_labeled ,
+ 
+Here we have denoted by , ,  the face and edges
+labeled by the strict -functor  and by ,
+,  the face and edges labeled by . The
+three squares in eq_prism  are labeled by the -morphisms
+
+. By condition (1)-(3) of
+Definition , the diagram eq_prism 
+-commutes. Therefore we can calculate  from,
+ 
+Observe that the right hand side involves both  and 
+.
+
+
+Gauge invariant expressions 
+
+
+In standard lattice gauge theory, gauge invariant quantities can be
+constructed from the holonomy around closed loops, namely by
+evaluating a group character. In order to find expressions that are
+invariant under local -gauge transformations, we consider the
+vertical composition of -morphisms over a closed surface, in the
+simplest case a tetrahedron. While the holonomy around the loop was
+based at a point, our vertical composition is now based at an edge of
+the tetrahedron.
+
+
+ 
+ 
+
+A tetrahedron with vertices labeled . Each triangle
+, , is coloured as in eq_labeled . 
+
+Figure  shows a tetrahedron . We label
+its triangles , , as in eq_labeled . A
+-morphism around the surface of the tetrahedron can be calculated
+as follows.
+
+ 
+Let  be a strict
+-functor. For each tetrahedron , the -holonomy 
+is the -morphism  in
+, given by,
+ 
+
+Since any -morphism associated with a closed surface has the same
+source and target,  is characterized by
+an element . It is therefore sufficient to
+define our gauge invariant actions as functions on . 
+
+Notice that we have labeled the - and -cells (edges and faces)
+of the lattice with data from the -groupoid , but
+that the -action is defined one level higher, namely for the
+-cells (tetrahedra). So far we have not formally defined the
+notion of a tetrahedron. For our purposes it is sufficient that the
+preceding definition can be used whenever we have a collection of four
+triangles whose edges match as shown in Figure .
+
+In standard lattice gauge theory, the action is a character of the
+holonomy around a loop. In our generalized setting, it turns out that,
+for our -holonomy, we need the following two invariances in order
+to obtain a locally -gauge invariant action.
+
+ 
+Let  be a Lie crossed module. A -action is a
+function  which is the composition
+ of a function  with
+the projection . We define the function
+ only on . It is required to be a class function
+of , 
+ 
+for all , , and to be constant on the
+orbits of , 
+ 
+for all  and .
+
+We present examples and discuss possible physical applications in
+Section  below. We have required the two
+invariances for the following purpose.
+
+ 
+Let  be a Lie crossed module and 
+ be a -action. Let  be any -morphism
+,  . Then  is invariant
+under horizontal composition with identities because for any
+, ,
+ 
+and we have . Furthermore,  is
+invariant under vertical conjugation because for any 
+,
+ 
+and .
+
+
+ 
+ 
+
+The inner tetrahedron is labeled by a strict -functor
+, the outer one by some
+strict -functor  (notation as in eq_labeled ). Both
+-functors are related by a pseudo-natural transformation
+. For simplicity, we have not drawn the
+double arrows on the faces. 
+
+ 
+Let  be a simplicial -complex and  be a
+Lie crossed module. Let 
+ be parallel strict
+-functors and  be some -action. If
+there exists a pseudo-natural transformation 
+, then the -action, evaluated on any
+tetrahedron  in  agrees for  and ,
+ 
+where  is the -holonomy of
+Definition  using the strict -functor  and
+ using .
+
+ 
+According to Definition ,
+ 
+and
+ 
+The two coloured tetrahedra corresponding to  and
+ with the pseudo-natural transformation 
+are shown in Figure . On the faces of this
+diagram, there are -morphisms from the strict -functors  and
+ and also from the pseudo-natural transformation 
+which we have suppressed in order to keep the drawing transparent. The
+four prisms attached to the triangular faces of the inner tetrahedron
+are of the form eq_prism  and therefore -commute. We read
+off from the picture that,
+ 
+so that  and  are related by
+horizontal composition with identities and by vertical
+conjugation. Therefore, the value of  agrees according to
+Lemma .
+
+ 
+It can be shown that the edge, here , on which the
+-morphism  is based, does not matter. By horizontal
+composition with identity -morphisms we can obtain an analogous
+-morphism based on any other edge which yields the same value of
+the action.
+
+Of course, we can calculate locally -gauge invariant expressions
+for any closed surface by calculating appropriate compositions of the
+-morphisms. Pasting theorems, see, for example ,
+guarantee that the -holonomy is well defined and independent of
+choices.
+
+The gauge invariant expressions of the standard formulation of lattice
+gauge theory are in general not invariant under local -gauge
+symmetry transformations unless all -morphisms  associated
+with the edges have the same source and target.
+
+ 
+As  corresponds to the set of all -morphisms whose source
+and target coincide, the Eckmann-Hilton argument implies that 
+ is always Abelian (in fact, it is always contained in the centre of
+). Even though both  and  can be non-Abelian and there is a
+non-trivial interplay between the two via  and , the
+quantities on which the -actions depend, are therefore always
+Abelian.
+
+This completes the construction of our generalization of lattice gauge
+theory. The generalized lattice and the generalized gauge group are
+both described by -categories. The configurations are given by
+strict -functors, the local -gauge symmetries by pseudo-natural
+transformations. In the last step, we have found actions that are
+invariant under this generalized local gauge symmetry.
+
+
+Partition function 
+
+
+It is now straightforward to write down a path integral for a quantum
+version of our lattice -gauge theory. Integrate over  for each
+edge and over  for each triangle, subject to the condition
+(-functions on ) that source and target of the
+-morphisms associated to the faces match. The integrand is the
+product over  or
+ for all tetrahedra  depending
+on whether Euclidean or real time is used. Here  denotes some
+-action. The partition function therefore reads,
+ 
+Here we have denoted the triangles by  and the tetrahedra by
+. We already know some observables of this theory, namely
+the expectation values of the -gauge invariant expressions
+constructed in Theorem .
+
+For any configuration given by  for each edge  and
+ for each triangle , we obtain a locally
+-gauge equivalent configuration by applying the pseudo-natural
+transformation eq_twogauge .
+
+
+
+Examples and physical applications 
+
+
+
+In this section, we come back to some examples of strict Lie
+-groups (Example ), illustrate what the admissible
+gauge invariant -actions are and sketch possible applications.
+
+ 
+The trivial -group (see Example (1)). In this case
+the assignment of variables reduces to conventional lattice gauge
+theory. There are no labels at the faces, and the local gauge
+transformations (Example ) reduce to the ordinary ones
+(Example ). As there are no variables associated
+with the faces, -actions are useless in this case.
+
+ 
+The purely Abelian -group (see Example (2)). In
+this case, the edges are not labeled while the faces are labeled with
+elements of some Abelian group . We have . If we choose
+, we recover -form electrodynamics. Possible -actions
+are real characters of ,  for  they are of the form
+ for some , and our model agrees
+with that of  for  except that it is defined on
+triangulations rather than on hyper-cubic lattices.
+
+ 
+The Euclidean -groups (see Example (4)). Again we
+have . The allowed -actions are functions of the
+-invariant norm,  of the form 
+for some function . This resembles the expansors used
+in  in the case of the Poincare -group.
+
+Observe that this example is a non-trivial generalization of -form
+electrodynamics even though  is Abelian. There is a non-trivial
+interplay with  which requires the -action to be constant on the
+orbits of  on . For the Poincare -group, this example
+suggests the following more ambitious conjecture.
+
+ 
+Lattice -gauge theory using the Poincare -group in four
+dimensions with a suitable action is equivalent to the refined
+Barrett-Crane-Yetter state sum proposed in  in the
+same fashion as standard lattice gauge theory with -function
+Boltzmann weight is related to the Ooguri model, see, for
+example .
+
+Lattice -gauge theory should therefore be formulated on the
+-complex dual to the triangulation used in the state sum model so
+that we can apply a suitable harmonic analysis and obtain sums over
+representations of  for the edges and sums over representations of
+ for the faces of the triangulation. This way it might be possible
+to obtain further conditions on the measure used in the state sum
+model and to relate it to a classical action with constraints at the
+classical level.
+
+ 
+The automorphism -group of a simple compact Lie group  (see
+Example (5)). In this case  is the
+centre of  and any function  gives rise to a
+-action. This example can be understood as a lattice model of the
+connections on non-Abelian gerbes. We notice some coincidences which
+suggest the following conjecture.
+
+ 
+Lattice -gauge theory with the automorphism -group for
+,   and , describes some
+aspects of the collective phenomena of strongly coupled pure QCD. In
+fact, the -gauge invariant expressions of
+Theorem  resemble the observables that detect centre
+monopoles and vortices which seem to play a key role in the
+understanding of the confinement of static quarks in pure lattice QCD.
+
+
+
+Discussion and outlook 
+
+
+
+
+Technical questions 
+
+
+At the technical level, there are a number of natural questions to
+ask. What is the most general gauge invariant expression? In standard
+lattice gauge theory, these are spin networks  ,
+generalizations of Wilson loops that include branchings of the lines
+with intertwiners of the gauge group at the branching points. In order
+to fully understand the possible spin networks, one has to study the
+representation category of the gauge group. In our lattice -gauge
+theory, the expressions  of Theorem are the analogues of Wilson loops. The most general gauge invariant
+expressions will be given by coloured branched surfaces,  by some
+sort of spin foams  . In order to understand these
+spin foams, we have to study the representation -category of a Lie
+-group. Work on the representation theory of -groups is in
+progress . It is desirable to find a gauge
+invariant expression which combines both holonomies of morphisms
+around loops and -holonomies around closed surfaces so that this
+expression reduces to the Wilson action if we choose the trivial
+-group. At the moment we have either the old observables
+(characters of holonomies) which are not -gauge invariant or very
+special new ones (-actions of -holonomies) which disappear for
+the trivial -group.
+
+A related question is that of a maximal gauge fixing. In standard
+lattice gauge theory, one can gauge fix all edges of a spanning tree
+to be labeled by the group unit. In lattice -gauge theory, the
+gauge fixing will make use of suitable surfaces.
+
+A further technical observation is that for -categories, there is
+one more natural type of maps besides functors and pseudo-natural
+transformations. These are called modifications  and relate two
+natural transformations. 
+
+ 
+Let ,  be small strict -categories,
+ be strict -functors and
+ be pseudo-natural
+transformations. A quasi-modification 
+ is a map
+ assigning to each object
+ a -morphism 
+in  such that,
+ 
+holds for each -morphism  in 
+where  are morphisms in . This is
+illustrated by the following diagram,
+ 
+We have suppressed the double arrows for the following -morphisms
+in order to keep the diagram simple,
+ 2 
+  _g          &F_g _y   
+    && _xF_g ,
+
+  _g^   &F_g^ _y   
+    && _xF_g^ ,
+
+  _g        &F_g _y 
+    && _xF_g ,
+
+  _g^ &F_g^ _y 
+    && _xF_g^ .
+
+It is open what modifications mean physically. Are some gauge
+equivalent configurations 'more equal' than others? An explanation why
+we are not forced to use this additional structural level may be the
+fact that our action is a map into the real numbers as opposed to a
+map into some -category. The requirement to use real numbers is, of
+course, imposed by the physical framework, but the -categorical
+treatment might indicate that one should try to categorify the action
+or the path integral.
+
+Given a path integral formulation of lattice -gauge theory as
+sketched in Section , we have the
+connection picture  of this theory which is given in terms of
+continuous variables. It is known that for lattice -theory (see,
+for example ) and also for standard lattice
+Yang-Mills theory , there is an equivalent
+dual  formulation provided by the representation picture 
+which is, in the case of Yang-Mills theory, the corresponding
+strong-weak dual theory. The dual formulation of standard lattice
+gauge theory is a spin foam model. How does the dual formulation of
+lattice -gauge theory look like?
+
+It is already obvious that we have to understand the representation
+-category of the gauge -group in order to formulate such a
+model. If our lattice -gauge theory lives on the two-complex dual
+to some triangulation of a given four-manifold, the dual theory will
+involve sums over suitable vector spaces for all edges and for all
+faces of the original triangulation. As already mentioned, this is
+precisely the structure of the refined Barrett-Crane-Yetter state
+sum model of quantum gravity as proposed in . An
+interesting project is therefore to perform the harmonic expansion
+(better: -harmonic expansion) of the Lie -group valued variables
+and, for generic -action, to generalize the transformation
+of  to lattice -gauge theory. We emphasize that
+the dual theory will involve one higher level of the given simplicial
+complex because the -action is associated with the -simplices.
+
+Thinking about the representation picture of lattice -gauge theory,
+the entire program of the lattice gauge and state sum models is worth
+reconsidering: topological models, diagrammatic techniques
+generalizing the chain mail  and generalizing the ribbon
+diagrammatics of . What is a suitable
+'non-commutative' structure which generalizes the ribbon diagrams
+of  and maybe weakens the axioms of the
+-category used? For weak versions of -groups, see . A
+general framework for state sum invariants of four-manifolds is
+provided by Mackaay's construction .
+
+
+A hierarchy of theories 
+
+
+One of the key ideas of higher category theory is that there is a
+hierarchy of structures (sets, categories, -categories,
+). In this hierarchy, we call standard lattice gauge theory a
+-gauge theory  and the model constructed in the present
+article a -gauge theory . Lattice -gauge theory is beyond
+the scope of this study, but we can still consider lattice -gauge
+theory in order to learn more about the hierarchy of models.
+
+Consider the construction of Section . How does it
+collapse in the case of a -gauge theory? The lattice is a
+-category,  just a set, a collection of points without
+structure. Similarly the set of labels ('-gauge group'). A
+configuration is then a -functor which is just a map from the set
+of points to the -gauge group. There is no notion of natural
+equivalence and therefore no local symmetry. Such a model resembles a
+lattice spin model. These models include the lattice versions of
+non-linear sigma models. In total, we have the following information
+on the hierarchy of lattice -gauge theories.
+
+. No local symmetry. The variables are associated with the
+vertices and the action terms with the edges. Gauge 'invariant'
+quantities are arbitrary functions. For models with a certain global
+symmetry, the strong coupling expansion  is an expansion in
+terms of spin networks (coloured graphs) and the dual formulation is a
+spin network model.
+
+. Standard lattice gauge theory. The variables are associated
+with the edges and the action terms with the faces. Gauge invariant
+quantities are spin networks. The strong coupling
+expansion  is an expansion in terms of spin foams
+(coloured -complexes) and the dual model is a spin foam model.
+
+. The model constructed in the present article. The generic gauge
+invariant quantities are certain spin foams. From the assignment of
+variables one can already see that the strong coupling expansion will
+lead to coloured -complexes.
+
+It seems that we can minimally couple the model at level  with the
+model at . The classic example at  is the Abelian Higgs
+model with frozen radial mode , but this construction can
+be extended to non-Abelian symmetry groups as well . The
+next more general step would therefore be to couple a -gauge theory
+to standard lattice gauge theory.
+
+
+General comments 
+
+
+It is an interesting question whether one can construct a Topological
+Quantum Field Theory (TQFT) from our -gauge theory. We should
+therefore require the higher level analogue of the flatness condition
+in order to obtain topological invariants. This means we should
+restrict the partition function of our quantum theory to those
+configurations for which the -holonomy  vanishes at
+every tetrahedron . This is the zero -curvature
+condition .
+
+For certain finite crossed modules this TQFT was constructed by
+Yetter  using the language of categorical groups, 
+group objects in the category of groupoids. In the topological case
+one can choose an arbitrary triangulation as the lattice and then
+construct the infinite refinement limit. This means in physical terms
+that the TQFT has a trivial renormalization.
+
+The continuum counterpart of the higher lattice gauge theory was
+developed in  and, for non-Abelian gerbes,
+in . In the continuum, it has turned out to be difficult to
+find fully gauge invariant actions. In the discrete approach, however,
+see also , invariant actions arise naturally from the
+tetrahedron diagram, Figure . Our result is that
+the admissible -actions are sensitive only to , an
+observation which may help to better understand the continuum
+situation. In particular for the automorphism -group,  is
+often a discrete group. In this case, it will be impossible to write
+down a naive continuum expression for the -action which just uses
+Lie algebras instead of Lie groups. Continuum -actions will rather
+involve some kind of topological defect or singularity and will be
+given by non-local expressions similar to topological charges.
+
+It should generally be possible to consider 'infinitesimal' simplices
+as in  in order to infer the continuum formulas
+corresponding to the given discrete expressions. It is open whether
+the converse is possible,  to integrate the differential continuum
+expressions in order to recover the non-infinitesimal formulas. The
+problem is that there is no 'surface ordered product' available
+yet. Because of this obstacle, we favour the discrete approach, at
+least for now.
+
+Finally, the model constructed here together with the continuum
+counterparts developed in  demonstrates that there
+exist theories with local symmetries beyond conventional gauge
+theory. Are the corresponding quantum field theories relevant in
+nature? We have indicated two possible areas of physics in which they
+might turn out to be useful, state sum models of quantum gravity and
+the low energy behaviour of QCD.
+
+
+
+
+I would like to thank Karl-Georg Schlesinger for discussions on the
+construction of  in 1998 at HLRZ Julich. It is a
+pleasure to thank John Baez and Louis Crane for various conversations
+on -categories and -groups. I am also grateful to Florian
+Girelli, Robert Oeckl, Marni Sheppeard and Laurent Freidel for
+discussions, comments on the literature or for carefully reading the
+manuscript.
+
+ 999 
+H. J. Rothe : Lattice Gauge Theories - An Introduction.
+World Scientific, Singapore, 1992.
+
+
+I. Montvay and  G. Mu nster : Quantum fields on a lattice.
+Cambridge University Press, Cambridge, 1994.
+
+
+M. Kalb and  P. Ramond : Classical direct interstring action.
+Phys. Rev.  D 9 , No. 8 (1974)
+  2273-2284.
+
+
+R. Savit : Topological excitations in  invariant theories.
+Phys. Rev. Lett.  39 , No. 2 (1977)
+  55-58.
+
+
+R. Savit : Duality in field theory and statistical systems.
+Rev. Mod. Phys.  52 , No. 2 (1980)
+  453-487.
+
+
+M. Henneaux and  C. Teitelboim : -form electrodynamics.
+Found. Phys.  16 , No. 7 (1986)
+  593-617.
+
+
+C. Teitelboim : Gauge invariance for extended objects.
+Phys. Lett.  B 167  (1986)
+  63-68.
+
+
+J. C. Baez : Higher Yang-Mills theory (2002).
+Preprint hep-th/0206130 .
+
+
+H. Grosse and  K.-G. Schlesinger : Duals for non-abelian
+  lattice gauge theories by categorial methods.
+Int. J. Th. Phys.  40 , No. 2 (2001)
+  459-475.
+Erwin Schro dinger Institute Preprint ESI 561 (1998), Vienna.
+
+
+R. Attal : Combinatorics of non-Abelian gerbes with connection and
+  curvature (2002).
+Preprint math-ph/0203056 .
+
+
+L. Breen and  W. Messing : Differential geometry of gerbes
+  (2001).
+Preprint math.AG/0106083 .
+
+
+J. C. Baez : Spin network states in gauge theory.
+Adv. Math.  117 , No. 2 (1996) 253-272,
+  gr-qc/9411007 .
+
+
+S. MacLane : Categories for the working mathematician.
+Graduate Texts in Mathematics 5. Springer, Berlin, 2nd edition, 1998.
+
+
+B. Eckmann and  P. J. Hilton : Group-like structures in
+  general categories I. Multiplications and comultiplications.
+Math. Ann.  145  (1962) 227-255.
+
+
+A. D. Lauda : Remarks on -groups (2002).
+Preprint math.CT/0212219 .
+
+
+M. Forrester-Barker : Group objects and internal categories (2002).
+Preprint math.CT/0212065 .
+
+
+L. Crane and  D. N. Yetter : A more sensitive Lorentzian
+  state sum (2003).
+Preprint gr-qc/0301017 .
+
+
+R. Brown : Groupoids and crossed objects in algebraic topology.
+Homol. Homot. Appl.  1 , No. 1 (1999) 1-78.
+
+
+J. W. Gray : Formal category theory: Adjointness for -categories.
+Lecture Notes in Mathematics 391. Springer, Berlin, 1974.
+
+
+R. Street : The algebra of oriented simplexes.
+J. Pure Appl. Alg.  49  (1987) 283-335.
+
+
+A. J. Power : A -categorical pasting theorem.
+J. Algebra  129  (1990) 439-445.
+
+
+M. P. Reisenberger : Worldsheet formulations of gauge theories and
+  gravity (1994).
+Preprint gr-qc/9412035 .
+
+
+J. C. Baez : An introduction to spin foam models of  theory and
+  quantum gravity.
+In Geometry and Quantum Physics , Lecture Notes in Physics
+  543. Springer, Berlin, 2000, pp. 25-93,
+  gr-qc/9905087 .
+
+
+C. Rovelli and  L. Smolin : Spin networks and quantum
+  gravity.
+Phys. Rev.  D 52 , No. 10 (1995) 5743-5759,
+  gr-qc/9505006 .
+
+
+J. C. Baez : Spin foam models.
+Class. Quant. Grav.  15 , No. 7 (1998) 1827-1858,
+  gr-qc/9709052 .
+
+
+L. Crane and  D. N. Yetter : Measured categories and
+  representations of -groups.
+In preparation (2003).
+
+
+J. W. Barrett and  M. Mackaay : Categorical representations
+  of categorical groups.
+In preparation (2003).
+
+
+R. Oeckl and  H. Pfeiffer : The dual of pure non-Abelian
+  lattice gauge theory as a spin foam model.
+Nucl. Phys.  B 598 , No. 1-2 (2001) 400-426,
+  hep-th/0008095 .
+
+
+H. Pfeiffer and  R. Oeckl : The dual of non-Abelian Lattice
+  Gauge Theory.
+Nucl. Phys. Proc. Suppl.  B 106  (2002)
+  1010-1012, hep-th/0110034 .
+
+
+J. E. Roberts : Skein theory and Turaev-Viro invariants.
+Topology  34 , No. 4 (1995) 771-787.
+
+
+H. Pfeiffer : Four-dimensional Lattice Gauge Theory with ribbon
+  categories and the Crane-Yetter state sum.
+J. Math. Phys.  42 , No. 11 (2001) 5272-5305,
+  hep-th/0106029 .
+
+
+R. Oeckl : Generalized lattice gauge theory, spin foams and state sum
+  invariants.
+To be published in J. Geom. Phys.  (2003).
+Preprint hep-th/0110259 .
+
+
+F. Girelli, R. Oeckl and  A. Perez : Spin foam diagrammatics
+  and topological invariance.
+Class. Quant. Grav.  19  (2002) 1093-1108,
+  gr-qc/0111022 .
+
+
+M. Mackaay : Spherical 2-categories and 4-manifold invariants.
+Adv. Math.  143  (1999) 288-348,
+  math.QA/9805030 .
+
+
+H. Pfeiffer : Exact duality transformations for sigma models and gauge
+  theories.
+To be published in J. Math. Phys.  (2003).
+Preprint hep-lat/0205013 .
+
+
+M. B. Einhorn and  R. Savit : Topological excitations in the
+  Abelian Higgs model.
+Phys. Rev.  D 17 , No. 10 (1978)
+  2583-2594.
+
+
+D. N. Yetter : TQFT's from homotopy -type.
+J. Knot Th. Ramif.  2 , No. 1 (1993) 113-123.
+
+
+
+
+
+
+
+
