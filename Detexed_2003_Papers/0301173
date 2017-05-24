@@ -1,0 +1,995 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lubos  Motl
+
+  Jefferson Physical Laboratory
+
+  Harvard University
+
+  Cambridge, MA 02138
+
+  E-mail: motl@feynman.harvard.edu 
+ 
+
+Andrew Neitzke
+
+  Jefferson Physical Laboratory
+
+  Harvard University
+
+  Cambridge, MA 02138
+
+  E-mail: neitzke@fas.harvard.edu 
+ 
+
+We give a simple
+derivation of the quasinormal frequencies of
+Schwarzschild black holes in  and non-extremal 
+Reissner-Nordstr m black holes in , in the limit of infinite damping.
+For Schwarzschild in  we find that the
+asymptotic real part of the frequency is , where 
+ is the spin of the perturbation; this confirms a result
+previously obtained by other means.  For Schwarzschild in  we find that the asymptotic real part
+is  for scalar perturbations and for some gravitational perturbations.  For non-extremal 
+Reissner-Nordstr m in  we find a specific generally aperiodic behavior 
+for the quasinormal frequencies, both for scalar perturbations and for axial 
+electromagnetic-gravitational perturbations.  The formulae are obtained by
+studying the monodromy of the perturbation analytically continued to the complex plane;
+the analysis depends essentially on the behavior of the potential in the "unphysical" region
+near the black hole singularity. 
+
+
+hep-th/0301173 
+
+HEP-UK-0017
+
+HUTP-03/A005
+ 
+
+Asymptotic black hole quasinormal frequencies 
+
+
+
+
+
+
+
+  
+  
+1 2   
+Tr  
+Z  
+R  
+C  
+Im  
+Re  
+
+ 
+_I 
+T_Hawking   
+J^(min)   
+ r  
+( 1 - 1 r  ) 
+(1 - 1 r^d-3   ) 
+#1  
+(#1  , #2  ) 
+(#1  ) 
+
+ 
+
+
+
+
+
+Introduction: why do we study quasinormal modes? 
+
+Recently it has been proposed that the asymptotic behavior
+of the high overtone black hole quasinormal frequencies captures important information
+about the spectrum of black hole observables and about quantum gravity in
+general.  More precisely, it has been suggested that the asymptotic real
+part of the black hole
+quasinormal frequencies coincides with the frequency emitted
+by a black hole whose area decreases by an amount that is natural from the
+point of view of discrete approaches to quantization of gravity such as
+loop quantum gravity (LQG).  While such approaches
+remain highly speculative, it is nevertheless interesting to understand
+how far this argument can be pushed; moreover, even if this particular
+line of inquiry has to be abandoned, the asymptotic spectrum of black hole
+excitations is a fundamental property of the black hole which should 
+eventually be good for something.  This paper is an attempt to simplify and
+extend the calculations of the relevant "experimental data."
+
+Let us briefly review the recent developments in loop quantum gravity which have led us to
+investigate this asymptotic spectrum.  
+(See for 
+increasingly lengthy reviews of 
+LQG and for the original derivations of the 
+area quantization law in LQG.)  In LQG, the natural quantum  of the horizon's area is proportional to the
+so-called Barbero-Immirzi parameter , a parameter
+in LQG which is arbitrary from the point of view of the microscopic definition
+of the theory, but whose value
+must be chosen in such a way that the black hole entropy comes out
+correctly.  This comes about as follows:  one imagines that each quantum of
+area  carries a piece of discrete information.  It can be found in 
+different microstates, and therefore it carries entropy .
+This must be equal to the known contribution of this area
+quantum to the black hole entropy, namely
+(In this paper, we use
+particle physics units with .)  , so we find that
+areaquantum A_0 = 4G k. 
+LQG predicts that , where  is the minimal allowed 
+spin carried by the spin networks. This means that
+ if the basic gauge group of LQG is taken to be , or  if 
+the gauge group is .  However, from the LQG point of view
+there seems to be no reason to choose this strange number 
+ or  (more precisely,  or
+)
+for the Barbero-Immirzi parameter.
+
+On the other hand, seemingly unrelated, one can consider 
+the "quasinormal modes" of the black hole background. 
+Quasinormal modes are perturbations of the background 
+which are allowed to have complex frequency but whose boundary conditions 
+must be "purely outgoing" both at the horizon and  at infinity; we 
+will review their precise definition in section .
+This boundary condition singles out discrete complex frequencies . As 
+, the quasinormal frequencies of gravitational perturbations are 
+known to behave as
+asympfreq _n = (2i (n-1/2) + (3)). 
+(Varying from the usual convention in general relativity, we parameterize the 
+frequencies in terms of , which is equal to  for a 
+four-dimensional Schwarzschild black hole.) 
+The imaginary part of asympfreq  is not hard to understand.  The 
+quasinormal modes determine the position of poles of a Green's function on 
+the given background, and the Euclidean black hole solution converges to a 
+thermal circle at infinity with the inverse temperature
+; therefore it is not too surprising that the 
+spacing of the poles in asympfreq  coincides with the spacing 
+ expected for a thermal Green's function. 
+
+However, we are not aware of a similar classical explanation of
+the term  in asympfreq .  This term is remarkable because, as 
+was first observed in, it is precisely the same strange number
+one needs to occur in the Barbero-Immirzi parameter of LQG if the gauge group
+is taken to be SO(3).  There are also some heuristic arguments
+which suggest that there might indeed be a reason to relate the two,
+identifying the quasinormal mode with a process in which the black hole ejects
+a single spin-network edge and thus reduces its area by .
+
+The result asympfreq  was originally obtained by numerical calculations ten
+years ago.  At that time the term  was
+only known to an accuracy of six decimal places. In 1998, 
+Hod conjectured that this number was exactly .  His 
+conjecture was recently proven in, using the methods of 
+continued fractions initiated by Leaver and 
+further refined by Nollert.
+
+In this paper we would like to reproduce the results of,
+using simpler functional methods which allow us to extend the analysis 
+not only to
+the case of an arbitrary spin perturbation, but also to the cases of charged and 
+higher-dimensional
+black holes where no numerical results are presently available.   
+We will find that the answer  is in fact universal for
+Schwarzschild black holes in all dimensions, at least for scalar perturbations
+(and we conjecture that one should have more generally 
+also for higher-spin axial perturbations, as in .)  For Reissner-Nordstr m
+in  we will find a more complicated generically aperiodic behavior,
+both for scalar and electromagnetic-gravitational
+perturbations.
+
+We believe that this puzzling behavior of the Green's functions
+at large imaginary frequencies should contain some important information about black
+holes and perhaps even quantum gravity.
+
+
+
+Quasinormal frequencies for  Schwarzschild black holes  
+The differential equation 
+
+In this section we will be concerned with 
+properties of certain perturbations of a four-dimensional Schwarzschild geometry, described by
+solutions of the differential equation 
+on the interval ,
+with the "Regge-Wheeler" potential
+ 
+The equation de  describes the radial dependence of a spin- perturbation of the
+background, with orbital angular momentum .
+We have set ; in these units the horizon is at .
+
+The numerator  which appears in potential 
+characterizes the spin of the perturbation.  Strictly speaking
+potential  is known to be correct for , i.e. for perturbations
+by scalar or electromagnetic test fields as well as perturbations of the 
+metric itself.  (Actually, in the cases , one has 
+to expand in tensor spherical
+harmonics and then potential  is only correct if
+we consider an "axial" perturbation; see e.g..)
+We believe that the
+form  probably holds universally in some sense, because
+our calculation relates this coefficient to Bessel's equation 
+and shows that it is very natural to write the numerator in this form.
+It might be useful to summarize its values for the
+most important examples of :
+spiny 1-j^2 = 
+  . 
+
+For future reference we remark that the factor  which occurs in
+de , potential  arises from the "warp factor" in the Schwarzschild
+geometry, which in a standard choice of coordinates is the time component
+ of the metric.
+
+We wish to study de  on the physical region  and we begin
+by describing the asymptotic solutions.  To simplify the differential
+operator which appears it is convenient to 
+define the "tortoise coordinate"  with the property that
+ 
+Integrating tortoise-origin  gives
+ 
+Then  takes values , and de  becomes
+ 
+Since  as ,
+the solutions behave as  at infinity.
+
+
+Analytic continuation 
+
+In our analysis we will find that it is essential to extend de  beyond the
+usual physical region .
+Continued to the whole complex -plane, de  is an
+ordinary differential equation with regular singular points at ,  and an irregular singular point
+at ; and
+by the general theory of differential equations, any solution of de  in the physical
+region extends to a solution on the -plane.  However, this solution
+may be multivalued around the singular points , .  This multivaluedness will play
+a crucial role in our analysis, which is essentially concerned with the computation of the
+monodromy around a particular closed contour in the -plane.  For convenience, to avoid having 
+to deal with multivalued functions, we can put branch cuts in the -plane from  and  
+and require that  satisfy de  everywhere except at the cuts.  In this approach the monodromy
+is defined by the discontinuity across the cut.
+
+rplane4d-nocontour.eps,width=65mm The -plane, with regions where  denoted by
+a darker color, and a convenient choice of branch cuts shown.  
+
+We will find it very convenient to exploit the simpler representation dex  for the differential
+equation.  After passing to complex  this introduces an extra complication, since the relation 
+tortoise  between  and  is itself multivalued because of the term .  As a result, as 
+we travel around a contour in the -plane, the corresponding contour in the -plane may not be closed.
+In the language of branch cuts we would say that  jumps when  crosses the branch cut from .
+
+Although  is not uniquely defined as a function of , the ambiguity is only in the imaginary
+part, so  still makes sense.  It will be important for us to know the sign of  in the
+various regions of the -plane; the structure is as shown in Figure .  We also show
+a convenient choice of the branch cuts (to economize, one should take the branch cut from  to 
+be the same for  and for ) although nothing we say will depend on this choice.
+
+
+
+Definition of quasinormal modes 
+
+Because the potential is mostly positive (for  it is
+strictly positive) and decays to zero at both ends, 
+there are no discrete normalizable bound states.
+Nevertheless we may look for discrete quasinormal  states, 
+counterparts of quasistationary states in quantum
+mechanics because their frequency is also allowed to be complex.  
+The mathematical theory of these quasinormal modes is more
+intricate than for ordinary normal modes; see for
+a more precise discussion than we will give here, as well as
+an excellent review of the substantial literature on quasinormal modes
+of black holes.
+
+Roughly, a quasinormal mode with frequency 
+is supposed to be a solution of dex  where we require "outgoing"
+behavior at both ends of the physical region:
+ 
+Since the differential operator in de  would be self-adjoint 
+acting on normalizable wavefunctions, and hence would have to have real eigenvalues,
+there are no quasinormal modes with .  
+So we take , and then in naive1 , naive2  we are asking for the exponentially
+decreasing component to be absent at both ends.  It is actually quite delicate to define
+exactly what this means!  If  were strictly vanishing at  then one 
+could just require that  be strictly proportional to  as appropriate, 
+but for more general  we do not know any way of defining the boundary condition
+using only the behavior of  on the real line.  This problem was also discussed in where
+it was suggested that the appropriate condition would be obtained by finding an analytic extension
+of  to  and demanding exponential decrease  there; this was further 
+shown to be equivalent to looking for poles in an appropriate Green's function.  In another 
+criterion was given in terms of the coefficients of a power series representation for ; this
+criterion is what was used in the analytical calculation of the asymptotic quasinormal 
+frequencies in.
+
+Here we wish to use another way of defining the boundary
+condition, by analytic continuation in  instead of
+; such a continuation has been considered before,
+e.g. in.  Once we allow complex  we can easily define 
+the boundary condition at the regular singular point , because the functions 
+ are distinguished by their monodromy there.  Namely, 
+,
+so to get  near  we simply require 
+that  have monodromy  on a counterclockwise circle around .
+What is more subtle is to define the boundary condition at  and we propose to do it by
+analytically continuing  via "Wick rotation" to the line
+, where the asymptotic behavior of the solutions is purely
+oscillatory and hence one can really pick out a particular solution by specifying
+its asymptotics.
+
+In the limit where  is almost pure imaginary, the line 
+ is slightly tilted off the line . 
+There are two possible directions for the Wick
+rotation and we choose the rotation through an angle smaller than .  (A careful argument
+should show that this is the only allowed choice; we will see below that it leads to 
+a very reasonable result.)
+For the time being we assume ; in this case  gets
+rotated to , so our boundary condition "at " is actually 
+ 
+
+
+
+Computation of quasinormal frequencies 
+
+Having defined the quasinormal modes we now proceed to study their frequencies, in the
+limit .
+Indeed, until the end of this computation we will behave as if  were purely imaginary.
+
+We will compute in two different ways 
+the monodromy of  around the contour shown in Figure , beginning and ending
+at the point marked A.
+rplane4d.eps,width=144mm Contour for the 
+calculation of quasinormal frequencies, shown in
+terms of  and in terms of .  The 
+singularities at  (equivalently ) 
+and  (equivalently )
+are marked.  The rotation by  in the  plane 
+becomes a rotation by
+ in the  plane as follows from double-cover . 
+The monodromy of  around  causes a  discontinuity in the 
+path in the -plane. The regions with  are denoted by
+a darker color. The wave function is well approximated by a sum of Bessel
+functions in the blue circle around .
+ 
+It will prove convenient to use the coordinate  instead of .  Actually, this definition
+is slightly imprecise since we have not specified which branch of the logarithm in  we should choose.
+Depending on the branch, the contour in the -plane will approach some point  as  approaches ;
+for convenience we choose the branch so that .
+
+First we compute the monodromy by matching the asymptotics along the line .  Beginning at A, 
+the plane wave behavior bd-infty  can be extrapolated toward the interior 
+since the term  dominates  in dex  away from a small neighborhood around .  As we
+extrapolate up from A we reach  at , and near this point we have
+ 
+so in a neighborhood of  we may write
+ 
+Thus de  may be simplified near  to
+ 
+This equation can be exactly solved in terms of Bessel 
+functions; for generic , the general solution is
+ 
+We choose the normalization factors 
+so that the asymptotics are 
+ 
+where we defined
+ 
+The phase shifts by  will be very important for our analysis.
+Using bessel-sol  and bessel-asymp-before  
+together with the boundary condition bd-infty 
+which states that  must be absent as , we have
+ 
+while for the coefficient of  we have
+ 
+To follow the contour through to B we now have to turn through an angle  around , or equivalently
+ around .  Using the fact that 
+ 
+where  is an even holomorphic function of ,
+after the  rotation the asymptotics are
+ 
+Then using bessel-sol , bessel-asymp-after  we get 
+the asymptotics at B,
+ 
+Finally, we can continue along the large semicircle in the right half-plane from B back to A.  Since we are in the region where  dominates the
+potential in dex  
+we essentially just have plane wave behavior; this approximation can be trusted at least for the coefficient of ,
+which therefore remains unchanged as we continue back to A and complete the contour
+(however, the same cannot be said for the coefficient of , which makes only an exponentially small contribution to  in
+the right half-plane and hence can be modified by the small correction terms in the WKB approximation.)  In the end we find that
+the monodromy around the contour multiplies the coefficient of  by a factor
+ 
+ 
+
+On the other hand, we can also obtain the monodromy action by observing that the only singularity of  or  
+inside the contour is at .  By our boundary condition going around  clockwise just multiplies  by ,
+but it multiplies  by , so the coefficient of  in the asymptotics of 
+ must be multiplied by  after the full round trip.  Comparing with monodromy  gives
+ 
+
+Note that if we had chosen  we would have had to Wick rotate
+in the opposite direction, hence set our boundary conditions at B instead of A, and run the contour in the opposite direction; hence we would have
+gotten answer  with  instead of .  This is as expected since if  is a quasinormal frequency
+then  must also be one; the corresponding wave functions
+are simply complex conjugates of one another.
+The two possibilities can be summarized by the equation
+unified (() 4 ) = -(1 + 
+2 
+j), 
+implying
+ 
+In the case  we recover the numerical result
+of 
+which was so important for:
+ 
+If our analysis of the dependence on  is correct,
+it implies .  
+Hence for , there cannot be any 
+asymptotic quasinormal modes, with the possible exception of the case 
+.  (This case is exceptional in our analysis for another reason as
+well:  if , then our form potential-sing  for the leading singularity
+vanishes.  A more careful analysis would be desirable to check whether 
+our results still hold in this case.)
+
+We should mention that unified  is equivalent to a more complicated 
+equation derived in, namely
+unifiedlubosone (i )
+(i + j / 2)
+(i - j /2) = i() 
+This equivalence can be shown by multiplying 
+unifiedlubosone  by 
+coscoscos (i )(i + j / 
+2)(i - j /2) 
+and expressing the sines and cosines in terms of exponentials.
+
+
+
+Some convenient notation  
+For later convenience we now describe the preceding computation in a more compact notation.  First write
+ 
+and
+ 
+
+Then the asymptotic matching
+through the Bessel region which we did by comparing bessel-asymp-before  and 
+bessel-asymp-after 
+shows that a 3 clockwise rotation in  transforms the asymptotic
+behavior by
+ 
+where the swap between  and  arises because of the swap  needed to 
+compare bessel-asymp-before  and bessel-asymp-after .
+
+In the case of four-dimensional Schwarzschild we read off the 
+initial asymptotics from bessel-asymp-before  as .  
+Since the coefficient of  had to vanish at A we got the constraint 
+ 
+The  rotation mono3pi  gave 
+ 
+so following the coefficient
+of  back around the semicircle gives its monodromy as ,
+which we computed using the constraint constraint-bd , obtaining
+ 
+
+
+
+Quasinormal frequencies for other black holes 
+
+Having reproduced the result of for 
+ Schwarzschild, we now apply the same technology to two other classes of black hole.  The 
+generalizations are surprisingly straightforward.
+
+
+Higher-dimensional Schwarzschild black holes 
+
+First we consider Schwarzschild black holes in arbitrary .
+We will verify a
+conjecture from:  namely, the asymptotic quasinormal 
+frequencies of the Schwarzschild black hole with 
+satisfy
+higherf e^  = -(1 + 2 j) 
+where  is the Hawking temperature of the black hole.
+(Strictly speaking, we will prove this only for scalar
+perturbations and for certain tensor modes; 
+we do not know the appropriate potentials for general perturbations 
+in , but we conjecture that suitably interpreted the more general result is
+still true as in .)
+
+To write the generalization of
+de  to  we need the warp
+factor for -dimensional Schwarzschild,
+warpd -g_00  = f(r) = 1-1 r^d-3  , 
+where we again chose units in which the horizon is at .
+Then the perturbation satisfies
+ 
+where  is known for scalar perturbations to be 
+As in the  case, this  grows large only at , and direct
+computation gives the coefficient of the singularity as
+ 
+sixd.eps,width=72mm Regions with  (darker) in the
+-plane for a six-dimensional Schwarzschild black hole, together
+with a contour for the calculation of quasinormal frequencies.  The left
+part of the -plane is shown in shadow because
+ can only be uniquely defined in the right part; the extra
+fictitious horizons are marked by crosses.  
+Now we want to describe the tortoise coordinate in  spacetime 
+dimensions.  From the warp factor warpd  we get the requirement
+tortd dz = ( 1 - 1 r^d-3   )^-1  dr, 
+which can be integrated to give
+tortdd z = r + _j=0 ^d-4 
+e^2i j/(d-3)  d-3 
+(1-r e^-2i j/(d-3) )
+ 
+where we chose the additive constant so that  for .  From tortdd 
+we obtain the behavior of  as shown in Figure .  Unlike the 
+situation in , tortdd  includes phases multiplying the logarithms which
+come from the fictitious "horizons" , so that  is
+not well defined for arbitrary ; but so long as we stay in the right part of the 
+-plane it is well defined.
+
+Near ,  
+terms in the Taylor expansion of tortdd  near  cancel and
+rzerod z - r^d-2  d-2 ,  
+generalizing the behavior double-cover  in the  case.
+Actually, this cancellation can be seen directly from tortd , by neglecting the term
+ on the right hand side.
+
+Now we can express the singularity of the potential in terms of ; combining
+leadingpot-hs  and rzerod  we find simply
+ 
+Note that this is exactly the same as the behavior for scalar perturbations in ;
+namely, it agrees with potential-sing  at .  The other case for which we know the
+potential is a particular family of tensor metric perturbations studied in, 
+which exist only in ; for these the leading singularity corresponds again to .
+(One might have expected , but in our final result  appears only in ,
+so that  and  are indistinguishable.)
+We conjecture that with some
+suitable interpretation this form 
+for the potential will actually persist for all , so that the  may be
+replaced by  in leading-z , but the skeptical reader may just
+set  in the rest of this section.
+
+At any rate, writing the potential in this form
+the Bessel function behavior of the solutions near , expressed in terms of , 
+is just as it was in , and again we have plane wave behavior away from a
+neighborhood of .  
+Furthermore, although the left part of the -plane is 
+rather complicated, the 
+behavior of  on the right part is essentially unchanged from .  So we 
+can repeat the argument from the previous section.  The 
+calculation of the monodromy by matching asymptotics in the -plane 
+works exactly as in four 
+dimensions, while the factor  from the monodromy around  
+is modified to , because of the
+coefficient  multiplying
+ in tortdd .
+
+Fortunately, this same factor appears in the formula for the Hawking temperature
+of a -dimensional black hole.  Namely, recall that the Hawking temperature
+can be computed as the surface gravity of the black hole:
+surfg = f'(1) 4 
+= d-3 4 , 
+giving .  Hence the monodromy of the coefficient of 
+  around the contour
+is , and comparing this to the result from Bessel asymptotics gives
+ 
+as desired.
+
+In fact the agreement between the surface gravity and the coefficient of the logarithm
+in the tortoise coordinate is not a coincidence and holds more generally.  
+This is because a horizon is characterized by the condition ,
+and the tortoise coordinate near  then obeys
+ 
+while the surface gravity is .
+
+Our result implies that for scalar and some gravitational perturbations
+ 
+This formula was independently conjectured in the revised version of,
+where it was obtained from considerations of Bohr-Sommerfeld quantization as
+originally proposed by Bekenstein and amplified e.g. in 
+, except that the integer
+3 could not be determined from these considerations.
+
+
+Four-dimensional non-extremal Reissner-Nordstr m black holes 
+
+Finally we want to extend our results to non-extremal Reissner-Nordstr m black holes
+in .  In this case the warp factor is 
+ 
+where we have fixed our units by setting 
+, , so that the outer horizon is at  and 
+the inner horizon is at .  The tortoise coordinate is therefore determined by
+ 
+which integrates to
+ 
+where we have again fixed the constant so that  at .  Then near  we find
+ 
+The form of the potential can be found in:  
+both for scalar perturbations and for axial electromagnetic-gravitational perturbations (which are coupled in this
+background, so we cannot talk about electromagnetic or gravitational perturbations
+separately) the potential is singular only near , and the leading singularity is
+ 
+Using zclose-rn  we can rewrite this in the familiar form
+ 
+(with all the  dependence disappearing)
+and, remarkably, the values of  which come out are nice:
+ 
+
+reissner.eps,width=144mm Regions with  (darker) in the
+-plane for four-dimensional non-extremal Reissner-Nordstr m, 
+with a contour for the calculation of quasinormal frequencies, shown both in the 
+-plane and the -plane.  
+
+Hence the Bessel function behavior near  will be unchanged from the previous examples,
+and our calculation will proceed in an almost identical manner.
+However, in this case we must use a slightly more complicated contour, going around a "lobe" as shown in Figure
+; the point is that we want to capture only the outer horizon at , where
+we know the boundary conditions and hence know the monodromy, and avoid the inner horizon at .
+As a result this computation is only valid in the non-extremal case .  
+
+The corresponding
+picture in the -plane looks rather complicated because a given  may or may not lie in a "Bessel region"
+depending on whether or not the -plane contour is passing near  
+(the potential is a multivalued function of  but an ordinary function of .)  In Figure this is indicated by letting the contour pass over or under the blue circles when  is not  passing
+through a Bessel region; it is easiest to understand that figure by redrawing it yourself, following the 
+given -plane contour starting at A and tracing out the corresponding -plane behavior.
+
+The matching of asymptotic expansions in this case can be done following the recipe given in
+Section .  As before, we begin at the point marked A with the asymptotic behavior ,
+and we have the boundary condition
+ 
+Going through a  rotation in  gives (compare mono3pi )
+ 
+which is in this case .  Then we can go out along the
+lobe where in our approximation the behavior is purely oscillatory.  
+After going around the lobe 
+we have to return to the Bessel region a second time.
+However, the asymptotics in terms of  will be different this time:  we chose the branch of  so
+that the first time we entered the Bessel region it was at , but now we have traveled an additional
+distance in  (from changing branches of the second logarithm in rn-tortoise ), namely
+ 
+So we may write the solution as
+ 
+Introducing a slight modification of our previous notation, 
+we write
+ 
+Then from phased-asymp  we obtain ,
+giving the constraint
+ 
+Making the second  rotation we get , so the asymptotics near
+the point B are .  Now running over the big
+semicircle to get back to the point A, as before, the WKB approximation allows us to claim the coefficient of the exponentially
+big component  is unchanged.  So over the full round trip this component is multiplied by .
+Between c1  and c2  we have three homogeneous linear constraints on the four coefficients , so we
+can determine this ratio; it turns out to be
+ 
+The contour encloses only the singularity at  (the outer horizon), so the monodromy comes only from the multivaluedness
+of  and  around .  As discussed in the previous section, this monodromy is determined by the surface gravity
+of the horizon at , namely
+ 
+Also note that .  Then matching the monodromies we obtain the final result,
+ 
+The first term looks exactly like the result higherf  from Schwarzschild, and then there is a
+correction term which came from the phase shift .  Actually, this term
+can also be written in terms of a Hawking temperature, but this time the Hawking temperature of the inner horizon:
+ 
+At any rate, substituting  or , from j-rn , gives the same answer in each case:
+ 
+So this is our result for the asymptotic quasinormal frequencies of scalar or axial electromagnetic-gravitational
+perturbations of Reissner-Nordstr m in .
+This result suggests a somewhat more complicated asymptotic behavior for the quasinormal frequencies 
+than we found in the case of Schwarzschild; in particular, the asymptotic frequencies seem to be
+aperiodic unless  is rational, and the real parts do not settle down to a simple value.  
+
+We note that by taking  slightly imaginary it
+would be possible to get rid of the last term in the asymptotic limit, and in this case one would
+obtain asymptotically .  This may not be an unreasonable thing 
+to do, since  is related to the charge and mass of the black hole, and the mass
+should be considered as slightly imaginary (the black hole eventually evaporates.)  Indeed, if 
+is real and fixed, then  is a decreasing function of , so the expected small negative imaginary
+part of  corresponds to a small positive imaginary part of , which is the correct sign to 
+suppress the last term.  Following and identifying this  with a quantum
+of energy emitted by a black hole, we note that this corresponds precisely to the black hole reducing
+its outer horizon area by  while keeping  fixed.
+
+One might be concerned that our result for Reissner-Nordstr m is incompatible with the 
+known results for Schwarzschild because 
+it does not reduce to  as .  There is no inconsistency;
+rather, there is an order-of-limits issue.  We expect that for extremely small  the real part
+will behave as  for a large range of  and then eventually switch over to 
+the Reissner-Nordstr m behavior determined by rn-answer ; the crossover point will
+go to  as .
+
+Directions for further study 
+
+This work suggests various possible directions for further study:
+
+ 
+
+The machinery developed here may be applicable more generally, e.g. to charged black holes in ,
+and perhaps even to general rotating black holes.  Some work in this direction is in progress for the Kerr
+black hole in .
+In addition one could consider the case of black holes 
+in de Sitter or anti-de Sitter space; quasinormal frequencies in these backgrounds have recently been
+studied, and recently some exact results have been obtained in
+the limit where the Schwarzschild horizon nearly coincides with the de Sitter horizon.
+The asymptotic quasinormal frequencies in these backgrounds may be related to properties of
+the holographic dual theory.  The method will however require some
+modification, since the potential no longer vanishes at infinity, and the expected answer is quite
+different (the real part is expected to diverge along with the imaginary part.)
+
+Our results so far only give the asymptotic real part of the frequency in the limit of infinite
+imaginary part.  It may be possible to extend the technique to obtain a systematic expansion
+including corrections in .
+
+It would be desirable to have some numerical calculations of the asymptotic quasinormal frequencies in
+the cases we considered above, to confirm or reject our proposed analytic solution.  In the case of
+Reissner-Nordstr m there are some results for the low overtones which seem to support our
+result, but it would be good to check directly that this behavior persists in the asymptotic limit.
+
+In  Schwarzschild we could only give results for certain types of perturbation, because so far
+a good theory of more general perturbations in these dimensions is apparently lacking.  It would be nice
+to understand how the leading term in the potential depends on the type of perturbation.
+
+The authors of also applied WKB methods to the calculation of quasinormal frequencies in 
+ Schwarzschild, but obtained  for
+the asymptotic real part.  We believe that the error there arose from an inappropriate analytic continuation
+in .  Since the potential is quartic there are four turning points, which in the limit of large  are
+the fourth roots of ; the calculation of picks out just two of these to
+contribute to the transmission amplitude, namely the two which would contribute if  were analytically
+continued so that the problem looked like the usual WKB barrier penetration.  But the WKB formula is not exact as a function
+of  even in the usual case; the corrections
+which are known to be small in one region can become large when one continues to a different region.  It is 
+possible that one can make a correct WKB calculation by including these "exponentially small" corrections in some way.
+One might then interpret our result answer  as coming from a sum over quantum mechanical instantons which run between all possible
+pairs of turning points in a symmetrical fashion, just as one can do for the standard WKB formula with two turning points.  In this case the four 
+terms  should be essentially the relevant instanton amplitudes.
+
+According to our calculation, the asymptotic real part of the frequency depends 
+only on the coefficient of the leading term in the potential.  
+This leading term becomes important only near the singularity at , but it still affects the
+transmission amplitude in the physical region  between the horizon and infinity.  Although the
+importance of the singularity at  was purely mathematical in our
+approach, there could be a more physical explanation of why our procedure
+works.  Can we view it as a manifestation of the complementarity principle, reflecting some
+kind of duality between what happens inside and outside the horizon?
+
+The occurrence of the Hawking temperature for the inner horizon of the Reissner-Nordstr m
+black hole is surprising.  How can the quasinormal modes know about the behavior of the black hole
+in the causally disconnected interior?  This mysterious term might have some interpretation
+in terms of the chemical potential of the black hole for electric charge.
+
+The original motivation for this work was the LQG explanation of the  
+in  Schwarzschild in terms of a spin network
+with links of spin 1.  If LQG is correct, perhaps the more complicated
+behavior for Reissner-Nordstr m should have a similar explanation.  The possible appearance
+of  in the asymptotic frequencies could support some recent claims that
+the gauge group of LQG should be SU(2) despite the  for Schwarzschild.
+
+Similarly, can spin foam models or other models explain the fact that the  for Schwarzschild black holes
+seems to be independent of dimension?
+
+
+We have answered some questions about the asymptotic quasinormal frequencies
+of black holes, but many more remain open.
+
+
+We are grateful to
+N.Arkani-Hamed,
+V.Cardoso,
+K.Kokkotas,
+K.Krasnov,
+A.Maloney,
+M.Schnabl,
+and A.Strominger
+for useful discussions, and to A. Maloney for reading a draft of this paper.
+The work of L.M. was supported in part by
+Harvard DOE grant DE-FG01-91ER40654 and the Harvard Society of Fellows.
+The work of A.N. was supported by an NDSEG Graduate Fellowship.
+
+
+ 99 
+
+
+
+
+
+
+
+O. Dreyer,
+"Quasinormal modes, the area spectrum, and black hole entropy," 
+[arXiv:gr-qc/0211076].
+
+
+C. Rovelli and P. Upadhya,
+"Loop quantum gravity and quanta of space: A primer," 
+[arXiv:gr-qc/9806079].
+
+
+C. Rovelli,
+"Loop quantum gravity," 
+Living Rev. Rel.  1 , 1 (1998)
+[arXiv:gr-qc/9710008].
+
+
+T. Thiemann,
+"Introduction to modern canonical quantum general relativity," 
+[arXiv:gr-qc/0110034].
+
+
+C. Rovelli and L. Smolin,
+"Discreteness of area and volume in quantum gravity," 
+Nucl. Phys. B 442 , 593 (1995)
+[Erratum-ibid. B 456 , 753 (1995)]
+[arXiv:gr-qc/9411005].
+
+
+A. Ashtekar and J. Lewandowski,
+"Quantum theory of geometry. I: Area operators," 
+Class. Quant. Grav.  14 , A55 (1997)
+[arXiv:gr-qc/9602046].
+
+
+J. F. Barbero G.,
+"Real Ashtekar variables for Lorentzian signature space times," 
+Phys. Rev. D 51 , 5507 (1995)
+[arXiv:gr-qc/9410014].
+
+
+G. Immirzi,
+"Quantum gravity and Regge calculus," 
+Nucl. Phys. Proc. Suppl.  57 , 65 (1997)
+[arXiv:gr-qc/9701052].
+
+
+E.W.Leaver,
+"An analytic representation for the quasi-normal modes of Kerr black holes," 
+Proc. R. Soc. A 402  (1985) 285.
+
+H.-P.Nollert,
+"Quasinormal modes of Schwarzschild black holes:
+The determination of quasinormal frequencies 
+with very large imaginary parts," 
+Phys. Rev. D 47  (1993) 5253-5258,
+http://prd.aps.org/ .
+
+N.Andersson,
+"On the asymptotic distribution of
+quasinormal-mode frequencies for Schwarzschild black holes," 
+Class. Quantum Grav. 10 , L61-L67 (June 1993).
+
+A.Bachelot, A.Motet-Bachelot,
+"The resonances of a Schwarzschild black hole. (in French)," 
+Annales Poincare Phys. Theor.  59 , 3 (1993).
+
+
+S. Hod,
+"Bohr's correspondence principle and the area 
+spectrum of quantum black holes," 
+Phys. Rev. Lett.  81 , 4293 (1998)
+[arXiv:gr-qc/9812002].
+
+
+L.Motl,
+"An analytical computation of asymptotic
+
+Schwarzschild quasinormal frequencies," 
+[arXiv:gr-qc/0212096].
+
+
+T. Regge and J. A. Wheeler,
+"Stability of a Schwarzschild singularity," 
+Phys. Rev. 108 , 1063 (1957).
+
+N. Andersson, K. D. Kokkotas and B. F. Schutz,
+"A new numerical approach to the oscillation modes of relativistic stars," 
+Mon. Not. Roy. Astron. Soc.  274 , 1039 (1995)
+[arXiv:gr-qc/9503014].
+
+
+F. J. Zerilli,
+"Gravitational field of a particle
+falling in a Schwarzschild geometry analyzed in tensor harmonics," 
+Phys. Rev. D 2 , 2141 (1970).
+
+
+
+H.-P.Nollert and B. G. Schmidt,
+"Quasinormal modes of Schwarzschild black holes:  Defined
+and calculated via Laplace transformation," 
+Phys. Rev. D 45  2617 (1992).
+
+
+K. D. Kokkotas and B. G. Schmidt,
+"Quasi-normal modes of stars and black holes," 
+Living Rev. Rel.  2 , 2 (1999)
+[arXiv:gr-qc/9909058].
+
+
+V. Cardoso, O. J. Dias and J. P. Lemos,
+"Gravitational radiation in -dimensional spacetimes," 
+[arXiv:hep-th/0212168].
+
+
+G. Gibbons and S. A. Hartnoll,
+"A gravitational instability in higher dimensions," 
+Phys. Rev. D 66 , 064024 (2002)
+[arXiv:hep-th/0206202].
+
+
+G. Kunstatter,
+"d-dimensional black hole entropy spectrum from quasi-normal 
+modes," 
+[arXiv:gr-qc/0212014].
+
+
+J. D. Bekenstein and V. F. Mukhanov,
+"Spectroscopy of the quantum black hole," 
+Phys. Lett. B 360 , 7 (1995)
+[arXiv:gr-qc/9505012].
+
+
+E. Berti and K. D. Kokkotas,
+"Quasinormal modes of Reissner-Nordstrom-anti-de Sitter black holes: scalar, electromagnetic and gravitational perturbations," 
+[arXiv:gr-qc/0301052].
+
+
+V. Cardoso, L. Motl and A. Neitzke, work in progress.
+
+S. Musiri and G. Siopsis,
+'Quasinormal modes of large AdS black holes," 
+[arXiv:hep-th/0301081].
+
+
+V. Cardoso and J. P. Lemos,
+"Quasinormal modes of the near extremal Schwarzschild-de Sitter black hole," 
+[arXiv:gr-qc/0301078].
+
+
+G. T. Horowitz and V. E. Hubeny,
+"Quasinormal modes of AdS black holes and the approach to thermal  equilibrium," 
+Phys. Rev. D 62 , 024027 (2000)
+[arXiv:hep-th/9909056].
+
+
+D. Birmingham, I. Sachs and S. N. Solodukhin,
+"Relaxation in conformal field theory, Hawking-Page transition, and  quasinormal/normal modes," 
+[arXiv:hep-th/0212308].
+
+
+N. Andersson and H. Onozawa,
+"Quasinormal modes of nearly extreme Reissner-Nordstroem black holes," 
+Phys. Rev. D 54 , 7470 (1996)
+[arXiv:gr-qc/9607054].
+
+
+J. W. Guinn, C. M. Will, Y. Kojima and B. F. Schutz,
+"High overtone normal modes of Schwarzschild black holes," 
+Class. Quant. Grav.  7  (1990) L47,
+http://www.iop.org/EJ/ 
+
+
+A. Strominger, private communication.
+
+A. Corichi,
+"On quasinormal modes, black hole entropy, and quantum geometry," 
+[arXiv:gr-qc/0212126].
+
+
+
+
+
+

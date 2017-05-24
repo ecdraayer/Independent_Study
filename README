@@ -1,0 +1,31 @@
+File and Folder Descriptions
+==============================================
+2003_abs:               Contains all abstract files for the 2003 papers
+2003_Papers:            Contains all latex files of 2003 papers
+Detex:                  Contains detex script and all its dependencies
+Detexed_2003_Papers:    Contains all 2003 papers latex files with removed latex tags
+Citations.csv:          CSV file containing number of citations for each paper
+getCitation.py:         python script to retrieve number of citations for each paper
+TFIDF.py:               python script to appy TFIDF scoring to the research papers
+CombineData.py:         python scripte to combine data from TFIDF.py and getCitations.py
+Top50TFIDF.csv:         CSV file containing top 50 TFIDF terms and corresponding citations 
+Top100TFIDF.csv:        CSV file containing top 100 TFIDF terms and corresponding citations 
+==============================================
+
+
+How To Run TFIDF.py
+==============================================
+# python TFIDF.py <Directory Contianing Papers> > OutputFile
+# Example python TFIDF.py Detexed_2003_Papers > Top100TFIDF.csv
+
+
+How To Run getCitations.py
+==============================================
+# python getCitations.py <Folder with paper abstract files>
+# Example: python getCitations.py 2003_abs
+
+How To Run CombineData.py
+==============================================
+# python CombineData.py <File From getCitations.py> <File From TFIDF.py> <Output File>
+# Example: python CombineData.py Top100TFIDF.csv Citations.csv Output.csv
+

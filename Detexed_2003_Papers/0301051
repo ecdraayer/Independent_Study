@@ -1,0 +1,269 @@
+
+
+
+
+
+
+
+
+10pt 10pt plus2pt minus5ptplus3pt6pt plus3pt
+minus3pt 
+
+12pt  
+
+section 1  1.0ex plus 1ex minus
+ .2ex .2ex plus .2ex   
+
+subsection 2  .2ex plus 1ex 
+.2ex plus .2ex   
+
+ 
+
+Maxwell  Characteristic Equation Algorithm Applied to Abelian Born-Infeld Action in D-branes 
+
+Joseph Ambrose G. Pagaran
+
+  Department of Physics
+
+  School of Science and Engineering
+
+  Ateneo de Manila University
+
+  1108 Loyola Heights, Quezon City 
+
+
+
+
+
+
+
+
+
+
+Abstract 
+
+An algorithm is devised to generate characteristic identities
+between Maxwell fieldstrength invariants (traced over Lorentz
+indices and disregarding ordering) that suffer linear dependence
+in certain dimensionalities as they have been originally obtained
+using a Maple routine. These relations between invariants are then
+applied to simplify the Abelian Born-Infeld (ABI) effective action
+in arbitrary degree of fieldstrength invariants. I have explicitly
+displayed the simplified ABI action in 4, 6, 8, 10, and 12
+space-time dimensions relevant in D-branes.
+
+ 
+
+Introduction 
+Abelian Born-Infeld (ABI) action is the non-linear
+generalization of the Maxwell action in quantum electrodynamics.
+It appears as a low energy effective action of open strings and in
+world-volume effective action in -branes.
+
+In particular, a flat -brane in type II string theory the
+bosonic massless degrees of freedom of an open string ending on
+the -brane are a U(1) gauge field. Apart from the 9- neutral
+scalar fields that describe the transversal excitations of the
+-branes which I choose to disregard, this U(1) gauge field in
+ dimensions describes the open string longitudinal
+fluctuations of the brane. When  -branes coincide,
+the massless degrees of freedom of open strings beginning and
+ending on them are a U() gauge field. (A number of
+the disregarded scalar fields are in the adjoint of the gauge
+group.)
+
+The present work explores the structure of the ABI action
+ 
+up to all orders in the string length  in the
+limit of slowly varying fieldstrengths, in the assumption of zero
+derivatives of the fieldstrength. Furthermore, the static gauge is
+choosen and transverse scalars are disregarded throughout the
+paper. Only dynamics contributed by the longitudinal excitations
+are considered as they are described by the U() gauge of 
+several coinciding -branes. Here in (),  is the
+D-brane tension, .
+
+Now in the ABI () action, the term can be expanded in
+powers of  
+ where the Lorentz tensors
+  are defined as coefficients in
+the  setting. Here, such coefficients are set to 1
+directing then our attention to the fieldstrength tensor in powers
+of , , and investigate its structure.
+
+These powers of  in () has been given attention in
+the work of Delbourgo where characteristic equations
+were expressed in terms of polynomials over traces of matrix
+powers. In this work, he developed a Maple routine that computes a
+set of invariants involving the electromagnetic Maxwell field
+tensor in arbitrary space-time dimensions specifically for
+describing multiphoton processes.
+
+Here, I devised an algorithm that generates the same set of
+invariants without using any symbolic software. But I use the
+results obtained from the latter and constructed a prescription
+based on the principle of induction. The devised algorithm will be
+enumerated in Section 2. A test run of the algorithm is performed
+in Section 3 at the same time compact notations are introduced.
+After having explicitly displayed the characteristic equations,
+the same set of equations is used to simplify the powers of  in
+the ABI action as it has been expanded in Eqn (). I
+displayed explicitly in Section 4 the simplified version of the
+ABI action relevant to D-branes in 4, 6, 8, 10, and 12
+space-time dimensions.
+
+The Algorithm 
+The following algorithm is devised to construct characteristic
+equations relating fieldstrength invariants
+ 
+() that suffer linear dependence in certain
+dimensionalities. That is,
+ 
+when  is even () and odd (), respectively.
+These are subject to the condition that the degree  of  be
+. Furthermore,  are the terms the
+devised algorithm generate.
+ 
+[(a)] All of the terms within a characteristic equation are all of degree
+. For example:
+ 
+are all of degree 12.
+[(b)] Each characteristic equation has one fieldstrength tensor of
+degree , say for , the relevant tensor is . See
+example in (a).
+[(c)]  With , the rest
+of the terms in each characteristic equation are products of the
+form  where  is even only and that 
+ is also even. The subscript here initially is set to
+. See example in (a).
+[(d)] These are only formed when the
+degree is even also. It is not constructed when the degree is odd.
+The following are all of degree 13,
+ 
+which is Example in (a) times .
+[(e)] Each term formed in steps (c)-(d) has a prefactor
+ with  and  defined in (c). This is
+applied only when  in (c) is unique. Here  denotes the
+degree of .
+[(f)] If in ,  is not unique (i.e.
+ appeared as a subscript  times) the term formed in step
+(e) will have a prefactor . It can be a
+product  for every th
+ term that appeared  times. It should be noted that
+ will have a different prefactor with . And that
+the latter expression should be used.
+[(g)]
+Characteristic equations whose common degree is odd is simply the
+even degree characteristic equation (obtained from steps (a)-(c))
+with all terms unit  multiplied.
+[(h)] All terms in a characteristic equation whose degree  is odd
+are all carried to  characteristic equation except that 
+is multiplied to each term. The additional degree is contributed
+by this unit  multiplication. Since  is again even, steps
+(c)-(f) is repeated.
+[(i)] All terms formed in the above steps are added after following
+strictly the constraints provided in each step as in () or
+equivalently () or (). These terms comprise the
+characteristic equation of  true only when  is abelian.
+It should be noted that this algorithm is constructed in the
+assumption of zero derivatives of the fieldstrength tensor and no
+ordering in indices is set. No other constraints about the indices
+are imposed.
+
+
+Test Run of Algorithm 
+Applying the algorithm in the Section 2 (particularly steps (c) to
+(f)), unique traced invariants  for even  (where
+) are displayed as follows.
+ 
+where  for even  in .
+While  is a reproduction of the results obtained via a
+Maple routine, the same characteristic invariants
+() were obtained following the algorithm devised in
+Section 2. Here,  are given in Eqn (). Explicitly
+() (or equivalently () or ()), these are
+( up to )
+ 
+The case when  is shown explicitly for illustration
+purposes. In Eqn (),  in odd degrees are now
+displayed illustrating the application of steps (d), (g) and (i).
+These correspond to  space-time
+dimensions, respectively. For my purposes, I consider  up to
+ space-time dimensions.
+
+Application to Abelian Born-Infeld Action 
+Now that I have the algorithm in place, let me consider the
+following notations, conventions, and definitions as well as
+assumptions which will be used throughout the present work.
+
+From now on, I set , I ignored the overall factor
+ and an additive constant. The metric is Euclidean and is
+"mostly plus". That is,
+ and
+ Indices denoted by
+ run from 1 to 2,  run from 1 to
+,  run from 1 to . There is no
+distinction between upper and lower indices. All are lowered.
+Repeated indices are summed over. Ordering of indices are also
+disregarded. Anti-hermitian matrices for U() generators (some
+subcartan algebra) are chosen, etc. The fieldstrength is given by
+ 
+Instead of using real spatial coordinates , complex
+coordinates . I denote  as
+ unless otherwise indicated. Also,
+ considering that I am working on a flat
+space. Furthermore,
+.
+
+Using (), the ABI action () becomes
+ 
+and using () or () with traced invariants given
+by (), the simplified ABI action relevant to
+ space-time dimensions in D-branes is given by
+ 
+after setting . Hence, this is the most simplified ABI
+action I can have with the assumption of no ordering, zero
+derivatives in fieldstrength tensor and using the characteristic
+equations I generated with the algorithm this work presented.
+
+Deforming  to
+ 
+the Donaldson-Uhlenbeck-Yau condition acquires  an order 
+correction. After some invariance restoration, the equations of
+motion integrate to the ABI action () with
+ 
+Modulo an undetermined overall multiplicative constant, this
+exhibits the Born-Infeld action through order , leading to a
+uniquely fixed equation of motion. These results raise the
+suspicion that the ABI action is the only deformation which allows
+solutions on D-branes at angles of the form
+.
+ This suspicion provides an important tool to probe the
+ structure of the effective action that captures correctly the
+ D-brane dynamics.
+
+Acknowledgements 
+I thank Emmanuel T. Rodulfo of De La Salle University for
+suggesting me to apply the algorithm to an ABI action and for
+providing me the Maple-routine based preprint of Robert Delbourgo
+from University of Tasmania where the devised algorithm in the
+present work was based to generate the same characteristic
+equations as given in Eqns. ()-() for
+.
+ 9 
+M. Born and L. Infeld Nature  132  (1932) 970, Proc. Roy. Soc.  A114  (1934) 425. 
+R. Delbourgo, preprint: UTAS-PHYS-93-42 (1993).
+See for example: S.V. Ketov, preprint: hep-th/0108189 .
+See for example: P. Koerber and A. Sevrin, preprint: hep-th/0108169 .
+J. Polchinski, Phys. Rev. Lett.  75  (1995) 4724,
+preprint: hep-th/9510017 . J. Dai, R. Leigh and J.
+Polchinski. Mod. Phys. Lett.   A4  (1989)
+2073.
+A. Ritz  and R. Delbourgo Int. J. Mod. Phys.  11A 
+(1996) 253.
+A. Sevrin, J. Troost and W. Troost, preprint: hep-th/0101192 .
+A.A. Tseytlin, Born-Infeld Action, Supersymmetry and String Theory
+in the Many Faces of the Superworld  ed. by M. Shifman,
+(World Scientific, Singapore, 2000), preprint: hep-th/9908105 .f
+E. Witten, Nucl. Phys.  B460  (1996) 35, preprint: hep-th/9510135 .
+

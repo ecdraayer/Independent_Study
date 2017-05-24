@@ -1,0 +1,3176 @@
+%\documentstyle[epsf,12pt]{article}
+\documentclass[12pt]{article}
+\usepackage[dvips]{epsfig}
+\usepackage{cite}
+\hoffset -10mm
+\voffset -10mm
+\textwidth 165mm
+\textheight 220mm
+\newcommand{\ep}{\varepsilon}
+\newcommand{\Gl}[2]{{\mbox{Gl}}_{#1}\left(#2\right)}
+\newcommand{\Li}[2]{{\mbox{Li}}_{#1}\left(#2\right)}
+\newcommand{\Cl}[2]{{\mbox{Cl}}_{#1}\left(#2\right)}
+\newcommand{\Ls}[2]{{\mbox{Ls}}_{#1}\left(#2\right)}
+\newcommand{\LS}[3]{{\mbox{Ls}}_{#1}^{(#2)}\left(#3\right)}                    
+\newcommand{\Lsc}[2]{{\mbox{Lsc}}_{#1\!}\left(#2\right)}
+\newcommand{\tfrac}[2]{{\textstyle{\frac{#1}{#2}}}}
+\newcommand{\ST}[2]{\left[ #1 \atop #2\right]} 
+\newcommand{\SN}[3]{{\mbox{S}}_{#1,#2}\left(#3\right)}
+\newcommand{\HA}[2]{{\mbox{H}}^{(#1)}_{#2}}
+\newcommand{\Snp}[2]{{\mbox{S}}_{#1\!}\left(#2\right)}
+\newcommand{\lc}[1]{\ln \left( 2 \cos \tfrac{#1}{2} \right)}
+\newcommand{\ls}[1]{\ln \left( 2 \sin \tfrac{#1}{2} \right)}
+               
+\def\H{\hbox{H}}
+\def\d{\hbox{d}}
+\def\f{\hbox{f}}
+
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+%=====================================================================
+\begin{document}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{flushright}
+ {DESY/02-214} \\[3mm]
+ {hep-th/0303162} \\[3mm]
+ {March 2003}
+\end{flushright}
+ \vspace*{2.0cm}
+ \begin{center}
+ {\Large \bf
+ Massive Feynman diagrams and inverse binomial sums
+ }
+ \end{center}
+ 
+\vspace{3mm}
+ 
+ \begin{center}
+ A.~I.~Davydychev$^{a,}$\footnote{
+ Current address: Schlumberger, SPC, 110 Schlumberger Dr., MD-5,
+ TX~77478, USA.
+ Email address:
+ davyd@thep.physik.uni-mainz.de}
+ \quad  and \quad
+ M.~Yu.~Kalmykov$^{b,}$\footnote{
+Supported by DFG under Contract SFB/TR~9-03. 
+On leave from BLTP, JINR, 141980 Dubna, Russia.
+Email address: kalmykov@ifh.de}\\
+ 
+\vspace{3mm}
+
+$^{a}${\em
+Institute for Nuclear Physics, 
+Moscow State University, \\
+ 119992, Moscow, Russia}
+\\
+\vspace{.3cm}
+$^{b}${\em
+ DESY--Zeuthen,
+Theory Group, Platanenallee 6, \\ D-15738 Zeuthen, Germany}
+\\
+\end{center}
+  
+ \hspace{3in}
+ \begin{abstract}
+ When calculating higher terms of the $\ep$-expansion
+ of massive Feynman diagrams, one needs to evaluate
+ particular cases of multiple inverse binomial sums.
+ These sums are related to the derivatives of certain
+ hypergeometric functions with respect to their parameters.
+ We explore this connection and
+ analytically calculate a number of such infinite sums,
+ for an arbitrary value of the argument which corresponds to
+ an arbitrary value of the off-shell external momentum.
+ In such a way, we find a number of new results for
+ physically important two-loop two- and three-point
+ Feynman diagrams. The results are presented in terms
+ of generalized polylogarithmic functions.
+\end{abstract}
+
+\vspace{3mm}
+
+%\noindent
+%PACS: 11.15.Bt, 02.30.Gp, 02.30.Lt, 12.15.Lk
+%%%% extra: 12.38.Bx 
+%\\
+%Keywords: Feynman diagrams, 
+%          Hypergeometric functions, 
+%          Multiple inverse binomial sums, 
+%          Higher order $\ep$-expansion,
+          
+\thispagestyle{empty} 
+\newpage
+%=====================================================================
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\setcounter{footnote}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\setcounter{equation}{0}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In many cases,
+the results of analytical calculation of Feynman diagrams can be 
+represented as combinations of hypergeometric functions. 
+However, the problem of constructing the $\ep$-expansion of
+hypergeometric functions within dimensional regularization~\cite{dimreg} 
+(where $n=4-2\ep$ is the space-time dimension) is not completely solved.
+Rather often,  
+results for the terms of the $\ep$-expansion can be expressed in terms of 
+polylogarithms~\cite{Lewin} as well as 
+Nielsen polylogarithms~\cite{Nielsen}. 
+Recently it was demonstrated that new types of functions, 
+harmonic polylogarithms~\cite{RV00} and 
+multiple polylogarithms~\cite{GR2001}, appear in 
+multiloop calculations. Furthermore, the nested sums~\cite{nested}
+were proposed as a generalization of multiple polylogarithms, and 
+the $\ep$-expansion for a large class of hypergeometric function 
+was constructed. 
+
+In this paper we study the {\it multiple inverse binomial sums}
+defined as\footnote{Some particular results for 
+the {\it multiple binomial sums} are presented in \cite{poleII}. 
+Those sums are defined similarly to Eq.~(\ref{binsum}),
+but with $\left( 2j \atop j\right)$ in the numerator, rather
+than in the denominator.}
+\begin{equation}
+\Sigma_{a_1,\ldots,a_p;
+\; b_1,\ldots,b_q;c}^{\; i_1,\ldots,i_p; \;j_1,\ldots,j_q}(u)
+\equiv
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j\right) } \frac{u^j}{j^c}
+[S_{a_1}(j\!-\!1)]^{i_1}\ldots [S_{a_p}(j\!-\!1)]^{i_p}\;
+[S_{b_1}(2j\!-\!1)]^{j_1}\ldots [S_{b_q}(2j\!-\!1)]^{j_q},
+\label{binsum}
+\end{equation}
+where $S_a(j)\equiv\sum_{k=1}^j k^{-a}$ is the harmonic sum\footnote{
+Through the rest of this paper, the notations $S_a$ and $\bar{S}_a$
+will always mean $S_a(j-1)$ and $S_a(2j-1)$, respectively, 
+even we do not mention this explicitly.} 
+and $u$ is an arbitrary argument.
+In what follows, we will also use
+$z\equiv \tfrac{1}{4}u$
+as the argument of the occurring hypergeometric functions.
+For sums of the type~(\ref{binsum}), the
+{\em weight} ${\bf J}$
+can be defined as 
+${\bf J} = c + \sum_{k=1}^{p} a_k i_k + \sum_{k=1}^{q} b_k j_k$, 
+whereas the {\em depth} can be associated with the sum 
+$\sum_{k=1}^{p} i_k + \sum_{k=1}^{q} j_k$.
+
+The sums~(\ref{binsum})
+appear in the calculation of massive Feynman diagrams 
+within several different approaches: for instance, as solutions of 
+differential equations for Feynman amplitudes~\cite{dem}, or
+through a na\"ive $\ep$-expansion of hypergeometric functions 
+within Mellin--Barnes technique~\cite{BD-TMF}.
+Physical applications include the one-, two- and three-loop 
+massive Feynman diagrams with two massive cuts 
+\cite{FKV98,DD,FKV99,DK-bastei,DK01,oneloop}. 
+The case $u=1$ corresponds to the single-scale propagator-type 
+diagrams~\cite{single}. 
+Although there are many publications 
+concerning harmonic series~\cite{harmonic},
+only a limited number of results are available for the inverse binomial sums. 
+Some particular results 
+for $u=1,2,3$ can be extracted from~\cite{KV00,DK01}.
+The sums with $u=1,3$ are expressible in terms 
+of an ``odd'' basis~\cite{odd}, whereas the case $u=2$
+corresponds to an ``even'' basis~\cite{DK01,euler}\footnote{The connection 
+between ``sixth root of unity''~\cite{B99}
+and ``odd''/``even'' bases was discussed in~\cite{DK01,review}.}. 
+However, only for special type of sums the analytical 
+results are available~\cite{KV00,sums,BBK},
+\begin{equation}
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j\right) } \frac{u^j}{j^c}   = 
+ - \sum_{i=0}^{c-2} \frac{(-2)^i}{i! (c-2-i)!} 
+( \ln u )^{c-2-i} \LS{i+2}{1}{\theta} \;,
+\end{equation}
+where
+$c \geq 2$,
+\begin{equation}
+\label{def_theta}
+\theta \equiv 2\arcsin\left(\tfrac{1}{2}\sqrt{u}\right) 
+= 2\arcsin\sqrt{z}\; , 
+\end{equation}
+%
+\begin{equation}
+\label{def_Ls}
+\LS{j}{k}{\theta} =   - \int\limits_0^\theta {\rm d}\phi \;
+   \phi^k \ln^{j-k-1} \left| 2\sin\frac{\phi}{2}\right| \, ,
+\quad 
+\Ls{j}{\theta} = \LS{j}{0}{\theta} \; 
+\end{equation}
+is the generalized log-sine function~\cite{Lewin}.
+Some examples when such functions occur in the $\ep$-expansion
+of Feynman diagrams can be found in Refs.~\cite{Ls_ex,odd,D-ep}.
+Usually, the occurring angles~(\ref{def_theta}),
+possess certain geometrical meaning~\cite{DD}. 
+
+The main aim of the present publication is the analytical 
+calculation of inverse binomial sums~(\ref{binsum}),
+including some relevant examples of physically important 
+Feynman diagrams.
+
+The paper is organized as follows. 
+In Section~2, employing the connection with the $\ep$-expansion
+of hypergeometric functions,
+we obtain analytical results for sums of the type~(\ref{binsum}),
+valid for $u\leq 4$ ($z\leq 1$). Mainly the sums of
+the {\em weights}~${\bf 3}$ and ${\bf 4}$ are considered.  
+In Section~3 the analytical continuation 
+to other values of $u$ is constructed. 
+Section~4 contains some applications of our results related to 
+the $\ep$-expansion of Feynman diagrams, 
+mainly two-loop master integrals. In Appendix~A we briefly summarize 
+the relevant properties of the harmonic polylogarithms 
+of complex arguments and related functions.
+In Appendix~B we show how certain identities between hypergeometric
+functions can be used to establish relations between the corresponding sums.
+Appendix~C contains a realistic example of a physical application
+of the considered integrals. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Inverse binomial sums and hypergeometric functions}
+\setcounter{equation}{0}
+
+\subsection{The $\ep$-expansion of the $_2F_1$ function}
+
+Here, our analysis is based on comparing
+two representations of hypergeometric function whose parameters
+depend on $\varepsilon$. 
+One of them is the series representation in terms of the harmonic sums,
+whereas the second one is the exact result in terms of the
+functions related to the polylogarithms. 
+
+In particular, we consider the $_{2}F_1$ 
+hypergeometric function of a special type,
+\begin{equation}
+_{2}F_1\left(\begin{array}{c|}
+1+a_1\ep, 1+a_2 \ep\\
+\tfrac{3}{2} + b \ep  \end{array} ~z \right)
+= \sum_{j=0}^{\infty} \frac{u^j}{j!}\;
+\frac{(1+a_1\ep)_j (1+a_2\ep)_j (2+b\ep)_j}  
+{(3+2b\ep)_{2j}} \; ,
+\end{equation}
+where $u=4z$, $(\alpha)_j\equiv\Gamma(\alpha+j)/\Gamma(\alpha)$ is
+the Pochhammer symbol,
+and we have used the duplication formula
+$(2\beta)_{2j}=4^j(\beta)_j(\beta+\tfrac{1}{2})_j$.
+To perform the $\ep$-expansion we use the well-known 
+representation
+\begin{equation}
+(1+a\ep)_j = j! \; \exp\left[ -\sum_{k=1}^{\infty} \frac{(-a\ep)^k}{k}
+S_k(j) \right] \; ,
+\label{pochhamer}
+\end{equation}
+which yields
+\begin{eqnarray}
+&& \hspace*{-15mm}
+_{2}F_1\left(\begin{array}{c|}
+1+a_1\ep, 1+a_2 \ep\\
+\tfrac{3}{2} + b \ep  \end{array} ~z \right)
+= \frac{2(1 + 2 b\ep)}{u} 
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j\right) }  \frac{u^j}{j}  
+\Biggl\{
+1 
++ \ep \left[ 
+   (A_1+b)S_1 - 2 b \bar{S}_1
+      \right] 
+\nonumber \\ && 
++  \ep^2 \Bigl[ 
+2 b^2 \left( \bar{S}_2 + \bar{S}_1^2 \right) 
+-  2 b (A_1+b) S_1 \bar{S}_1 
+- \tfrac{1}{2} (A_2+b^2) S_2
++ \tfrac{1}{2} (A_1+b)^2 S_1^2
+\Bigr]
+\nonumber \\ && 
++ \ep^3 \Bigl[ 
+\tfrac{1}{6} (A_1+b) ^3 S_1^3 
+- b (A_1+b)^2 S_1^2 \bar{S}_1 
+- \tfrac{1}{2} (A_1+b)(A_2+b^2)S_1 S_2
+\nonumber \\ && \hspace{10mm}
++ 2 b^2 (A_1+b) S_1 \left( \bar{S}_2 + \bar{S}_1^2 \right)
++ b (A_2+b^2) S_2 \bar{S}_1
++ \tfrac{1}{6} (2 b^3 - A_1^3 + 3 A_1 A_2) S_3
+\nonumber \\ && \hspace{10mm}
+- \tfrac{4}{3} b^3 
+\left( 2 \bar{S}_3 + 3 \bar{S}_2 \bar{S}_1 + \bar{S}_1^3 \right)
+\Bigr]
++ {\cal O} (\ep^4)
+\Biggr\} \; ,
+\label{hyper:f21}
+\end{eqnarray}
+where $A_k \equiv a_1^k+a_2^k.$
+Note that the coefficient of the $\ep^3$ term can be represented as
+\begin{eqnarray}
+\label{combinations}
+&& \hspace*{-7mm}
+\tfrac{1}{6}(A_1^3+b^3) C_0 
++2 b^2 (A_1+b) C_1
++4 b^3 C_2
++\tfrac{1}{2} b (A_1-b) (A_1-2b) C_3
+\nonumber \\ &&
++\tfrac{1}{2} (A_1^2-A_2) (A_1+b) \left(S_1 S_2-S_3\right)
++\tfrac{1}{2} b (A_1^2-A_2) \left(S_3-2 S_2 \bar{S}_1\right) \; ,
+\end{eqnarray}
+where we have introduced the following combinations of 
+harmonic sums:
+\begin{eqnarray}
+\label{combinations2}
+C_0&=& S_1^3-3S_1S_2+2S_3\; ,
+\nonumber \\
+C_1&=& 
+S_1^3-S_1 S_2+S_1 (\bar{S}_1^2+\bar{S}_2)
+-\tfrac{5}{2} S_1^2 \bar{S}_1+\tfrac{3}{2} S_2 \bar{S}_1 \; ,
+\nonumber \\
+C_2&=&  \tfrac{3}{4}S_1 S_2 - \tfrac{3}{4}S_1^3
++\tfrac{3}{2}S_1^2\bar{S}_1 - S_2\bar{S}_1 
+-\tfrac{1}{3} \left( 2\bar{S}_3 + 3 \bar{S}_1\bar{S}_2
++\bar{S}_1^3\right) \; ,
+\nonumber \\
+C_3&=& S_1^3-2 S_1^2 \bar{S}_1 - S_1 S_2 + 2 S_2 \bar{S}_1 \; .
+\end{eqnarray}
+To completely define the $\ep^3$ order of the expansion
+of $_2F_1$, we need results for six combinations
+of sums, according to the number of independent
+combinations of the parameters $A_i$ and $b$.
+
+Let us first consider the case $0\leq u \leq 4 $ ($0\leq z\leq 1$).
+In this region  the following parametrization 
+can be used:  
+$u = 4 \sin^2\tfrac{\theta}{2}$ ($z= \sin^2\tfrac{\theta}{2}$),
+where $0 \leq \theta \leq \pi.$
+In the rest of this paper, we will use the short-hand notation 
+\begin{equation}
+L_\theta \equiv
+\ln \left( 2 \cos \tfrac{\theta}{2} \right) \; , \qquad  
+l_\theta \equiv
+\ln \left( 2 \sin \tfrac{\theta}{2} \right) \; .
+\end{equation}
+
+For a few special cases, the $\ep$-expansion of the 
+$_2F_1$ functions is known. 
+First of all, the following relation holds~\cite{PBM3}:
+\begin{equation}
+{}_{2}F_1 \left(\begin{array}{c|} \!\! 1\!+\!\ep, 1 \!-\! \ep\! \\
+\frac{3}{2} \end{array} ~\sin^2 \tfrac{\theta}{2} \right)\! =
+\frac{\sin \left( \ep \theta \right)}{\ep \sin(\theta)} \; .
+\label{basis_I}
+\end{equation}
+Its expansion contains only the even powers of~$\ep$.
+Using it, it is easy to get 
+\begin{eqnarray}
+\sum_{j=1}^\infty \frac{1}{\left( 2j\atop j\right)} \frac{u^j}{j} S_2 
+&=&  \tfrac{1}{6} \theta^3 
+\tan\tfrac{\theta}{2} \; ,
+\label{S2}
+\\
+\sum_{j=1}^\infty \frac{1}{\left( 2j\atop j\right)} 
+\frac{u^j}{j} \left( S_2^2 - S_4 \right)
+&=&  \tfrac{1}{60} \theta^5 
+\tan\tfrac{\theta}{2} \; ,
+\label{S4}
+\end{eqnarray}
+etc. Then, there are some cases~\cite{D-ep,DK01} when 
+an arbitrary term of the $\ep$-expansion can be calculated
+in terms of log-sine functions, 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{eqnarray}
+_2F_1 \left(\begin{array}{c|} 1, 1+\ep  \\
+\tfrac{3}{2} \end{array} ~\sin^2 \tfrac{\theta}{2} \right)
+&=& \frac{\left( 2 \cos \tfrac{\theta}{2} \right)^{-2\ep}}{\sin \theta} 
+\sum_{j=0}^{\infty} \frac{(2\ep)^j}{j!}
+\left[ \Ls{j+1}{\pi-\theta} - \Ls{j+1}{\pi} \right] \; ,
+\label{basis_II}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\\
+_2F_1 \left(\begin{array}{c|} 1, 1+\ep  \\
+\tfrac{3}{2}+\ep \end{array} ~\sin^2 \tfrac{\theta}{2} \right)
+ &=& -\frac{2(1+2\ep)}{\sin\theta (\sin\tfrac{\theta}{2})^{2\ep}}
+ \sum_{j=0}^{\infty} \frac{(2\ep)^j}{j!} \Ls{j+1}{\theta} \; ,
+\\
+_2F_1 \left(\begin{array}{c|} 1, 1+\ep  \\
+\tfrac{3}{2}+\tfrac{1}{2}\ep \end{array} ~\sin^2 \tfrac{\theta}{2} \right)
+ &=& -\frac{1+\ep}{(2\sin\theta)^{1+\ep}}
+ \sum_{j=0}^{\infty} \frac{\ep^j}{j!} \Ls{j+1}{2\theta} \; .
+\end{eqnarray}
+Moreover, for a more general case an integral representation 
+can be obtained~\cite{PBM3,DK01},
+\begin{equation}
+{}_{2}F_1 \left(\begin{array}{c|} 1, 1 \!+\! a \ep \\
+\frac{3}{2}+b \ep \end{array} ~\sin^2 \tfrac{\theta}{2} \right) =
+\frac{(1\!+\! 2 b \ep)\left( 2 \cos \tfrac{\theta}{2} \right)^{2b\ep-2a\ep}}
+{ \sin \theta \left( 2 \sin \tfrac{\theta}{2} \right)^{2b\ep}}
+\int\limits_0^\theta {\rm d}\phi
+\left(2 \sin \tfrac{\phi}{2} \right)^{2b\ep} 
+\left(2 \cos \tfrac{\phi}{2} \right)^{2a\ep-2b\ep} . 
+\label{basis_III}
+\end{equation}
+Any order of the $\ep$-expansion of Eq.~(\ref{basis_III})
+can be expressed in terms of 
+the generalized ``log-sine-cosine'' function $\Lsc{i,j}{\theta}$
+whose properties are listed in Appendix~B of Ref.~\cite{DK01},
+\begin{equation}
+\label{Lsc}
+\Lsc{i,j}{\theta}=-\int\limits_0^{\theta}
+{\rm d}\phi\; \ln^{i-1}\Bigl|2\sin\tfrac{\phi}{2}\Bigr| \;
+\ln^{j-1}\Bigl|2\cos\tfrac{\phi}{2}\Bigr| \; .
+\end{equation}
+Up to the level $i+j=5$, only one independent function
+appears, $\Lsc{2,3}{\theta}$, that cannot be expressed
+in terms of ordinary log-sine integrals. 
+Note that $\Lsc{2,3}{\pi-\theta}$ can be reduced 
+to $\Lsc{2,3}{\theta}$ by using 
+Eq.~(A.27) of Ref.~\cite{DK01}.
+
+Using Eqs.~(\ref{basis_II})--(\ref{basis_III}), we obtain 
+the following results for the weight-{\bf 2} and weight-{\bf 3}
+sums, in addition to Eq.~(\ref{S2}): 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{eqnarray}
+&& 
+\sum_{j=1}^\infty \frac{1}{\left( 2j\atop j\right)} \frac{u^j}{j} S_1 
+=  2 \tan\tfrac{\theta}{2}
+\Bigl[\Ls{2}{\pi- \theta}  - \theta L_\theta \Bigr] \;,
+\label{S1a}
+\\ && 
+\sum_{j=1}^\infty \frac{1}{\left( 2j\atop j\right)} \frac{u^j}{j} \bar{S}_1
+=  
+\tan\tfrac{\theta}{2}
+\Bigl[
+2 \Ls{2}{\pi- \theta}
++  \Ls{2}{\theta}
++  \theta l_\theta
+- 2 \theta L_\theta
+\Bigr] \; ,
+\label{S1bar}
+\\ && 
+\sum_{j=1}^\infty \frac{1}{\left( 2j\atop j\right)}  \frac{u^j}{j} S_1^2 
+=  4 \tan\tfrac{\theta}{2}
+\Bigl[
+\Ls{3}{\pi-\theta} - \Ls{3}{\pi}
+- 2 \Ls{2}{\pi-\theta} L_\theta
++ \theta L^2_\theta
++ \tfrac{1}{24} \theta^3 
+\Bigr] \;, 
+\hspace*{7mm}
+\label{S1S1}
+\\ && 
+\sum_{j=1}^\infty \frac{1}{\left( 2j\atop j\right)}
+\frac{u^j}{j} S_1 \bar{S}_1
+=
+\tan\tfrac{\theta}{2}  
+\Bigl\{
+  5  \left[ \Ls{3}{\pi-\theta} - \Ls{3}{\pi} \right]
+-    \Ls{3}{\theta}
++ \tfrac{1}{2} \Ls{3}{2\theta}
+\nonumber \\ && \hspace*{5mm}
++ 2  \Ls{2}{\pi-\theta} l_\theta
+- 8  \Ls{2}{\pi-\theta} L_\theta
+- 2 \Ls{2}{\theta} L_\theta
+- 2 \theta l_\theta  L_\theta 
++ 4 \theta  L_\theta^2 
++ \tfrac{1}{12} \theta^3
+\Bigr\} \; ,
+\label{S1S1bar}
+\\ && 
+\sum_{j=1}^\infty \frac{1}{\left( 2j\atop j\right)}
+\frac{u^j}{j} 
+\left( \bar{S}_2 + \bar{S}_1^2 \right) 
+=
+\tan\tfrac{\theta}{2}  
+\Bigl\{
+  6  \left[ \Ls{3}{\pi-\theta} - \Ls{3}{\pi} \right]
+- 3  \Ls{3}{\theta}
+\nonumber \\ && \hspace*{5mm}
++ 4  \Ls{2}{\pi-\theta} l_\theta
+- 8  \Ls{2}{\pi-\theta} L_\theta
++ 2  \Ls{2}{\theta} l_\theta
++ \Ls{3}{2\theta}
+- 4 \Ls{2}{\theta} L_\theta
+\nonumber \\ && \hspace*{5mm}
++ \theta l^2_\theta
+- 4 \theta  L_\theta l_\theta
++ 4 \theta  L^2_\theta 
++ \tfrac{1}{12} \theta^3
+\Bigr\} \; ,
+\label{S2S1bar}
+\end{eqnarray}
+where $\Ls{3}{\pi}=-\tfrac{1}{2}\pi\zeta_2$.
+In fact, all $\Ls{j}{\pi}$ are expressible 
+in terms of the $\zeta$-function~\cite{Lewin}.
+
+For the weight {\bf 4}, the results for some combinations
+of sums involved in~(\ref{combinations}) can also be expressed
+in terms of log-sine functions, using 
+Eqs.~(\ref{basis_II})--(\ref{basis_III}),
+\begin{eqnarray}
+&& \hspace*{-10mm} 
+\sum_{j=1}^\infty \frac{1}{\left( 2j\atop j\right)} \frac{u^j}{j} C_0
+= 
+8 \tan\tfrac{\theta}{2}
+\Bigl\{
+\Ls{4}{\pi-\theta} \!-\! \Ls{4}{\pi} 
+\nonumber \\ && \hspace{15mm} 
+\!-\! 3 \Bigl[ \Ls{3}{\pi \!-\! \theta} \!-\! \Ls{3}{\pi} \Bigr] L_\theta
+\!+\! 3 \Ls{2}{\pi \!-\! \theta} L^2_\theta
+\!-\! \theta L^3_\theta
+\Bigr\} \; ,
+\label{combination:1}
+\\ && \hspace*{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sum_{j=1}^\infty \frac{1}{\left( 2j\atop j\right)} \frac{u^j}{j} C_1 
+= 
+\tan\tfrac{\theta}{2}  
+\Bigl\{
+\tfrac{2}{3} \Ls{4}{\theta}
+- \tfrac{1}{3} \Ls{4}{ 2\theta}
+- \tfrac{14}{3} \left[ \Ls{4}{ \pi - \theta} - \Ls{4}{ \pi} \right]
+\nonumber \\ && 
++ 14 \left[ \Ls{3}{ \pi - \theta} - \Ls{3}{\pi} \right] L_\theta
+- 2 \Ls{3}{\theta} l_\theta
++ \Ls{3}{2 \theta} \left[ L_\theta + l_\theta \right]
+- 14 \Ls{2}{\pi-\theta} L_\theta^2
+\nonumber \\ && 
++ 2 \Ls{2}{\pi-\theta} l_\theta^2
+- 2 \Ls{2}{2 \theta} L_\theta l_\theta   
+- \Ls{2}{2 \theta} L_\theta^2
+- 2 \theta L_\theta l_\theta^2
+- 2 \theta L_\theta^2 l_\theta
++ 4 \theta L_\theta^3 
+\Bigr\} \;, 
+\\ && \hspace*{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sum_{j=1}^\infty \frac{1}{\left( 2j\atop j\right)} \frac{u^j}{j} C_2 
+= 
+\tan\tfrac{\theta}{2}  
+\Bigl\{
+\tfrac{1}{3} \Ls{4}{2 \theta}
+- \Ls{4}{\theta}
++ 4 \left[ \Ls{4}{\pi - \theta} - \Ls{4}{\pi}  \right] 
+- \Ls{3}{2 \theta}\left( l_\theta + L_\theta  \right) 
+\nonumber \\ &&
+- 12 \left[\Ls{3}{\pi-\theta} - \Ls{3}{\pi} \right] L_\theta
++ 3 \Ls{3}{\theta} l_\theta 
++ 12 \Ls{2}{\pi-\theta} L_\theta^2  
+- 3 \Ls{2}{\pi-\theta} l_\theta^2
+\nonumber \\ &&
+- \tfrac{1}{2} \Ls{2}{2\theta} l_\theta^2 
++ \Ls{2}{2\theta} L_\theta^2 
++ 2 \Ls{2}{2\theta} l_\theta L_\theta 
++ 2 \theta  l_\theta^2 L_\theta
++ 2 \theta  l_\theta L_\theta^2
+- \tfrac{1}{3} \theta  l_\theta^3
+- \tfrac{10}{3} \theta L_\theta^3 
+\Bigr\} \; ,
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+where $\Ls{4}{\pi}=\tfrac{3}{2}\pi\zeta_3$
+and the combination of the harmonic sums $C_j$ are defined in (\ref{combinations2}).
+Finally, using (\ref{basis_III}) the result for the sum involving $C_3$ 
+can be expressed in terms of the ${\mbox{Lsc}}$-function (\ref{Lsc}),
+\begin{eqnarray}
+\label{last4}
+&& \hspace*{-10mm}
+\sum_{j=1}^\infty \frac{1}{\left( 2j\atop j\right)} \frac{u^j}{j} C_3
+= 
+- 4\tan\tfrac{\theta}{2}  
+\Bigl\{ 
+  2 \Lsc{2,3}{\theta}
++ 2  \left[ \Ls{4}{\pi-\theta} - \Ls{4}{\pi} \right]
+\nonumber \\ && 
++ 2 \left[ \Ls{3}{\pi-\theta} - \Ls{3}{\pi} \right] l_\theta
+- 8 \left[ \Ls{3}{\pi-\theta} - \Ls{3}{\pi} \right] L_\theta
+- \Ls{3}{2 \theta} L_\theta 
++ 2 \Ls{3}{\theta} L_\theta 
+\nonumber \\ && 
++ 8 \Ls{2}{\pi-\theta} L_\theta^2 
+- 4 \Ls{2}{\pi-\theta} L_\theta  l_\theta   
++ \Ls{2}{2 \theta} L_\theta^2
+- 2 \theta  L_\theta^3
++ 2 \theta   L_\theta^2 l_\theta
+\Bigr\}  \; .
+\end{eqnarray}
+Some of the results (\ref{S1a})--(\ref{last4}) can be written 
+in a slightly different form by means of relations~\cite{Lewin}
+$$
+\Ls{2}{\theta} = \Cl{2}{\theta} \; , \quad 
+\Cl{2n}{\pi+\theta} = - \Cl{2n}{\pi-\theta} \; , \quad
+\Cl{2n+1}{\pi+\theta} = \Cl{2n+1}{\pi-\theta} \; . 
+$$
+
+However, in this way one cannot obtain
+results for the two remaining combinations 
+in~(\ref{combinations}),
+involving $A_1^2-A_2=2a_1a_2$,
+since in Eq.~(\ref{basis_III})
+we always have $a_1a_2=0$. An interesting relation
+between these two functions is obtained in Appendix~B. 
+It should also be noted that for higher hypergeometric
+functions other combinations of sums may arise
+at this level (see below).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Expansion of higher functions}
+
+Let us consider 
+the hypergeometric function of the following type:
+\begin{equation}
+\hspace*{-3mm}
+_{P+1}F_P\left(\begin{array}{c|}
+\tfrac{3}{2} + b_1 \ep,\ldots, \tfrac{3}{2} + b_{J-1} \ep, \; 
+1+a_1\ep, \ldots, 1+a_K \ep, \; 2+d_1 \ep \ldots, 2+d_L \ep \\
+\tfrac{3}{2} + f_1 \ep, \ldots, \tfrac{3}{2} + f_J \ep, \; 
+1+e_1\ep, \ldots, 1+e_{R}\ep, \; 
+2+c_1\ep, \ldots, 2+c_{K+L-R-2} \ep
+\end{array} ~z \right),
+\label{PFQ}
+\end{equation}
+where $P=K+L+J-2$.
+Using the representation (\ref{pochhamer})
+its $\ep$-expansion can be reduced to inverse binomial sums~(\ref{binsum}).
+The original hypergeometric function (\ref{PFQ}) can be written as
+(see details in Appendix~B of Ref.~\cite{DK01})
+\begin{eqnarray}
+&& \hspace*{-10mm}
+_{P+1}F_P\left(\begin{array}{c|}
+\{ \tfrac{3}{2} +b_i\ep\}^{J-1}, \; 
+\{ 1+a_i\ep\}^K, \; \{ 2+d_i\ep\}^L  \\
+\{ \tfrac{3}{2} + f_i\ep\}^J, \; 
+\{ 1+e_i\ep \}^R,
+\{ 2+c_i\ep \}^{K+L-R-2} 
+\end{array} ~z \right)
+\nonumber \\ && \hspace*{20mm}
+= \frac{2}{u}
+\frac{
+\Pi_{s=1}^{K+L-R-2} (1+c_s\ep)  
+\Pi_{k=1}^{J} (1+ 2 f_k\ep)}
+{\Pi_{i=1}^{L} (1+d_i\ep)
+\Pi_{r=1}^{J-1} (1 + 2 b_r\ep)}
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j \right) }  
+\frac{u^j}{j^{K-R-1}}  
+\Delta \;, 
+\nonumber 
+\end{eqnarray}
+where $u=4z$,  
+\begin{eqnarray}
+\Delta &=& 
+\exp \left[ \sum_{k=1}^{\infty} \frac{(-\ep)^k}{k}  
+\left( S_k T_k + 2^k U_k \bar{S}_k + W_k j^{-k} \right) 
+\right]
+\nonumber \\
+&=&  
+1 
+- \ep \left( 
+   T_1 S_1 
++ W_1 j^{-1} 
++ 2 U_1 \bar{S}_1
+\right)
++  \ep^2 \Bigl[ 
+\tfrac{1}{2} j^{-2}\left( W_2 + W_1^2 \right) 
++ W_1 j^{-1} 
+ \left( T_1 S_1 
++ 2 U_1 \bar{S}_1  \right)
+\nonumber \\ &&
++  2 T_1 U_1 S_1 \bar{S}_1  
++ 2 U_2 \bar{S}_2 
++ 2 U_1^2 \bar{S}_1^2 
++ \tfrac{1}{2} T_2  S_2 
++ \tfrac{1}{2} T_1^2 S_1^2
+\Bigr]
++ {\cal O}(\ep^3)\; , 
+\label{expansion}
+\end{eqnarray}
+and we introduced the constants 
+\begin{eqnarray*}
+&& \hspace*{-8mm}
+A_k \equiv \sum_{i=1}^{K} a_i^k, \quad 
+B_k \equiv \sum_{i=1}^{J-1} b_i^k, \quad 
+C_k \equiv \sum_{i=1}^{K+L-R-2} c_i^k, \quad 
+D_k \equiv \sum_{i=1}^{L} d_i^k, \quad 
+E_k \equiv \sum_{i=1}^{R} e_i^k, \quad
+F_k \equiv \sum_{i=1}^{J} f_i^k, 
+\nonumber \\
+&& \hspace*{-8mm}
+T_k \equiv B_k + C_k + E_k - A_k - D_k - F_k, \quad
+U_k \equiv F_k - B_k, \quad
+W_k \equiv C_k - D_k. 
+\end{eqnarray*}
+Some results for separate terms 
+of expansion~(\ref{expansion}) are collected in Section~2.1. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+For the sums of the type~(\ref{binsum}) with an arbitrary integer power 
+$c\geq 2$  and  $0 \leq u \leq 4$, the following one-fold integral 
+representation \cite{BBK} is useful:
+\begin{eqnarray}
+\sum_{j=1}^\infty  \frac{u^j}{j^c} \frac{f(j)}{\left( 2j\atop j\right)} =
+\frac{1}{(c-2)!} \int\limits_0^{\theta}
+{\rm d}\phi \frac{\cos \tfrac{\phi}{2}}{\sin\tfrac{\phi}{2}}
+\Bigl[\ln{u} - 2\ln \left(2 \sin \tfrac{\phi}{2} \right)\Bigr]^{c-2} 
+\sum_{j=1}^\infty \frac{\left( 4 \sin^2\tfrac{\phi}{2} \right)^{j}}{j} 
+\frac{f(j)}{\left( 2j\atop j\right)}  \; ,
+\label{higher_c}
+\end{eqnarray}
+where $f(j)$ stands for an arbitrary combination of the harmonic sums.
+In this manner, the original sum of the type~(\ref{binsum}) 
+with an arbitrary positive integer parameter $c\geq 2$ is reduced
+to a one-fold integral representation containing
+a sum with $c=1$ in the integrand. 
+Using the representation~(\ref{higher_c}) we can generalize our 
+results~(\ref{S2}), (\ref{S4}), (\ref{S1a})--(\ref{last4})
+to the case of an arbitrary integer $c>1$.
+However, only for special types of sums these results are 
+expressible in terms of generalized log-sine functions~(\ref{def_Ls}):
+\begin{eqnarray}
+&& \hspace*{-7mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sum_{j=1}^\infty  \frac{u^j}{j^c} \frac{1}{\left( 2j\atop j\right)} S_2 =
+- \tfrac{1}{6} \sum_{i=0}^{c-2} \frac{(-2)^i}{i!(c-2-i)!} 
+\left(\ln u \right)^{c-2-i} \LS{i+4}{3}{\theta} \;, 
+\label{S2G}
+\\ && \hspace*{-7mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sum_{j=1}^\infty  \frac{u^j}{j^c} \frac{1}{\left( 2j\atop j\right)}
+\left( S_2^2-S_4 \right) =
+- \tfrac{1}{60} \sum_{i=0}^{c-2} \frac{(-2)^i}{i!(c-2-i)!} 
+\left(\ln u \right)^{c-2-i} \LS{i+6}{5}{\theta} \;, 
+\label{S4G}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{eqnarray}
+where $c \geq 2$, $0 \leq u \leq 4$, and the angle $\theta$ is
+defined in Eq.~(\ref{def_theta}). 
+
+Further results can be extracted 
+from integral representation~(\ref{higher_c}) by using 
+the integration rules for Clausen's function~\cite{Lewin} and 
+the following relation:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\[
+k \int\limits_0^\theta {\rm d}\phi\;
+{\phi}^{k-1} \LS{j}{i}{m \phi}
+=  \theta^k \LS{j}{i}{m\theta} - \frac{1}{m^k} \LS{j+k}{i+k}{m \theta}
+\; . 
+\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In this way, we obtain 
+\begin{eqnarray}
+\label{S1c2}
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j\right) } 
+\frac{u^j}{j^2} S_1   &=&  
+  4 \Cl{3}{\pi - \theta} - 2 \theta \Cl{2}{\pi - \theta} + 3 \zeta_3 , 
+\\ 
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j \right) } 
+\frac{u^j}{j^2} \bar{S}_1
+ &=&  -2 \Cl{3}{\theta} + 4  \Cl{3}{\pi-\theta}
+- 2 \theta \Cl{2}{\pi- \theta}
+-   \theta \Cl{2}{\theta}
++ 5 \zeta_3 \; , \hspace*{10mm}
+\\ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sum_{j=1}^\infty \frac{1}{\left( 2j\atop j\right)} 
+\frac{u^j}{j^2} S_1^2 
+&=&  
+4 \theta \left[ \Ls{3}{\pi-\theta} - \Ls{3}{\pi} \right]
+-  4\left[ \Ls{2}{\pi-\theta} \right]^2
++ \tfrac{1}{24} \theta^4 \; ,
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\\  
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j\right) } 
+      \frac{u^j}{j^2} S_1 \bar{S}_1
+&=& 
+ 5 \theta \left[\Ls{3}{\pi-\theta} - \Ls{3}{\pi} \right]
+- \theta \Ls{3}{\theta} 
++ \tfrac{1}{2} \theta \Ls{3}{2 \theta}
+\nonumber \\ && 
+- 4 \left[\Ls{2}{\pi-\theta} \right]^2
++ \tfrac{1}{48} \theta^4 
+- 2 \Ls{2}{\pi-\theta}  \Ls{2}{\theta} \; , 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\\  
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j\right) } 
+\frac{u^j}{j^2} 
+\left( \bar{S}_1^2 + \bar{S}_2 \right)
+&=& 
+  6 \theta \left[\Ls{3}{\pi-\theta} - \Ls{3}{\pi} \right]
+- 3 \theta \Ls{3}{\theta}
++  \theta \Ls{3}{2 \theta}
+\nonumber \\ &&
+- 4 \left[\Ls{2}{\pi-\theta} \right]^2
+- \left[\Ls{2}{\theta} \right]^2
++ \tfrac{1}{48} \theta^4
+- 4 \Ls{2}{\pi-\theta}  \Ls{2}{\theta} \; .
+\label{S2bar_2}
+\end{eqnarray}
+
+However, other sums are not expressible in terms of 
+the generalized log-sine functions.
+One needs to introduce a new function\footnote{Alternatively,
+instead of $\Phi(\theta)$ one may introduce the generalized
+Glashier function $\Gl{4}{\theta;1}$, see Eq.~(\ref{Gl4(theta,1)}) 
+in Appendix~A.},
+\begin{equation}
+\label{def_Phi}
+\Phi(\theta) \equiv
+\int\limits_0^\theta {\rm d}\phi\; 
+\Ls{2}{\phi} \ln \left(2 \cos \tfrac{\phi}{2} \right) \; , 
+\end{equation}
+which obeys the following symmetry property:
+\begin{equation}
+\label{sym_Phi}
+\Phi(\theta) + \Phi(\pi-\theta) 
+= \Phi(\pi) + \Ls{2}{\pi-\theta} \Ls{2}{\theta} \;, 
+\end{equation}
+where 
+\begin{eqnarray}
+\hspace{-10mm}
+\Phi(\pi) & = &  
+\tfrac{1}{6} \ln^4 2 - \zeta_2 \ln^2 2 + \tfrac{7}{2} \zeta_3 \ln 2 
+- \tfrac{53}{16} \zeta_4 + 4 \Li{4}{\tfrac{1}{2}} 
+= 0.64909 \ldots 
+\; . 
+\end{eqnarray}
+
+The following sums of the weight {\bf 4} are expressible 
+in terms of the function $\Phi(\theta)$:
+\begin{eqnarray}
+&& \hspace*{-10mm}
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j\right) } 
+\frac{u^j}{j^3} S_1   
+=  
+  2  \left[  \LS{4}{1}{\pi-\theta} - \LS{4}{1}{\pi} \right]  
+- \tfrac{1}{2} \LS{4}{1}{2 \theta}
++ 2 \LS{4}{1}{\theta}
+- 4 \theta \Ls{2}{\pi-\theta} l_\theta
+\nonumber \\ && 
+- 2 \pi \left[\Ls{3}{\pi-\theta} - \Ls{3}{\pi} \right]
++ 8 \left[ \Cl{3}{\pi-\theta} - \Cl{3}{\pi} \right] l_\theta
++ 4 \Phi(\pi-\theta) - 4 \Phi(\pi) \;, \hspace*{6mm}
+\label{S1_3}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\\ && \hspace*{-10mm} 
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j\right) } 
+\frac{u^j}{j^3} \bar{S}_1   
+=  
+  2 \left[ \LS{4}{1}{\pi-\theta} - \LS{4}{1}{\pi} \right]
+- \tfrac{1}{2} \LS{4}{1}{2 \theta}
++ 4 \LS{4}{1}{\theta}
++ \left[ \Ls{2}{\theta} \right]^2
+\nonumber \\ && 
+- 2 \pi \left[\Ls{3}{\pi-\theta} - \Ls{3}{\pi} \right]
++ 8 \left[ \Cl{3}{\pi-\theta} - \Cl{3}{\pi} \right] l_\theta
+- 4 \left[ \Cl{3}{\theta} - \zeta_3 \right] l_\theta
+\nonumber \\ && 
+- 2 \theta \Ls{2}{\theta} l_\theta
+- 4 \theta \Ls{2}{\pi-\theta} l_\theta
++ 4 \Phi(\pi-\theta) - 4 \Phi(\pi) \;,
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\label{S1bar_3}
+\end{eqnarray}
+%
+where we have also used the following integral:
+\begin{eqnarray}
+\int\limits_0^\theta {\rm d}\phi\;
+\phi \ln  \left(2 \cos \tfrac{\phi}{2} \right) 
+     \ln  \left(2 \sin \tfrac{\phi}{2} \right)    
+& =  & 
+-\tfrac{1}{8} \LS{4}{1}{2\theta} + \tfrac{1}{2} \LS{4}{1}{\theta}
++ \tfrac{1}{2} \left[\LS{4}{1}{\pi - \theta} - \LS{4}{1}{\pi} \right]
+\nonumber \\ && 
+- \tfrac{1}{2}\pi \left[\Ls{3}{\pi - \theta} - \Ls{3}{\pi} \right] \; .
+\nonumber 
+\end{eqnarray}
+
+Let us note that $\Phi(\theta)$ 
+can be related to the real part of a certain
+harmonic polylogarithm~\cite{RV00} of complex argument,
+\begin{equation}
+\label{PhiH}
+\Phi(\theta) 
+=  
+\tfrac{1}{96} \theta^2 (2\pi-\theta)^2
+- L_{\theta} \Cl{3}{\theta}
++ \zeta_3 \ln 2
+-  \H_{-1,0,0,1}(1)   
++ \tfrac{1}{2}\Bigl[  
+\H_{-1,0,0,1}( e^{{\rm i}\theta}) + \H_{-1,0,0,1}(e^{-{\rm i}\theta})   
+\Bigr] ,
+\end{equation}
+where (for details, see Appendix~A) 
+\begin{eqnarray}
+H_{-1,0,0,1}(y) &=& \int\limits_0^y {\rm d}x \; \frac{\Li{3}{x}}{1+x} ,
+\label{h(-1001)}
+\\
+\H_{-1,0,0,1}(1) &=&  
+- \tfrac{1}{12} \ln^4 2 + \tfrac{1}{2} \zeta_2 \ln^2 2
+- \tfrac{3}{4} \zeta_3 \ln 2 + \tfrac{3}{2} \zeta_4 - 2 \Li{4}{\tfrac{1}{2}}
+=  0.33955 \ldots \; .
+\end{eqnarray}
+The function $\H_{-1,0,0,1}(y)$ has a branch cut starting 
+at the point $y=-1$ ($\theta=\pm\pi$),
+which is subtracted by logarithmic terms in~(\ref{PhiH}), so that 
+$\Phi(\theta)$ is a smooth function of variable $\theta$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Analytical continuation}
+\setcounter{equation}{0}
+
+To obtain results valid in other regions of variable $u$ (for
+$u<0$ and $u>4$), we will construct
+the proper analytical continuation of the expressions presented
+in the previous section. 
+For generalized log-sine integrals it is described in~\cite{DK01}.
+Let us introduce a new variable
+\begin{equation}
+y \equiv e^{ {\rm i} \sigma \theta}, \hspace{5mm}
+\ln(-y-{\rm i}\sigma 0) = \ln{y} - {\rm i} \sigma \pi,
+\end{equation}
+where the choice of the sign $\sigma=\pm 1$ is related to the
+causal ``+i0'' prescription for the propagators\footnote{Whenever 
+possible, we shall keep $\sigma$ undetermined, since one may need
+different signs in different situations.}.
+For completeness, we also present  
+the inverse relations,
+\begin{equation}
+u = - \frac{(1-y)^2}{y} \;, \quad  
+y = \frac{1-\sqrt{\frac{u}{u-4}}}{1+\sqrt{\frac{u}{u-4}}} \;, \quad
+u \frac{{\rm d}}{{\rm d} u} 
+= -\frac{1-y}{1+y} \; y \frac{{\rm d}}{{\rm d}y}  \; . 
+\label{y<->u}
+\end{equation}
+In terms of this variable $y$, the analytic continuation of
+all generalized log-sine integrals can be expressed in terms 
+of Nielsen polylogarithms, whereas for
+the function $\Phi(\theta)$ we get
+\begin{eqnarray}
+\Phi(\theta) & = & \zeta_3 \ln 2 + \tfrac{1}{2} \zeta_4 
+-  H_{-1,0,0,1}(1) 
++ \tfrac{1}{2} \left[H_{-1,0,0,1}(y) + H_{-1,0,0,1}(y^{-1}) \right]
+\nonumber \\ && 
+- \tfrac{1}{4} \left[\Li{4}{y} + \Li{4}{y^{-1}} \right]
+- \tfrac{1}{2} \left[ \ln(1+y) - \tfrac{1}{2} \ln y \right] 
+           \left[\Li{3}{y} + \Li{3}{y^{-1}} \right] \;,
+\end{eqnarray}
+with $H_{-1,0,0,1}(y)$ 
+defined in Eq.~(\ref{h(-1001)}).
+
+Below we list the most complicated results, corresponding to the
+analytical continuation of the results obtained in Section~2:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\label{AN_S1S1_2}
+&& \hspace*{-10mm} 
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j \right) } \frac{u^j}{j^2} S_1^2
+ =
+- 8 \Snp{1,2}{-y} \ln y
++ 4 \Li{3}{-y} \ln y
+- 2 \Li{2}{-y} \ln^2 y
++ 4 \left[ \Li{2}{-y} \right]^2
+\nonumber \\ && \hspace{20mm}
+- \tfrac{1}{24} \ln^4 y
++ 4  \zeta_2 \Li{2}{-y}
++ \zeta_2 \ln^2 y
++ 4 \zeta_3 \ln y
++ \tfrac{5}{2} \zeta_4 \; ,
+\\ && \hspace*{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\label{AN_S1Sb1_2}
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j \right) } \frac{u^j}{j^2} S_1 \bar{S}_1
+ =  
+- 10 \Snp{1,2}{-y} \ln y 
++  \Snp{1,2}{y^2} \ln y 
+- 2 \Snp{1,2}{y} \ln y 
++ 4 \left[\Li{2}{-y} \right]^2
+\nonumber \\ && 
+- 2 \Li{2}{y} \Li{2}{-y} 
++ 3 \Li{3}{-y} \ln y 
+- \Li{3}{y} \ln y 
+- \tfrac{3}{2} \Li{2}{-y} \ln^2 y 
++ \tfrac{1}{2} \Li{2}{y} \ln^2 y 
+\nonumber \\ && 
+- \tfrac{1}{48} \ln^4 y 
++ 6 \zeta_2 \Li{2}{-y}
+-  \zeta_2 \Li{2}{y}
++ \tfrac{5}{4} \zeta_2 \ln^2 y 
++ \tfrac{11}{2} \zeta_3 \ln y 
++ 5 \zeta_4 \; ,
+\\ && \hspace*{-10mm} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\label{AN_Sb2_2}
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j \right) } \frac{u^j}{j^2} 
+\left( \bar{S}_1^2 +  \bar{S}_2 \right)
+ =  
+- 12 \Snp{1,2}{ -y} \ln y 
++ 2 \Snp{1,2}{y^2} \ln y 
+- 6 \Snp{1,2}{y} \ln y 
++ 4 \left[\Li{2}{-y} \right]^2
+\nonumber \\ && 
++  \left[\Li{2}{y} \right]^2
+- 4 \Li{2}{-y} \Li{2}{y} 
++ 2 \Li{3}{-y} \ln y 
+- \Li{3}{y} \ln y 
+- \Li{2}{-y} \ln^2 y 
+\nonumber \\ && 
++ \tfrac{1}{2} \Li{2}{y} \ln^2 y 
++ 8 \zeta_2 \Li{2}{-y}
+- 4 \zeta_2 \Li{2}{y}
++ \zeta_2 \ln^2 y 
++ 8 \zeta_3 \ln y 
++ 10 \zeta_4 \; , 
+\\ && \hspace*{-10mm} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j \right) } \frac{u^j}{j} C_0
+ =  
+\sigma \frac{1-y}{1+y}
+\Bigl[
+  24 \Snp{2,2}{-y}
+- 48 \Snp{1,3}{-y}
+- 12 \Li{4}{-y}
++ 24 \Li{3}{-y} \ln (1+y) 
+\nonumber \\ && 
+- 48 \Snp{1,2}{-y} \ln (1+y)
+- 8 \ln y \ln^3 (1+y) 
++ 6 \ln^2 y \ln^2 (1+y) 
+- 2 \ln^3 y \ln (1+y)
+\nonumber \\ && 
++ \tfrac{1}{4} \ln^4 y 
++ 24 \zeta_3 \ln(1+y) 
+- 12 \zeta_3 \ln y
+- 24 \ln^2 (1+y) \Li{2}{-y}
++ 12 \zeta_2  \ln y \ln (1+y) 
+\nonumber \\ && 
+- 3 \zeta_2   \ln^2 y 
+- 12 \zeta_2   \ln^2 (1+y) 
+- \tfrac{27}{2} \zeta_4
+\Bigr] \; ,
+\\ && \hspace*{-10mm} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sum_{j=1}^\infty \frac{1}{\left( 2j\atop j\right)} \frac{u^j}{j} C_1
+= \sigma \frac{1-y}{1+y}
+\Bigl[ 
+  3 \Li{4}{-y}  
+- 3 \Li{4}{y}
++ 28 \Snp{1,3}{-y} 
+- 2  \Snp{1,3}{y^2} 
++ 4  \Snp{1,3}{y} 
+\nonumber \\ &&
+- 14 \Snp{2,2}{-y} 
++ \Snp{2,2}{y^2} 
+- 2\Snp{2,2}{y}
++ 28 \Snp{1,2}{-y} \ln(1+y)
+- 2 \Snp{1,2}{y^2} \ln(1-y)
+\nonumber \\ && 
+- 2 \Snp{1,2}{y^2} \ln(1+y)
++ 4 \Snp{1,2}{y} \ln(1-y)
++ 4 \Li{3}{-y} \ln (1-y) 
++ 2 \Li{3}{y} \ln (1-y) 
+\nonumber \\ && 
+- 10 \Li{3}{-y} \ln (1+y) 
++ 4 \Li{3}{y} \ln (1+y)  
+- 2 \Li{2}{-y} \ln^2 (1-y) 
+\nonumber \\ && 
+- 2 \Li{2}{y^2} \ln (1+y) \ln (1-y) 
++ 12 \Li{2}{-y} \ln^2 (1+y) 
+- 2 \Li{2}{y} \ln^2 (1+y) 
+\nonumber \\ && 
+- 2 \ln y \ln^2 (1-y) \ln (1+y) 
+- 2 \ln y \ln (1-y) \ln^2 (1+y) 
++ 4 \ln y \ln^3 (1+y) 
+\nonumber \\ && 
++ \tfrac{1}{2} \ln^2 y \ln^2 (1-y) 
++ 2 \ln^2 y \ln (1-y) \ln (1+y)  
+- \tfrac{5}{2} \ln^2 y \ln^2 (1+y) 
+- \tfrac{1}{2} \ln^3 y \ln (1-y) 
+\nonumber \\ && 
++ \tfrac{1}{2} \ln^3 y \ln (1+y) 
++ \tfrac{45}{8} \zeta_4 
+- \zeta_3 \ln (1-y) 
+- 13 \zeta_3 \ln (1+y) 
++ 7 \zeta_3 \ln y 
++ \tfrac{9}{4} \zeta_2 \ln^2 y 
+\nonumber \\ && 
+- \zeta_2 \ln^2 (1-y)
++ 2 \zeta_2 \ln (1-y) \ln(1+y)
++ 8 \zeta_2 \ln^2 (1+y) 
+- 9 \zeta_2 \ln y \ln (1+y) 
+\Bigr] \;, 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\\ && \hspace*{-10mm}
+\label{AN_last4}
+\sum_{j=1}^\infty \frac{1}{\left( 2j\atop j\right)} \frac{u^j}{j} C_2
+= \sigma \frac{1-y}{1+y}
+\Bigl[
+ 2 \Snp{1,3}{y^2}
+- 24 \Snp{1,3}{-y}  
+- 6 \Snp{1,3}{y}
++ 12 \Snp{2,2}{-y} 
+- \Snp{2,2}{y^2} 
+\nonumber \\ && 
++ 3 \Snp{2,2}{y} 
+- 2 \Li{4}{-y} 
++ \tfrac{5}{2} \Li{4}{y}
+- 24 \Snp{1,2}{-y} \ln(1+y) 
+- 6 \Snp{1,2}{y} \ln (1-y)  
+\nonumber \\ && 
+- \Li{3}{y} \ln (1-y) 
++ 2 \Snp{1,2}{y^2} \ln (1-y) 
++ 2 \Snp{1,2}{y^2} \ln (1+y) 
+- 4 \Li{3}{-y} \ln (1-y) 
+\nonumber \\ && 
++ 8 \Li{3}{-y} \ln (1+y) 
+- 4 \Li{3}{y} \ln (1+y) 
++ 2 \Li{2}{-y} \ln^2 (1-y) 
+- \Li{2}{y} \ln^2 (1-y) 
+\nonumber \\ && 
++ 4 \Li{2}{-y} \ln (1-y) \ln (1+y) 
++ 4 \Li{2}{y} \ln (1-y) \ln (1+y) 
+- 10 \Li{2}{-y} \ln^2 (1+y) 
+\nonumber \\ && 
++ 2 \Li{2}{y} \ln^2 (1+y) 
+- \tfrac{1}{3} \ln y \ln^3 (1-y) 
++ 2 \ln y \ln^2 (1-y) \ln (1+y) 
+\nonumber \\ && 
++ 2 \ln y \ln (1-y) \ln^2 (1+y) 
+- \tfrac{10}{3} \ln y \ln^3 (1+y) 
+- \tfrac{1}{4} \ln^2 y \ln ^2 (1-y) 
+\nonumber \\ && 
+- 2 \ln^2 y \ln (1-y) \ln (1+y) 
++ 2 \ln^2 y \ln^2 (1+y) 
++ \tfrac{5}{12} \ln^3 y \ln (1-y) 
+- \tfrac{1}{3} \ln^3 y \ln (1+y) 
+\nonumber \\ && 
+- \tfrac{1}{96} \ln^4 y 
+- \tfrac{9}{4} \zeta_4 
++ 2 \zeta_3 \ln (1-y) 
++ 11 \zeta_3 \ln (1+y) 
+- \tfrac{13}{2} \zeta_3 \ln y 
+- 7 \zeta_2 \ln^2 (1+y) 
+\nonumber \\ && 
++ 2 \zeta_2 \ln^2 (1-y) 
+- 2 \zeta_2 \ln (1-y) \ln (1+y) 
+- \tfrac{7}{4} \zeta_2 \ln^2 y 
+- \zeta_2 \ln y \ln (1-y) 
+\nonumber \\ && 
++ 8 \zeta_2 \ln y \ln (1+y) 
+\Bigr] \;, 
+\\ && \hspace*{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\label{AN_S1_3}
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j \right) } \frac{u^j}{j^3} S_1
+ =  
+ 4 H_{-1,0,0,1}(-y) 
++ \Snp{2,2}{y^2}
+- 4 \Snp{2,2}{y} 
+- 4 \Snp{2,2}{-y} 
+- 6 \Li{4}{-y} 
+\nonumber \\ && 
+- 2 \Li{4}{y}
++ 4 \Snp{1,2}{-y}  \ln y 
++ 4 \Snp{1,2}{ y}  \ln y 
+- 2 \Snp{1,2}{ y^2}  \ln(y)
++ 4 \Li{3}{-y} \ln (1-y) 
+\nonumber \\ && 
++ 2 \Li{3}{-y} \ln y
++ 2 \Li{3}{y}  \ln y
+- \Li{2}{y} \ln^2 y 
+- 4 \Li{2}{-y} \ln y \ln (1-y) 
+\nonumber \\ && 
+- \tfrac{1}{3} \ln^3 y \ln (1-y) 
++ \tfrac{1}{24} \ln^4 y 
++ 2 \zeta_2 \Li{2}{y}
+- \tfrac{1}{2} \zeta_2 \ln^2 y 
++ 2 \zeta_2 \ln y \ln (1-y) 
+\nonumber \\ && 
++ 6 \zeta_3 \ln (1-y) 
+- 3 \zeta_3 \ln y 
+- \tfrac{7}{3} \zeta_3 \ln 2 
+- 4 \zeta_4 \; , 
+\\ && \hspace*{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\label{AN_Sb1_3}
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j \right) } \frac{u^j}{j^3} \bar{S}_1
+ =  
+ 4 H_{-1,0,0,1}(-y) 
++ \Snp{2,2}{y^2}
+- 8 \Snp{2,2}{y} 
+- 4 \Snp{2,2}{-y} 
+- 6 \Li{4}{-y} 
+\nonumber \\ && 
++ 2 \Li{4}{y}
+- \left[ \Li{2}{y} \right]^2
++ 4 \Snp{1,2}{-y}  \ln y 
++ 8 \Snp{1,2}{ y}  \ln y 
+- 2 \Snp{1,2}{ y^2} \ln y 
++ \tfrac{1}{48} \ln^4 y 
+\nonumber \\ && 
++ 4 \Li{3}{-y} \ln (1-y) 
+- 4 \Li{3}{y} \ln (1-y) 
++ 2 \Li{3}{-y} \ln y 
+- 4 \Li{2}{-y} \ln y \ln (1-y) 
+\nonumber \\ && 
++ 2 \Li{2}{y} \ln y \ln (1-y) 
+- \tfrac{1}{2} \Li{2}{y} \ln^2 y 
+- \tfrac{1}{6} \ln^3 y \ln (1-y) 
++ 4 \zeta_2 \ln y \ln (1-y) 
+\nonumber \\ && 
+- \zeta_2 \ln^2 y 
++ 10 \zeta_3 \ln (1-y) 
+- 5 \zeta_3 \ln y 
++ 4 \zeta_2 \Li{2}{y}
+- \tfrac{7}{3} \zeta_3 \ln 2 
+- \tfrac{19}{2} \zeta_4 \; , 
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+where the factor $\sigma$ appears due to
+$
+%\frac{\sin \frac{\theta}{2}}{\cos \frac{\theta}{2}} = 
+\tan\tfrac{\theta}{2} =
+{\rm i} \sigma \frac{1-y}{1+y} \;$
+and the combinations of harmonic sums
+$C_j$  ($j=0,1,2$) are defined in~(\ref{combinations2}).
+We have also used here the relations~(\ref{Hrel1}) and (\ref{Hrel2}).
+
+The results for 
+lower values of $c$ can be deduced using
+\begin{equation}
+\sum_{j=1}^\infty  \frac{u^j}{j^c} f(j) =
+u \frac{{\rm d}}{{\rm d}u} \sum_{j=1}^\infty \frac{u^j}{j^{c+1}} f(j) \;. 
+\label{derivative}
+\end{equation}
+For example, 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{eqnarray} 
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j\right) } \frac{u^j}{j^2} S_1
+&=& 
+4 \Li{3}{-y} - 2 \Li{2}{-y} \ln y - \tfrac{1}{6} \ln^3 y
++ 3 \zeta_3  + \zeta_2 \ln y \; ,
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\\  
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j \right) } \frac{u^j}{j^2} \bar{S}_1
+&=& 
+-2 \Li{3}{y} + 4 \Li{3}{-y} - 2 \Li{2}{-y} \ln y + \Li{2}{y}\ln y
+\nonumber \\ && 
+- \tfrac{1}{12} \ln^3 y + 2 \zeta_2 \ln y + 5 \zeta_3 \;.
+\end{eqnarray}
+The results for these two sums can be extracted from Ref.~\cite{FKV99}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Application to Feynman diagrams}
+\setcounter{equation}{0}
+
+
+Below  we present results for the $\ep$-expansion of one- and two-loop 
+master integrals shown in Fig.~1. 
+In the rest of this paper we use the notation $u=p^2/m^2$.
+
+\begin{figure}[th]
+\begin{center}
+\centerline{\vbox{\epsfysize=30mm \epsfbox{inverse_diag2.eps}}}
+\caption{\label{propagator} One- and two-loop diagrams
+considered in the paper.
+Bold and thin lines correspond to massive and
+massless propagators, respectively.}
+\end{center}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{One-loop vertex}
+
+Let us consider a one-loop triangle diagram with
+$m_1=m_2=m_3\equiv m$, $p_1^2=p_2^2=0$, with an arbitrary (off-shell)
+value of $p_3^2\equiv p^2$. Such diagrams occur, for example, in Higgs decay
+into two photons or two gluons via a massive quark loop.
+Following the notation of Ref.~\cite{BD-TMF}, we will denote
+this integral (with unit powers of propagators) as
+$J_3(1,1,1; m)$. According to Eq.~(40) of Ref.~\cite{BD-TMF}, the result
+in an arbitrary space-time dimension $n=4-2\ep$ is
+\begin{equation}
+J_3(1,1,1; m) \left. \right|_{p_1^2 = p_2^2 = 0} =
+- \tfrac{1}{2} \mbox{i} \pi^{2-\ep} (m^2)^{-1-\ep} \Gamma(1+\ep)\;
+{}_{3}F_2 \left(\begin{array}{c|} 1, 1, 1+\ep \\
+\frac{3}{2}, 2 \end{array} ~\frac{p^2}{4m^2} \right) \; .
+\end{equation}
+For this integral a number of one-fold integral representation are 
+available, see Eqs.~(3.10)--(3.11) in Ref.~\cite{DK01}.
+Expanding in $\ep$ we get
+\begin{eqnarray}
+\label{J3sums}
+&& \hspace{-5mm}
+J_3(1,1,1; m) \left. \right|_{p_1^2 = p_2^2 = 0} 
+= - \mbox{i} \pi^{2-\ep} \Gamma(1+\ep)\; \frac{(m^2)^{-\ep}}{p^2}
+\sum_{j=1}^{\infty} \frac{1}{\left( 2j \atop j\right) } \frac{u^j}{j^2} 
+\left[ 1 + \ep S_1
++ \tfrac{1}{2}\ep^2 \left( S_1^2 -S_2 \right)
+\right.
+\nonumber \\  && \hspace{8mm}
++ \tfrac{1}{6}\ep^3 \left( S_1^3 -3 S_1 S_2 + 2 S_3 \right)
++ \tfrac{1}{24}\ep^4 \left( S_1^4 -6 S_1^2 S_2 + 8 S_1 S_3 + 3 S_2^2 - 6 S_4 \right)
+\left. 
++ {\cal O} (\ep^5) 
+\right] .
+\hspace*{9mm}
+\end{eqnarray}
+Substituting results for the occurring inverse binomial sums, we
+obtain
+\begin{eqnarray}
+J_3(1,1,1; m) \left. \right|_{p_1^2 = p_2^2 = 0} 
+&\!\!=\!\!& - \mbox{i} \pi^{2-\ep} \Gamma(1+\ep)\; \frac{(m^2)^{-\ep}}{p^2}
+\Bigl\{ 
+ - \tfrac{1}{2} \ln^2 y 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nonumber \\ &&
++ \ep \left[ 
+4 \Li{3}{-y}
+- 2 \Li{2}{-y} \ln y 
+- \tfrac{1}{6} \ln^3 y 
++ \zeta_2 \ln y 
++ 3 \zeta_3 
+\right]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nonumber \\ && 
++ \ep^2 \Bigl[ 
+2 \left[\Li{2}{-y} \right]^2
++ 2 \Li{3}{-y} \ln y 
+- 4 \Snp{1,2}{-y} \ln y 
+- \Li{2}{-y} \ln^2 y 
+\nonumber \\ && 
++ 2 \zeta_2 \Li{2}{-y}
++ \tfrac{1}{2}\zeta_2 \ln^2 y 
++ 2 \zeta_3 \ln y 
+- \tfrac{1}{24} \ln^4 y 
++ \tfrac{5}{4} \zeta_4
+\Bigl]
++ {\cal O}(\ep^3) 
+\Bigl\} \; . 
+\label{Hgg1}
+\end{eqnarray}
+These results correspond to the analytic continuation of
+Eqs.~(3.13), (3.14) and (3.16) from Ref.~\cite{DK01}.
+
+The $\ep^3$ term is Eq.~(\ref{J3sums}) contains the same
+combination of sums as $C_0$ in Eq.~(\ref{combinations2}).
+However, the sum in Eq.~(\ref{J3sums}) contains $j^2$
+in the denominator, i.e., it corresponds to the case $c=2$.
+Using the result~(\ref{combination:1}) (with $c=1$) 
+together with (\ref{higher_c}), we obtain a one-fold
+integral representation for the $\ep^3$-term in Eq.~(\ref{J3sums}). 
+Analyzing it, we see that we get only one new non-trivial integral,  
+\begin{equation}
+\label{nontrivial5}
+\int\limits_0^\theta {\mbox d} \phi \; 
+\Ls{2}{\phi} \; \ln^2 \left| 2\sin\tfrac{\phi}{2} \right| \; ,
+\end{equation}
+while all other terms can be expressed in terms of known functions.
+For $\theta=\tfrac{2\pi}{3}$ the integral~(\ref{nontrivial5}) 
+is connected with the new element $\chi_5$ of the {\em odd} basis,
+whereas for $\theta=\tfrac{\pi}{2}$ it is related to
+the new element $\widetilde{\chi}_5$ 
+of the {\em even} basis, see Section~3.3 in Ref.~\cite{DK01} 
+and Eqs.~(14)--(15) in Ref.~\cite{review}.
+
+At the same time, the $\ep^4$-term of Eq.~(\ref{J3sums})
+(and all other even powers of $\ep$)
+can be calculated in terms of log-sine functions,
+so that their analytic continuation can be expressed in terms of 
+Nielsen polylogarithms.
+Namely, for the $\ep^4$-term, combining 
+Eqs.~(3.14), (3.19) from Ref.~\cite{DK01} and Eq.~(\ref{S4G}),
+we obtain the result for the sum 
+\[
+\sum_{j=1}^{\infty} \frac{1}{\left( 2j \atop j\right) } \frac{u^j}{j^c} 
+\left( S_1^4 -6 S_1^2 S_2 + 8 S_1 S_3 - 3 S_2^2\right)
+\]
+with $c=2$. Using Eq.~(\ref{derivative}), we also obtain
+the result for the case $c=1$. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Two-loop self-energy integral $F_{10101}$}
+
+This integral is a good illustration of the
+application of general expressions given in Section~3.
+The off-shell result for this integral in arbitrary
+dimension was presented in~\cite{BFT93} (where it was called
+$\widetilde{I}_3$, see Eq.~(22) of \cite{BFT93}).
+For unit powers of propagators, the result reads
+\begin{eqnarray}
+&& \hspace*{-15mm}
+m^{2+4\ep}
+(1-2\ep) F_{10101}(p^2,m) =
+\frac{1}{(1-\ep^2)(1+2\ep)}
+{}_{4}F_3 \left(\begin{array}{c|} 1, 1+\ep,1+\ep, 1+2\ep \\
+\frac{3}{2} +\ep ,2+\ep, 2-\ep \end{array} ~\frac{p^2}{4m^2} \right)
+\nonumber\\ && \hspace*{-15mm}
+-\frac{1}{2 \ep (1+\ep)}
+{}_{3}F_2 \left(\begin{array}{c|} 1, 1\!+\!\ep, 1\!+\!\ep \\
+\frac{3}{2}, 2+\ep \end{array} ~\frac{p^2}{4m^2} \right)
++ \frac{1}{2\ep}
+\frac{\Gamma^2(1-\ep)}{\Gamma(1\!-\!2\ep)} \left(-\frac{m^2}{p^2}\right)^\ep
+{}_{3}F_2 \left(\begin{array}{c|} 1, 1, 1+\ep \\
+\frac{3}{2}, 2 \end{array} ~\frac{p^2}{4m^2} \right). 
+\end{eqnarray}
+Expanding in $\ep$, we obtain
+\begin{eqnarray}
+&& \hspace*{-10mm}
+m^{2+4\ep}
+(1-2\ep) F_{10101}(p^2,m) 
+\nonumber\\ && \hspace*{-10mm}
+=
+\sum_{j=1}^\infty \frac{1}{\left( 2j \atop j\right) } \frac{u^j}{j^2} 
+\Biggl\{ 
+\frac{3}{j} - \ln(-u)
++ \ep \Biggl[
+- \frac{1}{j^2}
++ \frac{11}{j} S_1 
+- \frac{4}{j} \bar{S}_1 
+- \ln (-u) S_1 
++ \tfrac{1}{2} \ln^2 (-u) 
+- \zeta_2 
+\Biggr]
++ {\cal O} (\ep^2)\Biggr \}
+\nonumber\\ && \hspace*{-10mm}
+=  6 \Li{3}{y} - 6 \Li{2}{y} \ln y  -2 \ln^2 y \ln (1-y) - 6 \zeta_3 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nonumber\\ && \hspace*{-10mm}
++ \ep \Bigl\{ 
+  28  H_{-1,0,0,1}(-y) 
++ 7 \Snp{2,2}{y^2}
+- 28 \Snp{2,2}{-y}
+- 16 \Snp{2,2}{y}
+- 42 \Li{4}{-y} 
+- 26 \Li{4}{y}
+\nonumber\\ && \hspace*{-10mm}
++ 4 \left[\Li{2}{y} \right]^2
++ 16 \Snp{1,2}{y} \ln y 
+- 14 \Snp{1,2}{y^2} \ln y 
++ 28 \Snp{1,2}{-y} \ln y 
++ 18 \Li{3}{-y} \ln y 
+\nonumber\\ && \hspace*{-10mm}
++ 20 \Li{3}{y} \ln y 
++ 20 \Li{3}{-y} \ln (1-y) 
++ 12 \Li{3}{y} \ln (1-y) 
+- 2 \Li{2}{-y} \ln^2 y 
+- 9 \Li{2}{y} \ln^2 y 
+\nonumber\\ && \hspace*{-10mm}
+- 24 \Li{2}{-y} \ln y \ln (1-y) 
+- 4 \Li{2}{y} \ln y \ln (1-y)
+- 2 \ln^3 y \ln (1-y) 
++ 6 \zeta_2 \Li{2}{y}
+\nonumber\\ && \hspace*{-10mm} 
++ 4 \zeta_2 \ln y \ln (1-y) 
+- 12 \zeta_3 \ln y 
++ 24 \zeta_3 \ln (1-y) 
+- \tfrac{49}{3} \zeta_3 \ln 2 
+- 9 \zeta_4 
+\Bigr\}
++ {\cal O} (\ep^2) \; .
+\label{f10101}
+\end{eqnarray}
+The result for the finite part coincides with~\cite{B90},
+whereas the result for the $\ep$-term is new.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%J011
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Two-loop sunset-type diagram $J_{011}$}
+
+Let us consider sunset-type diagrams with two equal masses and 
+one zero mass (see Fig.~1). The off-shell result for the sunset-type 
+integral $J_{011}$ with arbitrary powers of propagators 
+has been obtained in Refs.~\cite{BFT93,D91}, by using the 
+Mellin--Barnes technique \cite{BD-TMF}:
+\begin{eqnarray}
+J_{011}(\sigma,\nu_1,\nu_2;p^2,m) \!\! &=& \!\!
+(m^2)^{n-\sigma-\nu_1-\nu_2}
+\frac{
+\Gamma(\nu_1\!+\!\nu_2\!+\!\sigma\!-\!n)
+\Gamma\left(\frac{n}{2}\!-\!\sigma\right)
+\Gamma\left(\nu_2\!+\!\sigma\!-\!\frac{n}{2}\right)
+\Gamma\left(\nu_1\!+\!\sigma\!-\!\frac{n}{2}\right)}
+{\Gamma(\nu_1)\Gamma(\nu_2)\Gamma\left(\frac{n}{2}\right)
+\Gamma(\nu_1+\nu_2+2\sigma-n) \Gamma^2 \left(3-\frac{n}{2}\right)}
+\nonumber\\ && \times
+{}_{4}F_3 \left( \begin{array}{c|}
+\sigma,\nu_1+\nu_2+\sigma-n,
+\nu_2+\sigma-\tfrac{n}{2}, \nu_1+\sigma-\tfrac{n}{2} \\
+\tfrac{n}{2}, \sigma + \tfrac{1}{2}(\nu_1+\nu_2-n),
+\sigma+ \tfrac{1}{2}(\nu_1+\nu_2+1-n)
+\end{array}~\frac{p^2}{4 m^2} \right) .
+\label{j011_off-shell}
+\end{eqnarray}
+%
+For simplicity, 
+in the definition of the integral $J_{011}$
+we will omit the arguments $p^2$ and $m$, 
+$$
+J_{011}(\sigma,\nu_1,\nu_2)  \equiv J_{011}(\sigma,\nu_1,\nu_2;p^2,m).
+$$
+Let us remind that for the integrals $J_{011}$ with 
+different integer values of $\sigma$ and $\nu_i$
+there are two master integrals~\cite{T97a} of this type,
+$J_{011}(1,1,1)$ and $J_{011}(1,1,2)$.
+However, two other independent combinations
+of the integrals of this type happen to be more suitable for 
+constructing the $\ep$-expansion, $J_{011}(1,2,2)$ and
+$[J_{011}(1,2,2)+2J_{011}(2,1,2)$] (see also in Ref.~\cite{thresholds}). 
+The latter combination corresponds to the integral $J_{011}(1,1,1)$ in 
+$2-2\ep$ dimensions \cite{T96}.
+In Ref.~\cite{single} 
+$J_{011}(1,1,3)$ has been used as the second integral.
+To construct the $\ep$-expansion of the integrals 
+$J_{011}(1,1,1)$ and $J_{011}(1,1,2)$ up to 
+order $\ep^2$, the integral $J_{011}(1,2,2)$ should also 
+be expanded up to $\ep^2$, whereas
+$[J_{011}(1,2,2)+2J_{011}(2,1,2)]$ or 
+$J_{011}(1,1,3)$ up to the order $\ep$ only. 
+In Appendix~C we give an example of a realistic calculation
+which demonstrates the required orders of the $\ep$-expansion
+for the integrals involved.
+
+For $J_{011}(1,2,2)$ we have obtained
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{eqnarray}
+&& \hspace{-10mm}
+J_{011}(1,2,2)  = 
+\frac{(m^2)^{-1-2\ep}}{(1-\ep)(1+2\ep)}
+{}_{3}F_2 \left( \begin{array}{c|}
+1,  1+\ep, 1+2\ep \\
+\tfrac{3}{2} + \ep, 2-\ep
+\end{array}~\frac{p^2}{4 m^2} \right)  
+\nonumber \\ && \hspace*{-5mm}
+= 2 \frac{(m^2)^{-2\ep}}{p^2}
+\sum_{j=1}^{\infty} \frac{1}{\left( 2j \atop j\right) } \frac{u^j}{j^2} 
+\Biggl\{ 
+1 + \ep \Biggl[ \frac{1}{j} + 5 S_1 - 2 \bar{S}_1
+\Biggr]
+\nonumber \\ &&
++ \ep^2 \Biggl[ 
+\frac{1}{j^2} 
++ \frac{5}{j}S_1 
+- \frac{2}{j} \bar{S}_1
++ \tfrac{25}{2} S_1^2 
+- 10 S_1 \bar{S}_1 
+- \tfrac{5}{2} S_2
++ 2 \bar{S}_1^2 
++ 2 \bar{S}_2 
+\Biggr]
++ {\cal O} (\ep^3) 
+\Biggr\}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nonumber \\ && \hspace*{-5mm}
+= 2 \frac{(m^2)^{-2\ep}}{p^2} 
+\left( 1-y \right)^{ 2 \ep}
+y^{ 2\ep}
+\Biggl\{ 
+- \tfrac{1}{2} \ln^2 y 
+\nonumber \\ &&
++ \ep 
+\Bigl[ 
+ \tfrac{1}{2} \ln^3 y 
++ \zeta_2 \ln y 
+-6 \ln y  \Li{2}{-y} 
+-4 \ln y  \Li{2}{y} 
++ 3 \zeta_3 
++ 12 \Li{3}{-y} 
++ 6 \Li{3}{y}
+\Bigr]
+\nonumber \\ &&
++ \ep^2 
+\Bigl[  
+ 12 H_{-1,0,0,1} (-y)
+-12 \ln y  \Snp{1,2}{-y} 
+-12 \ln y \Snp{1,2}{y^2} 
++ 8 \ln y  \Snp{1,2}{y} 
+- 12 \Snp{2,2}{-y}
+\nonumber \\ &&
++ 3 \Snp{2,2}{y^2}
+- 12 \ln (1-y) \Li{3}{-y} 
+-\tfrac{7}{24} \ln^4 y 
+- \tfrac{1}{2} \zeta_2 \ln^2 y 
++ 2 \zeta_3 \ln y 
++ 6 \ln y  \Li{3}{-y} 
+\nonumber \\ && 
++ 8 \ln y  \Li{3}{y} 
+- 7 \zeta_3 \ln 2 
++ 6 \zeta_2 \Li{2}{-y} 
++ 4 \zeta_2 \Li{2}{y}
++ \tfrac{13}{4} \zeta_4 
++ 18 \left[ \Li{2}{-y} \right]^2
+\nonumber \\ && 
++ 12 \Li{2}{y} \Li{2}{-y}
++ 4 \left[ \Li{2}{y} \right]^2
+- \tfrac{9}{4} \Li{4}{y^2}
+\Bigr]
++ {\cal O} (\ep^3) 
+\Biggr\} \; ,
+\label{j011_122}
+\end{eqnarray}
+where the result for the $\ep^2$-term is new.
+
+For another combination, we get
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{eqnarray}
+&& \hspace{-10mm}
+J_{011}(1,2,2) + 2 J_{011}(2,1,2)
+= - \frac{(m^2)^{-1-2\ep}}{\ep(1+2\ep)}
+{}_{3}F_2 \left( \begin{array}{c|}
+1,  1+\ep, 1+2\ep \\
+\tfrac{3}{2} + \ep, 1-\ep
+\end{array}~\frac{p^2}{4 m^2} \right)  
+\nonumber \\ && \hspace*{-10mm}
+= - \frac{2(m^2)^{-2\ep}}{p^2 } 
+\sum_{j=1}^{\infty} 
+\frac{1}{\left( 2j \atop j\right) } \frac{u^j}{j}
+\Biggl[ \frac{1}{\ep} 
++ \left( 5 S_1 - 2 \bar{S}_1 \right)
++ \ep \left(
+\tfrac{25}{2} S_1^2 
+- 10 S_1 \bar{S}_1 
+- \tfrac{5}{2} S_2
++ 2 \bar{S}_1^2
++ 2 \bar{S}_2
+\right)
+\!+\! {\cal O} (\ep^2) 
+\Biggr]
+\nonumber \\ && \hspace*{-10mm}
+= - \frac{2(m^2)^{-2\ep}}{p^2 }  
+\left( 1+y \right)^{-1-6 \ep}
+\left( 1-y \right)^{1-2 \ep}
+\Biggl\{ 
+\frac{1}{\ep}\ln y 
++ \Bigl[ 
+2 \ln^2 y 
+- \zeta_2 
+- 6 \Li{2}{-y} 
+- 2 \Li{2}{y}
+\Bigr] 
+\nonumber \\ && 
++ \ep \Bigl[ 
+24 \Snp{1,2}{-y} 
+\!+\! 6 \Snp{1,2}{y^2}
+\!-\! 8 \Snp{1,2}{y} 
+\!+\! \tfrac{5}{3} \ln^3 y 
+\!-\! 4 \zeta_2 \ln y 
+\!-\! 11 \zeta_3 
+\!-\! 24 \Li{3}{-y} 
+\!-\! 8 \Li{3}{y}
+\Bigr] 
+\nonumber \\ && 
++ {\cal O} (\ep^2) 
+\Biggr\} \;.
+\label{j011_c}
+\end{eqnarray}
+The $\ep$-term can be related to that of the result for
+$J_{011}(1,1,3)$ presented in Ref.~\cite{single}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Two-loop vertex diagram $P_{126}$ } 
+
+Consider the two-loop vertex-type diagram $P_{126}$ given 
+in Ref.~\cite{FKV99}\footnote{Their $q^2$ corresponds to our $p^2$,
+whereas their $z$ corresponds to our $u$.} (see Fig.~1),
+\begin{eqnarray} 
+(p^2)^2 P_{126}  &=& 
+    \sum_{j=1}^{\infty} \frac{1}{\left( 2j \atop j\right) } \frac{u^j}{j^2}
+      \Biggl\{
+      \frac{1}{\varepsilon^2}
+    + \frac{1}{\varepsilon} \Bigl[
+           - S_1
+           - \log(-u)
+             \Bigr]
+\nonumber \\ &&
+      + \tfrac{1}{2} \log^2(-u)
+      - S_1 \log(-u)
+      - \tfrac{3}{2} S_2
+      - \tfrac{15}{2} S_1^2
+      + 4 S_1 \bar{S}_1  
+      + 2 \frac{S_1}{j}
++ {\cal O} (\ep)
+      \Biggr\} \; .
+\end{eqnarray}
+It corresponds to one of the two-loop contributions to 
+a boson decay into two massless particles, 
+with a massive triangle subloop. Diagrams of such type  
+have been intensively studied for Higgs boson production 
+via gluon fusion~\cite{Hgg}.
+
+Using our approach, we obtain
+\begin{eqnarray} 
+(p^2)^2 P_{126}  &\!\!=\!\!& 
+     - \frac{1}{2\ep^2} \ln^2 y 
++ \frac{1}{\ep} \Bigl[ 
+2 \Li{2}{-y} \ln y 
+\!-\! 4 \Li{3}{-y}
+\!+\! \ln^2 y \ln (1-y) 
+\!-\! \tfrac{1}{3} \ln^3 y 
+\!-\! \zeta_2 \ln y 
+\!-\! 3 \zeta_3 
+\Bigr]
+\nonumber \\ &&
++  8 H_{-1,0,0,1}(-y) 
++ 2 \Snp{2,2}{y^2}
+- 8  \Snp{2,2}{-y}
+- 8  \Snp{2,2}{y}
+- 4 \Li{4}{y}
+- 12 \Li{4}{-y} 
+\nonumber \\ &&
+- 8 \Li{2}{y} \Li{2}{-y} 
+- 14 \left[ \Li{2}{-y} \right]^2
++ 28 \Snp{1,2}{-y} \ln y 
+- 10 \Li{3}{-y} \ln y 
+\nonumber \\ &&
++ 7 \Li{2}{-y} \ln^2 y 
+- 4 \Li{2}{-y} \ln y \ln (1-y) 
+- \ln^2 y \ln^2 (1-y) 
+- \tfrac{1}{6} \ln^4 y 
+\nonumber \\ &&
++ \tfrac{2}{3} \ln^3 y \ln (1-y) 
++ 2 \zeta_2 \ln y \ln (1-y) 
+- \tfrac{5}{2} \zeta_2 \ln^2 y 
++ 6 \zeta_3 \ln (1-y) 
+- 11 \zeta_3 \ln y
+\nonumber \\ &&
+- 6 \Li{2}{-y} \zeta_2 
+- \tfrac{14}{3} \zeta_3 \ln 2 
+- \tfrac{27}{4} \zeta_4 
++ {\cal O} (\ep) \; .
+\label{Hgg2}
+\end{eqnarray}
+Here, the result for the finite part is new.
+Alternatively, results of such type
+%(involving the same harmonic polylogarithm)
+can be obtained in a different way, using 
+a technique based on Mellin--Barnes contour integrals~\cite{S_Bha}. 
+
+\section{Conclusion}
+
+In this paper, we have studied the
+{\it multiple inverse binomial sums} of the type~(\ref{binsum}), 
+for arbitrary values of the variable~$u$.
+Our analysis was based on the connection between 
+these sums and terms of the expansion of certain
+hypergeometric functions with respect to the parameter~$\ep$.
+Using known results for the hypergeometric functions,
+together with the integral representation~(\ref{higher_c}),
+we have obtained a number of new analytical results
+up to the weight {\bf 4}, Eqs.~(\ref{S1a})--(\ref{last4}),
+(\ref{S1c2})--(\ref{S2bar_2}) and (\ref{S1_3})--(\ref{S1bar_3}).
+Moreover, in some cases like (\ref{S2G})--(\ref{S4G})
+the results can be obtained for an arbitrary weight.
+Constructing analytical continuation of the obtained results, 
+we have expressed them in terms of the generalized
+polylogarithms (\ref{AN_S1S1_2})--(\ref{AN_Sb1_3}).
+In the cases considered, only one new function was needed,
+in addition to the basis of Nielsen polylogarithms.
+As such function one can take, e.g., the harmonic polylogarithm 
+$H_{-1,0,0,1}(-y)$, where the variable $y$ is given in
+Eq.~(\ref{y<->u}).
+
+This approach allowed us to construct some terms of the 
+$\ep$-expansion of the generalized hypergeometric function 
+${}_{P+1}F_P$ (\ref{expansion}) and 
+obtain new analytical results for higher terms of the 
+$\ep$-expansion of some one- and two-loop 
+propagator-type (see Eqs.~(\ref{f10101}), (\ref{j011_122}) and (\ref{j011_c})) 
+and vertex-type (see Eqs.~(\ref{Hgg1}) and (\ref{Hgg2})) 
+diagrams depending on one dimensionless variable $u=p^2/m^2$.
+As a by-product, we have analytically proven the 
+earlier published results for the three-loop vacuum integrals, 
+the finite part of ${\bf D_4}$ and 
+the $\ep$-part of ${\bf D_3}$,
+corresponding to the particular value of $u=1$ ($z=\tfrac{1}{4}$),
+see Sections~4.3 and 4.6 in Ref.~\cite{DK01} and Refs.~\cite{B99,odd,d_3}.
+These integrals enter as master integrals in Avdeev's 
+package~\cite{leo96} and {\sf MATAD}~\cite{matad}. 
+Moreover, the developed technique is useful in 
+the calculation of two-loop vertex-type diagrams~\cite{vertex}.
+
+\vspace{5mm}
+
+
+{\bf Acknowledgements.}
+We are grateful to F.~Jegerlehner, M.~Spira, V.A.~Smirnov and
+O.V.~Tarasov for useful discussions.
+We would like to thank R.~Delbourgo and J.~Fleischer for their
+interest in our work, and
+J.~Gluza for checks of some formulae.
+This research was supported in part by INTAS-CERN grant No.~99-0377
+and by the Australian Research Council grant No.~A00000780.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Harmonic polylogarithms of complex arguments}
+\label{HPCA}
+\setcounter{equation}{0}
+
+Here we collect some properties 
+of the harmonic polylogarithms introduced in~\cite{RV00}. 
+Let us define a $w$-dimensional vector $\vec{a}=(a,\vec{b})$, where
+$a$ is the leftmost component of $\vec{a}$, while $\vec{b}$ stands
+for the vector of the remaining $(w-1)$ components. The harmonic
+polylogarithms of weight $w$ are then defined as follows:
+\begin{equation}
+\H_{\vec{a}}(y) = \int\limits_0^y \d x \ \f(a;x) \ \H_{\vec{b}}(x) \ ,
+\label{eq:def}
+\end{equation}
+where the three rational fractions $\f(a;x)$ are given by
+\[
+   \f(+1;x) = \frac{1}{1-x} \;, \quad  
+   \f(0;x)  = \frac{1}{x} \;, \quad  
+   \f(-1;x) = \frac{1}{1+x} \; .
+\]
+The derivatives can be written in a compact form
+\begin{equation}
+\frac{\d}{\d y} \H_{\vec{a}}(y) = \f(a;y) \H_{\vec{b}}(y) \; .
+\label{eq:derive}
+\end{equation}
+
+Let us put $y=e^{{\rm i}\theta}$, so that 
+\begin{equation}
+\H_{\vec{a}}(e^{{\rm i}\theta})  
+= \H_{\vec{a}}(1) 
++ {\rm i} \int\limits_0^\theta \d \phi \ e^{{\rm i}\phi}\;
+\f(a;e^{{\rm i}\phi}) 
+\ \H_{\vec{b}}(e^{{\rm i}\phi})  \; ,
+\end{equation}
+where 
+\begin{eqnarray}
+   e^{{\rm i}\phi} \f(+1;e^{{\rm i}\phi}) &=& 
+   \frac{e^{{\rm i}(\pi+\phi)/2}}{2 \sin \tfrac{\phi}{2} } 
+   = - \frac{1}{2} 
+\left( 1 - {\rm i} \cot \tfrac{\phi}{2}  \right)  
+\; ,
+\nonumber\\
+   e^{{\rm i}\phi} \f(0;e^{{\rm i}\phi})  &=&  1 \; , 
+\nonumber\\
+   e^{{\rm i}\phi} \f(-1;e^{{\rm i}\phi}) &=& 
+   \frac{e^{{\rm i}\phi/2}}{2 \cos \tfrac{\phi}{2} } 
+   = \frac{1}{2} 
+\left( 1 + {\rm i} \tan \tfrac{\phi}{2} \right) 
+\; .
+\end{eqnarray}
+
+Consider, for example, the harmonic polylogarithm $H_{-1,0,0,1}(y)$
+given in Eq.~(\ref{h(-1001)}).
+Using the decomposition of 
+$\Li{3}{e^{{\rm i}\phi}}$ into 
+the real and imaginary parts 
+\cite{Lewin} and integrating by parts, we obtain 
+expressions in terms of Clausen's and generalized log-sine functions,
+\begin{eqnarray}
+\H_{-1,0,0,1}(e^{{\rm i}\theta})&\!\!=\!\!& 
+\H_{-1,0,0,1}(1)  
++ \frac{{\rm i}}{2} \int\limits_0^\theta {\rm d} \phi \; \Li{3}{e^{{\rm i}\phi}}
+\left( 1 + {\rm i} \frac{\sin \tfrac{\phi}{2}}{\cos \tfrac{\phi}{2} }  \right) 
+\nonumber \\ 
+&\!\!=\!\!& \H_{-1,0,0,1}(1)   
+- \tfrac{1}{96} \theta^2 (2\pi-\theta)^2
++ \Phi(\theta) 
++ \ln \left(2 \cos \tfrac{\theta}{2} \right) \Cl{3}{\theta} - \zeta_3 \ln2 
+\nonumber \\ &&
++ {\rm i} \ln \left(2 \cos \tfrac{\theta}{2} \right) \Gl{3}{\theta}
++ \tfrac{1}{2} {\rm i} \left[ \Cl{4}{\theta} + \Cl{4}{\pi-\theta} \right]
+\nonumber \\ && 
+- {\rm i} \left[ 
+\Gl{2}{\theta}
+\Cl{2}{\pi-\theta}
++ \tfrac{1}{2} (\pi- \theta) \Cl{3}{\pi-\theta}
+- \tfrac{1}{2}\pi \Cl{3}{\pi}
+\right] \;, 
+\end{eqnarray}
+where 
+$$
+\Cl{3}{\pi} = -\tfrac{3}{4} \zeta_3 \;, \quad
+\Gl{2}{\theta} =  \zeta_2 - \tfrac{1}{2} \pi \theta + \tfrac{1}{4}\theta^2 \;,
+\quad 
+\Gl{3}{\theta} = \tfrac{1}{12}\theta \left(\pi-\theta \right) 
+\left(2\pi-\theta \right) \; ,
+$$
+and $\Phi(\theta)$ is defined in Eq.~(\ref{def_Phi}).
+
+In this paper, we have also used the following relations:
+\begin{eqnarray}
+\label{Hrel1}
+H_{-1,0,0,1}\left( -y^{-1} \right) &=& H_{-1,0,0,1}(-y)
++ \Li{4}{-y^{-1}}
++ \Li{4}{y} 
+- \Li{3}{y} \ln y 
+- \zeta_2 \Li{2}{1-y} 
+\nonumber \\ && 
++ \tfrac{1}{2} \ln^2 y \Li{2}{y} 
++ \tfrac{1}{6} \ln^3 y \ln (1-y)
+- \tfrac{1}{8} \zeta_4
+- {\rm i} \sigma \pi \tfrac{3}{4} \zeta_3 \; 
+\end{eqnarray}
+and 
+\begin{equation}
+\label{Hrel2}
+H_{-1,0,0,1}(y) +  H_{-1,0,0,1}(-y) 
+= \Li{2}{y} \Li{2}{-y}
++ \ln (1+y) \Li{3}{y}
++ \ln (1-y) \Li{3}{-y} \; .
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         int_li3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The following two representations of $H_{-1,0,0,1}(y)$ are also useful:
+\begin{eqnarray}
+H_{-1,0,0,1}(y)
+& = & \Li{4}{y}-{\textstyle{3\over4}} \zeta_3 \ln(1+y)
++ {\textstyle{1\over2}}
+\int\limits_0^1 \frac{\mbox{d} x\; \ln^2{x}\; \ln(1-xy)}{1+x} \; , 
+\\
+H_{-1,0,0,1}(y)
+& = & 
+-{\textstyle{3\over4}} \zeta_3 \ln(1+y)
++ {\textstyle{1\over16}} \sum\limits_{l=1}^{\infty}
+\frac{y^l}{l} \left[ \psi''\left(\frac{l+1}{2}\right)
+-\psi''\left(\frac{l}{2}\right) \right] .
+\end{eqnarray}
+
+Instead of $\Phi(\theta)$, 
+one could also introduce another function. One of such possibilities
+is to consider a generalization of the Glashier function.
+Let us recall that the real part of 
+$\Li{j}{e^{{\rm i}\theta}}$ can be presented as\footnote{We use
+the standard notation $\Li{j}{r,\theta}=
+{\rm Re}\left[\Li{j}{re^{{\rm i}\theta}}\right]$
+(see in Ref.~\cite{Lewin}).}
+\begin{equation}
+\Li{j}{1,\theta} =
+\frac{(-1)^{j-1}}{2(j-2)!}\int\limits_0^1
+\frac{{\rm d}\xi}{\xi}\; \ln^{j-2}\xi\; 
+\ln\left(1-2\xi\cos\theta+\xi^2\right)
+=
+\Biggl\{
+\begin{array}{l}
+\Cl{j}{\theta}, \quad j\;\;{\rm odd}\\
+\Gl{j}{\theta}, \quad j\;\;{\rm even}
+\end{array}
+\end{equation}
+where $\Cl{j}{\theta}$ and $\Gl{j}{\theta}$ are
+Clausen and Glashier functions, respectively.
+In particular, $\Gl{j}{\theta}$ is just a polynomial
+in $\theta$.
+
+A possible non-trivial generalization of $\Gl{j}{\theta}$
+(for even $j$) could be
+\begin{equation}
+\Gl{j}{\theta; a} =
+-\frac{1}{2(j-2)!}\int\limits_0^1
+\frac{{\rm d}\xi}{\xi+a}\; \ln^{j-2}\xi\; 
+\ln\left(1-2\xi\cos\theta+\xi^2\right), \quad
+j\;\;{\rm even},
+\end{equation}
+so that $\Gl{j}{\theta; 0}=\Gl{j}{\theta}$.
+In particular,
+\begin{equation}
+\label{Gl2_gen}
+\Gl{2}{\theta; a} = -\ln{b}\;\ln\frac{a+1}{a}
++ \Li{2}{\frac{a+1}{b},\widetilde{\theta}}
+- \Li{2}{\frac{a}{b},\widetilde{\theta}}\; ,
+\end{equation}
+where
+\begin{equation}
+\cos{\widetilde{\theta}}
+=\frac{a+\cos\theta}{\sqrt{1+2a\cos\theta+a^2}}, 
+\end{equation}
+so that
+\begin{equation}
+a = \frac{\sin(\theta-{\widetilde{\theta}})}
+         {\sin{\widetilde{\theta}}}, \quad
+b = \sqrt{1+2a\cos\theta+a^2} 
+= \frac{\sin\theta}{\sin{\widetilde{\theta}}} \; .
+\end{equation}
+Using Eqs.~(17) and (18) on p.~293 of~\cite{Lewin},
+we can see that the general result (\ref{Gl2_gen})
+simplifies in the case $a=1$ (${\widetilde{\theta}}=\tfrac{\pi}{2}$),
+\begin{equation}
+\Gl{2}{\theta; 1} = 
+-\tfrac{1}{4}\; \Li{2}{\cos^2{\tfrac{\theta}{2}}}
++ \tfrac{1}{8}(\pi-\theta)^2 
+- \tfrac{1}{2} \ln^2{2} \; .
+\end{equation}
+
+Then, let us consider
+\begin{equation}
+\label{Gl4(theta,1)}
+\Gl{4}{\theta; 1} = -\frac{1}{4}
+\int\limits_0^1 \frac{{\rm d}\xi}{\xi+1}\;
+\ln^2\xi\; \ln\left(1-2\xi\cos\theta+\xi^2\right) \; . 
+\end{equation}
+For $\theta=0$ we get
+\begin{equation}
+\Gl{4}{0; 1} = U_{3,1} - \zeta_4 \; ,
+\end{equation}
+where $U_{3,1}$ is the alternating two-fold Euler sum 
+considered in~\cite{euler,B99} (see also Ref.~\cite{GKP}), 
+$$
+U_{3,1} = 
+- 2 \Li{4}{\tfrac{1}{2}} + \tfrac{1}{2} \zeta_4
+- \tfrac{1}{12} \ln^4 2 + \tfrac{1}{2} \zeta_2 \ln^2 2 \;. 
+$$
+
+For general $\theta$,
+one can see that $\Gl{4}{\theta;1}$ is related to the real part
+of a harmonic polylogarithm,
+\begin{equation} 
+{\rm Re}H_{-1,0,0,1}\big(e^{{\rm i}\theta}\big)
+= \Gl{4}{\theta} - \Gl{4}{\theta; 1}
+- \tfrac{3}{4} \zeta_3 \ln\left(2\cos\tfrac{\theta}{2}\right).
+\end{equation}
+In particular, the function $\Phi(\theta)$
+can be presented as
+\begin{equation}
+\Phi(\theta) = -\Gl{4}{\theta; 1} + \Gl{4}{0; 1}
++\tfrac{7}{4}\zeta_3\ln{2} - \tfrac{1}{96}\theta^2(2\pi-\theta)^2
+-\left[\Cl{3}{\theta}-\Cl{3}{\pi}\right]
+\ln\left(2\cos\tfrac{\theta}{2}\right) ,
+\end{equation}
+where $\Cl{3}{\pi}=-\tfrac{3}{4}\zeta_3$.
+
+Using the symmetry property of $\Phi(\theta)$, Eq.~(\ref{sym_Phi}), 
+we get
+\begin{eqnarray}
+\Gl{4}{\theta; 1} + \Gl{4}{\pi-\theta; 1} &=&
+\tfrac{11}{8}\zeta_4 - \tfrac{1}{48}\theta^2(\pi-\theta)^2
+-\Cl{2}{\theta}\;\Cl{2}{\pi-\theta}
+\nonumber \\ &&
+-\left[\Cl{3}{\theta}-\Cl{3}{\pi}\right]
+\ln\left(2\cos\tfrac{\theta}{2}\right)
+\nonumber \\ &&
+-\left[\Cl{3}{\pi-\theta}-\Cl{3}{\pi}\right]
+\ln\left(2\sin\tfrac{\theta}{2}\right).
+\label{sym_Gl4}
+\end{eqnarray}
+For special values of $\theta$, Eq.~(\ref{sym_Gl4}) yields
+\begin{eqnarray}
+\Gl{4}{\pi; 1} &=& -U_{3,1} + \tfrac{19}{8}\zeta_4
+-\tfrac{7}{4}\zeta_3 \ln{2} ,
+\\
+\Gl{4}{\tfrac{\pi}{2}; 1} &=& \tfrac{161}{256}\zeta_4
+-\tfrac{21}{64}\zeta_3\ln{2} - G^2 , 
+\\
+\Gl{4}{\tfrac{\pi}{3}; 1}+\Gl{4}{\tfrac{2\pi}{3}; 1}
+&=& \tfrac{277}{216}\zeta_4 - \tfrac{13}{24}\zeta_3\ln{3}
+-\tfrac{2}{3}\left[ \Cl{2}{\tfrac{\pi}{3}} \right]^2 \; ,
+\end{eqnarray}
+where $G$ is the Catalan constant.
+Moreover, with the help of {\sf PSLQ} algorithm \cite{PSLQ} one can
+obtain results for $\Gl{4}{\tfrac{\pi}{3}; 1}$ and 
+$\Gl{4}{\tfrac{2\pi}{3}; 1}$ separately,
+\begin{eqnarray}
+\Gl{4}{\tfrac{\pi}{3}; 1}
+&=& \tfrac{259}{108} \zeta_4
+- \tfrac{13}{24} \zeta_3 \ln{3}
+-\tfrac{1}{3}\left[ \Cl{2}{\tfrac{\pi}{3}} \right]^2
++ \tfrac{1}{4} \pi \Ls{3}{\tfrac{2\pi}{3}}
+- \tfrac{3}{8} \LS{4}{1}{\tfrac{2\pi}{3}} \; ,
+\\
+\Gl{4}{\tfrac{2\pi}{3}; 1}
+&=& -\tfrac{241}{216} \zeta_4
+-\tfrac{1}{3}\left[ \Cl{2}{\tfrac{\pi}{3}} \right]^2
+- \tfrac{1}{4} \pi \Ls{3}{\tfrac{2\pi}{3}}
++ \tfrac{3}{8} \LS{4}{1}{\tfrac{2\pi}{3}} \; .
+\end{eqnarray}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Additional identities between inverse binomial sums}
+\label{AIBIBN}
+\setcounter{equation}{0}
+%=====================================================================
+As we have seen, the $\ep$-expansion of the
+hypergeometric functions
+produces series of the type (\ref{binsum}).
+One can use certain properties of hypergeometric functions
+to get relations between the sums (\ref{binsum}) involved
+in the $\ep$-expansion. 
+
+Let us consider Eq.~(B.18) of Ref.~\cite{DK01}
+(which follows from Eq.~(22) on p.~498 of~\cite{PBM3}),
+\begin{equation}
+{}_{3}F_2 \left(\begin{array}{c|}
+1+a_1 \ep, 1+ a_2 \ep, 1+ \tfrac{1}{2}(a_1+a_2)\ep  \\
+\tfrac{3}{2}+ \tfrac{1}{2}(a_1+a_2)\ep, 2+(a_1+a_2)\ep \end{array} ~z
+\right) =
+(1\!-\!z) \left[
+{}_{2}F_1 \left(\begin{array}{c|} 1+\tfrac{1}{2} a_1 \ep,
+1+\tfrac{1}{2} a_2 \ep \\
+\tfrac{3}{2}+\tfrac{1}{2}(a_1+a_2)\ep \end{array} ~z \right)
+\right]^2 .
+\label{less_trivial}
+\end{equation}
+It reduces the given $_3F_2$ function to a square of the $_2F_1$
+function.
+Substituting the $\ep$-expansions of the $_3F_2$ and $_2F_1$ functions 
+into (\ref{less_trivial}), we
+obtain the following relations between the sums:
+\begin{eqnarray}
+&&
+\Sigma_{-;-;2}^{-;-}(u) = \frac{4-u}{2u} 
+\left[ \Sigma_{-;-;1}^{-;-}(u)\right]^2 \; ,
+\\ &&
+\Sigma_{1;-;2}^{1;-}(u) - \Sigma_{-;1;2}^{-;1}(u) - \Sigma_{-;-;3}^{-;-}(u)
+= \frac{4-u}{u} \; \Sigma_{-;-;1}^{-;-}(u)
+\left[
+\Sigma_{1;-;1}^{1;-}(u) - \Sigma_{-;1;1}^{-;1}(u) \right] \; ,
+\\ &&
+\Sigma_{2;-;2}^{1;-}(u) = \frac{4-u}{4u} \; \Sigma_{-;-;1}^{-;-}(u)
+\Sigma_{2;-;1}^{1;-}(u) \; ,
+\\ &&
+\Sigma_{1;-;2}^{2;-}(u) - 2 \Sigma_{1;1;2}^{1;1}(u)
++\Sigma_{-;1;2}^{-;2}(u) + \Sigma_{-;2;2}^{-;1}(u) 
+-2\Sigma_{1;-;3}^{1;-}(u) + 2\Sigma_{-;1;3}^{-;1}(u)
++2\Sigma_{-;-;4}^{-;-}(u) 
+\nonumber \\ && \hspace*{10mm}
+= \frac{4-u}{u}
+\Bigl[
+\Sigma_{-;-;1}^{-;-}(u)
+\left( \Sigma_{1;-;1}^{2;-}(u) - 2 \Sigma_{1;1;1}^{1;1}(u)
++\Sigma_{-;1;1}^{-;2}(u) + \Sigma_{-;2;1}^{-;1}(u) 
+-\tfrac{3}{8} \Sigma_{2;-;1}^{1;-}(u)\right)
+\nonumber \\ && \hspace*{24mm}
++ \left( \Sigma_{1;-;1}^{1;-}(u) - \Sigma_{-;1;1}^{-;1}(u)\right)^2 
+\Bigl] \; ,
+\end{eqnarray}
+with $u=4z$, so that
+\[
+\frac{4-u}{u} = \frac{1-z}{z} 
+= \cot^2\tfrac{\theta}{2} \; . 
+\]
+
+Another interesting relation, Eq.~(B.19) of Ref.~\cite{DK01} 
+(which follows from Eq.~(20) on p.~498 of~\cite{PBM3}), reads
+\begin{eqnarray}
+&& \hspace*{-10mm}
+{}_{3}F_2 \left(\begin{array}{c|}
+1+a_1 \ep, 1+ a_2 \ep, 1+ \tfrac{1}{2}(a_1+a_2)\ep  \\
+\tfrac{3}{2}+ \tfrac{1}{2}(a_1+a_2)\ep, 1+(a_1+a_2)\ep \end{array} ~z
+\right) =
+{}_{2}F_1 \left(\begin{array}{c|} 1+\tfrac{1}{2}a_1\ep,
+1+\tfrac{1}{2} a_2 \ep \\
+\tfrac{3}{2}+\tfrac{1}{2}(a_1+a_2)\ep \end{array} ~z \right)
+\nonumber \\ &&     
+\times \left\{ 1 + \frac{a_1 a_2 \ep^2 z}
+{2\left[1+(a_1+a_2)\ep\right]}\;
+{}_{3}F_2 \left(\begin{array}{c|}
+1+\tfrac{1}{2} a_1 \ep, 1+\tfrac{1}{2} a_2 \ep, 1 \\
+\tfrac{3}{2}+ \tfrac{1}{2}(a_1+a_2)\ep, \; 2 \end{array} ~z \right)
+\right\} \; .
+\label{even_less_trivial}
+\end{eqnarray}
+In this way, we get the following relations:
+\begin{eqnarray}
+&&
+\Sigma_{2;-;1}^{1;-}(u) = \tfrac{1}{3}
+\Sigma_{-;-;1}^{-;-}(u) \Sigma_{-;-;2}^{-;-}(u) \; ,
+\nonumber \\
+&& 
+3\Sigma_{1,2;-;1}^{1,1;-}(u)
+-3\Sigma_{2,1;1}^{1;1}(u) 
+- \tfrac{7}{2} \Sigma_{3;-;1}^{1;-}(u)
+\nonumber \\ && \hspace*{20mm}
+= \Sigma_{-;-;1}^{-;-}(u)
+\left[ \Sigma_{1;-;2}^{1;-}(u) - \Sigma_{-;1;2}^{-;1}(u) \right]
++ \Sigma_{-;-;2}^{-;-}(u)
+\left[ \Sigma_{1;-;1}^{1;-}(u) - \Sigma_{-;1;1}^{-;1}(u) \right] \; .
+\hspace*{7mm}
+\end{eqnarray}
+We have checked that all above equations are satisfied by
+the explicit results for the sums 
+listed in this paper.
+
+Let us also present some relations for higher-order sums:
+\begin{eqnarray}
+\label{higher1}
+&& \hspace{-5mm}
+\Sigma_{3;-;2}^{1;-}(u) 
++ \Sigma_{2;-;3}^{1;-}(u) 
+- \Sigma_{2,1;-;2}^{1,1;-}(u) 
++ \Sigma_{2;1;2}^{1;1}(u) 
+= 
+\frac{4\!-\!u}{4u}\! 
+\left\{
+\Sigma_{2;-;1}^{1;-}(u)
+\left[ 
+  \Sigma_{-;1;1}^{-;1}(u) 
+- \Sigma_{1;-;1}^{1;-}(u) 
+\right]
+\right.
+\nonumber \\ && 
+\left.
++ 
+\Sigma_{-;-;1}^{-;-}(u) 
+\left[ 
+  \Sigma_{2;1;1}^{1;1}(u) 
+- \Sigma_{2,1;-;1}^{1,1;-}(u) 
++ \tfrac{1}{2} \Sigma_{3;-;1}^{1;-}(u) 
+\right] 
+\right\} , 
+\\ 
+\label{higher2}
+&& \hspace{-5mm}
+  \Sigma_{2;-;2}^{2;-}(u) 
+- \Sigma_{4;-;2}^{1;-}(u) 
+=
+\frac{4-u}{16u} 
+\left\{  
+\left[   \Sigma_{2;-;1}^{1;-}(u) \right]^2
++  \Sigma_{-;-;1}^{-;-}(u)  \left[
+  \Sigma_{2;-;1}^{2;-}(u) 
+- \Sigma_{4;-;1}^{1;-}(u)   \right]
+\right\} \; ,
+\nonumber \\ 
+\label{higher3}
+&& \hspace{-5mm}
+\Sigma_{2;-;1}^{2;-}(u) 
+-\Sigma_{4;-;1}^{1;-}(u) 
+= \tfrac{2}{45} \Sigma_{-;-;1}^{-;-}(u) 
+\left\{
+\left[ \Sigma_{-;-;2}^{-;-}(u) \right]^2
++ 3 \Sigma_{2;-;2}^{1;-}(u) 
+\right\} \;, 
+\\
+\label{higher4}
+&& \hspace{-5mm}
+2 \left[\Sigma_{-;-;2}^{-;-}(u)  \right]^2
+\left[ 
+  \Sigma_{1;-;1}^{1;-}(u) 
+- \Sigma_{-;1;1}^{-;1}(u) 
+\right]
++ 4  \Sigma_{-;-;2}^{-;-}(u)  \Sigma_{-;-;1}^{-;-}(u) 
+\left[ 
+  \Sigma_{1;-;2}^{1;-}(u) 
+- \Sigma_{-;1;2}^{-;1}(u) 
+\right] 
+\nonumber \\ && \hspace{-5mm}
++ 6 \Sigma_{2;-;2}^{1;-}(u) 
+\left[ 
+  \Sigma_{1;-;1}^{1;-}(u) 
+- \Sigma_{-;1;1}^{-;1}(u) 
+\right]
++ 6  \Sigma_{-;-;1}^{-;-}(u) 
+\left[ 
+  \Sigma_{2,1;-;2}^{1,1;-}(u) 
+- \Sigma_{2;1;-}^{1;1}(u) 
+\right] 
+\nonumber \\ && \hspace{-5mm}
++ 45  \Sigma_{2;1;1}^{2;1}(u) 
+- 45 \Sigma_{2,1;-;1}^{2,1;-}(u) 
++ 45 \Sigma_{4,1;-;1}^{1,1;-}(u) 
+- 45 \Sigma_{4;1;1}^{1;1}(u) 
++ 93 \Sigma_{3,2;-;1}^{1,1;-}(u) 
+- 93 \Sigma_{5;-;1}^{1;-}(u) 
+\nonumber \\ && \hspace{-5mm}
++ 4 \Sigma_{3;-;1}^{1;-}(u)  \Sigma_{-;-;2}^{-;-}(u) 
+- 3 \Sigma_{3;-;2}^{1;-}(u)  \Sigma_{-;-;1}^{-;-}(u)  
+= 0 \; , 
+\end{eqnarray}
+where Eqs.~(\ref{higher1}) and (\ref{higher2}) follow 
+from Eq.~(\ref{less_trivial}),
+while Eqs.~(\ref{higher3}) and (\ref{higher4}) follow 
+from Eq.~(\ref{even_less_trivial}).
+
+One more relation can be derived from Eq.~(47) 
+on p.~456 of~\cite{PBM3},
+\begin{equation}
+{}_{2}F_1 \left(\begin{array}{c|}
+1+a_1 \ep, 1+ a_2 \ep \\
+\tfrac{3}{2}+ \tfrac{1}{2}(a_1+a_2)\ep 
+\end{array} ~\sin^2\tfrac{\theta}{2}
+\right) =
+\cos\theta \;\;
+{}_{2}F_1 \left(\begin{array}{c|} 1+\tfrac{1}{2} a_1 \ep,
+1+\tfrac{1}{2} a_2 \ep \\
+\tfrac{3}{2}+\tfrac{1}{2}(a_1+a_2)\ep \end{array} ~\sin^2\theta \right) .
+\label{less_trivial2}
+\end{equation}
+We can compare the $\ep$-expansions of these $_2F_1$ functions,
+considering the coefficients of $\ep^k$ as functions of $\theta$.
+Introducing
+\[
+u=4\sin^2\tfrac{\theta}{2}, \qquad
+{\widetilde{u}}=4\sin^2\theta, \qquad
+A_1=a_1+a_2, \qquad A_2=a_1^2+a_2^2 \; ,
+\]
+we get the following relations at orders $\ep^0$ and $\ep^1$:
+\begin{eqnarray}
+\cot \tfrac{\theta}{2}
+\sum_{j=1}^{\infty} \frac{1}{\left(2j\atop j\right)}\frac{u^j}{j}
+&=& \tfrac{1}{2} 
+\cot \theta
+\sum_{j=1}^{\infty} \frac{1}{\left(2j\atop j\right)}
+\frac{{\widetilde{u}}^j}{j} \; ,
+\\
+\cot \tfrac{\theta}{2}
+\sum_{j=1}^{\infty} \frac{1}{\left(2j\atop j\right)}\frac{u^j}{j}
+\left( \tfrac{3}{2}S_1 - \bar{S}_1 \right)
+&=&\tfrac{1}{2} 
+\cot \theta
+\sum_{j=1}^{\infty} \frac{1}{\left(2j\atop j\right)}
+\frac{{\widetilde{u}}^j}{j} 
+\left( S_1 - \bar{S}_1 \right) \; .
+\end{eqnarray}
+At order $\ep^2$, comparison of the coefficients 
+of $A_2$ and $A_1^2$ yields
+\begin{eqnarray}
+&&
+\cot \tfrac{\theta}{2}
+\sum_{j=1}^{\infty} \frac{1}{\left(2j\atop j\right)}\frac{u^j}{j} S_2
+=\tfrac{1}{8} 
+\cot \theta
+\sum_{j=1}^{\infty} \frac{1}{\left(2j\atop j\right)}
+\frac{{\widetilde{u}}^j}{j} S_2 \; ,
+\\
+&&
+\cot \tfrac{\theta}{2}
+\sum_{j=1}^{\infty} \frac{1}{\left(2j\atop j\right)}\frac{u^j}{j}
+\left[ \tfrac{1}{2}\left(\bar{S}_2+\bar{S}_1^2\right) 
+-\tfrac{3}{2} S_1 \bar{S}_1 
+-\tfrac{1}{8}S_2 +\tfrac{9}{8}S_1^2 \right]
+\nonumber \\ && \hspace*{30mm}
+=\tfrac{1}{2} 
+\cot \theta
+\sum_{j=1}^{\infty} \frac{1}{\left(2j\atop j\right)}
+\frac{{\widetilde{u}}^j}{j} 
+\left[ \tfrac{1}{2}\left(\bar{S}_2+\bar{S}_1^2\right) 
+-S_1 \bar{S}_1 
+-\tfrac{1}{8}S_2 +\tfrac{1}{2}S_1^2 \right] \; .
+\end{eqnarray}
+All these equations are satisfied by analytic expressions
+for these sums in terms of $\theta$ from Section~2 of this paper. 
+Remember that one needs to substitute $\theta\to 2\theta$ 
+as an argument on the r.h.s.
+
+At order $\ep^3$, we have two independent structures,
+$A_1^3$ and $A_1 A_2$. It is more convenient, however, 
+to compare the coefficients of $A_1^3$ and $A_1(A_1^2-A_2)$.
+The first equation coming from the coefficients of $A_1^3$ yields
+\begin{equation}
+\cot \tfrac{\theta}{2}
+\sum_{j=1}^{\infty} \frac{1}{\left(2j\atop j\right)}\frac{u^j}{j}
+\left(
+\tfrac{3}{16}C_0+\tfrac{3}{4}C_1+\tfrac{1}{2}C_2
+\right)
+=\tfrac{1}{2} 
+\cot \theta
+\sum_{j=1}^{\infty} \frac{1}{\left(2j\atop j\right)}
+\frac{{\widetilde{u}}^j}{j} 
+\left(
+\tfrac{1}{24}C_0 + \tfrac{1}{2}C_1 + \tfrac{1}{2}C_2
+\right) \; , 
+\end{equation}
+where $C_j$ are the combinations of the harmonic sums
+defined in Eqs.~(\ref{combinations2}).
+This equation is also satisfied, if we use analytic expressions
+for these sums in terms of $\theta$ given in Section~2.
+
+The second equation at order $\ep^3$ comes from the
+coefficient of $A_1(A_1^2-A_2)$,
+\begin{equation}
+\cot \tfrac{\theta}{2}
+\sum_{j=1}^{\infty} \frac{1}{\left(2j\atop j\right)}\frac{u^j}{j}
+\left( -\tfrac{3}{4}S_1 S_2 + \tfrac{1}{2}S_2 \bar{S}_1
++\tfrac{1}{2}S_3 \right)
+=\tfrac{1}{2} 
+\cot \theta
+\sum_{j=1}^{\infty} \frac{1}{\left(2j\atop j\right)}
+\frac{{\widetilde{u}}^j}{j} 
+\left( -\tfrac{1}{8}S_1 S_2 + \tfrac{1}{8}S_2 \bar{S}_1
++\tfrac{1}{16}S_3 \right)\; .
+\end{equation}
+No explicit results for these sums are available. However,
+if we introduce two functions 
+\begin{eqnarray}
+\Psi_1(\theta) &=& \cot\tfrac{\theta}{2}
+\sum_{j=1}^{\infty} \frac{1}{\left(2j\atop j\right)}\frac{u^j}{j}
+\left(S_1S_2-S_3\right) \; ,
+\\
+\Psi_2(\theta) &=& \cot\tfrac{\theta}{2}
+\sum_{j=1}^{\infty} \frac{1}{\left(2j\atop j\right)}\frac{u^j}{j}
+\left(S_3-2S_2\bar{S}_1\right) \; ,
+\end{eqnarray}
+we obtain an interesting relation between them,
+\begin{equation}
+3\Psi_1(\theta) + \Psi_2(\theta) 
+= \tfrac{1}{4}\Psi_1(2\theta) + \tfrac{1}{8}\Psi_2(2\theta) \; .
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The ${\cal O}(\alpha \alpha_{\rm s})$ corrections 
+to the polarization function of  
+neutral gauge bosons in arbitrary dimension}
+\label{PoleMass}
+\setcounter{equation}{0}
+%=====================================================================
+\begin{figure}[th]
+\begin{center}
+\centerline{\vbox{\epsfysize=30mm \epsfbox{gluon2.eps}}}
+\caption{\label{QCD} 
+Two-loop contributions to the off-shell polarization 
+function of a neutral gauge boson.
+Bold and thin lines correspond to the massive quark propagator
+and the massless boson (gluon or photon) propagator, respectively.}
+\end{center}
+\end{figure}
+%
+%=====================================================================
+Here we present an example of a physically relevant 
+calculation\footnote{Another non-trivial example where 
+these master integrals appear is given in Ref.~\cite{background}.}
+that can be expressed in terms of 
+the master integrals $J_{011}$ studied in Section~4.3.
+Let us consider the two-loop propagator-type diagrams shown in Fig.~\ref{QCD}.
+All of these 
+${\cal O}(\alpha \alpha_{\rm s})$ 
+contributions to the polarization function of
+the gauge bosons 
+involve a quark loop with a gluon exchange.
+It was analytically calculated in~\cite{qcd},
+up to the finite term of the $\ep$-expansion. 
+Here we present the bare two-loop results in $n$-dimensional space-time
+(see also in Ref.~\cite{poleII}). 
+In contrast to the calculations performed in~\cite{qcd}, here we use 
+Tarasov's recurrence relations~\cite{T97a} for the reduction of the 
+original integrals to the set of master integrals.  
+In this Appendix we use the Euclidean notation~\cite{diagramatic},
+$P^2\leftrightarrow -p^2$, so that the on-shell limit
+would read $P^2\to -m^2$.
+
+Let us decompose the polarization tensor 
+into the transverse $\Pi_{\rm T}(P^2)$ and longitudinal 
+$\Pi_{\rm L}(P^2)$ parts,
+\[
+\Pi_{\mu \nu}(P^2) = \left( \delta_{\mu \nu} - \frac{P_\mu P_\nu}{P^2}\right) 
+                    \Pi_{\rm T}(P^2) 
+                  + \frac{P_\mu P_\nu }{P^2} \Pi_{\rm L}(P^2) \; . 
+\]
+Then, the two-loop corrections can be written as 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{eqnarray}
+&& \hspace*{-10mm}
+\Pi_{\rm T}^{(2)}(P^2) =  \frac{g^2 g_{\rm s}^2}{(4 \pi)^{n/2}} N_c C_F    
+\Biggl\{ 
+- J_{011}(1,1,1) {\frac {4}{\left (n-1\right )t}}
+\Bigl[
+-4{ A}n{{ m}}^{2}
++12{ A}{{ m}}^{2}
++{ A}t{n}^{2}
+\nonumber \\ && \hspace*{75mm}
+-3{ A}tn
++2{ A}t
++St{n}^{2}
+-3Stn
++2St
+\Bigr]
+%%%%%%%%%%%%%%%%%%%%%
+\nonumber \\ && 
+- J_{011}(1,1,2)
+\frac {4}{\left (n-4\right )\left (n-3\right )\left (n-1\right )t}
+\Bigl[
+112{ A}{{ m}}^{4}n
++{ A}{t}^{2}{n}^{3}
+-7{ A}{t}^{2}{n}^{2}
++18{ A}{t}^{2}n
+\nonumber \\ && 
++S{t}^{2}{n}^{3}
+-7S{t}^{2}{n}^{2}
++18S{t}^{2}n
+-16{ A}{{ m}}^{4}{n}^{2}
+-192{ A}{{ m}}^{4}
++4{ A}{{ m}}^{2}t{n}^{3}
+-32{ A}{{ m}}^{2}t{n}^{2}
+-16{ A}{t}^{2}
+\nonumber \\ && 
++100{ A}{{ m}}^{2}tn
++4S{{ m}}^{2}t{n}^{3}
+-36S{{ m}}^{2}t{n}^{2}
++96S{{ m}}^{2}tn
+-112{ A}{{ m}}^{2}t
+-16S{t}^{2}
+-80S{{ m}}^{2}t
+\Bigr]
+%%%%%%%%%%%%%%%%%%%%%
+\nonumber \\ && 
++ \left[ A_0(m) \right] ^2
+{\frac {2 \left (n-2\right )}{\left (4{{ m}}^{2}+t\right )
+       {{ m}}^{2}t\left (n-4\right )\left (n-1\right )\left (n-3\right )}}
+\Bigl[
+-4St{n}^{4}{{ m}}^{2}
++{ A}{t}^{2}{n}^{3}
++4{ A}{{ m}}^{2}t{n}^{3}
+\nonumber \\ && 
++36S{{ m}}^{2}t{n}^{3}
++S{t}^{2}{n}^{3}
+-32{ A}{{ m}}^{2}t{n}^{2}
+-7S{t}^{2}{n}^{2}
+-16{ A}{{ m}}^{4}{n}^{2}
+-120S{{ m}}^{2}t{n}^{2}
+-7{ A}{t}^{2}{n}^{2}
+\nonumber \\ && 
++112{ A}{{ m}}^{4}n
++184S{{ m}}^{2}tn
++100{ A}{{ m}}^{2}tn
++18{ A}{t}^{2}n
++18S{t}^{2}n
+-192{ A}{{ m}}^{4}
+-16{ A}{t}^{2}
+\nonumber \\ && 
+-112S{{ m}}^{2}t
+-112{ A}{{ m}}^{2}t
+-16S{t}^{2}
+\Bigr]
+%%%%%%%%%%%%%%%%%%%%%
+\nonumber \\ && 
+- A_0(m) B_0(m,m,t) 
+{\frac {2 \left (n-2\right )}{{{ m}}^{2}\left (n-3\right )
+        \left (4{{ m}}^{2}+t\right )\left (n-4\right )\left (n-1\right )}}
+\Bigl[
+432{ A}{{ m}}^{4}n
+-2{ A}t{n}^{4}{{ m}}^{2}
+\nonumber \\ && 
++64{{ m}}^{4}S
++40{{ m}}^{4}Sn
++8{{ m}}^{4}S{n}^{3}
+-48{{ m}}^{4}S{n}^{2}
++80{ A}{{ m}}^{4}{n}^{3}
+-8{ A}{n}^{4}{{ m}}^{4}
+-2St{n}^{4}{{ m}}^{2}
+\nonumber \\ && 
++{ A}{t}^{2}{n}^{3}
+-7{ A}{t}^{2}{n}^{2}
++18{ A}{t}^{2}n
++S{t}^{2}{n}^{3}
+-7S{t}^{2}{n}^{2}
++18S{t}^{2}n
+-280{ A}{{ m}}^{4}{n}^{2}
+-256{ A}{{ m}}^{4}
+\nonumber \\ && 
++24{ A}{{ m}}^{2}t{n}^{3}
+-98{ A}{{ m}}^{2}t{n}^{2}
++180{ A}{{ m}}^{2}tn
++24S{{ m}}^{2}t{n}^{3}
+-102S{{ m}}^{2}t{n}^{2}
++176S{{ m}}^{2}tn
+\nonumber \\ && 
+-16{ A}{t}^{2}
+-128{ A}{{ m}}^{2}t
+-16S{t}^{2}
+-96S{{ m}}^{2}t
+\Bigr]
+%%%%%%%%%%%%%%%%%%%%%%
+\nonumber \\ && 
+- \left[ B_0(m,m,t) \right]^2
+{\frac {2}{\left (4{{ m}}^{2}+t\right )\left (n-4\right )\left (n-1\right )}}
+\Bigl[
+448{ A}{{ m}}^{4}n
+-32{{ m}}^{4}S
++16{ A}{{ m}}^{4}{n}^{3}
+\nonumber \\ && 
++{ A}{t}^{2}{n}^{3}
+-9{ A}{t}^{2}{n}^{2}
++30{ A}{t}^{2}n
++S{t}^{2}{n}^{3}
+-9S{t}^{2}{n}^{2}
++30S{t}^{2}n
+-144{ A}{{ m}}^{4}{n}^{2}
+-448{ A}{{ m}}^{4}
+\nonumber \\ && 
++8{ A}{{ m}}^{2}t{n}^{3}
+-72{ A}{{ m}}^{2}t{n}^{2}
++232{ A}{{ m}}^{2}tn
++4S{{ m}}^{2}t{n}^{3}
+-44S{{ m}}^{2}t{n}^{2}
++152S{{ m}}^{2}tn
+\nonumber \\ && 
+-32{ A}{t}^{2}
+-240{ A}{{ m}}^{2}t
+-32S{t}^{2}
+-160S{{ m}}^{2}t
+\Bigr] 
+\Biggr\} \; ,
+\label{PT}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\\ && \hspace*{-10mm} 
+\Pi_{\rm L}^{(2)}(P^2) =  A \frac{g^2 g_{\rm s}^2}{(4 \pi )^{n/2}} N_c C_F    
+\Biggl\{ 
+- J_{011}(1,1,1) \frac{ 16 m^{2}\left (n-3\right )}{t}
+%%%%
+\nonumber \\ && 
+- J_{011}(1,1,2) \frac {16 m^{2}}{t\left (n-4\right )\left (n-3\right )}
+\Bigl[
+4   m^{2}{n}^{2}
+-28 m^{2}n
++48 m^{2}
++t{n}^{2}-5tn+8t
+\Bigr]
+%%%%
+\nonumber \\ && 
++ \left[ A_0(m) \right] ^2
+\frac{8 \left (n-2\right )}{t\left ( 4 m^{2}+t \right )\left (n-4\right )}
+\Bigl[
+t{n}^{2}-3tn+4{{ m}}^{2}n-16{{ m}}^{2}
+\Bigr]
+%%%%%%%%%%%%%%%%%%%%%%
+\nonumber \\ && 
+- \left[ B_0(m,m,t) \right]^2
+{\frac {8 {{ m}}^{2}}{\left (4{{ m}}^{2}+t\right )\left (n-4\right )}}
+\Bigl[
+-4tn+4t+4{{ m}}^{2}{n}^{2}-24{{ m}}^{2}n+t{n}^{2}+40{{m}}^{2}
+\Bigr]
+%%%%%%%%%%%%%%%%%%%%%
+\nonumber \\ && 
+- A_0(m) B_0(m,m,t) 
+\frac{ 8 \left( n - 2 \right) \left( {n}^{2}-5n+8\right )}{ \left(4 m^{2}+t \right) (n-4) (n-3)}
+\Bigl[-2{{ m}}^{2}n+10{{ m}}^{2}+t \Bigr] 
+\Biggr\} \;, 
+\label{PL}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+where the vertices $V_j$ ($j=1,2$) are defined as\footnote{Explicit 
+values of coefficients  $v_j$ and $a_j$
+for the Standard Model can be extracted from \cite{diagramatic}.}
+$$
+V_j = {\rm i} g \gamma_\mu (v_j + a_j \gamma_5) \;, 
+$$
+and we have introduced the following notations:
+$$
+A = a_1 a_2 \;, 
+\quad 
+S = v_1 v_2 \;, 
+\quad
+t=P^2,
+$$
+$N_c$ is a color factor (equal to 3 for quark and 1 for lepton), 
+$C_F$ is the Casimir operator of the fundamental representation
+of the Lie algebra (equal to $\tfrac{4}{3}$ for $SU(3)$ and 1 for QED), 
+and $m$ is the mass of the loop fermion. Finally,
+the occurring integrals are defined as
+%
+\begin{eqnarray}
+J_{011}(\sigma, \nu_1, \nu_2) & = & 
+\frac{\pi^{-n/2}}{\Gamma^2\left(3-\tfrac{n}{2}\right)}
+\int \int \frac{{\rm d}^n K_1 \;\; {\rm d}^n K_2 }
+{\left[(K_2-P)^2\right]^{\sigma}
+\left[ K_1^2+m^2 \right]^{\nu_1}
+\left[ (K_1-K_2)^2 + m^2 \right]^{\nu_2}} \; ,
+\nonumber \\ 
+B_0(m_a,m_b,t) & = & \frac{\pi^{-n/2}}{\Gamma\left(3-\tfrac{n}{2}\right)}
+\int \frac{{\rm d}^n K}
+{\left[(K-P)^2+m_a^2\right]
+\left[ K^2+m_b^2 \right]} \; ,
+\nonumber \\ 
+A_0(m) & = & \frac{\pi^{-n/2}}{\Gamma\left(3-\tfrac{n}{2}\right)}
+\int \frac{{\rm d}^n K}{K^2+m^2}
+\equiv \frac{4 (m^2)^{n-2}}{(n-2)(n-4)} \;.
+\end{eqnarray}
+We note that the integral $J_{011}$ is defined in the same way
+as in Section~4.3, one should only remember to substitute $p^2\to-t$.
+ 
+In particular, for the zero momentum transfer, $P^2=t=0$, we get
+\begin{eqnarray}
+\Pi_{\rm L}^{(2)}(0) & = & 
+- A \frac{g^2 g_{\rm s}^2}{(4 \pi)^{n/2}} N_c  C_F \left[ A_0(m) \right]^2 
+\frac{4(n-2)(n^2-5n+7)}{m^2} \;, 
+\nonumber \\
+\Pi_{\rm T}^{(2)}(0) & = & 
+- A \frac{g^2 g_s^2}{(4 \pi)^{n/2}} N_c  C_F \left[ A_0(m) \right]^2 
+\frac{4(n-2)(n^3-6n^2+13n-11)}{(n-1)m^2} \;. 
+\nonumber 
+\end{eqnarray}
+
+To obtain the finite terms of the $\ep$-expansion of the results
+given in Eqs.~(\ref{PT}) and (\ref{PL}),
+the integral $J_{011}(1,1,2)$ should be expanded up to the $\ep$-part.
+Furthermore,
+using the approach of Ref.~\cite{T97a}, we obtain the following 
+relations between the integrals investigated in 
+Section~4.3 and the master integrals $J_{011}(1,1,1)$ and  $J_{011}(1,1,2)$:
+\begin{eqnarray}
+&& 
+\hspace*{-10mm}
+J_{011}(1,1,1)\frac{(3n-8)(3n-10)(n-3)^2}{n-4}  = 
+\left[ A_0(m)  \right]^2 (n-3)(n-2)^2 
+\Biggl[
+\frac{t}{4m^4} 
+- \frac{(7n-24)}{2m^2 (n-4)}
+\Biggr]
+\nonumber \\ && 
++J_{011}(1,2,2)
+\Biggl[ \frac{8 m^2 (t+m^2)}{n-4}
+- 2 t^2 (n-3) + 2 t m^2 (7n-17) + 8 m^4 (2n-5)
+\Biggr]
+\nonumber \\ && 
++ \left[ J_{011}(1,2,2) + 2 J_{011}(2,1,2) \right] (n-3) (t+4m^2) (t-2 m^2)
+\;, 
+\\ 
+&& 
+\hspace*{-10mm}
+J_{011}(1,1,2)\frac{(3n-8)(3n-10)(n-3)^2}{n-4}  =
+\left[ A_0(m)  \right]^2 
+\frac{(n-3)(2n-7)(3n-8)(n-2)^2}{4m^4 (n-4)}
+\nonumber \\ && 
++J_{011}(1,2,2)
+\Biggl[
+-\frac{ 4 (t+2m^2)}{n-4}
+- n^2 \left( \tfrac{15}{2}t + 12m^2 \right) + n \left( \tfrac{79}{2}t+62m^2 \right) - 55 t - 86 m^2
+\Biggr]
+\nonumber \\ && 
++ \tfrac{1}{2} \left[ J_{011}(1,2,2) + 2 J_{011}(2,1,2) \right] (n-3) (3n-8)(t+4m^2) 
+\;. 
+\end{eqnarray}
+%
+From these relations we see that, in order to obtain the $\ep^j$ terms of 
+$J_{011}(1,1,1)$ and  $J_{011}(1,1,2)$, the integral
+$J_{011}(1,2,2)$ should be expanded up to $\ep^j$, whereas
+the combination $[J_{011}(1,2,2)+2J_{011}(2,1,2)]$ 
+up to $\ep^{j-1}$ only.
+The expansion of the integrals near the threshold can be performed by using 
+the numerical algorithm described in Ref.~\cite{expansion}.
+
+The higher-order terms of the $\ep$-expansion 
+of the one-loop integral $B_0(m_1,m_2,t)$ 
+can be extracted from Refs.~\cite{D-ep,DK01}. 
+Here we present coefficients up to the order $\ep^2$ 
+for the particular case $m_1=m_2=m$:
+\begin{eqnarray}
+\hspace{-5mm}
+B_0(m,m,t) & \!\!=\!\! & \frac{(m^2)^{-\ep}}{(1-2\ep) }
+\Biggl(
+\frac{1}{\ep} + \frac{1+y}{1-y} \Biggl\{ \ln y 
++ \ep \Bigl[  
+\tfrac{1}{2} \ln^2 y \!-\! 2 \ln y \ln (1+y) \!-\! 2 \Li{2}{-y} 
+\!-\! \zeta_2 
+       \Bigr] 
+\nonumber \\ && 
++ \ep^2 \Bigl[ 
+4 \Snp{1,2}{-y} 
+- 2 \Li{3}{-y} 
++ 4 \ln(1+y) \Li{2}{-y} 
+- \ln^2 y \ln(1+y) 
+\nonumber \\ && 
++ 2 \ln y \ln^2 (1+y) 
++ \tfrac{1}{6} \ln^3 y 
+- \zeta_2 \ln y 
++ 2 \zeta_2 \ln(1+y) 
+- 2\zeta_3 
+\Bigr]  
++ {\cal O}(\ep^3)
+\Biggr\}
+\Biggr) \;, 
+\hspace*{6mm}
+\end{eqnarray}
+where the variable $y$ is defined in Section~3.
+
+The bare two-loop amplitudes (\ref{PT}) and (\ref{PL}) contain 
+subdivergencies which should be cancelled by proper counterterms,
+$$
+\Pi_{\rm CT}(P^2) = 
+\delta m^2 \frac{\partial}{\partial m^2 } \Pi^{(1)} (P^2) \;, 
+$$
+where $\Pi^{(1)}$ is the one-loop amplitude, while $\delta m^2 $ 
+is the one-loop mass
+counterterm defined in a particular renormalization scheme. 
+The derivatives of the bare one-loop amplitudes in $n$ dimensions
+read
+\begin{eqnarray}
+\frac{\partial}{\partial m^2} \Pi_{\rm T}^{(1)}(P^2) 
+& \!\!=\!\! & \frac{g^2}{(4 \pi )^{n/2}} N_c 4
+\Biggl\{ 
+\Biggl[ \frac{S t (3\!-\!n) }{(4m^2\!+\!t)} \!+\! S\!+\!(2\!-\!n)A \Biggr]B_0(m,m,t)
+\!+\! \frac{2 S (n\!-\!2) }{(4m^2\!+\!t)} A_0(m)
+\Biggr \} \;, 
+\nonumber \\
+\frac{\partial}{\partial m^2 } \Pi_{\rm L}^{(1)}(P^2) & \!\!=\!\! & 
+A \frac{g^2}{(4 \pi )^{n/2}} N_c 4 
+\Biggl \{ 
+\Biggl[ \frac{t (n-3) }{(4m^2+t)} + 1-n \Biggr]B_0(m,m,t)
++ \frac{2 (2-n) }{(4m^2+t)} A_0(m)
+\Biggr \} \;.
+\nonumber 
+\end{eqnarray}
+
+As an example of application of these formulae, let us consider 
+the transversal part of the $\gamma-Z$ propagator $(A=0)$
+in the $\overline{MS}$-scheme.
+Up to the finite in $\ep$ part, the result for the subtracted quantity 
+$\Pi^{\rm sub}(P^2) = \Pi^{(2)}(P^2) + \Pi_{\rm CT}$ is 
+\begin{eqnarray}
+\label{gammaZ}
+\Pi_{{\rm T},\gamma Z}^{\rm sub}(P^2) 
+&=& S  \frac{g^2 g_{\rm s}^2}{(4 \pi)^2} N_c C_F    
+\Biggl\{ 
+- \frac{2t}{\ep} 
++ \left(-\tfrac{55}{3}t + \tfrac{296}{3} m^2 \right)
++ 16 t \zeta_3 \left[ 1 - 4 \frac{y^2}{(1-y)^4} \right]
+\nonumber \\ && 
+- \tfrac{16}{3} m^2 \frac{(1-4y+y^2)}{y(1-y)^2} 
+\left [ \ln(1-y) + 2 \ln(1+y) \right] \ln y 
+\left[ (1+y^2) \ln y - 2 (1-y^2) \right]
+\nonumber \\ && 
++ \tfrac{8}{3} m^2 \frac{(2+7y-22y^2+6y^3)}{(1-y)^2} \ln^2 y
+- 4 m^2 \ln y \frac{(1-6y-46y^2-6y^3+y^4)}{y(1-y^2)}
+\nonumber \\ && 
++ 4 t \ln \frac{m^2}{\mu^2} \left[ 1- \frac{12 y}{(1-y)^2} \right] 
+- 96 m^2 \frac{y}{1-y^2} \ln y \ln \frac{m^2}{\mu^2}
+\nonumber \\ && 
++ \tfrac{32}{3} m^2 \frac{(1-4y+y^2)}{y(1-y)^2} 
+\left [ \Li{2}{y} + 2 \Li{2}{-y} \right]  
+\left[ 1-y^2 - 2\left(1+y^2\right) \ln y \right] 
+\nonumber \\ && 
++ 32 m^2 \frac{(1-4y+y^2)}{y(1-y)^2} (1+y^2) 
+\left [\Li{3}{y} + 2 \Li{3}{-y} \right]  
++ {\cal O}(\ep)
+\Biggr\} \; , 
+\end{eqnarray}
+%
+where we have taken into account the one-loop massive counterterm
+$$
+\delta m^2 =  - 2 \frac{g_{\rm s}^2}{(4\pi)^2} C_F \frac{3}{\ep} m^2 \;. 
+$$
+The small-momentum expansion of Eq.~(\ref{gammaZ}) is 
+\begin{eqnarray}
+\hspace{-10mm}
+&& 
+\left. \Pi_{T,\gamma Z}^{sub}(p^2) \right|_{P^2 \to 0 }= 
+S  \frac{g^2 g_{\rm s}^2}{(4 \pi)^2} m^2 N_c C_F  
+\Biggl\{ 
+\frac{2}{\ep} u
++ \tfrac{13}{3} u + \tfrac{776}{405} u^2 
++ \ln \frac{m^2}{\mu^2 } \left( 4 u + \tfrac{8}{5} u^2 \right)
++ {\cal O}(u^3)
+\Biggr\} \;, 
+\nonumber 
+\end{eqnarray}
+where $u=-P^2/m^2$.
+%
+Let us remind that in a theory with the spontaneous symmetry breaking, 
+like the Standard Model, 
+the inclusion of tadpoles~\cite{FJ} is also required 
+for the renormalization group 
+invariance of the massive parameters~\cite{poleI,poleII,expansion}.
+The proper bare two-loop tadpole contribution 
+is given in Section~4.3 of Ref.~\cite{poleII}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{99}
+\bibitem{dimreg}
+G.~'tHooft and M.~Veltman,
+Nucl.\ Phys.\ {\bf B44} (1972) 189;\\
+%%CITATION = NUPHA,B44,189;%%
+C.G.~Bollini and J.J.~Giambiagi,
+Nuovo~Cimento {\bf 12B} (1972) 20; \\
+%%CITATION = NUCIA,B12,20;%%
+J.F.~Ashmore,  
+Lett.\ Nuovo Cim.\ {\bf 4} (1972) 289;\\
+%%CITATION = NCLTA,4,289;%%
+G.M.~Cicuta and E.~Montaldi,
+Lett.\ Nuovo Cim.\ {\bf 4} (1972) 329.
+%%CITATION = NCLTA,4,329;%%
+
+\bibitem{Lewin}
+L.~Lewin, {\it Polylogarithms and associated functions}
+(North-Holland, Amsterdam, 1981).
+
+\bibitem{Nielsen}
+K.S.~K\"olbig, J.A.~Mignaco and E.~Remiddi, B.I.T. {\bf 10} (1970) 38;\\
+%%CITATION = BITXA,10,38;%%
+R.~Barbieri, J.A.~Mignaco and E.~Remiddi, Nuovo Cim.\ {\bf A11} (1972) 824;\\
+%%CITATION = NUCIA,A11,824;%%
+A.~Devoto and D.W.~Duke, Riv.\ Nuovo Cim.\  {\bf 7}, No.6 (1984) 1;\\
+%%CITATION = RNCIB,7N6,1;%%
+K.S.~K\"olbig, SIAM J.\ Math.\ Anal.\ {\bf 17} (1986) 1232.
+%%CITATION = SJMAA,17,1232;%%
+
+\bibitem{RV00}
+E.~Remiddi and J.A.M.~Vermaseren,
+Int.\ J.\ Mod.\ Phys.\ {\bf A15} (2000) 725.
+%%CITATION = IMPAE,A15,725;%%
+ 
+\bibitem{GR2001}
+A.B.~Goncharov,
+Math.\ Res.\ Lett.\ {\bf 5} (1998) 497; \\
+%%CITATION = 00146,5,497;%%
+J.M.~Borwein, D.M.~Bradley, D.J.~Broadhurst and P.~Lison\v ek,
+Trans.\ Amer.\ Math.\ Soc.\ {\bf 353} (2001) 907; \\
+%%CITATION = TAMTA,353,907;%%
+T.~Gehrmann and E.~Remiddi,
+Nucl.\ Phys.\ {\bf B601} (2001) 248.
+%%CITATION = NUPHA,B601,248;%%
+
+\bibitem{nested}
+S.~Moch, P.~Uwer and S.~Weinzierl,
+J.\ Math.\ Phys.\  {\bf 43} (2002) 3363.
+%%CITATION = HEP-PH 0110083;%%
+
+\bibitem{poleII}
+F.~Jegerlehner, M.Yu.~Kalmykov and O.~Veretin, 
+to be publ. in Nucl.\ Phys.\ {\bf B}
+(hep-ph/0212319).
+%%CITATION = HEP-PH 0212319;%%
+
+\bibitem{dem}
+A.V.~Kotikov,
+Phys.\ Lett.\ {\bf B254} (1991) 158;
+%%CITATION = PHLTA,B254,158;%%
+{\bf B259} (1991) 314. 
+%%CITATION = PHLTA,B259,314;%%
+
+\bibitem{BD-TMF}
+E.E.~Boos and A.I.~Davydychev,
+Teor.\ Mat.\ Fiz.\ {\bf 89} (1991) 56.
+%%CITATION = TMFZA,89,56;%%
+
+\bibitem{FKV98}
+J.~Fleischer, A.V.~Kotikov and O.L.~Veretin,
+Phys.\ Lett.\ {\bf B417} (1998) 163.
+%%CITATION = HEP-PH 9707492;%%
+
+\bibitem{DD} A.I.~Davydychev and R.~Delbourgo, 
+J.\ Math.\ Phys.\ {\bf 39} (1998) 4299. 
+%%CITATION = JMAPA,39,4299;%%
+
+\bibitem{FKV99}
+J.~Fleischer, A.V.~Kotikov and O.L.~Veretin,
+Nucl.\ Phys.\ {\bf B547} (1999) 343.
+%%CITATION = NUPHA,B547,343;%%
+
+\bibitem{DK-bastei} 
+A.I.~Davydychev and M.Yu.~Kalmykov,
+Nucl.\ Phys.\ B (Proc.\ Suppl.) {\bf 89} (2000) 283.
+%%CITATION = HEP-TH 0005287;%%
+
+\bibitem{DK01}
+A.I.~Davydychev and  M.Yu.~Kalmykov,
+Nucl. Phys. {\bf B605} (2001) 266.
+%%CITATION = HEP-TH 0012189;%%
+
+\bibitem{oneloop}
+J.~Fleischer, F.~Jegerlehner and O.V.~Tarasov, 
+DESY preprint DESY-03-033.
+
+\bibitem{single}
+J.~Fleischer, M.Yu.~Kalmykov and  A.V.~Kotikov,
+Phys.\ Lett.\ {\bf B462} (1999) 169; {\bf B467} (1999) 310(E).
+%%CITATION = PHLTA,B462,169;%%
+
+\bibitem{harmonic}
+D.I.~Kazakov and A.V.~Kotikov, 
+Theor.\ Math.\ Phys.\  {\bf 73} (1988) 1264; 
+%%CITATION = TMPHA,73,1264;%% 
+Nucl.\ Phys.\ {\bf B307} (1988) 721; \\
+%%CITATION = NUPHA,B307,721;%% 
+D.~Borwein, J.M.~Borwein and R.~Girgensohn,
+Proc.\ Edinburgh Math.\ Soc.\ {\bf 38} (1995) 277;\\
+%%CITATION = PEMSA,38,277;%%
+J.M.~Borwein and R.~Girgensohn,
+Electronic J.\ Combinatorics {\bf 3} (1996) R23;\\
+%%CITATION = 00185,3,R23;%%
+P.~Flajolet and B.~Salvy, Experimental Math.\ {\bf 7} (1998) 15;\\
+%%CITATION = 00162,7,15;%%
+O.M.~Ogreid and P.~Osland, J.\ Comput.\ Appl.\ Math.\ {\bf 98} (1998) 245;
+%%CITATION = JCAMD,98,245;%%
+{\bf 136} (2001) 389; \\
+%%CITATION = HEP-TH 9904206;%%
+V.A.~Smirnov,
+Phys.\ Lett.\ {\bf B547} (2002) 239. 
+%%CITATION = HEP-PH 0209193;%%
+
+\bibitem{KV00}
+M.Yu.~Kalmykov and O.~Veretin, Phys.\ Lett.\ {\bf B483} (2000) 315.
+%%CITATION = PHLTA,B483,315;%%
+
+\bibitem{odd}
+J.~Fleischer and M.Yu.~Kalmykov,
+%``Single mass scale diagrams: Construction of a basis for the  epsilon-expansion,''
+Phys.\ Lett.\ {\bf B470} (1999) 168.
+%%CITATION = HEP-PH 9910223;%%
+
+\bibitem{euler}
+D.J.~Broadhurst, 
+Open University preprint OUT-4102-62 (hep-th/9604128).
+%%CITATION = HEP-TH 9604128;%%
+
+\bibitem{B99}
+D.J.~Broadhurst, Eur.\ Phys.\ J.\ {\bf C8} (1999) 311.
+%%CITATION = EPHJA,C8,311;%%
+
+\bibitem{review}
+A.I.~Davydychev and M.Yu.~Kalmykov,
+%``Geometrical approach to loop calculations and the epsilon-expansion of  Feynman diagrams,''
+Proc. Workshop ``CPP2001'', Tokyo, Japan, November 2001, 
+KEK Proceedings 2002-11, p.~169
+(hep-th/0203212).
+%%CITATION = HEP-TH 0203212;%%
+
+\bibitem{sums}
+Z.~Nan-Yue and K.S.~Williams, Pacific J.\ Math.\ {\bf 168} (1995) 271.
+%%CITATION = PJMAA,168,271;%%
+
+\bibitem{BBK}
+J.M.~Borwein, D.J.~Broadhurst and J.~Kamnitzer,
+Experimental Math. {\bf 10} (2001) 25.
+%%CITATION = HEP-TH 0004153;%%
+
+\bibitem{Ls_ex}
+A.I.~Davydychev and J.B.~Tausk,
+Phys.\ Rev.\ {\bf D53} (1996) 7381; \\
+%%CITATION = PHRVA,D53,7381;%%
+A.I.~Davydychev,
+%Mainz preprint MZ-TH/99-30
+Proc.\ Workshop ``AIHENP-99'', Heraklion, Greece, April 1999 (Parisianou S.A.,
+Athens, 2000), p.~219
+(hep-th/9908032);\\
+%%CITATION = HEP-TH 9908032;%% 
+A.V.~Kotikov and L.N.~Lipatov,
+Nucl.\ Phys.\ {\bf B582} (2000) 19.
+%%CITATION = NUPHA,B582,19;%%
+
+\bibitem{D-ep}
+A.I.~Davydychev, Phys.\ Rev.\ {\bf D61} (2000) 087701.
+%%CITATION = PHRVA,D61,087701;%%
+
+\bibitem{PBM3} A.P.~Prudnikov,  Yu.A.~Brychkov  and O.I.~Marichev,
+{\em Integrals and Series, v.3: More Special Functions},
+Gordon and Breach, New York, 1990.
+
+\bibitem{BFT93}
+D.J.~Broadhurst, J.~Fleischer and O.V.~Tarasov,
+Z.\ Phys.\ {\bf C60} (1993) 287.
+%%CITATION = ZEPYA,C60,287;%%
+
+\bibitem{B90}
+D.J.~Broadhurst, Z.\ Phys.\ {\bf C47} (1990) 115.
+%%CITATION = ZEPYA,C47,115;%%
+
+\bibitem{D91}
+A.I.~Davydychev,
+{\em ``Loop calculations in QCD with massive quarks"},
+talk at Int.\ Conf.\ ``Relativistic Nuclear Dynamics"
+(Vladivostok, Russia, September 1991),\\
+{\tt http://wwwthep.physik.uni-mainz.de/$\;\widetilde{}\;$davyd/preprints/vladiv.ps.gz}
+
+\bibitem{T97a}
+O.V.~Tarasov, Nucl.\ Phys.\ {\bf B502} (1997) 455.
+%%CITATION = NUPHA,B502,455;%%
+
+\bibitem{thresholds}
+A.I.~Davydychev and V.A.~Smirnov, Nucl.\ Phys.\ {\bf B554} (1999) 391.
+%%CITATION = NUPHA,B554,391;%%
+
+\bibitem{T96}
+O.V.~Tarasov, Phys.\ Rev.\ {\bf D54} (1996) 6479.
+%%CITATION = HEP-TH 9606018;%%
+
+\bibitem{Hgg}
+A.~Djouadi, M.~Spira and P.M.~Zerwas,
+%``Production of Higgs bosons in proton colliders: QCD corrections,''
+Phys.\ Lett.\ {\bf B264} (1991) 440; \\
+%%CITATION = PHLTA,B264,440;%%
+S.~Dawson and R.~Kauffman,
+%``QCD corrections to Higgs boson production: nonleading terms in the heavy quark limit,''
+Phys.\ Rev.\ {\bf D49} (1994) 2298; \\
+%%CITATION = HEP-PH 9310281;%%
+M.~Spira, A.~Djouadi, D.~Graudenz and P.M.~Zerwas,
+%``Higgs boson production at the LHC,''
+Nucl.\ Phys.\ {\bf B453} (1995) 17.
+%%CITATION = HEP-PH 9504378;%%
+
+\bibitem{vertex}
+A.I.~Davydychev and V.A.~Smirnov, 
+to be publ. in Nucl.\ Instr.\ Meth.\ {\bf A} 
+%``Analytical evaluation of certain on-shell two-loop three-point  diagrams,''
+(hep-ph/0210171); \\
+%%CITATION = HEP-PH 0210171;%%
+R.~Bonciani, P.~Mastrolia and E.~Remiddi,
+%``Vertex diagrams for the QED form factors at the 2-loop level,''
+hep-ph/0301170.
+%%CITATION = HEP-PH 0301170;%%
+
+\bibitem{GKP}
+S.~Groote, J.~G.~Korner and A.~A.~Pivovarov,
+%``Transcendental numbers and the topology of three-loop bubbles,''
+Phys.\ Rev.\ {\bf D60} (1999) 061701.
+%%CITATION = HEP-PH 9904304;%%
+
+\bibitem{PSLQ} 
+H.R.P.~Ferguson, D.H.~Bailey and S. Arno, 
+Math.\ Comput.\ {\bf 68} (1999) 351.
+%%CITATION = MCMPA,68,351;%% 
+
+\bibitem{background}
+F.~Jegerlehner and O.V.~Tarasov, Nucl.\ Phys.\ {\bf B549} (1999) 481.
+%%CITATION = HEP-PH 9809485;%%
+
+\bibitem{qcd}
+T.H.~Chang, K.J.~Gaemers and W.L.~van Neerven, Nucl.\ Phys.\ {\bf B202} (1982) 407; \\
+%%CITATION = NUPHA,B202,407;%%
+A.~Djouadi and C.~Verzegnassi, Phys.\ Lett.\ {\bf B195} (1987) 265; \\
+%%CITATION = PHLTA,B195,265;%%
+A.~Djouadi, Nuovo Cim.\ {\bf A100} (1988) 357; \\
+%%CITATION = NUCIA,A100,357;%%
+B.A.~Kniehl, J.H.~K\"uhn and R.G.~Stuart, Phys.\ Lett.\ {\bf B214} (1988) 621;\\
+%%CITATION = PHLTA,B214,621;%%
+B.A.~Kniehl, Nucl.\ Phys.\ {\bf B347} (1990) 86 ; \\
+%%CITATION = NUPHA,B347,86;%%
+A.~Djouadi and P.~Gambino, Phys.\ Rev.\ {\bf D49} (1994) 3499;
+{\bf D53} (1996)  4111(E).
+%%CITATION = HEP-PH 9309298;%%
+
+\bibitem{diagramatic}
+M.~Veltman, {\it Diagrammatica}, Cambridge University Press, 1994; \\
+D.~Bardin and G.~Passarino, {\it The Standard Model in the Making}, Oxford, UK: Clarendon, 1999.
+
+\bibitem{expansion}
+F.~Jegerlehner, M.Yu.~Kalmykov and O.~Veretin, 
+Nucl.\ Phys.\ B (Proc.\ Suppl.) {\bf 116} (2003) 382 (hep-ph/0212003).
+%%CITATION = HEP-PH 0212003;%%
+
+\bibitem{FJ} 
+J.~Fleischer and F.~Jegerlehner, 
+Phys.\ Rev.\ {\bf D23} (1981) 2001. 
+%%CITATION = PHRVA,D23,2001;%%
+
+\bibitem{poleI}
+F.~Jegerlehner, M.Yu.~Kalmykov and O.~Veretin, 
+Nucl.\ Phys.\ {\bf B641} (2002) 285.
+%%CITATION = HEP-PH 0105304;%%
+
+\bibitem{S_Bha}
+V.A.~Smirnov,
+Phys.\ Lett.\ {\bf B524} (2002) 129.
+%%CITATION = PHLTA,B524,129;%% 
+
+\bibitem{d_3}
+K.G.~Chetyrkin and M.~Steinhauser,
+Nucl.\ Phys.\ {\bf B573} (2000) 617.
+%%CITATION = HEP-PH 9911434;%%
+
+\bibitem{leo96}
+L.V.~Avdeev, Comput.\ Phys.\ Commun.\ {\bf 98} (1996) 15.
+%%CITATION = CPHCB,98,15;%%
+
+\bibitem{matad}
+M.~Steinhauser, Comput.\ Phys.\ Commun.\ {\bf 134} (2001) 335.
+%%CITATION = HEP-PH 0009029;%%
+
+
+\end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+

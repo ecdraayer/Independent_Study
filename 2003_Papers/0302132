@@ -1,0 +1,2686 @@
+
+%%%%%%%%%%%  As February 17, 2003 %%%%%%%%%%%%%
+%%%%%%%%%%%  Edited on March 5, 2003 %%%%%%
+
+\documentclass[prd,twocolumn,amsmath,amssymb,
+nofootinbib,showpacs] {revtex4}
+% Some other (several out of many) possibilities
+%\documentclass[preprint,aps]{revtex4}
+%\documentclass[preprint,aps,draft]{revtex4}
+%\documentclass[prb]{revtex4}% Physical Review B
+
+\usepackage{epsfig}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{feynmf}
+
+%\def\be{\begin{equation}}
+%\def\ee{\end{equation}}
+
+\newcommand {\nn} {\nonumber}
+\newcommand {\half} {\frac{1}{2}}
+\newcommand {\p} {\prime}
+\newcommand {\G} {{\cal G}}
+\newcommand{\td}{\bar{\nabla}}
+
+\newcommand{\bna}{\bar{\nabla}}
+\newcommand{\R}{\hat{R}}
+\newcommand{\g}{\hat{g}}
+
+\newcommand{\T}{{\cal T}}
+\newcommand{\M}{{\cal M}}
+
+\newcommand{\ha}{\hat{\alpha}}
+\newcommand{\hx}{\hat{x}}
+\newcommand{\hs}{\hat{s}}
+
+
+\newcommand{\ta}{\tilde{\alpha}}
+\newcommand{\tb}{\tilde{\beta}}
+\newcommand{\wth}{\widetilde{h}}
+
+\newcommand{\tnu}{\tilde{\nu}}
+\newcommand{\tsigma}{\tilde{\sigma}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\JHEP}{J. High Energy Physics}
+
+%\nofiles
+
+\begin{document}
+%%\begin{fmffile}{disc5pics}
+
+\preprint{NTUTP-03/A07}
+
+\author{Ishwaree P. Neupane}
+
+%% \email{ishwaree.neupane@cern.ch}
+
+\title{\large \bf Thermodynamic and Gravitational Instability on Hyperbolic
+Spaces}
+
+% Force line breaks with \\
+
+\affiliation{ Department of Physics,
+National Taiwan University, Taipei 106, Taiwan, R.O.C.\\
+{\scriptsize \bf ishwaree@phys.ntu.edu.tw, ~
+Ishwaree.Neupane@cern.ch }\\
+~~~~~}
+
+% \altaffiliation[Also at ]{Theory Division, CERN, Switzerland.}
+%Lines break automatically or can be forced with \\
+
+%\date{\today}% It is always \today, today,
+             %  but any date may be explicitly specified
+
+\begin{abstract}
+
+We study the properties of anti-de Sitter black holes for various
+horizon topologies ($k=0,\,\pm 1$) and for various dimensions. We
+explore the thermodynamic and classical (in)stability of higher
+dimensional black holes with emphasis on the less well understood
+$k=-1$ solution. In particular, we show that there exists a unique
+$k=-1$ extremal black hole solution which has the lowest energy
+for all spacetimes in its asymptotic class. What looks encouraging
+is that the Gauss-Bonnet type curvature corrections to the
+Einstein action not only admit exact solutions but they might be
+crucial for stability of hyperbolic $(k=-1)$ black holes. This in
+turn implies that the hyperbolic spacetimes can be stable
+thermodynamically and classically if the background is defined by
+an extremal solution and the extremal entropy is non-negative. For
+the ground state metric taken from the Einstein-Gauss-Bonnet
+theory, the gravitational potential can be positive and bounded
+from below for a small coupling $\alpha~(<<l^2)$, with $l$ being
+the effective curvature radius of anti-de Sitter space.
+
+\end{abstract}
+
+\pacs{04.70.-s, 04.50.+h, 11.10.Kk, 11.25.-w}
+
+\maketitle
+
+\section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In parallel to the development of Anti de Sitter (AdS) holography
+(more generally, the gravity -- gauge theory
+correspondence~\cite{Maldacena97a,Witten98}), the AdS black holes
+in higher dimensional spacetimes are known to play an important
+role in the dual field theory defined on the AdS (conformal)
+boundary; viz., a black hole in AdS space is described as a
+thermal state of the dual conformal field theory
+(CFT)~\cite{Witten98a}. In the presence of a negative cosmological
+constant the Einstein field equations admit AdS black holes as
+exact vacuum solutions whose event horizons are Einstein manifolds
+with positive, zero or negative scalar curvature. Many efforts
+have been concentrated to explore AdS black holes with
+non-spherical event horizons, analyzing black hole solutions in
+four-dimensions~\cite{Vanzo} (see~\cite{Lemos95a,Mann96a} for
+relevant discussions) and in higher
+dimensions~\cite{Birmingham98a}. The analysis
+in~\cite{Birmingham98a} (see also~\cite{Emparan99b} in the spirit
+of holographic counter-term prescription proposed in
+~\cite{Vijay99a,Emparan99a}) is well motivated from the AdS/CFT
+correspondence. The study of hyperbolic (also called
+"topological") black holes~\cite{Mann96a,Vanzo}) has provided a
+new angle of interest to the study of non-supersymmetric version
+of the AdS/CFT correspondence. No much has been done to understand
+the thermodynamic and classical instability of these solutions in
+higher dimensions when there are Gauss-Bonnet (GB) type curvature
+corrections to the black hole thermodynamics. So we study this
+problem in detail in this paper.
+
+One of the important issues that one has to address on a
+hyperbolic manifold is the positivity of energy. In the low energy
+limit of the superstring theory (namely, supergravity), the
+underlying supersymmetry and constant positive (scalar) curvature
+ensure that solutions which approach AdS globally or flat locally
+respect the known positive energy theorems. In general, the
+positive energy theorems only show stability of the spacetimes
+which saturate the bounds, i.e., they become asymptotically either
+locally flat or AdS. However, the known theorems do not extend to
+include the Horowitz-Myers (HM) soliton~\cite{Horowitz98a}, whose
+AdS asymptotic is a toroidal space with zero scalar curvature. The
+HM soliton is a non-supersymmetric background, but it is
+conjectured that an AdS soliton is the ground state for planar
+($k=0$) black holes. This means the absence of sypersymmetry does
+not necessarily imply instability of the background.
+
+On the other hand, there arises the question of background choice
+for black hole spacetimes with hyperbolic event horizons. In a
+gravitational theory, it is necessary to make the Euclideanized
+action finite. One can do so by assigning classically stable
+lowest energy configurations to the AdS black holes with
+$k=0,\,\pm 1$ event horizons. For a spherical black hole (i.e.,
+$k=+1$), the background is simply the global AdS space, which is a
+solution at finite temperature. Of course, a spherical event
+horizon topology is the most convenient choice to explain the dual
+dynamics, such as, a thermal phase transition in large N gauge
+theories~\cite{Witten98a}. Also, the all specific examples of CFTs
+that arise in AdS/CFT are well behaved when $k=+1$. Nonetheless,
+there are some good reasons to explore physics behind the $k=-1$
+topology, e.g., the ground state for $k=-1$ is different from the
+solution that is locally isometric to AdS, and the hyperbolic AdS
+black holes exhibit some new and interesting features that other
+two cousins ($k=0,+1$) of AdS simply do not share, such as
+enhancements in the value of the entropy that are not accompanied
+by increment in the energy~\cite{Emparan99b}. It is also
+known~\cite{Emparan98a,Klemm99a} that the AdS space with $k=-1$ is
+relevant to study CFTs with less than maximal (or no)
+supersymmetry.
+
+Maximally symmetric hyperbolic spaces~\cite{Kehagias00a} naturally
+arise as the near-horizon region of certain
+$p$-branes~\cite{Emparan98a} and black hole
+geometries~\cite{Horowitz91a,Gibbons93a} in supergravity theories.
+Therefore, the background choice in the $k=-1$ case and the
+classical stability of hyperbolic spaces both are interesting
+issues. It is argued in~\cite{Galloway02a} that a conformal
+boundary with cross sections $k=0,1$ does not serve as the
+conformal boundary of $k=-1$ non-singular asymptotically locally
+AdS spacetimes. This means, for hyperbolic black holes, a global
+AdS space as the choice of background might be inconsistent. This
+looks reasonable because the conformal boundary of a pure AdS
+space is isometric to $I\!\!R^{1}\times {\cal M}^{n-1}$, where the
+base manifold ${\cal M}^{n-1}$ is a round-sphere for a spherical
+$(k=1)$ horizon, which, of course, has constant positive scalar
+curvature, but, for hyperbolic black holes, ${\cal M}^{n-1}$ is
+either a hyperbolic manifold $H^{n-1}$ or its quotient space
+$H^{n-1}/\Gamma$. Therefore, one has to assign a background to
+hyperbolic ($k=-1$) black holes different from a pure AdS
+metric~\cite{Vanzo,Birmingham98a,Klemm99a}.
+
+AdS spacetime whose conformal boundary (in the sense of Penrose)
+is a hypersurface of negative scalar curvature could be unstable
+under metric perturbations~\cite{Gibbons02a}, if the background is
+a zero mass topological black hole. One may expect instability in
+some cases, even if the background is the negative mass extremal
+state, but not in others, depending upon the higher order
+corrections. In Einstein gravity, one must restrict the spacetime
+region $r>r_{extr}$, with $r_{extr}$ being the extremal horizon,
+for stability. We will be led to entertain the somewhat radical
+proposition that {\it the hyperbolic black hole solutions can be
+stable, thermodynamically and classically, if the ground state
+metric receives higher order curvature corrections and the
+background is defined by a negative mass extremal state}. We show
+that there exists a unique $k=-1$ extremal black hole solution
+which has lowest energy for all spacetimes in its asymptotic
+class.
+
+The layout of the paper is as follows. In section II we give black
+hole solutions in AdS spacetimes, compute extremal parameters and
+define different reference backgrounds in Einstein gravity
+modified with a Gauss-Bonnet term. In section III we compute
+Euclideanized actions applicable to the curvature $k=0,\,\pm 1$ of
+the black hole horizons, part of these results had been obtained
+in~\cite{IPN02b}. In section IV we relate the free energy and
+specific heat curves and discuss the thermal phase transitions. In
+section V we turn to stability analysis of the background metrics
+(vacuum solutions) in Einstein gravity under metric perturbations,
+by setting up a Sturm-Liouville problem. We extend this analysis
+in section VI for the background metrics in the
+Einstein-Gauss-Bonnet theory. Finally, section VII contains the
+discussion, outlook and future problems.
+
+\section{Black holes in AdS Space}
+
+We shall be interested in the gravitational action of a general
+form that might include the contribution from higher curvature
+terms. Our starting point is therefore the Lagrangian of gravity
+including a Gauss-Bonnet term \bea\label{action1}
+I&=&\frac{1}{16\pi G_{n+1}}\int
+d^{n+1}x\,\sqrt{-g}\,\left(R-2\Lambda\right)+ {\mbox{surface
+terms}} \nn \\
+&+& \alpha^\prime \int d^{n+1}x\,\sqrt{-g}\,
+\left(R_{abcd}R^{abcd}-4 R_{cd}R^{cd}+R^2\right)\,.\nn \\
+&{}&~~~~~ \eea The Gauss-Bonnet type curvature corrections to the
+Einstein action in a pure gravity theory were originally proposed
+by Lanczos~\cite{Lanczos} and Lovelock~\cite{Lovelock}, longtime
+before the realization that a GB term can indeed arise in some
+string theory as leading $\alpha^\p$-corrections~\cite{Zumino}.
+The black hole solutions with a GB term were first given by
+Boulware and Deser~\cite{Deser85a}. Those solutions were nicely
+generalized by Myers and Simon~\cite{Myers88a} regularizing the
+classical action (see also~\cite{Wiltshire} for charged
+Gauss-Bonnet black holes). These calculations, however, were
+limited to a vanishing cosmological constant and for a spherical
+event horizon. Recently, there has been considerable interest in
+generalizing those results for $ \Lambda < 0$ and $k \neq 1$, and
+some progress have been made
+in~\cite{Cai01a,Nojiri01c,IPN02a,IPN02b}, see
+also~\cite{Cai98a,Zanelli00a} within the context of dimensionally
+extended (higher derivative) Lovelock gravity.
+
+\subsection{Black holes for $\alpha^\p=0$}
+
+The Einstein field equations modified by a Gauss-Bonnet term take
+the following form \be \label{newEE} R_{ab}-\frac{2\Lambda}{n-1}\,
+g_{ab}=-\,32 \pi G_{n+1}\,\alpha^\p
+\left(H_{ab}-\frac{1}{n-1}\,g_{ab} H\right)\,.\ee Here $H_{ab}=R
+R_{ab}-2R_{acbd}R^{bd}+R_{acde}R_b\,^{cde}-2R_{ac} R_b^c$ and $H$
+is its trace. For generality, throughout this paper we work in
+$AdS_{n+1}$ spacetimes with arbitrary number of spatial dimensions
+$n$. For $\alpha^\p=0$, we have the well known AdS black hole
+solutions \be ds^2=-\,f(r)\,dt^2+\frac{dr^2}{f(r)}+{r^2}\,
+d\Sigma_{k,n-1}^2\,,\ee with
+$$ f(r)=k-\frac{\mu}{r^{n-2}}
++\frac{r^2}{\ell^2}\,$$ where $\mu$ is an integration constant and
+$\ell$ is a length scale that fixes the cosmological term
+$\Lambda=-\,n(n-1)/2\ell^2$. The metric of a $(n-1)$-dimensional
+manifold ${\cal M}^{n-1}$, whose Ricci scalar equals to
+$(n-1)(n-2)k$, is denoted as $d\Sigma_{k,n-1}^2$, the latter is
+the unit metric on $S^{n-1}$, $I\!\!R^{n-1}$, or $H^{n-1}$,
+respectively, for $k=1,\,0$ or $-1$. Defining a discrete subgroup
+$\Gamma\subset S0(n-1,1)$ that acts on a $(n-1)$-dimensional
+hyperbolic space, one can obtain a compact hyperbolic manifold
+$H^{n-1}/\Gamma$. The spacetime metric for $\mu=0$ reduces to
+$AdS$ in global coordinate when $k=+1$, and to a massless
+topological black hole when $k=-1$.
+
+One can fix the periodicity of the Euclidean time $\tau=it\to
+\beta$, using $\left(f(r)\right)^{\prime} (r_+)=4\pi/\beta$, to be
+\be {\beta}=\frac{4\pi\, r_+\, \ell^2}
+{n\,r_+^2+k\,(n-2)\,\ell^2}\,.\ee where $r_+$ is the largest real
+positive root of $f(r)$. When $k=+1$, the Euclidean period $\beta$
+is always non-negative, but this is not so when $k=-1$. The notion
+that an inverse of Euclidean period is the Hawking temperature of
+a black hole is unique only up to the sign, that is, $T=1/\beta$
+or $T=-\,1/\beta$. This is because the temperature cannot be
+negative but the sign for the Euclidean period is a convention,
+which depends on whether we measure it clockwise or
+anti-clockwise, so $T=|\beta^{-1}|$. Similar situation would arise
+in de Sitter spacetimes.
+
+If $\mu=0$ is taken as the background for $k=-1$, then the
+coordinate patch breaks down at $r=l$. This is partly resolved by
+defining a negative mass extremal background (which has zero
+temperature)~\cite{Vanzo,Birmingham98a}, the latter is defined by
+the degenerate horizon at $r=r_{extr}$, with a mass parameter
+$\mu=\mu_{extr}$, namely, \be
+r^2_{extr}=\left(\frac{n-2}{n}\right) \ell^2\,,\quad
+\mu_{extr}=-2\,\ell^{n-2}\sqrt{\frac{(n-2)^{n-2}}{n^n}}\,. \ee
+These are the minimum values of $\mu$ and $r_+$ that are
+compatible with cosmic censorship. Obviously, $\mu_{extr}<0$ for
+$n>2$. When $n=2$, the extremal state is a pure $AdS_3$ soliton
+with a singularity at $r_{extr}=0$, analogous to the BTZ
+solution~\cite{BMTZ93a}. For a massless background, there appear
+states, namely, those for $\mu_{extr}\leq \mu< 0$, with total
+negative energy, and the gravitational potential is not well
+behaved for small $r$. This means that a reference spacetime with
+$\alpha^\p=0$ might be incomplete for $k=-1$. We may overcome to
+this difficulty by activating higher curvature corrections, such
+as a GB term.
+
+\subsection{Gauss-Bonnet black holes}
+
+We include a Gauss-Bonnet term into the effective action not only
+because the black hole solutions are more general (than in
+Einstein gravity), but also for a gravitational stability of AdS
+black hole spacetimes with hyperbolic horizons, whose ground state
+may be defined by a negative mass extremal state, the curvature
+corrections to the Einstein action might be important.
+
+For $\alpha^\p>0$, the metric solution is modified to \be
+\label{adsBHn} f(r)= k+\frac{r^2}{2\alpha}\pm \,
+\frac{r^2}{2\alpha}\sqrt{1+\frac{8\alpha\Lambda}{n(n-1)}
++\frac{4\alpha\,\mu}{r^n}} \,, \ee where the coupling
+$\alpha=16\pi G_{n+1}\, (n-2)(n-3)\alpha^\prime$. We can fix the
+cosmological constant $\Lambda=-\,n(n-1)/2 l^2$, where $l$ is the
+effective curvature radius of AdS space. The fixing of $\Lambda$
+should be consistent with the solution of the equations of motion.
+For example, in a constant negative (or positive) curvature
+background, $R_{ab}=-\,n c\,g_{ab}$, the field
+equations~(\ref{newEE}) amount to fix the cosmological term
+$\Lambda=-\,n(n-1)\,c\left(1-c\alpha\right)/2\equiv \mp\,n(n-1)/2
+l^2$, where $c=1/\ell^2>0$ for $\Lambda< 0$, $c=0$ for
+$\Lambda=0$, and $c=-\,1/\ell^2$ for $\Lambda>0$. In this case,
+the length scale $\ell$ may be re-scaled, namely, $\ell^2\to l^2=
+\ell^2/\left(1-\alpha/\ell^2\right)$.
+
+For generality, henceforth, we use a common scale $l^2$, unless
+otherwise stated, but a convention that $l^2\to \ell^2$, in the
+limit $\alpha\to 0$, is to be understood. One also notes that the
+coupling $\alpha$ is not the bare coupling $\alpha^\p$, although
+they are proportional. For example, when $n=5$, $\alpha=96\pi
+G_{6}\,\alpha^\p$, and the dimension of $\alpha$ is
+$(\mbox{length})^2$.
+
+\subsection{Extremal Gauss-Bonnet black holes}
+
+For $\alpha>0$, the periodicity of the Euclidean time is \be
+\label{HawkingT} {\beta}=\frac{4\pi\, r_+\, l^2\,
+\left(r_+^2+2\alpha\,k\right)} {n\,r_+^4+k\,(n-2)\,r_+^2\,l^2
++(n-4)\alpha\,k^2\,l^2}\,. \ee The mass parameter $\mu$ may be
+expressed in terms of the horizon radius $r_+$, namely, \be
+\label{BHMass} \mu (r=r_+) = r_+^{n-2}\left(k+\frac{r_+^2}{l^2}
++\frac{\alpha k^2}{r_+^2}\right)\equiv \frac{16\pi
+G_{n+1}\,M}{(n-1)V_{n-1}}\,, \ee where $M$ is the
+Arnowitt-Deser-Misner (ADM) mass of a black hole, and $V_{n-1}$ is
+the volume of $d\Sigma^2_{k,n-1}$.
+
+With $\alpha>0$, the extremal black hole interpretation exists
+only for $n\geq 4$, because the Gauss-Bonnet term is a topological
+for $n=3$, and there is no extremal solution for $n=2$. When
+$n=4$, there exists the degenerate extremal horizon at
+$r=r_{extr}$ satisfying \be r_{extr}^2=\frac{l^2}{2}\,,\quad
+\mu_{extr}=-\frac{l^2}{4}+\alpha\, \label{4dextr}\ee given that
+$\alpha \neq  l^2/4$. In five dimensions, there is no black hole
+interpretation for $\alpha>l^2/4$. One should also note that the
+Hawking temperature at $\alpha=l^2/4$, when $n=4$, \be
+T=\frac{2n\,r_+^2+(n-4)k l^2}{8\pi r_+l^2}= \frac{r_+}{\pi\,l^2}
+\ee is non-zero and positive. In $n+1>5$ spacetime dimensions,
+when $k=-1$, the extremal parameters, such that $\beta\to \infty$,
+are~\cite{IPN02b} \be
+r_{extr,\,crit}^2=\left(\frac{n-2}{2n}\right)l^2 \left(1\pm
+\sqrt{1-\frac{4n(n-4)}{(n-2)^2}
+\,\frac{\alpha}{l^2}}\right)\,,\label{rextr} \ee
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bea
+\mu_{extr,\,crit}&=&\left(\frac{2\,r_{extr,crit}^{n-2}}{n-4}\right)
+\nn \\
+&{}& \times\Bigg[\frac{2}{n}\mp
+\sqrt{\left(\frac{n-2}{n}\right)^2-\frac{4(n-4)}{n}\,
+\frac{\alpha}{l^2}}\Bigg]\,.\label{mextr} \eea Again, for
+$\alpha=l^2/4$, the negative root in~(\ref{mextr}) gives
+$\mu_{extr}=0$ independent of $n$. More precisely, \bea
+&& r_{extr}^2=\frac{l^2}{2}\,, \quad \mu_{extr}=0\,, \nn \\
+&& ~~~~~~~~ T=\frac{n}{4\pi r_+
+l^2}\,\left(r_+^2-\frac{n-4}{n}\,r_{extr}^2\right)\,,\eea
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bea r_{crit}^2&=&\frac{(n-4)}{2n}\,l^2\,, \nn \\
+\mu_{crit}&=&l^{n-2}\,\sqrt{\frac{(n-4)^{n-4}}{n^n}\,2^{(8-n)}}\,,\nn
+\\
+ T&=&\frac{n}{4\pi r_+ l^2}\big(r_+^2-r_c^2\big)\,. \eea
+It will be somewhat of misnomer to call $\mu_{extr}=0$ state as an
+extremal state because extremal black holes are defined to have
+zero temperature, which require $\alpha<l^2/4$, but the
+$\mu_{extr}=0$ state defined by the coupling $\alpha=l^2/4$ has
+non-zero temperature~\cite{Cai01a,IPN02a}. We therefore call the
+$\mu_{extr}=0$ state as a massless state, but this should not be
+mixed up with a massless topological black hole, the latter simply
+means $\mu=0$ and $k=-1$.
+
+For $\alpha=l^2/4$, only the black hole of critical size
+$r_+=r_{crit}$ has zero temperature but this is not a massless
+state, rather $\mu_{crit}>0$. Notice that the $k=-1$ solution with
+$\mu_{extr}=0$ saturates the bound $r_+^2 \geq
+2\alpha=l^2/2=r_{extr}^2$. The proper extremal black holes are
+those which satisfy $\alpha < l^2/4$ and have zero Hawking
+temperature. We will show that the AdS extremal solution gives a
+local minimum of the AdS energy functional.
+
+\subsection{Choice of backgrounds}
+
+For $\alpha^\p=0$, the harmonic function $f(r)$ is defined by \be
+\label{bhmetric2} f(r)=k+\frac{r^2}{l^2}-\frac{\mu}{r^{n-2}}
+\,.\ee It is established that a pure AdS space ($k=1$, $\mu=0$),
+whose (Euclidean) boundary is a conformal sphere, is the reference
+background for AdS Schwarzschild black holes. For the case of
+toroidal $k=0$ horizon, a candidate ground state was proposed by
+Horowitz and Myers~\cite{Horowitz98a}. The latter background, for
+example, in five dimensions, has the form  \bea
+ds^2&=&\frac{r^2}{l^2}\,\left(1-\frac{r_0^4}{r^4}\right)\,d\phi^2
++\frac{l^2}{r^2}\left(1-\frac{r_0^4}{r^4}\right)^{-1}\,dr^2 \nn \\
+&{}&+\,r^2
+\left(-\,dt^2+\sum_{i=1}^{2}\left(d\theta^i\right)^2\right)\,,\eea
+where $r_0$ is some constant related to AdS soliton mass. We are
+interested here in AdS black holes whose event horizon is a
+hyperbolic ($k=-1$) space. When $\alpha=0$, $n+1=5$, the extremal
+mass parameter is $\mu_{extr}=-\,l^2/4$, so the extremal metric
+has the form \be
+ds^2=-\,f(r)\,dt^2+\frac{dr^2}{f(r)}+r^2\,dH_{3,k=-1}^2\,\ee with
+\be
+ f(r)=\left(\frac{r}{l}-\frac{l}{2r}\right)^2 =
+\frac{r^2}{l^2}\left(1-\frac{l^2}{2r^2}\right)^2 \,.\ee This is a
+candidate ground state for hyperbolic black holes, in restricting
+the spacetime region $r\geq r_e=l/\sqrt{2}$ for the background.
+The gravitational potential is not well behaved in the region
+$r<l/\sqrt{2}$ (see, section V), but the curvature corrections
+(i.e., $\alpha^\p>0$) to the Einstein action, and hence to the
+extremal background, should improve the situation.
+
+We therefore consider the metric solution with $\alpha>0$: \be
+\label{newk=-1} f(r)= k+\frac{r^2}{2\alpha}\mp
+\frac{r^2}{2\alpha}\sqrt{1-\frac{4\alpha}{l^2}
++\frac{4\alpha\,\mu}{r^n}} \,. \ee For generality, we kept the
+both signs in~(\ref{newk=-1}) but a more physical result is given
+by the negative root, which reduces to that of Einstein gravity in
+the limit $\alpha\to 0$. For the spherical black hole (i.e.,
+$k=1$), $\mu=0$ itself defines a reference background (AdS vacuum
+solution). In this case, it is obvious that the constraint
+$\alpha\leq l^2/4$ must hold. Interestingly, a gravitational
+action defined with $\alpha=l^2/4$, in some cases, is equivalent
+to the Einstein gravity. This branch corresponds to a class of
+solutions originally proposed in~\cite{Chamseddine89a} and studied
+in~\cite{Cai98a,Zanelli00a}. For $k=0$, a massless ground state is
+still legitimate. In this case, for the particular coupling
+$\alpha=l^2/4$, the graviton propagators in $AdS_{n+1}$ spacetime,
+when $n\geq 4$, do not receive any corrections from the massive
+(Kaluza-Klein) modes (see, e.g.~\cite{IPN02e} in the braneworld
+context but this result holds in general). The $k=0$, $\mu=0$
+background is stable under metric perturbations.
+
+Turn now to background choice for $k=-1$. It is known that a
+solution with $\mu=0$ cannot be the ground state (background) for
+hyperbolic ($k=-1$) black holes. This was first observed
+in~\cite{Vanzo} with $\alpha=0$, but this is true also for
+$\alpha>0$. For the coupling $(n-2)^2/[4n(n-4)]>\alpha/l^2\geq
+1/4$, when $n>4$, one might achieve $\mu\geq 0$ such that the
+terms inside the square root in~(\ref{newk=-1}) is non-negative.
+However, for this coupling the background itself will be unstable
+classically and thermodynamically. Thus, one requires $\alpha <
+l^2/4 $ at the background, and the extremal mass $\mu_{extr}$ can
+only take a negative value as in Einstein
+gravity~\cite{Birmingham98a,Emparan99a}. With $\alpha=l^2/4$, for
+example, when $n+1=5$, the Ricci-scalar and Kretschmann scalar
+$K~(=R_{abcd}R^{abcd})$ read \bea
+R&=&-\,\frac{40}{l^2}+\frac{12\sqrt{\mu\,l^2}}{r^2 l^2}\,,\nn \\
+K&=&\frac{160}{l^4}+\frac{48\mu}{r^4\,l^2}\mp
+\frac{96\sqrt{\mu\,l^2}}{r^2\,l^4}\,.\eea Therefore, the metric
+spacetime is only asymptotically AdS when $\mu\neq 0$, and, of
+course, $\mu<0$ is not allowed in this case. Next, consider, for
+example, a coupling $\alpha=l^2/12$. For a large $r$, the
+curvature scalars read \bea R&=&-\frac{40}{l^2}\,\Big(3\mp
+\sqrt{6}\Big)-\frac{10(15\pm 4\sqrt{6})\,\mu}{r^4}+{\cal
+O}\left(\frac{1}{r^6}\right)\nn \\
+K&=&\frac{480(5\mp 2\sqrt{6})}{l^4}+{\cal
+O}\left(\frac{1}{r^8}\right)\,,\eea in satisfying
+$\mu>-\,2r^4/l^2$ and $r^2>l^2/2\sqrt{3}$. We should note that $K$
+diverges when $\mu=-\,2r^4/l^2$. Our proposition is that one has
+to take $\mu_{extr}<0$, which certainly requires $\alpha<l^2/4$,
+as the background value for $k=-1$. A candidate ground state is
+then the extremal metric obtained by replacing $\mu$
+in~(\ref{newk=-1}) with $\mu_{extr}$. This is a physically
+motivated choice of background for topological black
+holes~\cite{Vanzo,Birmingham98a,IPN02b}. An extremal background is
+not (maximally) supersymmetric because the geometry
+$H^{n-1}/\Gamma$ often breaks the supersymmetry but it may be
+stable under gravitational (tensor) perturbations when $\alpha<<
+l^2$.
+
+
+\section{Background subtraction and thermodynamic
+quantities}
+
+For a solution of the equations of motion, the classical
+action~(\ref{action1}) becomes \be I=\frac{1}{16\pi G_{n+1}}\int
+d^{n+1}x\,\sqrt{-g}\left(-\frac{2}{n-3}\, R
++\frac{8\Lambda}{n-3}\right)\,. \ee This action diverges for the
+classical solution when integrated from zero to infinity. A choice
+of the background is the key to this problem. As is known, there
+should be a regularized setting -- a cut off in the radial
+integration and subtraction of a suitably chosen background in
+order to cancel divergences, so that the action (energy) is
+finite. In the $k=+1$ case, one subtracts energy of the reference
+geometry which is simply AdS space produced by a setting $\mu=0$.
+For the $k=0$ case, a zero mass ground state is still legitimate,
+and is an acceptable background~\cite{Vanzo,Birmingham98a}.
+However, it has been known that this prescription would not
+directly apply to the $k=-\,1$ case. The background subtraction
+technique for $k=-\,1$ may follow similar to the Horowitz-Myers
+soliton. For HM soliton, one subtracts a background for the
+non-zero negative mass soliton, so that the AdS soliton itself is
+a local minimum of the energy. While, for the $k=-1$ case,
+subtraction of an extremal state (again non-zero mass background)
+would be physical, because the extremal ground state will have a
+local minimum of the energy at zero
+temperature~\cite{Vanzo,Birmingham98a,Emparan99b,IPN02b}.
+
+One notes that for the global AdS (or AdS extremal metric) ($X_1$)
+any value of the periodicity $\beta^\p$ is possible, while the
+black hole spacetime ($X_2$) has a fixed periodicity $\beta$. One
+can therefore adjust $\beta^\p$ such that the geometry of the
+hypersurface at $r=R\to \infty$ is the same for AdS space and
+AdS-Schwarzschild when $k=1$~\cite{Witten98a}, and for the
+extremal state and hyperbolic AdS black hole spacetime when
+$k=-1$~\cite{Birmingham98a}. The surface term has no role in the
+large $r$ limit because the black hole correction to the AdS
+metric ($k=+1$) or extremal state ($k=-1$) vanishes too rapidly at
+$r=R\to \infty$~\cite{Hawking83a,Witten98a}. Thus one can fix
+$\beta^\p$ by demanding \be \beta'\sqrt{k-\frac{\mu
+_{extr}}{r^2}+\frac{r^2}{l^2}}\simeq \beta \sqrt{k-\frac{\mu
+}{r^2}+\frac{r^2}{l^2}}\,. \ee In doing this, one finds the
+(Euclidean) action difference $\widehat{I}=I(X_2)-I(X_1)$ in the
+form \bea \widehat{I}&=& -\frac{V_{n-1}\,r_+^{n-4}\,\beta}{16\pi
+G_{n+1}\,(n-3)} \Bigg[2(n-1)\,k r_+^2-(n-1) \mu \,r_+^{4-n}\nn \\
+&{}&~~~~~~~ -\,\frac{8\pi
+r_+^3}{\beta}+\frac{4(n-1)\,r_+^4}{l^2}\Bigg]-\beta\,M_{extr}\delta_{k,-1}
+\nn \\
+&=&-\frac{V_{n-1}\,r_+^{n-4}\,\beta}{16\pi G_{n+1}\,(n-3)}\nn \\
+&{}& ~~~~~~~~~\times
+\Bigg[(n-1)\left(k\,r_+^2-\alpha\,k^2\right)+\frac{3(n-1)\,r_+^4}{l^2}\Bigg]
+\nn \\
+&{}&~~~~~~~~~~ +\,\frac{V_{n-1}\,r_+^{n-1}}{2(n-3)G_{n+1}}
+-\beta\,M_{extr}\delta_{k,-1}\,. \eea The free energy of the black
+hole is then given by $F=\widehat{I}/\beta$. Hence \bea F &=& -
+\frac{(n-1) V_{n-1}\,r_+^{n-4}}{16\pi G_{n+1}\,(n-3)}
+\left[\left(k\,r_+^2-\alpha\,k^2\right)
++\frac{3\,r_+^4}{l^2}\right]\nn \\
+&{}&+\frac{V_{n-1}r_+^{n-1}}{2(n-3)G_{n+1}}\,\frac{1}{\beta}
+-M_{extr}\delta_{k,-1} \nn \\
+%% intermediate step %%%%
+%%&=& \frac{V_{n-1}\,r_+^{n-2}}{16\pi G_{n+1}}
+%%\frac{1}{(r_+^2+2\alpha k)}\bigg[
+%%r_+^2\left(k-\frac{r_+^2}{l^2}\right)-\frac{6(n-1)\alpha k
+%%r_+^2}{(n-3)l^2} +\frac{(n-7)\alpha k^2}{n-3}+\frac{2(n-1)\alpha^2
+%%k}{(n-3)r_+^2} \bigg]
+%%-M_{extr} \nn \\
+&=&\frac{V_{n-1}\,r_+^{n-2}}{16\pi G_{n+1}}
+\Bigg[\left(k-\frac{r_+^2}{l^2}\right) +\frac{n-1}{n-3}\,
+\frac{\alpha k^2}{r_+^2}\nn \\
+&{}&-\frac{2n}{n-3}\, \frac{\alpha k\left(2r_+^2+k
+l^2\right)}{l^2\left(r_+^2+2\alpha
+k\right)}\Bigg]-M_{extr}\delta_{k,-1} \,.\eea The condition
+$\alpha=l^2/4$ is an exceptional one. In this case, $M_{extr}=0$,
+and the last term inside the square bracket becomes a constant. On
+the other hand, the solutions with $k=0$ are qualitatively similar
+to the $\alpha=0$ case. For $k=0$, the free energy scales as $
+V_{n-1}/\beta^n$ for all temperatures. This may be traced back to
+the observation that the planar black hole in $AdS_5$ is exactly
+dual to a thermal state of ${\cal N}=4$ supersymmetric Yang-Mills
+theory in four-dimensional Minkowski space~\cite{Witten98a}.
+While, for $k=\pm 1$, this scaling is valid only in the limit of
+high temperatures.
+
+A local minimum of the Hawking temperature is given by solving
+$\partial \beta/\partial r_+=0$, where \bea\label{Tminima}
+\frac{1}{\beta^2}\,\frac{\partial \beta}{\partial r_+}&=&
+\frac{1}{4\pi} \Bigg[\frac{(n-2) k}{r_+^2} - \frac{n}{l^2}-
+\frac{n\alpha k}{r_+^2 l^2}\, \frac{(2r_+^2+k l^2)}{(r_+^2+2\alpha
+k)}\nn
+\\&{}& ~~~~~-\,\frac{2n\alpha k^2}{(r_+^2+2\alpha k)^2}
+\left(1-\frac{4\alpha}{l^2}\right) \Bigg]\,. \eea For $\alpha=0$,
+it is obvious that there is no minimum of temperature for $k=\{0,
+-1\}$ family, thus such black holes exist for all temperatures but
+the situation could be different for $\alpha> 0$ as we exhibit
+below.
+
+The resulting black hole entropy is~\cite{IPN02a,IPN02b} \bea
+\label{GBentropy} {\cal S}&=&\beta^2\,\frac{\partial F}{\partial
+\beta}=\left(\frac{1}{\beta^2}\,\frac{\partial \beta}{\partial
+r_+}\right)^{-1}\,
+\frac{\partial F}{\partial r_+}\nn \\
+&=&\frac{V_{n-1} r_+^{n-3}}{4G_{n+1}}
+\left(r_+^2+\frac{2(n-1)\alpha\,k}{(n-3)}\right)\,. \eea The
+entropy flow is given by \bea d {\cal S}&=&\frac{(n-1)V_{n-1}
+r_+^{n-4}}{4G_{n+1}}
+\Big(r_+^2+2\alpha\,k\Big)\nn \\
+&=&\beta\,\frac{(n-1)V_{n-1}}{16\pi G_{n+1}} \times\nn \\
+&{}&\left[\frac{n\, r_+^{n-1}}{l^2} +(n-2)k r_+^{n-3}+(n-4)\alpha
+k^2 r_+^{n-5}\right]\,. \eea In the second step above we have made
+use of~(\ref{HawkingT}). Using the thermodynamic relation $d{\cal
+S} =\beta\,dE$, we arrive at \be\label{totalE1} E=M+E_0\,. \ee One
+reads $M$ from Eq.~(\ref{BHMass}), and $E_0$ is an integration
+constant. We are able to do something better than fixing $E_0$
+using the criterion $E\vert_{\beta\to \infty}=0$. The energy $E$,
+obtained directly using the Euclideanized action, takes a
+remarkably simple form \be \label{totalE2}
+E=\frac{\partial\widehat{I}}{\partial \beta}=M
+-M_{extr}\,\delta_{k,-1}\,.\ee Comparing (\ref{totalE1}) and
+(\ref{totalE2}), we can easily identify that
+$E_0=-\,M_{extr}\,\delta_{k,-1}\geq 0$. For $k=0,\,1$, the
+thermodynamic energy of AdS black holes is given by the black hole
+mass $M$, since AdS solution with $\mu=0$ is the one with lowest
+action and energy. This is generally not the case for $k=-1$
+geometry, rather, $E=-M_{extr}>0$ when $\mu=0$, $E=0$ when
+$\mu=\mu_{extr}$, and $E>0$ otherwise. The total energy is a
+positive, concave function of the black hole's temperature for all
+values $k=0,\,\pm1$.
+
+The black hole solutions obtained for flat or spherical horizons,
+with $\alpha^\p>0$, share many properties of the simpler
+Schwarzschild-type solution of the Einstein gravity. These are the
+cases studied essentially in more detail in the literature.
+However, not much has been done for solutions involving the
+hyperbolic geometries, so we are primarily interested here in the
+$k=-1$ case.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Extremal state as the ground state}
+
+A hyperbolic $AdS_5$ black hole has some special feature, viz.,
+the total energy \bea E&=&\frac{3V_3\,r_+^2}{16\pi
+G}\,\left(-1+\frac{r_+^2}{l^2}+\frac{\alpha}{r_+^2}\right)
++\frac{3l^2\,V_3}{64\pi G}\left(1-\frac{4\alpha}{l^2}\right)\nn \\
+&=&\frac{3\,V_3}{16\pi G}\left(-\, r_+^2+\frac{r_+^4}{l^2}
++\frac{l^2}{4}\right)\, \eea is independent of the coupling
+$\alpha$. This simple observation might have some new and
+interesting consequences in the field theory dual, if the latter
+exists with a GB term.
+
+We can perhaps make use of the relation
+$$ \frac{\alpha^\p}{l^2}=\left(2 g_{YM}^2 N\right)^{-1/2}\,.$$
+(In the units $16\pi G_5=1$, $\alpha^\p=\alpha/2$). Then a small
+$\alpha^\p$ corresponds to the strong coupling limit, (i.e.,
+$g_{YM}^2 N$ is large.) And also note that the entropy is  $$
+{\cal S}=|\beta|\left(E-F\right)\,. $$ As shown above, for $n=4$
+and $k=-1$, the free energy $F$ is dependent of the coupling
+$\alpha$, but the energy $E$ (or energy density $E/V_3$) is not.
+That is, free energy and entropy both scale with the coupling
+$\alpha$. For the planar or spherical black holes,
+$\mbox{lim}_{\beta\to \infty}\beta F= 0$ holds, but in the
+hyperbolic $AdS_5$ case one observes that $\mbox{lim}_{\beta\to
+\infty}\beta F= \mbox{finite}$ for a small coupling $\alpha^\p$.
+This result may be traced back to the discussions
+in~\cite{Emparan99b}, where similar results that support the
+scaling behavior of the free energy (and entropy) on hyperbolic
+space -- when going from strong to weak coupling -- are presented
+(see~\cite{Horowitz97a} for original ideas on black-hole/string
+correspondence).
+
+\begin{figure}[ht]
+\begin{center}
+\epsfig{figure=5DMextr.eps, height=4.0cm, width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=7DMextr.eps, height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\caption{The ADM mass $M$ (curved lines) and extremal mass
+$M_{extr}$ (horizontal lines) in the function of horizon ($r_+$).
+The values are fixed at $l=1$, $16\pi G=1$, and (a) (upper plot)
+$n=4$, $V_3=2\pi^2$, $k=-1$ and $\alpha=0,~1/12,~1/4$ (up to
+down); (b) (lower plot) $n=6$, $V_3=\pi^3$, $k=-1$ and
+$\alpha=0,17/100,\,1/4$.} \label{figure1}
+\end{figure}
+
+In spacetime dimensions $n+1>5$, however, the energy $E$ also
+depends upon the coupling $\alpha$, independently, we choose
+$\mu_{extr}=0$ or $\mu_{extr}\neq 0$ or $\mu=0$ as a reference
+background for hyperbolic $(k=-1)$ black holes. What is more
+interesting to note is that in all spacetime dimensions the energy
+$E$ has a unique local minimum at the extremal horizon position
+$r_+=r_{extr}$. These are clearly seen in the plots of
+Figs.~(\ref{figure1}) and (\ref{figure2}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+\begin{center}
+\epsfig{figure=5DEnergy.eps, height=4.0cm, width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=7DEnergy.eps, height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\caption{The energy $E$ in the function of horizon ($r_+$). The
+values are fixed at $l=1$, $16\pi G=1$, and (a) $n=4$ (upper
+plot), $V_3=2\pi^2$, $k=+1$ (curves that grow with $r_+$) at
+$\alpha=1/4,~1/12$ (up to down), and $k=-1$ (curve that has
+minimum at $r_+=r_{extr}$); (b) $n=6$ (lower plot), $V_3=\pi^3$,
+$k=-1$ and $\alpha=0,\,17/100,\,1/4$ (top to bottom curves --
+along the $E$-axis).} \label{figure2}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+As we noted above, specially, for the coupling $\alpha=l^2/4$,
+$M_{extr}=0$. Take, for simplicity, $n=6$, then one finds \be
+E=\frac{5V_{5}\,r_+^{4}}{16\pi G_{7}} \left( -1+\frac{r_+^2}{l^2}
++\frac{l^2}{4r_+^2}\right)\geq 0\,.\ee There are two minima -- one
+at $r_+=0$ and another at $r_+=r_{extr}=l/\sqrt{2}$ -- only the
+latter is a stable minimum.
+
+\subsection{Thermodynamic instability for $k=-1$}
+
+To justify that $M_{extr}=0$ is not the ground state for the
+$k=-1$ case, we may adopt an Euclidean path integral formulation
+along with a consideration that the (extremal) entropy and
+specific heat should be non-negative at the background. The black
+hole entropy is always positive for $k=\{0,~1\}$ horizons.
+However, for $k=-1$, the inequality $r_+^2\geq 2\alpha$, which
+must hold in order to have a black hole interpretation, is not
+enough to guarantee that the (extremal) entropy and specific heat
+are always positive, rather one must satisfy $r_+^2\geq
+2(n-1)\alpha/(n-3)$. That is, there must be an upper bound in the
+strength of the coupling $\alpha$ for a thermodynamically stable
+background. For example, when $n+1=7$, the positivity of extremal
+entropy requires that $r_+^2>10\,\alpha/3$ and hence
+$\alpha/l^2<17/100$, which further implies that $4\alpha<l^2$.
+When one approaches a massless state at $4\alpha=l^2$, so
+$M_{extr}=0$, the specific heat could be negative, which mimics a
+thermodynamic instability.
+
+In the canonical ensemble, which should be the case here as we are
+considering uncharged black holes, the second derivative of the
+Euclidean action $\widehat{I}~(=\beta E-{\cal S})$ along the path
+parameterized by $x$ is \be
+\left(\frac{\partial^2\hat{I}}{\partial^2\,
+x}\right)_T=\frac{1}{\beta^2}\,\left(\frac{d\beta}{d x
+}\right)^{2}\, \frac{d E}{d T}\,, \ee where $x=x(T)$ is the
+parameter that labels the path in the Euclidean path integral
+formulation. The black hole cannot be a local minimum of the
+action when the specific heat $dE/dT$ is negative~\cite{Reall01a}.
+
+Though the arguments for thermodynamic stability of black hole
+spacetimes are not directly available to the classical
+stability~\cite{Reall01a}, they might be related. A study of
+gravitational perturbations shows that stability of the $k=-1$
+spacetimes against metric perturbations with $\alpha>0$ indeed
+requires $\alpha<<l^2$. As we noted above, when $n+1=7$, the
+thermodynamic stability of the solution requires $\alpha\leq
+17l^2/100$. We will need a slightly stronger bound, namely,
+$\alpha\lesssim 2l^2/15$, at the classical level, such that the
+gravitational potential is positive and bounded from below for the
+$k=\pm 1$ geometry. So for the thermodynamic stability of
+hyperbolic black hole spacetimes, not only the specific heat but
+also the extremal entropy must be non-negative at the background.
+
+
+\section{Specific heat and free energy curves and thermal
+phase transition}
+
+In Einstein gravity, small spherical black holes can have negative
+specific heat but large size blacks holes have positive specific
+heat~\cite{Gregory93a}. There exists a discontinuity for the
+specific heat at $r_+=l/\sqrt{2}$, so small and large black holes
+are somehow disjoint. However, this is not essentially the case in
+the Einstein-Gauss-Bonnet theory, and specially for
+Schwarzschild-$AdS_5$ black hole, also the small black holes can
+have positive specific heat~\cite{IPN02a}, which are not only
+thermodynamically stable but also globally preferred. Therefore, a
+Gauss-Bonnet type corrections to Einstein gravity look promising
+even from the view of thermodynamic stability of small spherical
+black holes. In this section, however, we will try to learn more
+about the hyperbolic black holes, which have some peculiar
+features unavailable to other two classes of $AdS$ black holes --
+planar ($k=0$) and spherical ($k=+1$).
+
+For $k=+1$, as first observed by Hawking and
+Page~\cite{Hawking83a} in Einstein gravity, the AdS black hole of
+horizon $r_+<l$ has positive and $r_+>l$ has negative free
+energies, and there occurs a first order phase transition between
+a thermal AdS space and an AdS black hole at the scale $r_+\sim
+l$. As we see shortly, for the spherical black holes, the
+Hawking-Page type phase transition is available only for a small
+Gauss-Bonnet coupling.
+
+The $AdS_5$ and $AdS_7$ black holes are of some particular
+interest because the string or M-theory provides dual for
+$AdS_{n+1}$, $n=4,~6$ as the CFTs describing the world-volume
+theory for $N$ parallel $D3$- and $M5$-branes. Though it is not
+explored yet whether a dual description should exist with a
+Gauss-Bonnet term, it is certainly interesting to explore a
+possibility of thermal phase transition in this theory.
+In~\cite{Gubser98a,Klemm99a}, the string or M-theory corrections,
+of order ${\alpha^\p}^3\,{\cal R}$, where ${\cal R}$ is a scalar
+constructed out of contraction of four Weyl tensors, to the black
+hole thermodynamic are presented. With perturbative calculations,
+it is shown in~\cite{Klemm99a} that such corrections do not give
+rise to a thermal phase transition for flat and hyperbolic
+horizons, although to a quotient of hyperbolic space
+$H^{n-1}/\Gamma$, and also to a flat space $I\!\!R^{n-1}$
+compactified down to a torus, there may arise new phase
+transitions. The implications of finite size and finite coupling
+effects on the appearance of strong/weak coupling phase
+transitions are studied in the literature,
+e.g.,~\cite{Mli99a,MLi99b,Kogan99a}.
+
+
+\subsection{Specific heat for hyperbolic black holes}
+
+Figs.~(\ref{figure3}) and (\ref{figure4}) show the plots of
+specific heat in function of horizon position, when $k=-1$. One
+again has to make a distinction between the two cases:
+$\alpha=l^2/4$ and $\alpha < l^2/4 $. For a hyperbolic $AdS_5$
+black hole, the small horizon regime $r<r_{extr}$ has a single
+branch for $\alpha=l^2/4$ and two branches for $\alpha < l^2/4 $.
+The first branch (cusp) on the left, which will almost coincide
+with the $r_+$-axis when $\alpha<<l^2$, has negative specific
+heat, so is unstable.
+
+\begin{figure}[ht]
+\begin{center}
+\epsfig{figure=5Dheat1.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=5Dheat2.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=5Dheat3.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\caption{The Euclidean period $\beta$ (curves that asymptote to
+$C$ or/and $r_+$-axes) and specific heat (curves with one or more
+cusps) {\it vs} horizon position $r_+$. The values are fixed at
+$l=1$, $n=4$, $V_3/16\pi G=2\pi^2$, $k=-1$, and $\alpha=1/4$,
+$\alpha=1/8$ and $\alpha=1/12$ (top to bottom plot).}
+\label{figure3}
+\end{figure}
+
+When the negative mass extremal state is taken as a reference
+background, the energy condition $E\geq 0$ always holds. When
+$\alpha=l^2/4$, the Euclidean time has a fixed and positive period
+$\beta=\pi\,l^2/r_+$, thus the Hawking temperature and specific
+heat are defined, respectively, by $T=1/\beta$ and $C=dE/dT$.
+However, for the coupling, $\alpha < l^2/4 $, the sign of $\beta$
+is important.
+
+For $n=4$ and $k=-1$, an interesting situation arises when
+$\alpha=l^2/12$. For this particular coupling, the extremal
+entropy is zero, hence the Euclidean period is \be \beta=\frac{\pi
+l^2\left(6r_+^2-l^2\right)}{r_+\left(2r_+^2-l^2\right)} \,.\ee
+This is negative in the region $0.408<r_+<0.707$, where one still
+has a black hole interpretation because $r_+^2\geq 2\alpha$ holds,
+but the specific heat must be defined by \be \label{newdefC}
+C=-\,\beta^2\,\frac{dE}{d(-\beta)}=\frac{dE}{dT}\,.\ee This
+reveals that the second cusp in the bottom plot of
+Fig.~(\ref{figure3}) actually has positive specific heat. One also
+notes that the free energy depends upon a regularization
+(background choice) but the Hawking temperature does not. And, the
+extremal mass $M_{extr}$ is $r_+$ or $T$ independent, thus one
+gets the same answer for specific heat from $C=dE/dT$ and
+$C=dM/dT$.
+
+One has to make sure that a negative (extremal) entropy is not due
+to a wrong sign of $\beta$, while deriving the entropy formula.
+For $n=4$, one finds \be \label{entropy5} {\cal
+S}=\beta^2\,\frac{dF}{d\beta}=\frac{V_{3,k=-1}\,r_+^{3}}{4G_{5}}
+\left(1-\frac{6\alpha}{r_+^2}\right)\,. \ee The entropy at the
+extremal state takes the form~\cite{IPN02b} \be \label{5dentropy}
+{\cal S}_{extr}=\frac{V_3}{G_5}\,\frac{l^3}{2^{7/2}}
+\left(1-\frac{12\alpha}{l^2}\right)\,. \ee This is non-negative
+only if $\alpha\leq l^2/12$. As noted before, for the coupling
+$\alpha=l^2/4$, the Euclidean period $\beta=\pi l^2/r_+$ is always
+positive, so the formula ${\cal S}=\beta^2\,(dF/d\beta)$ is
+effective. It is then obvious that the extremal entropy can be
+negative for $\alpha=l^2/4$; this branch therefore belongs to an
+unstable region where the specific heat is also negative (see the
+upper most plot in Fig.~(\ref{figure3})). This particular feature
+is not totally new; even for $k=+1$, when $\alpha=0$, small black
+holes have negative specific heat, so are unstable. There is
+however a difference here. For $k=+1$, a thermodynamic instability
+arises only due to a finite size effect, viz., a black hole of
+size $r_+\leq l/\sqrt{2}$ is unstable, $r_+>l$ is stable and
+$l>r_+>l/\sqrt{2}$ is only locally preferred but globally
+unstable. In the $k=-1$ case, however, a thermodynamic instability
+could arise either due to a large coupling effect or a small size
+effect.
+
+For $k=-1$, any negative entropy state though may arise,
+typically, when the higher derivative couplings are in the order
+of the AdS length scale $l^2$, can be ruled out as being
+unphysical (see, the discussion in~\cite{Nojiri02a} in the context
+of dual field theories), because neither such states are stable
+classically nor the supergravity approximation allows one to take
+$\alpha$ in the same order as $l^2$. Indeed, the coupling $\alpha$
+should be at least one order magnitude smaller than the length
+scale $l^2$.
+
+For $n=4$, $\alpha=l^2/12$, the entropy of the extremal black hole
+is zero. It is then relevant to ask what would happen in the limit
+$l^2/4>\alpha>l^2/12$. As a specific example, for the coupling
+$\alpha=l^2/8$, the period is \be \beta=\frac{\pi
+l^2\left(4r_+^2-l^2\right)}{2r_+\left(2r_+^2-l^2\right)}\,.\ee
+This is negative only in the range $l^2/4<r_+^2<l^2/2$, i.e.,
+$0.5<r_+<0.707$. Nevertheless, for the coupling $\alpha=l^2/8$,
+the entropy~(\ref{entropy5}) can be negative in the range
+$l^2/2<r_+^2<3l^2/4$ where $\beta$ is positive and the formula
+${\cal S}=\beta^2\,(dF/d\beta)$ is effective. Thus, in five
+dimensions, black hole solutions with $\alpha>0$ are
+thermodynamically stable only if $\alpha\leq l^2/12$, that is,
+${\cal S}_{extr}\geq 0$.
+
+\begin{figure}[ht]
+\begin{center}
+\epsfig{figure=7Dheat1.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=7Dheat2.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=7Dheat3.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\caption{The Euclidean period (curves that asymptote to $C$ or/and
+$r_+$-axes) and specific heat (curves with two or more cusps) {\it
+vs} horizon position $r_+$. The values are fixed at $l=1$, $n=6$,
+$V_5/16\pi G=\pi^3$, $k=-1$, and $\alpha=0.25$, $\alpha=0.23$ and
+$\alpha=17/100$ (top to bottom plots).} \label{figure4}
+\end{figure}
+
+As the bottom plot in Fig.~(\ref{figure3}) or Fig.~(\ref{figure4})
+shows, for small $\alpha$, the black hole with small horizon
+(second cusp), which has negative specific heat and positive free
+energy, is separated from a large non-extremal black hole
+$(r_+>r_{extr})$, by a critical size black hole (third cusp),
+which itself belongs to an unstable region. So only the black
+holes of extremal size or bigger than this are thermodynamically
+stable.
+
+For $n+1=7$, the extremal entropy vanishes for $\alpha=17
+l^2/100$. In this case, the Euclidean period is \be \beta
+=\frac{4\pi r_+ l^2(50 r_+^2-17l^2)}{(10r_+^2-l^2)(30r_+^2-17
+l^2)}\,.\ee Note that $\beta$ is negative in the range
+$0<r_+<0.3162$ and $0.5831<r_+<0.7528$, where the
+formula~(\ref{newdefC}) does apply. The free energy is also
+negative when $0.5831<r_+<0.7528$. Hence, the first and third
+cusps in the bottom plot of Fig.~(\ref{figure4}) should be mirror
+reflected. However, as we noted above, one has no black hole
+interpretation for the first cusp. For $\alpha=l^2/4$, there are
+only two cusps, because in this case two unstable branches (the
+second and third cusps that appear for $\alpha<l^2/4$) merge to a
+single cusp, which has negative specific heat. A clear message
+behind these observations is that the thermodynamic stability in
+$n=6$ requires $\alpha/l^2\leq 17/100$. In other words, the
+specific heat and extremal entropy should be non-negative at the
+background. Similar arguments would apply to all hyperbolic black
+holes in $n+1 \geq 5$ spacetime dimensions.
+
+
+\subsection{Free energy for hyperbolic black holes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+\begin{center}
+\epsfig{figure=hyper1.eps, height=4.0cm, width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=hyper2.eps, height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=hyper3.eps,height=4.0cm,width=7.0cm}
+\end{center}
+\caption{The Euclidean period (curves that asymptote to $F$ or/and
+$r_+$-axis) and free energy (curves that are bounded from up or
+that take finite values at $r_+=0$) {\it vs} horizon position
+$r_+$. The values are fixed at $k=-1$, $n=4$, $l=1$, $16\pi G=1$,
+$V_3=2\pi^2$, and, $\alpha=1/6,\,0.1305,\,1/8$ (top to bottom
+plots).} \label{figure5}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[ht]
+\begin{center}
+\epsfig{figure=hyper4.eps, height=4.0cm, width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=hyper5.eps, height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=hyper6.eps, height=4.0cm,width=7.0cm}
+\end{center}
+\caption{The Euclidean period (curves that asymptote to $F$ or/and
+$r_+$-axis) and free energy (curves that have finite values at
+$r_+=0$ or bounded from up) {\it vs} horizon upper two plots. The
+values are fixed at $k=-1$, $n=6$, $l=1$, $16\pi G=1$,
+$V_5=\pi^3$; and $\alpha=0.25,~0.2162,\,0.2072$ (top to bottom
+plots)} \label{figure6}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We now want to use the obtained thermodynamic quantities to
+determine the thermal phase structure. Figs.~(\ref{figure5}) and
+(\ref{figure6}) show the plots of Euclidean period $\beta$ and
+free energy $F$ as functions of horizon size $r_+$, when $k=-1$.
+The first plot in Fig.~(\ref{figure6}) corresponds to the
+$\mu_{extr}=0$ state with $\alpha=l^2/4$. In lower two plots, the
+extremal state is shown by an asymptotic on the right, and the
+critical state, which is absent in $AdS_5$ (c.f.,
+Fig.~(\ref{figure5})), is shown by another asymptotic on the left.
+The middle vertical line, where the free energy diverges and
+$\beta=0$, corresponds to the horizon at $r_+^2=2\alpha$.
+
+To interpret these plots, we must keep in mind that, except for
+the coupling $\alpha=l^2/4$ for which $M_{extr}=0$, the
+subtraction has been done with respect to a zero-temperature,
+zero-energy density state. Therefore, a net sign difference
+between the free energies of the extremal state and the
+corresponding black hole is important in order to explain any
+possible phase transition.
+
+It is perhaps relevant to note that in the region $0<r_+^2\leq
+2(n-1)\alpha/(n-3)$, where the behavior of extremal entropy is
+somewhat exotic (unusual), the second law of thermodynamics does
+not necessarily hold. Besides, for a hyperbolic $AdS_5$ black
+hole, the free energy scales with the coupling $\alpha$, but the
+energy (or energy density) does not. The energy is vanishing at
+the extremal horizon $r_+=l/\sqrt{2}$, where $\beta\to \infty$,
+but the free energy can be positive, zero or negative depending
+upon the coupling constant. Unlike a naive expectation, the
+entropy is non-zero at the extremal state, in particular, for a
+small coupling $\alpha$. This is consistent with the earlier
+observations made in~\cite{Emparan99a,Emparan99b} for
+$\alpha^\p=0$; a common thread in these results is that
+$\mbox{lim}_{\beta\to \infty} \beta F=finite$. This further helped
+the authors of~\cite{Emparan99a,Emparan99b} to trace back their
+result of a non-zero extremal entropy to the discussion of
+"precursor states" first noticed in~\cite{Susskind99a}, when
+studying a short distance behavior of $AdS{\slash} CFT$ duality.
+(Further comments on it is beyond the scope of this paper.)
+
+One can smoothly approach the negative mass extremal limit from a
+non-zero temperature, and the regime $r>r_{extr}$ has a unique
+black hole interpretation for all temperature $T>0$. As the lower
+two plots of Figs.~(\ref{figure5}) and (\ref{figure6}) show the
+Euclidean period is zero at $r_+=\sqrt{2\alpha}=r_1$, where the
+free energy diverges, and $\beta$ is negative in the range $r_{1}<
+r_+<r_{extr}$, thus the Hawking temperature is defined by
+$T={|\beta|}^{-1}$. In the range $r_{1}< r_+<r_{extr}$, the
+Hawking temperature decreases until it approaches the extremal
+state with zero temperature. A singularity at
+$r_+=\sqrt{2\alpha}=r_1$, where free energy diverges and
+$\beta=0$, is hidden inside the extremal horizon, so is harmless.
+
+The extremal entropy is vanishing when $\alpha/l^2=1/12$ for
+$n=4$, and $\alpha/l^2=17/100$ for $n=6$. At these particular
+couplings, as one approaches the extremal state ($T=0$) from the
+right the free energy curve approaches a maximum value which is
+less than zero. Thus, even at the zero temperature, the
+thermodynamic ensemble is dominated by an extremal black hole.
+While the physics for high enough temperature for all cases is
+dominated by non-extremal black holes.
+
+In Einstein gravity, as first discussed in~\cite{Birmingham98a},
+there is no Hawking-Page type phase transition for flat and
+hyperbolic horizons, hence the spatial Wilson loop cannot exhibit
+confinement in a dual description. Though this is purely a gauge
+theory intuition, with some perturbative calculations, this result
+is shown to hold with string or M-theory curvature corrections to
+the black hole thermodynamics~\cite{Klemm99a}. For a Gauss-Bonnet
+theory, which admits the exact solution, we might need further
+clarifications.
+
+When $\alpha=l^2/4$ and $n=4$, no distinction can be made between
+the small (critical or extremal) and large (non-extremal) black
+holes. When $n>4$, there appears a critical black hole at zero
+temperature. The point where the free energy curve crosses the
+$F=0$ axis falls in the high temperature regime, and a thermal
+phase transition is not seen as a function of temperature.
+
+As argued in~\cite{Klemm99a,Surya01a}, for hyperbolic and flat
+horizons, any phase transition, if exists, should be of different
+nature than for spherical horizons. It could be either due to a
+large coupling $\alpha^\p$ effect or due to a non-trivial horizon
+topology, such as $H^3/\Gamma$ or $I\!\!R^{n-1}/\Gamma$.
+Specifically, a new phase transition might occur as the coupling
+$\alpha^\p$ is increased~\cite{Emparan99b,Klemm99a}. One also
+observes a similar behavior here, for example, when $n=4$, at some
+finite coupling $0.25\,l^2>\alpha>0.1305\,l^2$, in the range
+$r_2>r_+>r_{extr}$, there exists a region where the free energy is
+positive and the Hawking-Page temperature is finite.
+
+For an extremal background having a zero or positive entropy
+${\cal S}_{extr}\geq 0$ (i.e., for small $\alpha$) the free energy
+$F(\beta)$ can only be negative for positive $\beta$. The free
+energy takes a maximum value at the extremal state only if ${\cal
+S}_{extr}=0$ (for example, when $n=4$ and $\alpha=l^2/12$). In
+other words, when $k=-1$ and $n=4$, there is no thermal AdS phase
+at all for the coupling $\alpha<0.1305\,l^2$, hence no any phase
+transition occurs in this case. Unlike in the conventional
+Hawking-Page thermal phase transition, where a first order phase
+transition takes place between a thermal AdS phase ($r_+<l$) and a
+Schwarzschild AdS black hole ($r_+>l$), for the $k=-1$ topology,
+there does not occur any phase transition as a function of
+temperature.
+
+\subsection{Free energy for spherical black holes}
+
+Next we examine the behavior of free energy and the thermodynamic
+stability of spherical black holes. In fact, there would exist
+relatively more stable black hole solutions for spherical
+horizons. In this case, the reference background itself is a
+global AdS space, so $E=M$, and hence the free energy is zero when
+\bea \alpha_{\pm}&=&\pm \frac{r_+^2}{2}
+\sqrt{\frac{9\,r_+^4}{l^4}+\frac{(15-n)\,r_+^2}{(n-1)\,l^2}
+-\frac{(n+1)(7n-25)}{4(n-1)^2}}\nn \\
+&{}&
++\,r_+^2\left(\frac{3\,r_+^2}{2\,l^2}-\frac{(n-7)}{4(n-1)}\right)
+\,. \eea The corresponding zero free energy curves, each for
+$\alpha_-$ and $\alpha_+$, coincide when \bea \label{stableF}
+r_+^2&=&\left(\frac{n+8\sqrt{n(n-3)}-15}{18(n-1)}\right)l^2 \,,
+\nn \\
+\alpha&=&r_+^2\left[\frac{4\sqrt{n(n-3)}-(n-3)}{6(n-1)}\right]\
+.\eea Thus, for example, when $n+1=5$, one has
+$r_+^2=18\alpha/7>2\alpha$. Only for coupling $\alpha_-$ one would
+expect a stable AdS solution with $F=0$, in satisfying $\alpha <<
+l^2$.
+
+\begin{figure}[ht]
+\begin{center}
+\epsfig{figure=hyper7.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=hyper8.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=hyper9.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\caption{Inverse temperature $\beta$ (curves that asymptote to $F$
+and $r_+$ axes) and free energy (curves that cross $r_+$-axis)
+{\it vs} horizon position $r_+$ for spherical black holes. The
+values are fixed at $k=+1$, $n=4$, $l=1$, and, from top to bottom,
+$\alpha=0.0278$, $0.01$, and $\alpha=0.003$. A new branch of
+stable black hole appears in the $AdS_5$ case.} \label{figure7}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+\begin{center}
+\epsfig{figure=hyper10.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=hyper11.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=hyper12.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\caption{Inverse temperature $\beta$ (curves that asymptote to
+$r_+$-axis) and free energy (curves that cross the $r_+$-axis)
+{\it vs} horizon position $r_+$ for spherical black holes. The
+values are fixed at $k=+1$, $n=6$, $l=1$, and, from top to bottom,
+$\alpha=0.1$, $0.05$, and $\alpha=0.01$.} \label{figure8}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+For spherical black holes, we have computed the free energy with
+respect to AdS space, so positive free energy means a thermal AdS
+phase is thermodynamically preferred, while negative free energy
+means a black hole phase is preferred. And, in general, a finite
+low temperature phase corresponds to a thermal AdS phase. A
+relatively more stable region is that where the free energy is
+negative and the Hawking-Page temperature is large.
+
+The spherical black holes indeed present an interesting thermal
+feature, namely, a Hawking-Page thermal phase transition at finite
+temperature~\cite{Hawking83a}. Looking to the extreme left of each
+plots in Fig~(\ref{figure7}) and Fig.~(\ref{figure8}), the free
+energy is positive for $AdS_5$ spherical black holes and is
+vanishing for $AdS_7$ spherical black holes.
+
+In the $AdS_5$ case, as the coupling strength of $\alpha$ is
+decreased the free energy further lowers towards zero at low
+temperature. For an extremely small coupling $\alpha<<l^2$, in the
+small $r_+$ region, the free energy nearly approaches zero but it
+never touches the $F=0$ axis. For example, when
+$\alpha/l^2=3\times 10^{-7}$, the free energy is $F\sim 4\times
+10^{-6}$. That is, for $\alpha<<l^2$, the free energy curve
+crosses the $F=0$ only once, namely when $r_+\lesssim l$, which
+corresponds to a Hawking-Page phase transition.
+
+For the coupling $\alpha/l^2\gtrsim 0.0278$, the free energy is
+monotonously decreasing function of $r_+$ and the second branch
+(peak) on the right disappears. Making use of the relation $
+{\alpha^\p}/l^2=1/\sqrt{2 g_{YM}^2 N}$ (in the units $16\pi
+G_{n+1}=1$, $\alpha=(n-2)(n-3)\alpha^\p$), one observes that the
+Hawking-Page transition might disappear at sufficiently small 't
+Hooft coupling $g_{YM}^2 N$, but there might appear a new phase
+transition in small $r_+$ region, as in~\cite{Mli99a,Klemm99a}.
+
+For $AdS_5$ spherical black holes, the plots of inverse
+temperature and free energy would remind us of the behavior of a
+Van der Waals gas in the Clapeyron $(V,P)$ phase, where one
+observes the point of inflection in $\beta(r)$ to signal a
+critical point. Therefore, these graphics can be compared to those
+in Refs.~\cite{Chamblin99a,Klemm99a}. In~\cite{Chamblin99a}, the
+plane of the Clapeyron phase was observed for charged AdS black
+holes, and in~\cite{Klemm99a}, analogous behavior was noted for
+AdS black holes that receive stringy corrections of the form
+${\alpha^\p}^3 R^4$. These results are available also to AdS black
+hole thermodynamic that receives a $R_{abcd}R^{abcd}$ type
+correction~\cite{IPN02c} (see~\cite{Odintsov01b} for a related
+discussion on the confining (deconfining) phase transitions).
+In~\cite{Klemm99a}, the free energy curves, however, diverge for
+small $r_+$ and the solutions are only perturbative. With a
+Gauss-Bonnet type correction we have exact solutions and the free
+energy curves are smooth functions of the horizon position $r_+$,
+and hence of the Hawking-Page temperature.
+
+In $AdS_7$ spacetime, a thermal AdS phase always dominates over a
+black hole, so there are no stable small black holes. Nonetheless,
+the low temperature corresponds to a thermal AdS phase with zero
+or positive free energy, and the high temperature corresponds to
+an AdS black hole with negative free energy. Unlike in the $AdS_5$
+case, for $AdS_7$, the qualitative features of the Hawking-Page
+transitions are not changed by the coupling strength $(\alpha)$,
+except that the free energy becomes more and more positive as the
+coupling $\alpha$ is decreased.
+
+Indeed, for the $\alpha>0$ solution, the $AdS_7$ black hole
+behaves differently from the $AdS_5$ black hole. But, in all
+spacetime dimensions, a maximum of free energy with $F>0$
+corresponds to the low temperature phase and the $F<0$ phase
+corresponds to the high temperature phase, separated by the
+Hawking-Page transition at $F=0$. At low temperature and small
+coupling $\alpha$ (i.e., $g_{YM}^2 N$ is large), a pure AdS space
+dominates the thermodynamic ensemble, and at high temperature,
+where free energy is negative, the Schwarzschild-AdS black hole
+dominates the thermodynamic ensemble.
+
+Translating plots for the free energy to the field theory, one
+would expect that, for the $k=1$ event horizon topology, the
+four-dimensional dual field theory can have a vanishing or
+positive free energy at low temperature. In the spirit of
+Witten-Hawking-Page type phase transition~\cite{Witten98a}, it is
+plausible that the low temperature thermal AdS phase with $F=0$
+corresponds to a confining phase in the dual large $N$ Yang-Mills
+theory, and the high temperature black hole phase with $F<0$
+corresponds to a de-confining phase of the gauge theory.
+
+\section{Stability analysis: metric perturbations}
+
+Stability of the spacetime matrices under gravitational
+perturbations can normally be checked from an analysis that
+whether the bound states with negative eigen state exist. If the
+corresponding Schrodinger equations allows a state with $E<0$
+or/and there are growing (quasi-) normal modes at the event
+horizon, then the spacetime metrics are usually unstable. This
+will be the main focus in what follows henceforth.
+
+\subsection{Linearized field equations}
+
+The Einstein field equations supplemented with a Gauss-Bonnet term
+read \be \label{newEE2} R_{ab}=\frac{2\Lambda}{n-1}\,
+g_{ab}-32\alpha^\p \pi G_{n+1} \left(H_{ab}-\frac{1}{n-1}\,g_{ab}
+H\right)\,.\ee In maximally symmetric spaces, for a background
+metric $\bar{g}_{ab}$, the Ricci curvature is $\bar{R}_{ab}=-\,n c
+\,\bar{g}_{ab}$, with $c$ being a constant of dimension
+$(\mbox{length})^{-2}$. One considers a small perturbation to the
+metric $\bar{g}_{ab}\to g_{ab}= \bar{g}_{ab}+h_{ab}$,
+$g^{ab}=\bar{g}^{ab}-h^{ab}$, such that $\vert h^a\,_b\vert <<1$.
+Then, for $\alpha^\p=0$, the linearized vacuum Einstein equations
+read \be \delta R_{ab}=-\,n c\, h_{ab}=-\,\frac{n}{l^2}\,h_{ab}\,.
+\ee
+
+Next, for $\alpha^\p>0$, as evaluated in the Appendix, the
+perturbations $\delta g_{ab}~(=h_{ab})$ must satisfy \bea
+&{}&\left(1-2 C\alpha\right) \delta R_{ab}= -\,n\,C\,
+\left(1-\frac{(3n^2-3n+2) C
+\alpha}{n(n-3)}\right)h_{ab}\nn \\
+&{}& ~~~~ -\,\frac{2C\alpha}{n-3}\,\bar{g}_{ab}\left(\bna^c\bna^d
+h_{cd}-\bna^2 h+C(n+1)h\right)\,. \label{A3} \eea For the
+transverse trace-free (de Donder) perturbations, $h_c^c=\bna^a
+h_{ab}=0$, we obtain \bea 2\delta
+R_{ab}&=&\left(\Delta_L h\right)_{ab}\nn \\
+&=&-\,\frac{2n C}{1-2C\alpha}\left[1-\frac{C \alpha
+(3n^2-3n+2)}{n(n-3)}\right]h_{ab} \,.\nn \\
+&{}& ~~~~ \eea For the $k=-1$ horizon, it is not {\it a priori}
+sufficient to prove stability for the tensor modes only. In these
+cases, the scalar and vector modes also can be unstable. However,
+it is generally the case for a spherical horizon topology. In
+particular, when the vacuum solutions of the Einstein field
+equations are taken into account, the vector and scalar
+perturbations, in the background of higher dimensional black
+holes, are insensitive to probe stabilities on the base manifold
+${\cal S}^{n-1}$ (see, for
+example,~\cite{Gubser00a,Shiromizu,Gibbons02a} for relevant
+discussion). As argued in~\cite{Gibbons02a}, for the
+$k=\{0,\,-1\}$ geometry, instability could arise also due to
+scalar fluctuations. We will not study such modes here, which
+might require knowledge of couplings between the curvature and
+conformal scalars on the boundary other than the scalar modes of
+the metric fluctuations. A linear perturbation analysis for
+stability of dilatonic black holes with a Gauss-Bonnet term has
+been presented in~\cite{Torii98}.
+
+We wish to study stability of the background metrics under the
+conditions \be h_{0a}=h_{1a}=0\,. \ee Alternatively, one may
+impose the conditions such that $|h_a\,^b|<<1$ and \bea h_{cd}&=&
+{\cal O}\left(r^{-2}\right)\,, \quad h_{c
+r}=\left(r^{-4}\right)\,, \quad h_{rr}=\left(r^{-6}\right)\,,\nn
+\\
+&{}& ~~~~~ \mbox{with}\,,~ c,\,d\neq r\,.\nn \eea With these
+constraints, along with a requirement that the base manifold
+${\cal M}^{n-1}$ is itself an Einstein space $\widetilde{R}_{i
+j}(h)=(n-2)k\,\tilde{g}_{i j}$, the transverse tracefree property
+of $h_{ab}$ is characterized by $h_{i j}$, where $i\,\,j,\cdots$
+run from $2$ to $n~(\equiv D-1)$, \bea 2\delta R_{i
+j}&=&\left(\Delta_L h\right)_{i j}\nn \\
+&=&-\,\frac{2n\,C}{1-2C\alpha}\,\left(1-\frac{C \alpha
+(3n^2-3n+2)}{n(n-3)}\right)h_{i j}\nn \\
+&\equiv& -\,2\,n\,A\,h_{i j}\,, \label{mainlinear} \eea with \bea
+&{}&\left(\Delta_L h\right)_{i
+j}\,=\,\frac{1}{r^2}\,\tilde{\Delta}_L h_{i j} -f
+\left(\frac{d^2}{d r^2}
++\frac{4}{r^2}\right)h_{i j} \nn \\
+&{}& ~~~~~-\,\frac{r f^\p+(n-5)f}{r}\,\frac{d}{d r}\,h_{i
+j}+\frac{1}{f}\, \frac{d^2}{d t^2}\,h_{i j} \,, \eea where
+$\tilde{\Delta}_L h_{i j}$ is the Lichnerowicz operator acting on
+${\cal M}^{n-1}$. One may look for unstable tensor modes of the
+form \be h_{i j}(x) = r^2\,\phi(r)\, e^{\omega t}\,\wth_{i j}
+(\tilde{x})\,, \ee where $(\tilde{x})$ are coordinates on ${\cal
+M}^{n-1}$. It is convenient to assume that \be
+\left(\widetilde{\Delta}_L \wth\right)_{i j}=\lambda\, \wth_{i
+j}\,,\ee where $\lambda$ is the eigenvalue of the Lichnerowicz
+operator. Eq.~(\ref{mainlinear}) then takes the form of
+Sturm-Liouville type problem~\cite{Gibbons02a} \bea
+&{}&-\,f\frac{d}{dr}\left(f\,
+r^{n-1}\,\frac{d\phi(r)}{dr}\right)-\,\frac{2f}{r^2}\,\Big((n-2)f
+-\frac{\lambda}{2}\nn \\
+&{}&+\,r\,f^\p-nA\,r^2\Big)\phi(r)=\omega^2\,\phi(r)
+\,r^{n-1}\,.\eea In terms of Regge-Wheeler type coordinates:
+$dr\equiv f\,dr_*$ and $\phi(r)\equiv \Phi\,r^{-(n-1)/2}$, this
+takes the form \be \frac{d^2\Phi}{dr_*^2}- V(r(r_*))\Phi=\omega^2
+\Phi \ee where \bea \label{mainpoten}
+V(r)&=&\frac{\lambda\,f}{r^2}+\frac{\left((n-2)(n-10)-1\right)
+f^2}{4r^2} + \frac{(n-5)ff^\p}{2r}\nn \\
+&{}& ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ + 2nA\,f \,.\eea A
+requirement of finite energy is equivalent to the normalization
+condition that $\int \Phi^2\,dr_*=\int f(r)^{-1}\,\Phi^2\,dr$ is
+finite~\cite{Gibbons02a}. In general, stability of the AdS vacuum,
+and stability the above potential, in particular, depends on the
+eigenvalues of the Lichnerowicz operator $\Delta_L$.
+
+\subsection{Stability of massless state in general relativity}
+
+We specialize the above case for $\alpha^\p=0$. In fact, for the
+$k=+1$ geometry, the metric background with a zero mass is always
+stable in AdS space. This is reminiscent of the fact that the
+ground state of the Schwarzschild AdS black hole is itself given
+by a global AdS space with $\mu=0$. The issue of instability
+arises only for $n+1>4$, because in four spacetime dimensions the
+Schwarzschild black holes are stable~\cite{Vishves70a}, and also
+the symmetric transverse trace-free tensor modes are not available
+in stability analysis, when $n=3$.
+
+Consider first the case with a vanishing cosmological constant
+$\Lambda=0$, so $A=0$. In this case, the spacetime is flat if the
+base is a sphere and if the base is not a sphere then the full
+spacetime is a cone which is singular at the origin. So it is
+relevant to consider the $k=1$ geometry. In this case, one has
+$f(r)\to 1$ asymptotically and $r=r_*$. The asymptotic potential
+is \be \label{inftypoten}
+V_\infty(r)=\frac{4\lambda+(n-2)(n-10)-1}{4\,r^2}
+=\frac{(2\nu-1)(2\nu+1)}{4\,r^2}\,. \ee  Thus the
+potential~(\ref{inftypoten}) is non-negative only if \bea
+\label{lambdarel.} \lambda &\geq & \frac{1+(n-2)(10-n)}{4}\,,\nn
+\\ or, \quad \nu &=&\frac{1}{2}\,\sqrt{(n-2)(n-10)+4\lambda}\geq
+\frac{1}{2} \eea where $V_\infty (r)=0$ if equality holds. In
+general, stability of the background metric requires that there is
+no any bound negative energy states or no growing modes with
+$\omega>0$ at the horizon, if latter exists. A requirement that
+$\lambda>0$ indeed constraints the spacetime dimensions $D=(n+1)$
+by $n\leq 10$, because $n>10$ may allow a negative $\lambda$,
+which should not be the case for the $k=+1$ topology. The
+dimensions $D=n+1\leq 11$ itself is interesting from the view
+point of low energy supergravity.
+
+The asymptotic solution for $\Phi(r)$ that decays as $r$ goes to
+$+\infty$ is \bea \Phi_\infty &=& C_1\,\sqrt{r}\,
+J_\nu\left(\sqrt{-\omega^2}\,r\right)+
+C_2\,\sqrt{r}\,~  Y_\nu \left(\sqrt{-\omega^2}\,r\right)\nn \\
+&=& Re \,\left(\sqrt{r}\,K_\nu(\omega r)\right) \,. \eea For small
+$r$, and a real positive $\nu$, $\Phi_\infty(r)$ behaves as $\sim
+r^{-\nu+1/2}$. The solution is divergent but normalizable for
+$1>\nu >1/2$, and divergent and non-normalizable for $\nu\geq 1$.
+In this case, there are no localized negative energy modes due to
+an imaginary $\nu$. For $n\leq 10$, an imaginary $\nu$ does not
+exist for a positive potential. For $n>10$, the eigenvalue
+$\lambda$ may take a negative value, so $\nu>1$, but this solution
+is always non-normalizable.
+
+Above we have analyzed only the $\Lambda=0$ case. It has been
+known that a massless solution with $k=+1$, $\mu\geq 0$ is usually
+stable under metric perturbations, and this is true also for the
+$\Lambda<0$ solution. In this case, the
+potential~(\ref{inftypoten}) is modified to \bea
+\label{fullpotenk=1}
+V(r)&=&\left(\frac{4\lambda+(n-2)(n-10)-1}{4\,r^2}
++\frac{(n-1)(n+1)}{4\,l^2}\right)\nn \\
+&{}& ~~~~~~~~~~~~~~~~~~~~~~\times
+\left(1+\frac{r^2}{l^2}\right)\nn \\
+V(x) &=&\frac{1}{l^2} \Bigg(\frac{4(\lambda-n+1)+(n-3)(n-5)}{4\,
+x} \nn \\
+&{}& ~~~~~~~~~~~~~~ +\,
+\frac{(n-1)(n+1)}{4}\Bigg)\left(1+x\right)\,, \eea where $x\equiv
+r^2/l^2$. The potential~(\ref{fullpotenk=1}) is always positive
+and bounded from below in satisfying~(\ref{lambdarel.}). The
+Schr\"odinger equation under the above potential may be expressed
+as a hypergeometric equation \bea \label{Schro} &{}&
+x(x+1)^2\,\Phi^{\p\p}(x)+
+\frac{(x+1)(3x+1)}{2}\,\Phi^\p(x)\nn \\
+&{}&~~ -\, \frac{x+1}{4}\times
+\Bigg(\frac{4\lambda+(n-2)(n-10)-1}{4x}\nn \\
+&{}& ~~~~~+\,
+\frac{(n-1)(n+1)}{4}+\frac{\omega^2\,l^2}{(x+1)}\Bigg)\Phi(x)=0\,,
+\eea with no singularities in the range $0<x<\infty$. To
+simplify~(\ref{Schro}) one can make the following substitutions
+\bea 2\nu &=&\sqrt{4\lambda+(n-2)(n-10)}\,,
+\quad \sigma=-\,\frac{i\omega\,l}{2}\\
+a&=&\sigma+\frac{2\nu-(n-2)}{4}\,, \quad
+b=\sigma+\frac{2\nu+(n+2)}{4}\,, \nn \\
+&{}&~~~~~~~~~~~~~~~~~ c=\nu+1\,. \eea Under the decomposition
+$\Phi(x)=x^{(1+2\nu)/4}\, (1+x)^\sigma\,\varphi(x)$, two
+independent solutions of~(\ref{Schro}) are \bea &{}&\varphi(x)=
+{}_2F_1(a,\, b;\, c;\, -\,x)\, \quad \mbox{and}\nn \\
+&{}&~~ x^{1-c}\,~{}_2F_1(a-c+1,\, b-c+1;\, 2-c;\, -\,x)\,, \eea
+where ${}_2F_1(a, b; c;x)$ is the hypergeometric function, and the
+parameter $c\neq 0, -1, -2, -3, \cdots$ for the first solution,
+and $c\neq 2, 3, 4,\cdots$ for the second solution. A general
+solution of~(\ref{Schro}) is thus given by a linear combination of
+\bea &{}& \Phi_\pm (x)= x^{(1\pm
+2\nu)/4}\,\left(1+x\right)^{-\,i\omega l/2}\times \nn \\
+&{}& {}_2F_1\Bigg(\frac{\pm\, 2\nu-(n-2)}{4}-\frac{i\omega
+l}{2},\,
+\frac{\pm\, 2\nu+(n+2)}{4}-\frac{i\omega l}{2};\nn \\
+&{}& ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\,\pm\,\nu+1;\,-\,x\Bigg)\,.\eea  There exists a solution that is
+analytic in the neighborhood of the origin which can be normalized
+to unity. A stability check may be needed for the both limits:
+$x\to 0$ and $x\to \infty$. This is the case extensively studied
+by Gibbons and Hartnoll in~\cite{Gibbons02a}. For a consideration
+of the $\alpha>0$ case in next section, we briefly discuss first
+some important features of the $\alpha=0$ solution.
+
+To study the asymptotic behavior, one uses the following relation
+for hypergeometric functions~\cite{Askey} \bea
+&&_2F_1(a,b;c;x)=h_1\,(-x)^{-a}\times \nn \\
+&&{}~~~~~~~~~~
+_2F_1\Big(a,\,a-c+1;\,a-b+1;\frac{1}{x}\Big)\nn \\
+&&+\,h_2\,(-x)^{-b}\,{}_2F_1\left(b,\,b-c+1; b-a+1;
+\frac{1}{x}\right), \label{infinite} \eea where \be
+h_1=\frac{\Gamma(c)\Gamma(b-a)}{\Gamma(c-a)\Gamma(b)}\,, \quad
+h_2=\frac{\Gamma(c)\Gamma(a-b)}{\Gamma(c-a)\Gamma(a)}\,. \ee
+
+As $x\to \infty$, the asymptotic solution is \bea &&
+{}_2F_1(a,\,b;\,c;\,x)=h_1\,(-x)^{-a}
+\left(1+\frac{a(a-c+1)}{a-b+1}\,\frac{1}{x}+\cdots\right)\nn \\
+&&~~~~~~~~~+\,h_2\,(-x)^{-b}
+\left(1+\frac{b(b-c+1)}{b-a+1}\,\frac{1}{x}+\cdots\right)\,.\eea
+The boundedness requires that as $r\to\infty$ the function
+$\Phi(r)$ must go as ${\cal O}\left(r^{(n-1)/2}\right)$ or lower
+power of $r$. The solution which has this behavior is given by the
+linear combination of $\Phi_{\pm}$ such that the term $(x)^{-b}$
+of two solutions cancel. Hence \bea \label{thirdsol} \Phi_3 (x)&=&
+x^{-(n+1)/4+i\omega\,l/2}\,\left(1+x\right)^{-\,i\omega\,l/2} \nn
+\\&\times & {}_2F_1\Bigg(\frac{2\nu+n+2}{4}-\frac{i\omega\,l}{2},
+\, \frac{-\, 2\nu+n+2}{4}-\frac{i\omega\,l}{2};\nn \\
+&{}&~~~~~~~~~~~~~~~~~ \,\frac{n+2}{2};\,-\,\frac{1}{x}
+\Bigg)\,.\eea To evaluate the behavior as $r\to 0$, one can
+apply~(\ref{infinite}) to~(\ref{thirdsol}), replacing $1/x$ by $x$
+for ${}_2F_1$. Then the leading behavior of the solution as $x\to
+0$ is given by ${\cal O}\left(x^{-(n+1+2\nu-n-2)/4}\right) \sim
+{\cal O}\left(r^{(1-2\nu)/2}\right)$. The range of convergence for
+$c>a+b$ is $|x|<1$ and $x=1$, which implies that
+$0>-\,i\omega\,l$. Therefore, a situation that the hypergeometric
+series terminates for some special (positive) values of $\omega$
+simply does not arise here~\cite{Gibbons02a}. As a consequence,
+the massless configurations where ${\cal M}^{n-1}$ has constant
+positive ($k=+1$) curvature are stable under tensor perturbations.
+Some further discussion on the asymptotic behavior of the
+solutions will also be given in next section while discussing the
+$\alpha>0$ case.
+
+\subsection{Instability of hyperbolic black holes with $\mu=0$}
+
+The instability of $k=-1$ massless ($\mu=0$) black hole spacetimes
+in Einstein gravity ($\alpha^\p=0$), under tensor perturbations,
+was studied in~\cite{Gibbons02a} with some details. So we will be
+brief in our analysis of this particular case, but we shall review
+some results reported earlier as there arise some quantitative
+differences. For $\alpha=0$, the metric solution $f(r)$ takes the
+form \be \label{bhmetric}
+f(r)=k+\frac{r^2}{l^2}-\frac{\mu}{r^{n-2}} \,.\ee With $k=-1$,
+$\mu=0$, the above metric, although it possesses a horizon ar
+$r_+=l$, may not describe a black
+hole~\cite{Vanzo,Mann96a,Emparan99b}. This spacetime is simply a
+topological space, which requires suitable identifications at
+conformal infinity. The gravitational potential takes the form
+\bea
+V(x)&=&\frac{1}{l^2}\Bigg(\frac{4(n-1+\lambda)-(n-3)(n-5)}{4\,x}\nn
+\\ &{}&~~~~~~ +\,\frac{(n-1)(n+1)}{4}\Bigg)\left(x-1\right) \,, \eea where
+$x\equiv r^2/l^2$. One can easily show that the above potential
+can be positive for all values of $x$ only if \be
+\lambda=5-3n\equiv \tilde{\lambda}\,.\ee This is a special
+situation. One might note that for a quotient space, the
+Lichnerowicz spectrum should be bounded below by
+$\lambda_{min}=-\,2(n-1)$. The spacetime dimensions $n+1=4$ is in
+borderline for which $\tilde{\lambda}=\lambda_{min}$. The issue of
+instability, however, arises only for $n+1>4$, because there are
+no tensor harmonics on $S^2$ or $H^2$. For $n+1\geq 5$,
+$\tilde{\lambda}$ is smaller than the minimum eigenvalue
+$\lambda_{min}$, and in this case the potential can be negative.
+More precisely, as the plots in Fig~(\ref{figure9}) show, the
+potential is negative but bounded from below when \be
+\label{critical}
+\lambda<\lambda_{crit}=\frac{(n-2)(n-10)-1}{4}\,,\ee and unbounded
+when $\lambda \geq \lambda_{crit}$, the latter might signal
+instability of a massless black hole, when $k=-1$.
+
+To gather more information, we need to solve the Schr\"odinger
+equation. In terms of the dimensionless parameter $x\equiv
+r^2/l^2$, the Schrodinger equation, under the above potential, can
+easily be expressed as a hypergeometric equation \bea
+\label{HyperGk=-1} &&
+x(x-1)\,\Phi^{\p\p}(x)+\frac{x+1}{2}\,\Phi^\p(x)-\frac{1}{4}\,
+\Bigg(\frac{(n-1)(n+1)}{4}\nn \\
+&& +\frac{4\lambda+1-(n-2)(n-10)}{4x}+\frac{\omega^2\,l^2}{4}\,
+\frac{1}{x-1}\Bigg)\Phi(x)=0\,. \nn \\
+&&~~~~~~~~~~~~~~~~~~ \eea Then one can make the following
+substitutions \bea \label{substitute} 2\tnu
+&=&\sqrt{4(2-\lambda)+(n-2)(n-10)}\,,
+\quad \tsigma=-\,\frac{\omega\,l}{2}\nn \\
+a&=&\tsigma+\frac{2\tnu+(n+2)}{4}\,, \quad
+b=\tsigma+\frac{2\tnu-(n-2)}{4}\,, \nn \\
+&{}&~~~~~~~~~~~~~~~~~ c=\tnu+1\,,\eea and decompose the harmonic
+function as $\Phi(x)=x^{(3+2\tnu)/4}\,
+{(x-1)}^{\tsigma}\,\varphi(x)$. Then two independent solutions
+of~(\ref{HyperGk=-1}) are  \bea &{}& \varphi(x)= {}_2F_1(a,\, b;\,
+c;\, x)\,\quad \mbox{and}\nn \\ &{}&~~x^{1-c}\,~{}_2F_1(a-c+1,\,
+b-c+1;\, 2-c;\, x)\,. \eea
+
+A general solution of~(\ref{HyperGk=-1}) is therefore given by the
+linear combination of the following two solutions~\footnote{We
+believe that the expression given in Ref.~\cite{Gibbons02a} (c.f.,
+Eq.(43)) need to be presented as appeared in the
+expression(~\ref{k-1sol}) with some change of notations $2\tnu=C$,
+$n=d+1$, and $l=1/L$.} \bea \label{k-1sol} &{}& \Phi_\pm
+(x)=x^{(3\pm
+2\tnu)/4}\,\left(x-1\right)^{-\,\omega\,l/2}\times \nn \\
+&{}& {}_2F_1\Bigg(\frac{\pm\,
+2\tnu+(n+2)}{4}-\frac{\omega\,l}{2},\, \frac{\pm\,
+2\tnu-(n-2)}{4}-\frac{\omega\,l}{2};\nn \\
+&{}&~~~~~~~~~~~~~~~~~~~~~~~~\, \pm\,\tnu+1;\,\,x\Bigg)\,.\eea The
+boundedness requires that as $r\to\infty$ the function $\Phi(r)$
+must go as ${\cal O}\left(r^{(n-1)/2}\right)$ or lower power of
+$r$. The solution which has this behavior as $r\to \infty$ is
+given by the linear combination of $\Phi_{\pm}$ such that the term
+$(-x)^{-b}$ of two solutions cancel, and hence the asymptotic
+behavior goes like ${\cal O}\left(x^{(3\pm 2\tnu\mp 2\tnu
+-n-2)/4}\right)\sim {\cal O}\left(r^{-(n-1)/2}\right)$. The
+solution that is well behaved as $r\to \infty$ therefore takes the
+form \bea &&\Phi_3 (x)=x^{(2\omega l
+-n+1)/4}\,\left(x-1\right)^{-\,\omega\,l/2}\times ~~~~~~~~~~~~\nn
+\\
+&&{}_2F_1\left(\frac{2\tnu+n+2}{4}-\frac{\omega\,l}{2},\,
+\frac{-2\tnu+n+2}{4}-\frac{\omega\,l}{2};\,
+\frac{n+2}{2};\,\,\frac{1}{x}\right)\nn \\
+&& ~~~~~~~~~~~~~~~~~~~~~~  \,.\eea
+
+We can find the new solutions of the hypergeometric equation by
+using the relation \bea &{}&{}_2F_1\left(a,\, b;\,c;\,x\right)=
+k_1\,{}_2F_1\left(a,\,b;\,a+b+1-c;\,1-x\right)\nn \\
+&{}&~~~~~~~~~~~~~~~~~~~~~~~
++\,k_2\,\left(1-x\right)^{c-a-b}\,\times\nn \\
+&&~~~~~~{}_2F_1 \left(c-b,\,c-a;\,1+c-a-b;\,1-x\right)\,,\eea
+where \be
+k_1=\frac{\Gamma(c)\Gamma(c-a-b)}{\Gamma(c-a)\Gamma(c-b)}\,,\quad
+k_2=\frac{\Gamma(c)\Gamma(-c+a+b)}{\Gamma(a)\Gamma(b)}\,. \ee For
+a generic solution with $k_1,\,k_2\neq 0$, the dominant term as
+$x\to 1$ is ${\cal O}\left((x-1)^{-\omega\,l/2}\right)$. This
+solution is not square integrable at $x=1$. In the special case,
+$k_1=0$, which is accomplished by choosing $c=a$ or $c=b$, one
+finds the solution with better behavior at $x=1$. In this case,
+the leading term as $x\to 1$ is \be
+(x-1)^{-\omega\,l/2}\,\left(\frac{x-1}{x}\right)^{\omega\,l}=
+{\cal O}\left((x-1)^{\omega\,l/2}\right)\,.\ee This solution is
+normalizable and bounded at the horizon for $\omega>0$. The
+condition that either $(c-a)$ or $(c-b)$ is zero would be that \be
+\omega =\left(\frac{2\tnu-(n+2)}{2\,l}\right)>0
+%% \quad \mbox{or}\quad
+%%\omega=\left(\frac{-2\tnu-n-2}{4 l}\right)>0
+\,.\ee This holds if $2\tnu>n+2$, which requires $\lambda_{min}
+<(6-4n)$ (c.f., the first expression in Eq.~(\ref{substitute})).
+As we noted above, for $H^{n-1}$ space and its quotient
+$H^{n-1}/\Gamma$, this eigenvalue may not be allowed, because the
+Lichnerowicz spectrum is bounded below by $\lambda_{min}=
+-\,2(n-1)$. This should not mean that a massless topological
+spacetime is stable. In fact, in the following range of the
+eigenvalues, which are allowed by the theory such that $2\tnu
+> 1$, \be \label{mainconstr} \frac{(n-2)(n-10)-1}{4}\leq \lambda <
+\frac{(n-2)(n-10)+8}{4}\,, \ee one still has
+$\lambda>\lambda_{min}$, but the gravitational potential is always
+unbounded from below. Though a negative potential does not
+necessarily imply instability of the background, an unbounded
+potential certainly signals instability of a massless topological
+black hole spacetime.
+
+\begin{figure}[ht]
+\begin{center}
+\epsfig{figure=5dpoten.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=7dpoten.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=10dpoten.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\caption{The potential in function of horizon $r_+$ at fixed
+$l=1$; (a) $n=4$ and $\lambda=-\,5,~-\,14/4,~-\,3$ (top to
+bottom); (b) $n=6$ and $\lambda=-\,6,~-\,17/4,~-\,4$ (top to
+bottom); (c) $n=9$ and $\lambda=-\,3,~-\,9/4,~-\,1$ (top to
+bottom). The above potential will be bounded and positive only for
+$\lambda=5-3n$, and it is always unbounded for $\lambda$
+satisfying~(\ref{mainconstr}).} \label{figure9}
+\end{figure}
+
+As some specific examples, instability of a massless topological
+black hole can arise in the following range: \bea \bullet &{}&
+n=4: \quad -\,\frac{13}{4}\leq \lambda
+<-\,1 \nn \\
+\bullet &{}& n=6: \quad -\,\frac{17}{4}\leq \lambda <-\,2\nn \\
+\bullet &{}& n=9: \quad -\,2\leq \lambda <\frac{1}{4}\,.\nn \eea
+
+In four dimensions, the Schwarzschild AdS black hole is shown to
+be stable against small electromagnetic and gravitational
+perturbations~\cite{Cardoso01a}. In~\cite{Wang01a}, using a
+numerical method, a classical instability for the evolution of a
+massive scalar field coupled to curvature in four-dimensional
+topological spacetime is explored. Recently, an analytic
+expression for the quasi-normal modes of a scalar perturbation is
+presented in~\cite{Aros02a} for $n\geq 3$, where a massless
+topological black hole itself is taken as the ground state. Here
+we see that, for $k=-1$, a massless background can be unstable
+under metric perturbations.
+
+As for tensor perturbations, one can check instability by
+evaluating the (quasi-)normal modes at the horizon. To this aim,
+one defines $\omega\,l=-\,i\bar{\omega}$, then the quasinormal
+frequencies are determined by the conditions
+$a\vert_{\tsigma}=-\,N$ or $b\vert_{\tsigma}=-\,N$, with
+$N=0,1,2,\cdots $, so \be
+\bar{\omega}=i\left[2N+\frac{2(\tnu+1)\pm n}{2}\right]\,. \ee The
+quantity in the square bracket is generally positive, even if we
+take the negative sign. To make it negative we require
+$2\tnu<n-2$, even if $N=0$. This further implies that
+$\lambda>2n+5$, but for such value of $\lambda$ the potential is
+unbounded from below, thereby signalling a gravitational
+instability of a massless topological black hole.
+
+\subsection{Stability of negative mass extremal state}
+
+We discuss first the extremal solution in Einstein gravity. The
+metric background with a negative extremal mass $\mu_{extr}<0$ is
+given by \be \label{extremalMetric} f(r)=-1+\frac{r^2}{l^2}+
+B\left(\frac{l}{r}\right)^{n-2}\,, \quad
+B=2\sqrt{\frac{(n-2)^{n-2}}{n^n}}\,. \ee The above metric
+background has constant negative curvature, namely,
+$R_{ab}=-\,(n/l^2)\,g_{ab}$, and it is a candidate background
+metric for hyperbolic black
+holes~\cite{Vanzo,Birmingham98a,Emparan99a}. The gravitational
+potential therefore reads \bea \label{extremal1+n}
+V(r)&=&\Bigg[\frac{4(n-1+\lambda)-(n-3)(n-5)}{4\,r^2}\nn \\
+&{}&~~~~~+\, \frac{(n-1)(n+1)}{4\,l^2}-\frac{B(n-1)^2 l^{n-2}}{4\,
+r^n}\Bigg]\nn \\
+&{}&\times\, \left(-1+\frac{r^2}{l^2}
++B\left(\frac{l}{r}\right)^{n-2}\right) \,. \eea The spacetime one
+is allowed to take is $r>r_{extr}=l\,\sqrt{(n-2)/n}$. As expected
+the potential vanishes at the extremal horizon $r=r_{extr}$. This
+potential does not involve any negative energy eigen states for
+$\lambda>\lambda_{crit}$ and $r_+\geq r_{extr}$, and there is a
+bound state at the extremal horizon with $E=0$.
+
+\begin{figure}[ht]
+\begin{center}
+\epsfig{figure=potential4.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=potential5.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=potential6.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\caption{The potential defined for a negative mass extremal
+background with $\alpha=0$. The values are chosen, from top to
+bottom, at (a) $n=4$ and $\lambda=0,\,-1$ and $-2$; (b) $n=5$ and
+$\lambda=-1,\,-2$ and $-3$; (c) $n=6$ and $\lambda=-2,\,-3$ and
+$-4$.} \label{figure10}
+\end{figure}
+
+\subsection{Extremal solution in $n=4$}
+
+We are interested to check stability for the $k=-1$,
+$\mu_{extr}<0$ solution. For $n=4$, the metric
+function~(\ref{extremalMetric}) takes the form  \be
+\label{4dextremalM} f(x)=\frac{(2x-1)^2}{4x}\,, \ee where $x\equiv
+r^2/l^2$ is a dimensionless scale. There is no cosmological
+horizon for an extremal solution, so the perturbation extends to
+$x\to \infty$. The extremal horizon is at $2x=1$. The
+potential~(\ref{extremal1+n}) reads as \be
+V(x)=\frac{1}{l^2}\,\left(\frac{4(3+\lambda)+1}{4\,x}+\frac{15}{4}
+-\frac{9}{16\,x^2}\right) \left(\frac{(2x-1)^2}{4\,x}\right)\,.
+\ee This potential vanishes at the extremal horizon $2x=1$, but it
+is everywhere positive outside the extremal horizon. The
+Schrodinger equation under the potential takes the form \bea
+&&\frac{(2x-1)^2}{8x^2}\Bigg[2x(2x-1)^2\,\Phi^{\p\p}(x)+(4x^2-1)\,\Phi^\p(x)
+-2x\times \nn\\
+&&\left(\frac{4(3+\lambda)+1}{4\,x}+\frac{15}{4}-\frac{9}{16\,x^2}\right)
+\Phi(x)\Bigg] -\omega^2 l^2\,\Phi(x)=0\,.\nn \\
+&& ~~~~~~~~~ \eea The condition of boundedness is automatic,
+because it simply requires that $\Phi(x)$ is bounded at $2x=1$,
+where $f(x)=0$, as seen in the above plots for the potential. The
+finite energy condition will be that $\Phi(x)$ goes to zero on the
+extremal horizon, because the zero of $f(x)$ is simple. We can get
+some insights about stability of the solutions by inspecting the
+graphics for the gravitational potential.
+
+The above equation may be solved exactly only for $\omega=0$ modes
+\bea &{}&
+\Phi(x)=c_1\,(2x-1)^{-\,\gamma/4}\,x^{3/4}\,{}_2F_1(a,b;1;2x)\nn
+\\
+&{}& ~~~~ +\,c_2\, (2x-1)^{-\,\gamma/4}\,
+x^{3/4}\,{}_2F_1(a,b;1,2x)\nn \\
+&{}& ~~~~~~~\times \, \int
+\frac{(2x-1)^{-1+\gamma/2}}{x\,\left({}_2F_1(a,b;1;2x)\right)^2}\,dx
+\,,\eea where \be \gamma=\sqrt{2\lambda+32}\,,\quad
+a=\frac{6-\gamma}{4}\,,\quad b=\frac{-\,(2+\gamma)}{4}\,.\ee This
+solution converges at $2x=1$ for any eigenvalue
+$\lambda>\lambda_{crit}$, and as well in the
+range~(\ref{mainconstr}), and it is also normalizable there. The
+situation is similar in the $n>4$ case. Now for the eigenvalues
+$\lambda$ in the range given by~(\ref{mainconstr}), where one
+might expect instability to arise for a massless background, the
+potential is bounded and positive. Therefore, in the spacetime
+region $r\geq r_{extr}$, the potential is always positive, tending
+to zero at the extremal state. This means the extremal ground
+state could be stable under tensor perturbation.
+
+\subsection{Extremal solution in $n=6$}
+
+For $n=6$, the metric function~(\ref{extremalMetric}) takes the
+form \be f(x)=\frac{(3x+1)(3x-2)^2}{27\,x^2}\,, \ee and the
+corresponding potential is \bea
+V(x)&=&\frac{1}{l^2}\,\left(\frac{4\lambda+17}{4x}+\frac{35}{4}
+-\frac{25}{27\,x^2}\right)\nn \\
+&{}&~~~~~~\times \left( \frac{(3x+1)(3x-2)^2}{27\,x^2}\right)\,.
+\eea This potential is plotted in Fig.~(\ref{figure10}), and there
+is no need to repeat the above calculation for $n=6$, because this
+potential does not cover the whole spacetime region. For example,
+when $\lambda=-13/4$, the potential is not well behaved when
+$x<0.27$.
+
+More precisely, for the $\alpha=0$ solution, the spacetime region
+$r<r_{e}$ can have an internal infinity~\cite{Mann96a}, where the
+potential is not well defined. This might force the reference
+spacetime to be incomplete in Einstein gravity, specially for the
+$k=-1$ case. This is clearly seen in the plots of gravitational
+potential $V(r)$ vs horizon position, as shown in
+Fig.~(\ref{figure10}) for different spatial dimensions ($n$) and
+eigenvalues ($\lambda$). This problem may be resolved once the
+background metric and hence the potential receives higher
+derivative curvature corrections.
+
+
+\section{Gauss-Bonnet black holes and Gravitational Stability}
+
+For $\mu=0$, the AdS vacuum solution is given by \be \label{mu=0}
+f(r)=k+\frac{r^2}{2\alpha}\left(1\mp \sqrt{1-
+\frac{4\alpha}{l^2}}\,\right)\equiv k+C\,r^2\,. \ee That is, the
+$AdS_{n+1}$ metric spacetime has constant curvature $ R_{ab}=- n
+C\, g_{ab}$.
+
+For $k=-1$, we take a negative mass extremal state as the ground
+state. In this case, the background metric in five dimensions
+takes the form \be \label{GBExtremal}
+f(r)=-1+\frac{r^2}{2\alpha}\left[1 - \sqrt{\left(1 -
+\frac{4\alpha}{l^2}\right)\left(1-\frac{\alpha
+l^2}{r^4}\right)}\right]\,.\ee In the $\alpha\to 0$ limit, an
+anticipated, this reduces to~(\ref{extremalMetric}), which
+satisfies $R_{ab}=-\,(n/l^2)\,g_{ab}$. For a finite coupling
+$\alpha$, the metric background~(\ref{GBExtremal}) is only
+asymptotically locally AdS, which can be easily seen by allowing a
+particular coupling. A requirement that $4\alpha < l^2$ is
+complementary to the condition $r^2 \geq l^2/2$. The above
+background, unlike the AdS vacuum used in the spherical case,
+represents an extremal black hole which itself receives
+corrections from the coupling $\alpha$, similar situation arises
+for stringy corrections of the form $\left(\alpha^\p\right)^3
+R^4$~\cite{Klemm99a}.
+
+Here we shall be interested in the following
+two backgrounds: \\
+\noindent (i) an AdS space with zero mass ($\mu= 0$), which is
+the background for spherical black holes, and\\
+\noindent (ii) an extremal metric with $\mu_{extr}<0$, which is
+taken as the background for $k=-1$ hyperbolic black holes.
+
+\subsection{Stability of a massless Gauss-Bonnet black hole}
+
+As shown in the previous section, for $\alpha=0$, the
+Schwarzschild AdS black hole with $\mu=0$ and $k=+1$ horizon is
+stable under tensor perturbations. Here we extend this analysis
+for a non-trivial GB coupling. The background metric function,
+with $\alpha>0$, therefore reads \be \label{k=1bg} f(r)=1+C\,r^2
+\,, \quad \frac{1}{C}\equiv\frac{2\alpha}{1\mp
+\sqrt{1+\frac{8\alpha\Lambda}{n(n-1)}}}
+>0\,.\ee
+For generality, we may allow both sign for $C$, but we will
+ultimately find that, for $n+1\leq 8$, only the negative sign in
+front of the square root in~(\ref{k=1bg}) can give stable solution
+under metric perturbations. In maximally symmetric spaces, as
+explicitly shown in the Appendix (sub-section B), one may take
+$C\equiv 1/l^2$, which corresponds to the negative sign
+in~(\ref{k=1bg}). In this case, the Einstein vacuum is also the
+vacuum (ground state) of the Einstein-Gauss-Bonnet theory (see
+Appendix for further details).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[ht]
+\begin{center}
+\epsfig{figure=potential7.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=potential8.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=potential9.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\caption{The potential vs horizon radius for $k=+1$. The values
+are fixed at $n=7$, $\lambda=17/4$, $\alpha=2/11$ (upper plot);
+$n=8$, $\lambda=14/4$, $\alpha=2/9$ (middle plot); $n=9$,
+$\lambda=9/4$, $\alpha=1/4$ (lower plot). The upper most curve
+corresponds to the $\alpha=0$ case, and two other curves
+correspond to $\mp$ signs in~(\ref{k=1bg}): $-$ and $+$ (up to
+down) in the upper most plot, and reverse in the lower two
+plots).} \label{figure11}
+\end{figure}
+
+Let us introduce a dimensionless scale $x=Cr^2$, then the
+corresponding Schr\"odinger equation may be expressed as
+hypergeometric equation \bea \label{GBSchwarz} &{}&
+x(x+1)^2\,\Phi^{\p\p}(x)+
+\frac{(x+1)(3x+1)}{2}\,\Phi^\p(x)\nn \\
+&{}& -\, \frac{x+1}{4}
+\Bigg(\frac{4\lambda+(n-2)(n-10)-1}{4x}\nn \\
+&{}&+\, \frac{n^2-8n-1+d}{4}+
+\frac{\omega^2}{(x+1)C}\Bigg)\Phi(x)=0\,, \eea where \bea
+\label{constant=d} d &=&
+\frac{8nC}{(1-2C\alpha)}\,\frac{2\alpha}{1\mp \left(1-2C\alpha\right)}\nn \\
+&{}&\times
+\,\left[1-\frac{C\alpha(3n^2-3n+2)}{n(n-3)}\right]\,.\eea  We
+shall choose the minus sign out of $\mp$ in Eq.~(\ref{k=1bg}) or
+Eq.~(\ref{constant=d}) because this branch gives stable solutions
+in all dimensions. Another reason for choosing the negative sign
+is that, for this branch, in the limit $\alpha\to 0$, the black
+hole solutions reduce to that of Einstein gravity.
+
+The hypergeometric equation~(\ref{GBSchwarz}) may be solved
+exactly, and two independent solutions are \bea \Phi_\pm
+(x)&=&x^{(1\pm
+2\nu)/4}\,\left(1+x\right)^{-\,i\omega /{2\sqrt{C}}}\nn \\
+&{}& {}_2F_1\Bigg(\frac{\pm\, 2\nu \mp 2\beta +2}{4}
+-\frac{i\omega}{2\sqrt{C}},\, \frac{\pm\, 2\nu \pm 2\beta +2}{4}\nn \\
+&{}& ~~-\,
+\frac{i\omega}{2\sqrt{C}};\,\pm\,\nu+1;\,-\,x\Bigg)\,,\eea where
+$\nu=\frac{1}{2}\,\sqrt{4\lambda+(n-2)(n-10)}$ and
+$\beta=\frac{1}{2}\,\sqrt{n^2-8n+d}$. To determine the conditions
+for $\nu$ and $\beta$ to be real we need to satisfy \be \lambda
+\geq \lambda_{crit} = \frac{1+(n-2)(10-n)}{4}\,,\quad
+\mbox{and}\quad d\geq 8n-n^2+1 \,.\ee The first constraint is the
+same as in the $\alpha=0$ case. For $\alpha= 0$, one has $d=8n$,
+so $2\beta=n$. As we noted above, one of the roots of $C$ reduces
+to the solution in Einstein gravity, namely, $C=1/\ell^2$. We may
+derive a more useful constraint for $C\alpha$ from the condition
+$d\geq (8n-n^2+1)$, so $2\beta\geq 1$, which implies that \be
+\label{bound} C\alpha \leq \frac{(n-3)(n-1)}{2(n^2+11)}\,.\ee
+Using~(\ref{k=1bg}), along with $\Lambda=-\,n(n-1)/(2l^2)$, we
+find the constraint \be \label{newconstr} \frac{\alpha}{l^2}\leq
+\frac{(n-3)(n-1)(n^2+4n+19)}{4(n^2+11)^2}\,. \ee So, for example,
+when $n+1=5$, we find $\alpha/l^2\leq 17/324$. This bound may be
+slightly enhanced by minimizing the eigenvalue $\lambda$, but
+satisfying $\nu \geq 1/2$, $\beta\geq (1-\nu)$. At any rate, the
+bound $\alpha/l^2\leq 17/324$, which is required here to make the
+potential non-negative at the linearized level, already puts a
+stronger bound to $\alpha/l^2$ than required for the thermodynamic
+stability, namely, $\alpha/l^2\leq 1/12$. Therefore, the
+quasi-local energy of the $k=1$ Schwarzschild AdS spacetimes and
+the $k=-1$ extremal black hole entropy reported in~\cite{IPN02b}
+are non-negative, given that a classical background is stable.
+
+By the same arguments as for the pure AdS case with $\alpha=0$,
+the solution that is well behaved as $x\to \infty$ is given by the
+linear combination of $\Phi_\pm$, which reads \bea \Phi_3 (x)&=&
+x^{-(2\beta+1)/4+i\omega/{2\sqrt{C}}}\,\left(1+x\right)^{-\,i\omega
+/{2\sqrt{C}}} \nn \\
+&{}& {}_2F_1\Bigg(\frac{2\beta + 2\nu +2}{4}-\frac{i\omega
+}{2\sqrt{C}},\, \frac{2\beta - 2\nu +2}{4}\nn \\ &{}& ~~ -\,
+\frac{i\omega}{2\sqrt{C}};\,\beta+1;\,-\,\frac{1}{x}\Bigg)\,.\eea
+In the $\alpha=0$ case, the leading behavior as $r\to \infty$ goes
+like ${\cal O}\left(r^{-(n+1)/2}\right)$, while it goes as $r\to
+0$ like ${\cal O}\left(r^{1-2\nu)/2}\right)$. Both solutions
+converge, and are normalizable only if $2\nu < 1$, that is, if
+$4\lambda< 1+(n-2)(10-n)$. However, in this limit, there may be a
+continuum of negative energy bound state due to a negative (or an
+unbounded) potential. Fortunately, these solutions do not satisfy
+the usual boundedness condition, \be \int
+\phi^2\,\frac{r^{n-1}}{f(r)}\,dr=1 \ee because
+$\phi=\Phi\,r^{-(n-1)/2}\sim r^{-n}$ diverges at the origin. Thus,
+for the $k=+1$ case, a zero mass background is stable under tensor
+perturbations~\cite{Gibbons02a}, and this is true also for the
+$\alpha>0$ solution, in satisfying~(\ref{newconstr}). In the
+latter case, the leading behavior of the solution as $x\to 0$ is
+given by ${\cal O}\left(x^{-(2\beta+1+2\nu-2\beta-2)/4}\right)
+\sim {\cal O}\left(r^{(1-2\nu)/2}\right)$, which is same as in the
+$\alpha=0$ case.
+
+For the positive root in~(\ref{k=1bg}), the gravitational
+potential is unbounded when $n\leq 7$, thus a metric background
+with positive root is unstable~\cite{Deser85a}. In the bottom plot
+of Fig.~(\ref{figure11}), the positions of the curves are
+reversed. That is, in spacetime dimensions $n+1> 8 $, a black hole
+solution with the plus root in~(\ref{k=1bg}) can also be stable.
+We have taken here a minimal $\lambda$, and $\alpha$ is allowed to
+take its value towards its upper bound.
+
+One also notes that if the base manifold is a round sphere
+$S^{n-1}$, the spectrum of the Lichnerowicz operator is bounded
+from up by $2(n-1)$. Interestingly, for a small GB coupling, in
+(\ref{newconstr}), the potentials are bounded from below. So a
+massless AdS metric with $k=1$ is stable only for a small
+Gauss-Bonnet coupling $\alpha$. In other words, since
+$\alpha=16\pi G_{n+1}\,(n-2)(n-3)\,\alpha^\p\sim M^{n-1}$, when
+the AdS length scale is much larger than the corresponding
+$(n+1)$-dimensional Planck scale $M$, the potential is bounded
+from below and stable under gravitational perturbations.
+
+A remark is in order. In the strong coupling regime, such as
+$\alpha\sim l^2$, additional higher order curvature corrections
+are important. Moreover, when $n+1>7$, a Gauss-Bonnet type
+quadratic corrections to Einstein gravity may be supplemented by
+the higher order Euler invariants, such as cubic order in Riemann
+tensors or/and additional higher order corrections, like that of
+$R^4$ terms.
+
+\subsection{Potential for extremal background}
+
+For $\alpha>0$, the $\mu_{extr}<0$, $k=-1$ (extremal) background
+does not have constant curvature. So in this case, the
+perturbation equations would involve terms like $a(l^6/r^8)$ and
+higher powers of $(l/r)$, with some constant $a$, namely $a<<1$
+when $\alpha<<l^2$. This complicates the process for finding exact
+solution to the Schrodinger equation. But, in the limit
+$\alpha<<l^2$, as well as $r^2>2\alpha$, so that $R_{ab}\simeq
+-\,(n/l^2) \,g_{ab}$, we may get some approximate ideas about
+stability of an extremal background by inspecting the
+gravitational potential.
+
+\begin{figure}[ht]
+\begin{center}
+\epsfig{figure=potential10.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%
+\begin{center}
+\epsfig{figure=potential11.eps,height=4.0cm,width=7.0cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\caption{The potential vs horizon radius, with an extremal state
+as the ground state. The values are fixed at $n=4$, $l^2=1$,
+$\lambda=-1,\,-1.6,\,-2,\,-3$ (from top to bottom); and
+$\alpha=1/17$ (upper plot) and $\alpha=1/20$ (lower plot). }
+\label{figure12}
+\end{figure}
+
+For $k=-1$, the gravitational potential, for small $\alpha/l^2$
+or/and $r^2>2\alpha$, may be given by \bea V(r) &\simeq &
+\Bigg[\frac{4\lambda+13}{4r^2}-\frac{17}{8\alpha}
++\sqrt{\frac{(l^2-4\alpha)\,r^4}{(r^4-\alpha l^2)\,l^2}}\nn
+\\&\times& \left(\frac{17}{8\alpha}
+-\frac{13\,l^4}{8(l^2-\alpha)r^4}\right)+\frac{4(2l^2-19\alpha)}
+{l^2(l^2-2\alpha)}\Bigg] f(r)\, \nn \\
+\eea where $f(r)$ is given by~(\ref{GBExtremal}). For a small
+coupling $\alpha<<l^2$, the gravitational potential can be bounded
+from below for all eigenvalues satisfying
+$\lambda>\lambda_{crit}=-\,13/4$. The coupling $\alpha/l^2$ is
+equally important parameter for a classical stability of the
+background. As the plots in Fig.~(\ref{figure12}) show, when
+$\alpha/l^2\leq 1/18$ holds, the gravitational potential is always
+bounded from below and it is positive for large $r$, but it can be
+negative and unbounded for $\alpha/l^2> 1/18$. It is quite
+interesting that the above constraint for $\alpha/l^2$, which we
+actually derived for $k=+1$, is effective to the $k=-1$ case.
+
+It is possible that the plots for gravitational potentials would
+be modified at small scales, namely, $r^2<l^2/2$, due to the terms
+like $l^6/r^8$, and also due to additional higher derivative
+curvature corrections, like $R^4$ terms. However, any corrections
+to the potential coming from them would only contribute in the
+order of $1/r^8$, so they will not destabilize the potential for
+large $r$, as well as, for small $r$ but in the limit
+$\alpha<<l^2$ and $r^2>2\alpha$.
+
+For $k=-1$, the base manifold has negative curvature, so a
+negative potential does not imply instability of the background,
+if it can be bounded from below. We can be little more precise
+here. The Breitenloher-Freedman bound $\lambda>-\,n^2/4$, which
+may be required for the positivity of energy (or unitarity) in
+$AdS_{n+1}$ spacetime, is $\lambda>-\,4$, when $n+1=5$. In our
+case, we must satisfy $\lambda> -\,13/4$, such that the potential
+is bounded from below and positive for large $r$, which puts a
+stronger bound for stability of an extremal background than the
+Breitenloher-Freedman bound.
+
+A bounded and positive potential certainly implies that there are
+no unstable modes. Therefore, we see that, for a small but
+non-zero Gauss-Bonnet coupling, the hyperbolic black hole, whose
+ground state is the extremal black hole spacetime with a negative
+mass, may be stable under the tensor perturbation. We have shown
+that the AdS extremal solution has a minimal energy under small
+metric perturbations.
+
+\section{Discussion and Outlook}
+
+In this paper, by taking Gauss-Bonnet type curvature corrections
+into account, we have presented three important ideas
+together: \\
+$\bullet$ choice of backgrounds for AdS black holes with
+spherical, flat or hyperbolic event
+horizons \\
+$\bullet$ thermodynamic (in)stability of AdS black
+holes with hyperbolic and spherical event horizons, and \\
+$\bullet$ classical (gravitational) instability of background
+spacetimes of dimensions $n+1>4$.\\
+
+Having made it clear that what are the backgrounds to be used for
+black hole spacetimes with spherical ($k=+1$), flat ($k=0$) or
+hyperbolic ($k=-1$) event horizons, we have computed the
+Gauss-Bonnet curvature corrections to the AdS black hole
+thermodynamics by allowing $k=0,\,\pm 1$. It is shown that there
+exists a unique $k=-1$ extremal black hole solution which has the
+lowest energy for all spacetimes in its asymptotic class.
+
+The $AdS_5$ hyperbolic black hole presents some interesting
+features, such as, the free energy and the entropy are dependent
+of the Gauss-Bonnet coupling $\alpha$, but the total energy is
+not, thereby indicating a possibility that entropy and free energy
+scale with the coupling of $\alpha^\p$-corrections, when going
+from strong to weak coupling~\cite{Emparan99b,Gubser98a,Klemm99a}.
+
+We have shown that for a thermodynamic stability of hyperbolic
+black holes the extremal entropy and the specific have to be
+non-negative at the background. By considering the free energy,
+the corresponding thermal phase diagrams are obtained for $n=4$
+and $n=6$ in the limit of sufficiently small and large
+$\alpha^\p$-coupling, allowed in the theory. The Gauss-Bonnet
+corrections to the black hole thermodynamics do not give rise to
+Hawking-Page transition as a function of temperature for flat and
+hyperbolic horizons. It is plausible that, for $k=-1$, when the
+coupling $\alpha$ is large, there appears a new phase transition.
+For example, in five dimensions, such behavior is seen for the
+coupling $0.25\, l^2<\alpha<0.1305\,l^2$. (We did not elaborate
+more upon this possibility, because it is not clear yet whether a
+dual description should exist with a GB term, we will briefly
+comment on it below.)
+
+As for spherical black holes, there would appear a stable branch
+of small black holes when the coupling $\alpha$ is small. It is
+observed that, in five dimensions, there might occur a first-order
+thermal phase transition only if $\alpha<0.0278\,l^2$. Moreover,
+the Hawking-Page transition temperature decreases with increasing
+the coupling of $\alpha^\p$-corrections (i.e. increasing string
+scale), and this holds for all spacetime dimensions $n+1\geq 5$.
+
+We have explored a classical (in)stability of AdS spacetimes of
+dimensions $n+1>4$, considering the curvature $k=+1$ and $k=-1$,
+applicable, respectively, to spherical and hyperbolic event
+horizons. A base manifold with a negative curvature may be stable
+under tensor perturbation for an extremal background but in the
+Einstein gravity the gravitational potential is not well behaved
+in the small distance scale $r<r_{extr}$. For solutions of the
+Einstein-Gauss-Bonnet theory we need a small GB coupling,
+$\alpha<<l^2$, in order to obtain a bounded and positive
+potential. This is perhaps one of the important achievements of
+the present paper.
+
+\medskip
+We end with few remarks and future problems.
+
+We have computed curvature corrections to the $(n+1)$-dimensional
+AdS black hole thermodynamics using the conventional
+regularization scheme which follow by the subtraction of
+divergences from a reference state to which the black hole
+solution is asymptotically matched. It might be more interesting
+to recover the obtained results in the Gauss-Bonnet theory using
+the regularization where divergences are removed by subtraction of
+local counter-terms at the boundary in the spirit of AdS/CFT
+correspondence, as proposed in~\cite{Vijay99a} and implemented for
+the Einstein gravity in~\cite{Emparan99a}.
+
+With some further efforts, it might be possible to apply the black
+hole thermodynamics with a GB term to the AdS/CFT correspondence.
+One has AdS black holes as exact solutions when there are
+interactions of the form $R+a R^2$, $R+b R_{ab}R^{ab}$ or
+$R+\alpha_1 {\cal R}_{GB}^2$. So, one would find it convenient to
+modify the Lagrangian of gravity \bea {\cal L}&\sim&
+R+\alpha_1\,{\cal R}_{GB}^2+ a\,R^2+b\,R_{ab}R^{ab}= R+
+(a+\alpha_1)R^2\nn
+\\&{}&+\, (b-4\alpha_1)R_{ab}R^{ab}
++\alpha_1\,R_{abcd}R^{abcd}\,.\nn \eea To this Lagrangian one can
+construct AdS black holes exactly and study its thermodynamics. As
+discussed in~\cite{Odintsov99a}, the $\alpha_1(\mbox{Riemann})^2$
+term arises as next to the leading order terms in AdS/CFT
+correspondence for ${\cal N}=4$ and ${\cal N}=2$ super Yang-Mills
+theories. One can fix the coefficients of higher derivative terms
+to be the supergravity prediction of ${\cal O}\left(N^2\right)$
+correction to the trace anomaly and study the Witten-Hawking-Page
+phase transitions. This might help to further explore the
+confining (deconfining) phase transitions in dual gauge
+theories~\footnote{We thank Sergei Odintsov for this interesting
+remark.}.
+
+We have studied (in)stability of the black hole spacetimes with
+different event horizons, considering only the AdS part on
+$AdS_{n+1}\times Y$ for some $Y$. Out of many possible backgrounds
+in $D=11$ supergravity~\cite{Page84a}, two of them are (i)
+$AdS_2\times H^2\times S^7$ (ii) $AdS_5\times H_2\times S^4$; both
+these backgrounds are
+non-supersymmetric~\cite{Emparan98a,Kehagias00a}. It would be
+interesting to know stability of the solutions by considering the
+eigenvalues of the Lichnerowicz operator in the transverse space
+$Y$ acting on symmetric tensors.
+
+One could ask whether it is possible to build a stable
+(meaningful) field theory on the AdS asymptotic (conformal
+boundary in the sense of Penrose) having negative scalar
+curvature, namely, $I\!\!R^{1}\times H^3$. Witten and Yau have
+advocated~\cite{Edward99a} that a massless scalar coupled to a BPS
+brane action, defined for a hypersurface $I\!\!R^{1}\times H^3$,
+which has constant negative curvature, has a potential (or brane
+action) unbounded from below. The instability of a massless
+topological black hole as the background discussed in section V is
+consistent with those results.
+
+The calculations in~\cite{Edward99a} show that stable solutions on
+$I\!\!R^{1}\times H^3$ cannot be obtained in the effective field
+theory by using only the lowest order terms in the $10d$ or $11d$
+supergravity. One possibility to improve the situation is to allow
+higher derivative curvature corrections to the bulk action and to
+take a non-supersymmetric bulk background, for example, an
+extremal black hole metric with a negative mass or a non-zero
+temperature background. With these modifications, it might be
+possible that the potential is bounded from below. It would be
+interesting to study these issues in some general framework.
+
+\medskip {\it Acknowledgements}:
+
+The author would like to thank Danny Birmingham, Rong-Gen Cai,
+Chiang-Mei Chen, Roberto Emparan, Pei-Ming Ho, Miao Li, Shin'ichi
+Nojiri, Sergi Odintsov, Sumati Surya and John Wang for helpful
+discussions on the subjects. He has enjoyed many fruitful
+conversations with Sean Hartnoll. This work is supported by the
+National Science Council, the center for Theoretical Physics at
+NTU, Taiwan, R.O.C..
+
+\section*{Appendix : Linearized Curvature Terms for $R^2$-Gravity}
+\renewcommand{\theequation}{A.\arabic{equation}}
+\setcounter{equation}{0}
+
+Our convention of metric is $(-,+,+,\cdots,+)$, and of curvatures
+is \bea R_{abc}\,^d
+&=&\partial_b\Gamma_{ac}^d-\partial_a\Gamma_{bc}+
+\Gamma_{eb}^d\Gamma_{ac}^e - \Gamma_{ea}^d\Gamma_{bc}^e\nn \\
+R_{acb}\,^c &=&R_{ab}\,, ~~~ R_{ab}g^{ab}=R \nn \\
+\Gamma_{ab}^c &=&\frac{1}{2}\,g^{cd}\left(\partial_b g_{ad}
++\partial_a g_{bd} -\partial_d g_{ab}\right)\,. \eea
+
+Consider a small perturbation to the metric \be \bar{g}_{ab}\to
+g_{ab}= \bar{g}_{ab}+h_{ab}\,, \quad g^{ab}=\bar{g}^{ab}-h^{ab}\,,
+\quad \vert h^a\,_b\vert <<1\,. \ee Under this perturbation the
+curvatures transform as~\cite{IPN01d}) \bea R_{abc}\,^d &\to &
+R_{abc}\,^d
+ -\bar{\nabla}_{[a}\bar{\nabla}_{|c|} h_{\,b]}\,^d +\bar{\nabla}_{[a}\bar{\nabla}^d
+h_{b]\,c} \nn \\
+&{}&+\,\half\left(\bar{R}_{abe}\,^d h_c\,^e- \bar{R}_{abc}\,^e
+h_e\,^d\right)\label{curvature}\nn \\
+R_{ab}&\to & R_{ab}+\frac{1}{2}\,\left(\Delta_L\right) h_{ab}
+-\frac{1}{2}\,\bar{\nabla}_a\bar{\nabla}_b h
++\bar{\nabla}_{(a}\bar{\nabla}^c
+h_{b)\,c}\label{Riccitensor} \nn \\
+R &\to & R -\bar{R}_{ab} h^{ab}- \bar{\nabla}^2 h  +
+\bar{\nabla}_a\bar{\nabla}_b h^{ab}\label{Ricciscalar} \eea where
+$h=h_p^p$. The Lichnerowicz operator $\Delta_L$ acting on a
+symmetric second rank tensor $h_{ab}$ reads as \be \left(\Delta_L
+h\right)_{ab}=-\bar{\nabla}^c\bar{\nabla}_c h_{ab}-2\bar{R}_{apbq}
+h^{pq}+ 2\bar{R}_{(a}\,^c \,h_{b)\,c} \,.\ee
+
+\subsection{Gauge freedom}
+The diffeomorphism invariance of the gravitational theory, under
+\be h_{ab}\to h_{ab}+\bar{\nabla}_a\xi_b+\bar{\nabla}_b\xi_a
+\,,\ee implies gauge invariance of the linearized theory. To this
+effect, one of the physical gauges is the transverse (or harmonic)
+gauge \be \bar{\nabla}^a \hat{h}_{ab}\equiv
+\bar{\nabla}^a\left(h_{ab}-\frac{1}{2}\,g_{ab}\,h_c^c\right)=0\,,
+\ee which may always be imposed. Under this the Lichnerowicz
+operator is compatible with the transverse tracefree condition,
+$h_c^c=\bar{\nabla} ^a h_{ab}=0$. This gauge does not eliminate
+all of the gauge freedom, but does simplify the perturbation
+equations \be \delta
+R_{ab}=\frac{1}{2}\,\left(\Delta_L\right)_{ab} \,.\ee
+
+
+\subsection{Background solutions}
+
+The Einstein field equations modified by a Gauss-Bonnet term read
+\be R_{ab}-\frac{2\Lambda}{n-1}\, g_{ab}=16\pi G
+\left[\frac{2\alpha^\p}{n-1}\,g_{ab}H-2\alpha^\p\,H_{ab}\right]\,,
+\label{A1} \ee where $H_{ab}\equiv R
+R_{ab}-2R_{acbd}R^{cd}+R_{acde}R_b\,^{cde}-2R_{ac} R_b^c$ and $H$
+is its trace. For $\alpha^\p=0$, the field equations~(\ref{A1})
+admit black holes as the exact vacuum solution, whose $g_{00}$
+component in $(n+1)$ dimensions is \be \label{g00}
+g_{00}=f(r)=k-\frac{2\Lambda
+r^2}{n(n-1)}-\frac{\mu}{r^{n-2}}\,,\ee where $\mu$ is an
+integration constant, and in suitable co-ordinates, $k=0,~\mp1$.
+There are two independent constants $\mu$ and $\Lambda$, where, of
+course, the parameter $\mu$ is related to the ADM mass of a black
+hole. The base manifold ${\cal M}^{n-1}$ (i.e., the hypersurface
+at the event horizon) will have constant negative (if $k=-1$) or
+zero (if $k=0$) or positive ($k=1$) scalar curvature.
+
+The metric solution~(\ref{g00}) satisfies \be
+R_{abcd}=\frac{2\Lambda}{n(n-1)}\left(g_{ac}g_{bd}-g_{ad}g_{bd}\right)\,,
+\quad R_{ab}=\frac{2\Lambda}{(n-1)}\,g_{ab}\,,\ee which is
+maximally symmetric. While $\Lambda$ is fixed by the curvature of
+the spacetime, namely \be \Lambda=\mp
+\,\frac{n(n-1)}{2{\ell}^2}\,.\ee For $\Lambda<0$, one chooses the
+negative sign so that ${\ell}$ is the curvature radius of the AdS
+space.
+
+For a non-trivial $\alpha$, the cosmological constant is fixed \be
+\Lambda=-\,\frac{n(n-1)}{2 l^2}\,.\ee The new length scale $l^2$
+is not the same as ${\ell}^2$, but there must be involved some
+relation between them. On physical ground, the form of $\Lambda$
+should be consistent with the exact (vacuum) solution of the field
+equations~(\ref{A1}). For $\alpha^\p>0$, the metric solution is
+known to be \be \label{muneq0}
+f(r)=k+\frac{r^2}{2\alpha}\left(1\mp \sqrt{1+
+\frac{8\alpha\Lambda}{n(n-1)}+\frac{4\alpha\mu}{r^n}}\right)\,,
+\ee where $\alpha=16\pi G\, (n-2)(n-3)\alpha^\prime$. For a
+spherically symmetric black hole (i.e., $k=1$), the background
+(AdS vacuum solution) is given by the setting $\mu=0$. The metric
+function then takes the form \be f(r)=1+C\,r^2\,, \quad C\equiv
+\frac{1\mp \sqrt{1+ \frac{8\alpha\Lambda}{n(n-1)}}}{2\alpha}\,,
+\ee where $C$ is a constant of dimension $(\mbox{length})^2$. Our
+convention is that $C>0$ for $\Lambda<0$ and $C<0$ for
+$\Lambda>0$. The above metric has constant curvature, namely, \be
+\label{symmetricGB}
+R_{abcd}=-\,C\,\left(g_{ac}g_{bd}-g_{ad}g_{bd}\right)\,, \quad
+R_{ab}=-\,n C\,g_{ab}\,.\ee In these backgrounds, the field
+equations~(\ref{A1}) amount to fix the cosmological constant \be
+\Lambda=-\,\frac{n(n-1)C}{2}\,\left(1-\alpha C\right)\,.\ee
+
+Finally, the background metric for a spherically symmetric
+solution takes the form \bea f(r)&=&
+1+\frac{r^2}{2\alpha}\left[1\mp
+\sqrt{1-4\alpha C(1-\alpha C)}\,\right]\nn \\
+&=&1+C\,r^2\,,\quad 1+\frac{r^2}{\alpha}-C r^2 \,. \eea In
+identifying $C$ by $1/{\ell}^2$, one has $f(r)=1+r^2/{\ell}^2$
+which is the same as in Einstein gravity. The message is clear,
+that is, for a spherically symmetric solution, the AdS vacuum of
+the Einstein theory is also the vacuum of the
+Einstein-Gauss-Bonnet theory, although the black hole solutions,
+which are given by $\mu\neq 0$, with $\alpha>0$ are very different
+from those for $\alpha=0$.
+
+\subsection{Linearized equations}
+
+For the backgrounds~(\ref{symmetricGB}), the variations of the
+curvatures are given by \bea \delta\left(RR_{ab}\right)&=&
+-\,n(n+1)\,C\,\delta R_{ab}-n C\,\delta R\nn \\
+\delta\left(R_{acde}R_b\,^{cde}\right)&=& -\,4 C\,\delta
+R_{ab}+2C^2\left(h_{ab}-\bar{g}_{ab}\,h\right)\nn \\
+\delta\left(R_a^c\,R_{bc}\right)&=&-\,2n C\,\delta R_{ab}-n^2
+C^2\,h_{ab}\nn
+\\
+\delta\left(R_{acbd}R^{cd}\right)&=&
+\frac{n C^2}{2}\left((n+3)h_{ab}-\bar{g}_{ab} h\right)-\nn \\
+&{}& (n-1)C\,\delta R_{ab}-\bar{g}_{ab}\,C\,\delta R \,.\eea And
+\bea &{}&
+\delta\Bigg(g_{ab}\Big(R^2-4R_{ab}R^{ab}+R_{abcd}R^{abcd}\Big)\Bigg)\nn
+\\ &{}& ~~~~~~~=\, n(n-2)(n-1)(n+1)C^2\,h_{ab}\nn \\
+&{}& ~~~~~~~~~~~~- \, 2(n-1)(n-2)\,C\,\delta R \,.\eea Therefore,
+the field equations~(\ref{A1}) reduce to the form \bea
+\label{finallinear} \big(1-2C \alpha \big)\delta R_{ab}&=& -\,n
+C(1-C\alpha)\,h_{ab}+
+\frac{2(n^2+1)\alpha}{n-3}\,C^2\,h_{ab}\nn \\
+&{}& -\, \frac{2\alpha\, C}{n-3}\,\Big(\delta R
++C\,\bar{g}_{ab}\,h\Big)\,.\eea
+
+Note that a massless $(\mu=0)$ topological $(k=-1)$ black hole
+solution \be f(r)=-1+C\,r^2 \,\ee is locally AdS and maximally
+symmetric. In this case, the above linearized expressions are
+fully effective.
+
+For an extremal metric background, however, (\ref{finallinear})
+may be used only for a large $r$. For a small coupling
+$\alpha/\ell^2$, under a re-scaling $l^2\to
+\ell^2/(1-\alpha/\ell^2)$, in five dimensions, the extremal
+solution is \be f(r)=
+-1+\frac{r^2}{2\alpha}-\frac{{\ell}^2-2\alpha}{2\alpha}
+\sqrt{\left(\frac{r^4}{{\ell}^4}-\frac{\alpha}{{\ell}^2-\alpha}\right)}\,.\ee
+Therefore, in the limit $\alpha\to 0$, one has \be f(r)\approx
+-1+\frac{r^2}{\ell^2}+\frac{\ell^2}{4
+r^2}=\frac{r^2}{\ell^2}\left(1-\frac{\ell^2}{2r^2}\right)^2\,.\ee
+However, for $\alpha>0$, the metric spacetime is only
+asymptotically locally AdS. As a simple choice, when
+$\alpha={\ell}^2/5$, the curvatures are \bea R_0^0&=&
+-\,\frac{4}{{\ell}^2}- \frac{9}{64}\,\frac{{\ell}^6}{r^8}+ {\cal
+O}\left(\frac{1}{r^{12}}\right)=R_1^1\nn\\
+R_{i}^{j}&=&
+\left(-\,\frac{4}{{\ell}^2}+\frac{3}{64}\,\frac{{\ell}^6}{r^8}+
+{\cal O}\left(\frac{1}{r^{12}}\right)\right)\delta_{i}^{j}\,. \eea
+That is, one has $R_{ab}\simeq -\,\frac{n}{{\ell}^2}\, g_{ab}$,
+only for large $r~(>>{\ell})$ or/and $\alpha<<\ell^2$. Though the
+sub-leading terms are much suppressed for $r>{\ell}$, for an
+extremal background, there would be some extra contributions on
+the right hand side of~(\ref{finallinear}).
+
+
+%%\begin{thebibliography}{100}
+
+\begin{references}
+
+\bibitem{Maldacena97a} J. Maldacena, Adv. Theor. Math. Phys. {\bf 2},
+    231 (1998) [{\tt hep-th/9711200}].
+%% CITATION = HEP-TH/9711200 %%%
+
+\bibitem{Witten98} E. Witten, {Adv. Theor. Math. Phys.} {\bf 2}, 253 (1998)
+    [{\tt hep-th/9802150}];
+%% CITATION = HEP-TH/9802150 %%
+
+%%\bibitem{Polyakov98a} S. S. Gubser, I. Klevanov and A. Polyakov,
+%%Phys. Lett. B {\bf 428}, 105 (1998) [{\tt hep-th/9802109}].
+%% CITATION = PHLTA,B428,105 %%%%%
+
+\bibitem{Witten98a}
+     E. Witten, {Adv. Theor. Math. Phys.} {\bf 2}, 505 (1998)
+    [{\tt hep-th/9803131}].
+%% CITATION = HEP-TH/9803131 %%
+
+\bibitem{Vanzo} L. Vanzo, Phys. Rev. D {\bf 56}, 6475 (1997)
+    [{\tt gr-qc/9705004}].
+%% CITATION = PHRVA,D56,6475 %%%
+
+\bibitem{Lemos95a} J. P. Lemos, Phys. Lett. B {\bf 353}, 46 (1995)
+    [{\tt gr-qc/9404041}]; C. Huang and C. Liang, Phys. Lett. A {\bf 201},
+    27 (1995); R.-G. Cai and Y. Z. Zhang, Phys. Rev. D {\bf 54}, 4891 (1996)
+        [{\tt gr-qc/9609065}]; D. R. Brill, J. Louko and P.
+        Peldan, Phys. Rev. D {\bf 56}, 3600 (1997) [{\tt
+        gr-qc/9705012}].
+%% CITATION = PHLTA,B353,46 %%
+%% CITATION = PHLTA,A201,27 %%
+%% CITATION = PHRVA,D54,4891 %%
+%% CITATION = PHRVA,D56,3600 %%
+
+\bibitem{Mann96a}
+    R.~B.~Mann, {Class. Quantum Grav.} {\bf 14}, L109 (1997)
+    [{\tt gr-qc/9607071}]; R.~B.~Mann, {\tt gr-qc/9709039}.
+%% CITATION = CQGRD,14,L109 %%%
+%% CITATION = HEP-TH/9709039 %%
+
+\bibitem{Birmingham98a}
+    D.~Birmingham, {Class. Quantum Grav.} {\bf 16}, 1197 (1999)
+    [{\tt hep-th/9808032}].
+%% CITATION = CQGRD,16,1197 %%%
+
+\bibitem{Emparan99b}
+    R.~Emparan, {\JHEP} {\bf 9906}, 036 (1999) [{\tt hep-th/9906040}].
+%% CITATION = JHEPA,9906,036 %%%
+
+\bibitem{Vijay99a} V. Balasubramanian and P. Kraus, Commun. Math. Phys.
+{\bf 208}, 413 (1999) [{\tt hep-th/9902121}].
+%% CITATION = CMPHA,208,413 %%%
+
+\bibitem{Emparan99a}
+        R.~Emparan, C. V. Johnson, and R. C. Myers, {Phys. Rev. D}
+        {\bf 60}, 104001 (1999) [{\tt hep-th/9903238}].
+%% CITATION = PHRVA,D60,104001 %%
+
+\bibitem{Horowitz98a}
+        G.T. Horowitz and R. C. Myers, Phys. Rev. D {\bf 59},
+        026005 (1999) [{\tt hep-th/9808079}].
+%% CITATION = PHRVA,D59,026005 %%%
+
+\bibitem{Klemm99a} M. M. Caldarelli and Dietmar Klemm, Nucl. Phys.
+{\bf B555}, 157 (1999) [{\tt hep-th/9903078}].
+%% CITATION = NUPHA,B555,157 %%%%%%
+
+\bibitem{Emparan98a} R.
+        Emparan, Phys. Lett. B {\bf 432}, 74 (1998) [{\tt
+        hep-th/9804031}].
+%% CITATION = PHLTA,B432,74 %%%
+
+\bibitem{Kehagias00a} A. Kihagias and J. G. Russo, {\JHEP}, 0007, 027
+(2000) [{\tt hep-th/0003281}]
+%% Hyperbolic Spaces in String and M-Theory %%%%%
+%% CITATION = JHEPA,0007,027 %%
+
+\bibitem{Horowitz91a} G. T. Horowitz and A. Strominger, Nucl.
+Phys. {\bf B360}, 197 (1991).
+%%% CITATION = NUPHA,B360,197 %%%
+
+\bibitem{Gibbons93a} G. W. Gibbons and P. K. Townsend, Phys. Rev.
+Lett. {\bf 71}, 3754 (1993).
+%% CITATION = PRLTA,71,3754 %%%
+
+\bibitem{Galloway02a} G. J. Galloway, S. Surya, and E. Woolgar,
+hep-th/0204081.
+%% CITATION = HEP-TH/0204081 %%
+
+\bibitem{Gibbons02a} G. W. Gibbons and S. A. Hartnoll, Phys. Rev.
+D {\bf 66}, 064024 (2002) [{\tt hep-th/0206202}].
+%% CITATION = PHRVA,D66,064024 %%%
+
+\bibitem{IPN02b} I. P. Neupane, Phys. Rev. D {\bf 67}, 0615xx(R)
+(2003) (to appear) [{\tt hep-th/0212092}].
+
+\bibitem{Lanczos} C. Lanczos, Ann. Math. {\bf 39}, 842 (1938).
+%% CITATION = ANMAA,39,482 %%%
+
+\bibitem{Lovelock} D. Lovelock, J. Math. Phys. {\bf 12}, 498
+(1971).
+%% CITATION = JMAPA,12,498 %%%
+
+\bibitem{Zumino} B. Zumino, Phys. Rep. {\bf 137}, 109 (1985);
+B. Zwiebach, Phys. Lett. B {\bf 156}, 315 (1985).
+%% CITATION = PRPLC,137,109 %%%
+%% CITATION = PHLTA,B156,315 %%%
+
+\bibitem{Deser85a}
+    D.~G.~Boulware and S. Deser, {Phys. Rev. Lett.} {\bf 55}, 2656
+    (1985).
+%% CITATION = PRLTA,55,2656 %%%
+
+\bibitem{Myers88a}
+    R.~C.~Myers and J.~Z.~Simon, {Phys. Rev. D} {\bf 38}, 2434
+    (1988).
+%% CITATION = PHRVA,D38,2434 %%%
+
+\bibitem{Wiltshire}
+    D.~L.~Wiltshire, {Phys. Rev. D} {\bf 38}, 2445 (1988); M. H.
+    Dehghani, hep-th/0211191 (PRD, to appear).
+%% CITATION = PHRVA,D38,2445 %%
+%% CITATION = HEP-TH/0211191 %%
+
+\bibitem{IPN02a}
+        Y.~M.~Cho and I.~P.~Neupane
+        Phys. Rev. D {\bf 66}, 024044 (2002) [{\tt hep-th/0202140}].
+%% CITATION = PHRVA,D66,024044 %%%
+
+\bibitem{Cai01a}
+    R.-G. Cai,
+    %{\sl Gauss-Bonnet Black Holes in AdS Spaces},
+    {Phys. Rev. D} {\bf 65}, 084014 (2002) [{\tt hep-th/0109133}].
+%% CITATION = PHRVA,D65,084014 %%
+
+\bibitem{Nojiri01c}
+        M. Cvetic, S. Nojiri, and S. D. Odintsov, {Nucl. Phys.} {\bf B628},
+        295 (2002) [{\tt hep-th/0112045}].
+%% CITATION = NUPHA,B628,295 %%%%
+
+\bibitem{Cai98a} R.-G. Cai and K. Soh, Phys. Rev. D {\bf 59},
+044013 (1999) [{\tt gr-qc/9808067}]; J. Crisostomo, R. Troncosos
+and J. Zanelli, Phys. Rev. D {\bf 62}, 084013 (2000) [{\tt
+hep-th/0003271}].
+%% CITATION = PHRVA,D59,044013 %%%
+%% CITATION = PHRVA,D62,084013 %%%
+
+\bibitem{Zanelli00a} R. Aros, R. Troncoso and J. Zanelli, Phys.
+Rev. D {\bf 63}, 084015 (2001) [{\tt hep-th/0011097}].
+%% CITATION = PHRVA,D63,084015 %%%
+
+\bibitem{BMTZ93a} M. Banados, C. Teitelboim, and J. Zanelli,
+{Phys. Rev. Lett.} {\bf 69}, 1849 (1992); M. Banados, M. Henneaux,
+C. Teitelboim, and J. Zanelli, Phys. Rev. D {\bf 48}, 1506 (1993).
+%% CITATION = PRLTA,48,1849 %%%%%
+%% CITATION = PHRVA,D48,1506 %%%%%
+
+\bibitem{Chamseddine89a} A. H. Chamseddine, Phys. Lett. B {\bf
+233}, 291 (1989); {\sl ibid}, Nucl. Phys. {\bf B346}, 213 (1990).
+%% CITATION = PHLTA,B233,291 %%%%
+%% CITATION = NUPHA,B346,213 %%%
+
+\bibitem{IPN02e} Y. M. Cho, I. P. Neupane, and P. S. Wesson,
+Nucl. Phys. {\bf B621}, 388 (2002) [{\tt hep-th/0104227}]; Y. M.
+Cho and I. P. Neupane, Int. J. Mod. Phys. {\bf A18} (to appear),
+[{\tt hep-th/0112227}].
+
+\bibitem{Hawking83a}
+    S.~W.~Hawking and D.~N.~Page, {Commun. Math. Phys.}
+    {\bf 87}, 577 (1983).
+%% CITATION = CMPHA,87,577 %%%%
+
+\bibitem{Horowitz97a} G. T. Horowitz and J. Polchinski, Phys. Rev.
+D {\bf 55}, 6189 (1997) [{\tt hep-th/9612146}].
+%% CITATION = PHRVA,D55,6189 %%%
+
+\bibitem{Reall01a} H. S. Reall,
+%% {\sl Classical and Thermodynamic stability of black branes %%%
+Phys. Rev. D {\bf 64}, 044005 (2001) [{\tt hep-th/0104071}].
+%% CITATION = PHRVA,D64,044005 %%%%
+
+\bibitem{Gregory93a} R. Gregory and R. Laflamme, Phys. Rev. D {\bf
+37}, 305 (1988); {\sl ibid}, Phys. Rev. Lett. {\bf 70}, 2837
+(1993) [{\tt hep-th/9301052}].
+%% CITATION = PHRVA,D37,305 %%
+%% CITATION = PRLTA,70,2837 %%%
+
+\bibitem{Gubser98a} S. S. Gubser, I. R. Klebanov, and A. A.
+Tseytlin, Nucl. Phys. {\bf B534}, 202 (1998) [{\tt
+hep-th/9805156}].
+%% CITATION = NUPHA,B534,202 %%%
+
+\bibitem{MLi99b} Y. Gao and M. Li, Nucl. Phys. {\bf B551}, 229 (1999)
+[{\tt hep-th/9810053}].
+%% CITATION = NUPHA,B551,229  %%%
+
+\bibitem{Mli99a} M. Li, E. Martinec, and V. Sahakian, Phys. Rev. D
+{\bf 59}, 044035 (1999) [{\tt hep-th/9809061}].
+%% CITATION = PHRVA,D59,044035 %%%
+
+\bibitem{Kogan99a} J. L. F. Barb\'on, I. I. Kogan, and E.
+Rabinovici, Nucl. Phys. {\bf B544}, 104 (1999) [{\tt
+hep-th/9809033}].
+
+\bibitem{Nojiri02a} S. Nojiri and S. D. Odintsov, Phys. Rev. D
+    {\bf 66}, 044012 (2002) [{\tt hep-th/0204112}]; J. E. Lidsey,
+    S. Nojiri, S. D. Odintsov, and S. Ogushi, Phys. Lett. B {\bf
+    544}, 337 (2002) [{\tt hep-th/0207009}].
+%% CITATION = PHRVA,D66,044012 %%%
+%% CITATION = PHLTA,B544,337 %%%%
+
+\bibitem{Susskind99a} J. Polchinski, L. Susskind, and N. Toumbas,
+Phys. Rev. D {\bf 60}, 084006 (1999) [{\tt hep-th/9903228}].
+
+\bibitem{Surya01a} S. Surya, K. Schleich, and D. M. Witt, Phys.
+    Rev. Lett. {\bf 86}, 5231 (2001) [{\tt hep-th/0101134}].
+%% CITATION = PRLTA,86,5231 %%%
+
+\bibitem{Chamblin99a} A. Chamblin, R. Emparan, C. V. Johnson, and
+R. C. Myers, Phys. Rev. D {\bf 60}, 064018 (1999)
+%% {\sl Charged AdS black Holes and Catastrophic Holography}
+[{\tt hep-th/9902170}].
+%% CITATION = HEP-TH/9902170 %%%
+
+\bibitem{IPN02c} I. P. Neupane,
+%%{\it Large N Effects on Thermal Phase Transition},
+ICTP-Preprint, IC-2002-072, Trieste.
+%% CITATION = IC-2002-072, Trieste, ICTP-Preprint, Entered by DESY %%
+
+\bibitem{Odintsov01b} S. Nojiri and S. D. Odintsov, Phys. Lett. B
+{\bf 521}, 87 (2001); {\bf 542}, 301(E) (2002).
+
+\bibitem{Gubser00a} O. DeWolfe, D. Z. Freeman, S. S. Gubser, G. T.
+Horowitz, and I. Mitra,
+%% {sl Stability of $AdS_p\times M_q$ Compactifications Without
+%% Supersymmetry %%
+Phys. Rev. D {\bf 65}, 064033 (2002) [{\tt hep-th/0105047}].
+%% CITATION = PHRVA,D65,064033 %%%
+
+\bibitem{Shiromizu} T. Shiromizu, D. Ida, H. Ochiai, and T. Torii,
+Phys. Rev D {\bf 64}, 084025 (2001) [{\tt hep-th/0106265}].
+%% CITATION = PHRVA,D64,084025 %%%%
+
+\bibitem{Torii98} T. Torii and K.-I. Maeda, Phys. Rev. D {\bf 58},
+084004 (1998).
+%% CITATION = PHRVA,D58,084004 %%%
+
+\bibitem{Askey} G. E. Andrews, R. Askey, and R. Roy, {\sl Special
+Functions} (Cambridge University Press, Cambridge, England, 1999).
+%%% Text Book on Special Functions %%%%%
+
+\bibitem{Vishves70a} C. V. Vishvesshwara,
+%% Stability of the Schwarzschild metric %%
+Phys. Rev. D {\bf 1}, 2870 (1970).
+%% CITATION = PHRVA,D1,2870 %%%
+
+\bibitem{Cardoso01a} V. Cardoso and J.P.S. Lemos, Phys. Rev. D
+{\bf 64}, 084071 (2001) [{\tt gr-qc/0105103}].
+%% CITATION = PHRVA,D64,084071 %%%
+
+\bibitem{Wang01a} B. Wang, E. Abdalla, and R. B. Mann, Phys. Rev.
+D {\bf 65}, 084006 (2002) [{\tt hep-th/0107243}].
+%%% CITATION = PHRVA,D65,084006 %%%
+
+\bibitem{Aros02a} R. Aros, C. Martinez, R. Troncoso, and Jorge
+Zanelli, Phys. Rev. D (to appear) [{\tt hep-th/0211024}].
+%% CITATION = HEP-TH/0211024 %%%%
+
+\bibitem{Odintsov99a} S. Nojiri and S. D. Odintsov, Phys. Lett. B
+{\bf 471}, 155 (1999) [{\tt hep-th/9908065}].
+
+\bibitem{Page84a} D. N. Page and C. N. Pope,
+%% {sl Which compactifications of d=11 supergravity are stable $?$ %%%
+Phys. Lett. B {\bf 144}, 346 (1984).
+%% CITATION = PHLTA,B144,346 %%%
+
+\bibitem{Edward99a} E. Witten and S.-T. Yau, Adv. Theor. Math.
+Phys. {\bf 3}, 1635 (1999) [{\tt hep-th/9910245}].
+%% CITATION = HEP-TH/9910245 %%%
+
+\bibitem{IPN01d} I. P. Neupane, Class. Quantum Grav. {\bf 19}, 1167
+(2002) [{\tt hep-th/0108194}].
+%% CITATION = CQGRD,19,1167 %%%%
+
+\end{references}
+
+%%\end{thebibliography}
+
+%\newpage
+
+\end{document}
+
+%%% Comments welcome
+

@@ -1,0 +1,12 @@
+#! /bin/bash
+
+cd "$(dirname "$0")"
+
+for file in Test/*
+do 
+  filename=$(basename "$file")
+  touch CleanPapers/$filename
+
+  detex -n $file > CleanTestPapers/$filename
+  
+done

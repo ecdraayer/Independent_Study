@@ -1,0 +1,1674 @@
+%2003.2.05 15:00
+%FileName: SusyV.tex   Type start 2002.7.14
+%History: Ver.2003.1.5/2002.12.21/11.5/10.25/7.14
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  Copyied from G. Silva
+\documentclass{article}
+%\usepackage{amsmath}
+%\usepackage{hyperref}
+\usepackage{psfig}
+\usepackage{latexsym}
+%%%
+%\documentstyle[a4j,epsbox]{jarticle}
+%\documentstyle[11pt]{article}
+%%%%%%%%%%%%%\documentstyle[12pt,epsf]{article}
+%\documentstyle[12pt,epsbox]{article}
+\begin{document}
+%\tolerance=5000
+%\def\be{\begin{equation}}
+%\def\ee{\end{equation}}
+%\def\bea{\begin{eqnarray}}
+%\def\eea{\end{eqnarray}}
+%\def\nn{\nonumber \\}
+%\def\det{{\rm det\,}}
+%\def\Tr{{\rm Tr\,}}
+%\def\e{{\rm e}}
+%\def\etal{{\it et al.}}
+% Additional Def  
+%\newcommand {\be}{\begin{equation}}
+\newcommand {\ee}{\end{equation}}
+\newcommand {\bea}{\begin{eqnarray}}
+\newcommand {\eea}{\end{eqnarray}}
+\newcommand {\nn}{\nonumber \\}
+\newcommand {\Tr}{{\rm Tr\,}}
+\newcommand {\tr}{{\rm tr\,}}
+\newcommand {\e}{{\rm e}}
+\newcommand {\etal}{{\it et al.}}
+% Definition by S.I. 97.6.21, GEGIN
+%%%%%%   Abbreviation  %%%%%
+\newcommand {\m}{\mu}
+\newcommand {\n}{\nu}
+\newcommand {\pl}{\partial}
+\newcommand {\p} {\phi}
+\newcommand {\vp}{\varphi}
+\newcommand {\vpc}{\varphi_c}
+\newcommand {\al}{\alpha}
+\newcommand {\be}{\beta}
+\newcommand {\ga}{\gamma}
+\newcommand {\Ga}{\Gamma}
+\newcommand {\x}{\xi}
+\newcommand {\ka}{\kappa}
+\newcommand {\la}{\lambda}
+\newcommand {\La}{\Lambda}
+\newcommand {\si}{\sigma}
+\newcommand {\Si}{\Sigma}
+%\newcommand {\th}{\theta}
+\newcommand {\Th}{\Theta}
+\newcommand {\om}{\omega}
+\newcommand {\Om}{\Omega}
+\newcommand {\ep}{\epsilon}
+\newcommand {\vep}{\varepsilon}
+%\newcommand {\e} {\eta}
+\newcommand {\na}{\nabla}
+\newcommand {\del}  {\delta}
+\newcommand {\Del}  {\Delta}
+%%%%%%%%%%%
+\newcommand {\mn}{{\mu\nu}}
+\newcommand {\ls}   {{\lambda\sigma}}
+\newcommand {\ab}   {{\alpha\beta}}
+\newcommand {\gd}   {{\gamma\delta}}
+%%
+\newcommand {\half}{ {\frac{1}{2}} }
+\newcommand {\third}{ {\frac{1}{3}} }
+\newcommand {\fourth} {\frac{1}{4} }
+\newcommand {\sixth} {\frac{1}{6} }
+\newcommand {\sqg} {\sqrt{g}}
+\newcommand {\fg}  {\sqrt[4]{g}}
+\newcommand {\invfg}  {\frac{1}{\sqrt[4]{g}}}
+\newcommand {\sqZ} {\sqrt{Z}}
+\newcommand {\sqk} {\sqrt{\kappa}}
+\newcommand {\sqt} {\sqrt{t}}
+\newcommand {\sql} {\sqrt{l}}
+\newcommand {\reg} {\frac{1}{\epsilon}}
+\newcommand {\fpisq} {(4\pi)^2}
+%%%  cal  %%%%
+\newcommand {\Lcal}{{\cal L}}
+\newcommand {\Ocal}{{\cal O}}
+\newcommand {\Dcal}{{\cal D}}
+\newcommand {\Ncal}{{\cal N}}
+\newcommand {\Mcal}{{\cal M}}
+\newcommand {\scal}{{\cal s}}
+%%% vec %%%%
+%\newcommand {\Dvec}{{\vec D}}   
+\newcommand {\Dvec}{{\hat D}}   %advice by Mike Creutz 98.11.4
+\newcommand {\dvec}{{\vec d}}
+\newcommand {\Evec}{{\vec E}}
+\newcommand {\Hvec}{{\vec H}}
+\newcommand {\Vvec}{{\vec V}}
+%%% vec, left & right  %%%%%
+\newcommand {\rpl}{{\vec \partial}}
+\def\overleftarrow#1{\vbox{\ialign{##\crcr
+ $\leftarrow$\crcr\noalign{\kern-1pt\nointerlineskip}
+ $\hfil\displaystyle{#1}\hfil$\crcr}}}
+\def\lpl{{\overleftarrow\partial}}
+%%%%  til  %%%%
+\newcommand {\Btil}{{\tilde B}}
+\newcommand {\ctil}{{\tilde c}}
+\newcommand {\dtil}{{\tilde d}}
+\newcommand {\Ftil}{{\tilde F}}
+\newcommand {\Ktil}  {{\tilde K}}
+\newcommand {\Ltil}  {{\tilde L}}
+\newcommand {\mtil}{{\tilde m}}
+\newcommand {\ttil} {{\tilde t}}
+\newcommand {\Qtil}  {{\tilde Q}}
+\newcommand {\Rtil}  {{\tilde R}}
+\newcommand {\Stil}{{\tilde S}}
+\newcommand {\Ztil}{{\tilde Z}}
+%%
+\newcommand {\altil}{{\tilde \alpha}}
+\newcommand {\betil}{{\tilde \beta}}
+\newcommand {\etatil} {{\tilde \eta}}
+\newcommand {\latil}{{\tilde \lambda}}
+\newcommand {\Latil}{{\tilde \Lambda}}
+\newcommand {\ptil}{{\tilde \phi}}
+\newcommand {\Ptil}{{\tilde \Phi}}
+\newcommand {\natil} {{\tilde \nabla}}
+\newcommand {\xitil} {{\tilde \xi}}
+%%%%  hat   %%%%%%
+\newcommand {\Ahat}{{\hat A}}
+\newcommand {\Rhat}{{\hat R}}
+\newcommand {\Shat}{{\hat S}}
+\newcommand {\ehat}{{\hat e}}
+\newcommand {\mhat}{{\hat m}}
+\newcommand {\shat}{{\hat s}}
+\newcommand {\Dhat}{{\hat D}}   
+\newcommand {\Vhat}{{\hat V}}   
+\newcommand {\xhat}{{\hat x}}
+\newcommand {\Zhat}{{\hat Z}}
+\newcommand {\Gahat}{{\hat \Gamma}}
+\newcommand {\Phihat} {{\hat \Phi}}
+\newcommand {\phihat} {{\hat \phi}}
+\newcommand {\nah} {{\hat \nabla}}
+\newcommand {\etahat} {{\hat \eta}}
+\newcommand {\omhat} {{\hat \omega}}
+\newcommand {\psihat} {{\hat \psi}}
+\newcommand {\thhat} {{\hat \theta}}
+\newcommand {\gh}  {{\hat g}}
+%%%%  bar  %%%%
+\newcommand {\abar}{{\bar a}}
+\newcommand {\Abar}{{\bar A}}
+\newcommand {\cbar}{{\bar c}}
+%\newcommand {\dbar}{{\bar d}}
+\newcommand {\bbar}{{\bar b}}
+\newcommand {\gbar}{\bar{g}}
+\newcommand {\Bbar}{{\bar B}}
+\newcommand {\fbar}{{\bar f}}
+\newcommand {\Fbar}{{\bar F}}
+\newcommand {\kbar}  {{\bar k}}
+\newcommand {\Kbar}  {{\bar K}}
+\newcommand {\Lbar}  {{\bar L}}
+\newcommand {\Qbar}  {{\bar Q}}
+\newcommand {\albar}{{\bar \alpha}}
+\newcommand {\bebar}{{\bar \beta}}
+\newcommand {\labar}{{\bar \lambda}}
+\newcommand {\psibar}{{\bar \psi}}
+\newcommand {\vpbar}{{\bar \varphi}}
+\newcommand {\Psibar}{{\bar \Psi}}
+\newcommand {\chibar}{{\bar \chi}}
+\newcommand {\sibar}{{\bar \sigma}}
+\newcommand {\xibar}{{\bar \xi}}
+\newcommand {\thbar}{{\bar \theta}}
+%\newcommand {\fbar}{{\bar 5}}  duplicate def.
+%
+%\newcommand {\dbartil}{{\tilde {\bar d}}}
+\newcommand {\bbartil}{{\tilde {\bar b}}}
+%%%%%%%%%%%%%%%%  DOT  %%%%%%%%%%%%%%%%%
+\newcommand {\aldot}{{\dot{\alpha}}}
+\newcommand {\bedot}{{\dot{\beta}}}
+%%%%%%%%%%%%%%  PRIME   %%%%%%%%%%%%%%%
+\newcommand {\alp}{{\alpha'}}
+\newcommand {\bep}{{\beta'}}
+\newcommand {\gap}{{\gamma'}}
+%%%%  Bold Face  %%%%
+\newcommand {\bfZ} {{\bf Z}}
+\newcommand {\BFd} {{\bf d}}
+%%%%%%%%%  number suffix
+\newcommand  {\vz}{{v_0}}
+\newcommand  {\ez}{{e_0}}
+\newcommand  {\mz}{{m_0}}
+\newcommand  {\xf}{{x^5}}
+\newcommand  {\yf}{{y^5}}
+\newcommand  {\Zt}{{Z$_2$}}
+%%%%  Integral  %%%%%%%%%%%
+\newcommand {\intfx} {{\int d^4x}}
+\newcommand {\intdX} {{\int d^5X}}
+\newcommand {\inttx} {{\int d^2x}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand {\change} {\leftrightarrow}
+\newcommand {\ra} {\rightarrow}
+\newcommand {\larrow} {\leftarrow}
+\newcommand {\ul}   {\underline}
+\newcommand {\pr}   {{\quad .}}
+\newcommand {\com}  {{\quad ,}}
+\newcommand {\q}    {\quad}
+\newcommand {\qq}   {\quad\quad}
+\newcommand {\qqq}   {\quad\quad\quad}
+\newcommand {\qqqq}   {\quad\quad\quad\quad}
+\newcommand {\qqqqq}   {\quad\quad\quad\quad\quad}
+\newcommand {\qqqqqq}   {\quad\quad\quad\quad\quad\quad}
+\newcommand {\qqqqqqq}   {\quad\quad\quad\quad\quad\quad\quad}
+\newcommand {\lb}    {\linebreak}
+\newcommand {\nl}    {\newline}
+
+%%%%%%%%%%% Space  %%%%%%%
+\newcommand {\vs}[1]  { \vspace*{#1 cm} }
+
+
+%%%%%%%%%%%%   Journal %%%%%%%%%%%%%%
+\newcommand {\MPL}  {Mod.Phys.Lett.}
+\newcommand {\NP}   {Nucl.Phys.}
+\newcommand {\PL}   {Phys.Lett.}
+\newcommand {\PR}   {Phys.Rev.}
+\newcommand {\PRL}   {Phys.Rev.Lett.}
+\newcommand {\IJMP}  {Int.Jour.Mod.Phys.}
+\newcommand {\CMP}  {Commun.Math.Phys.}
+\newcommand {\JMP}  {Jour.Math.Phys.}
+\newcommand {\AP}   {Ann.of Phys.}
+\newcommand {\PTP}  {Prog.Theor.Phys.}
+\newcommand {\NC}   {Nuovo Cim.}
+\newcommand {\CQG}  {Class.Quantum.Grav.}
+
+% Definition by S.I. 97.6.21,  END
+
+
+\font\smallr=cmr5
+%%%%%%%%%%%%%%%%%%%% definition in Mirabbeli-Peshkin model, 02.7 %%%%%%%%%%%
+\newcommand {\npl}  {{\frac{n\pi}{l}}}
+\newcommand {\mpl}  {{\frac{m\pi}{l}}}
+\newcommand {\kpl}  {{\frac{k\pi}{l}}}
+
+
+%%%%%%%%%%%%%%%%%%%% definition  by IKEDA  ,SEC 4.5  %%%%%%%%%%%%%%%%%%%%%%%
+\def\ocirc#1{#1^{^{{\hbox{\smallr\llap{o}}}}}}
+\def\ogamma{\ocirc{\gamma}{}}
+\def\oM{{\buildrel {\hbox{\smallr{o}}} \over M}}
+\def\osigma{\ocirc{\sigma}{}}
+
+\def\overleftrightarrow#1{\vbox{\ialign{##\crcr
+ $\leftrightarrow$\crcr\noalign{\kern-1pt\nointerlineskip}
+ $\hfil\displaystyle{#1}\hfil$\crcr}}}
+\def\overnab{{\overleftrightarrow\nabslash}}
+
+\def\va{{a}}
+\def\vb{{b}}
+\def\vc{{c}}
+\def\tilpsi{{\tilde\psi}}
+\def\tbpsi{{\tilde{\bar\psi}}}
+%%%%%%%%%%%%%%%%%%%% definition  by IKEDA  ,SEC 4.5, App.A  %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\def\delL{{\delta_{LL}}}
+\def\delG{{\delta_{G}}}
+\def\delc{{\delta_{cov}}}
+
+%%%%%%%%%%%%%%%%%%%% definition  by IKEDA , SEC 5  %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% 98.10.30 Chiral Fermion, with Creutz  %%%%%%%%%%%%%%%%
+\newcommand {\sqxx}  {\sqrt {x^2+1}}   %99.2.20 wall.tex App.B
+\newcommand {\gago}  {\gamma^5}
+%\newcommand {\gago}  {\gamma_5}
+\newcommand {\Pp}  {P_+}
+\newcommand {\Pm}  {P_-}
+\newcommand {\GfMp}  {G^{5M}_+}
+\newcommand {\GfMpm}  {G^{5M'}_-}
+\newcommand {\GfMm}  {G^{5M}_-}
+\newcommand {\Omp}  {\Omega_+}    %99.4.17 wall.tex
+\newcommand {\Omm}  {\Omega_-}
+\def\Aslash{{}\hbox{\hskip2pt\vtop
+ {\baselineskip23pt\hbox{}\vskip-24pt\hbox{/}}
+ \hskip-11.5pt $A$}}
+\def\Rslash{{}\hbox{\hskip2pt\vtop
+ {\baselineskip23pt\hbox{}\vskip-24pt\hbox{/}}
+ \hskip-11.5pt $R$}}
+
+
+
+
+%\def\kslash{{}\hbox{\hskip2pt\vtop
+% {\baselineskip23pt\hbox{}\vskip-24pt\hbox{/}}
+% \hskip-11.5pt $k$}}
+\def\kslash{
+{}\hbox       {\hskip2pt\vtop
+                   {\baselineskip23pt\hbox{}\vskip-24pt\hbox{/}}
+               \hskip-8.5pt $k$}
+           }    %99.2.23 -11.5 -> -8.5
+\def\qslash{
+{}\hbox       {\hskip2pt\vtop
+                   {\baselineskip23pt\hbox{}\vskip-24pt\hbox{/}}
+               \hskip-8.5pt $q$}
+           }    
+\def\dslash{
+{}\hbox       {\hskip2pt\vtop
+                   {\baselineskip23pt\hbox{}\vskip-24pt\hbox{/}}
+               \hskip-8.5pt $\partial$}
+           }    
+\def\dbslash{{}\hbox{\hskip2pt\vtop
+ {\baselineskip23pt\hbox{}\vskip-24pt\hbox{$\backslash$}}
+ \hskip-11.5pt $\partial$}}
+
+\def\Kbslash{{}\hbox{\hskip2pt\vtop
+ {\baselineskip23pt\hbox{}\vskip-24pt\hbox{$\backslash$}}
+ \hskip-11.5pt $K$}}
+\def\Ktilbslash{{}\hbox{\hskip2pt\vtop
+ {\baselineskip23pt\hbox{}\vskip-24pt\hbox{$\backslash$}}
+ \hskip-11.5pt ${\tilde K}$}}
+\def\Ltilbslash{{}\hbox{\hskip2pt\vtop
+ {\baselineskip23pt\hbox{}\vskip-24pt\hbox{$\backslash$}}
+ \hskip-11.5pt ${\tilde L}$}}
+\def\Qtilbslash{{}\hbox{\hskip2pt\vtop
+ {\baselineskip23pt\hbox{}\vskip-24pt\hbox{$\backslash$}}
+ \hskip-11.5pt ${\tilde Q}$}}
+\def\Rtilbslash{{}\hbox{\hskip2pt\vtop
+ {\baselineskip23pt\hbox{}\vskip-24pt\hbox{$\backslash$}}
+ \hskip-11.5pt ${\tilde R}$}}
+\def\Kbarbslash{{}\hbox{\hskip2pt\vtop
+ {\baselineskip23pt\hbox{}\vskip-24pt\hbox{$\backslash$}}
+ \hskip-11.5pt ${\bar K}$}}
+\def\Lbarbslash{{}\hbox{\hskip2pt\vtop
+ {\baselineskip23pt\hbox{}\vskip-24pt\hbox{$\backslash$}}
+ \hskip-11.5pt ${\bar L}$}}
+\def\Rbarbslash{{}\hbox{\hskip2pt\vtop
+ {\baselineskip23pt\hbox{}\vskip-24pt\hbox{$\backslash$}}
+ \hskip-11.5pt ${\bar R}$}}
+\def\Qbarbslash{{}\hbox{\hskip2pt\vtop
+ {\baselineskip23pt\hbox{}\vskip-24pt\hbox{$\backslash$}}
+ \hskip-11.5pt ${\bar Q}$}}
+\def\Acalbslash{{}\hbox{\hskip2pt\vtop
+ {\baselineskip23pt\hbox{}\vskip-24pt\hbox{$\backslash$}}
+ \hskip-11.5pt ${\cal A}$}}
+
+
+
+
+
+
+
+\begin{flushright}
+%***  Ver.03.02.02  ***
+Feburary 2003\\
+DAMTP-2003-9\\
+hep-th/0302029 \\
+%US-02-05
+\end{flushright}
+
+\vspace{0.5cm}
+
+\begin{center}
+
+
+{\Large\bf 
+%Effective Potential of SUSY Theories and
+Brane-Anti-Brane Solution and\\ 
+the SUSY Effective Potential\\
+in \\
+Five Dimensional Mirabelli-Peskin Model
+%Quantum Dynamics \\
+%of \\
+%A Bulk and Boundary System
+%
+%Bulk and Boundary Quantum Effects in
+%Mirabelli-Peskin Model
+}
+
+
+\vspace{1.5cm}
+%{\large Note by S.I.}
+{\large Shoichi ICHINOSE
+         \footnote{
+Om leave of absence from
+%Laboratory of Physics, 
+School of Food and Nutritional Sciences, 
+University of Shizuoka, 
+Yada 52-1, Shizuoka 422-8526, Japan\\
+E-mail address:\ ichinose@u-shizuoka-ken.ac.jp
+                  }
+}\ and\ 
+{\large Akihiro MURAYAMA$^\ddag$
+         \footnote{
+E-mail address:\ edamura@ipc.shizuoka.ac.jp
+                  }
+}
+\vspace{1cm}
+
+{\large 
+Department of Applied Mathematics and Theoretical Physics,
+University of Cambridge, Wilberforce Road, Cambridge,
+CB3 0WA, U.K.
+ }
+
+$\mbox{}^\ddag${\large
+Department of Physics, Faculty of Education, Shizuoka University,
+Shizuoka 422-8529, Japan
+}
+\end{center}
+
+\vfill
+
+{\large Abstract}\nl
+A localized configuration is found
+in the 5D bulk-boundary theory
+on an $S_1/Z_2$ orbifold of 
+Mirabelli-Peskin.
+A bulk scalar and the extra (fifth) component of
+the bulk vector constitute the configuration. 
+$\Ncal=1$ SUSY is preserved.
+The effective potential of the SUSY theory is obtained
+using the background field method. 
+The vacuum is generalized
+in relation to the treatment of the extra coordinate.
+Taking into account the {\it supersymmetric boundary condition}, 
+the Coleman-Weinberg potential is correctly obtained.
+The scalar-loop contribution to the Casimir potential
+is concretely identified. It depends on the brane
+configuration parameters besides the $S_1$ periodicity
+parameter.
+
+\vspace{0.5cm}
+
+PACS NO:
+\ 11.10.Kk,%Field theories in dimensions other than four
+\ 11.27.+d,%Extended classical solutions; cosmic strings,domain walls,texture
+\ 12.60.Jv,%Supersymmetric models
+\ 12.10.-g,%Unified field theories and models
+\ 11.25.Mj,%Compactification and four-dimensional models
+\ 04.50.+h %Gravity in more than four dimensions, Kaluza-Klein theory,...
+\nl
+Key Words:\ Mirabelli-Peskin model, supersymmetric boundary condition, 
+SUSY effective potential, Coleman-Weinberg potential,
+bulk-boundary theory. 
+
+
+%\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%  Sec.1  Intro  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf 1}\ {\it Introduction}\q
+Through the development of the 
+recent several years, it looks that  
+the higher-dimensional approach begins to obtain the citizenship 
+as an important building tool in constructing a unified theory.
+Among many ideas in this approach,  
+the system of {\it bulk and boundary} theories becomes a fascinating model
+of the unification. 
+The boundary is regarded as
+our 4D world. It is inspired by the M, string and D-brane theories\cite{HW96}.
+One pioneering paper, giving a concrete realization, 
+ is that by Mirabelli and Peskin\cite{MP97}. 
+They consider 
+5D supersymmetric Yang-Mills theory with a boundary matter.
+The boundary couplings with the bulk world
+are uniquely fixed by the SUSY requirement. 
+They demonstrated some consistency of the bulk and boundary quantum effects
+by calculating {\it self-energy} of the scalar matter field.
+Here we examine the vacuum configuration and
+the effective potential.
+
+Contrary to the motivation of ref.\cite{MP97}, 
+we do not seek a SUSY breaking mechanism, rather
+we make use of the SUSY invariant properties
+in order to make the problem as simple as possible.
+The SUSY symmetry is so restrictive that we only
+need to calculate some small portion of
+all possible diagrams.
+
+In the calculation of the effective potential
+of the 5D model, we recall that of the Kaluza-Klein model. 
+The dynamics quantumly produces the effective
+potential which describes the Casimir effect\cite{AC83,SI85}.
+The situation, however, is 
+different from the present case
+in the following points:\ 
+1)\ the 4D reduction mechanism;\ 
+2)\ Z$_2$-symmetry;\ 
+3)\ treatment of the vacuum with respect to
+ the extra-coordinate dependence;\ 
+4)\ supersymmetry;\ 
+5)\ characteristic length scales.
+We will compare the present result with the KK case.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% Mirabelli-Peskin Model                   %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf 2}\ {\it Mirabelli-Peskin Model}\q
+Let us consider the 5 dimensional flat space-time with the signature
+(1,-1,-1,-1,-1).
+\footnote{
+Notation is the same as ref.\cite{MP97}.
+} 
+The space of the fifth
+component is taken to be ($S_1$), 
+with the periodicity $2l$, and has the $Z_2$-orbifold condition.
+%*** mp1b %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\xf\ra\xf+2l\ (\mbox{periodicity})\com\q
+\xf\change -\xf\ (Z_2\mbox{-symmetry})\pr
+\label{mp1b}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+We take a 
+5D bulk theory $\Lcal_{bulk}$ which is
+coupled with a 4D matter theory $\Lcal_{bnd}$ on a "wall" at $\xf=0$
+and with $\Lcal'_{bnd}$ on the other "wall" at $\xf=l$.
+The boundary Lagragians are, in the bulk action,  described by
+ the delta-functions along the extra axis $x^5$.
+%*** mp1 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+S=\int d^5x\{\Lcal_{blk}+\del(x^5)\Lcal_{bnd}+\del(x^5-l){\Lcal'}_{bnd}
++\mbox{periodic part}\}
+\pr\label{mp1}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We take
+%*** mp1c %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\Lcal'_{bnd}=-\Lcal_{bnd}
+\pr\label{mp1c}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(Necessity of the minus sign will be stated later.)
+We consider both bulk and boundary quantum effects.
+For the boundaries, however, 
+we may examine only the brane at $\xf=0$ because 
+the quantum effect
+from the other brane is considered to be higher order.
+
+The bulk dynamics is given by the 5D super YM theory
+which is made of 
+a vector field $A^M\ (M=0,1,2,3,5)$, 
+a scalar field $\Phi$, 
+a doublet of symplectic Majorana fields $\la^i\ (i=1,2)$, 
+and a triplet of auxiliary scalar fields $X^a\ (a=1,2,3)$:
+%*** mp2 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\Lcal_{SYM}=-\half\tr {F_{MN}}^2+\tr (D_M\Phi)^2
++\tr(\labar^ii\ga^MD_M\la^i)
++\tr (X^a)^2-\tr (\labar^i[\Phi,\la^i])\com   %\nn
+%F_{MN}=\pl_MA_N-\pl_NA_M-ig[A_M,A_N]\com\q
+%D_M\Phi=\pl_M\Phi-ig[A_M,\Phi]\com\nn
+%D_M\la^i=\pl_M\la^i-ig[A_M,\la^i]
+%\com
+\label{mp2}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+where all bulk fields are the {\it adjoint} representation
+of the gauge group $G$. 
+The bulk Lagrangian $\Lcal_{SYM}$ 
+is invariant under the 5D SUSY transformation.
+%*** mp4 %%%%%%%%%%%%%%%%
+%\begin{eqnarray}
+%\del_\xi A^M=i\xibar^i\ga^M\la^i\com\nn
+%\del_\xi\Phi=i\xibar^i\la^i\com\nn
+%\del_\xi\la^i=(\Si^{MN}F_{MN}-\ga^MD_M\Phi)\xi^i
+%-i(X^a\si^a)^{ij}\xi^j\com\nn
+%\del_\xi X^a=\xibar^i(\si^a)^{ij}\ga^MD_M\la^j
+%-i[\Phi,\xibar^i(\si^a)^{ij}\la^j]\com
+%\label{mp4}
+%\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%where $\Si^{MN}=\fourth [\ga^M,\ga^N]$, and
+%the SUSY global parameter $\xi^i$ is the symplectic Majorana
+%spinor. 
+This system has the symmetry of
+8 real super charges.
+As the 5D gauge-fixing term, we take the Feynman
+%*** Landau??? cf Barbieri et al PLB82**** 
+gauge:
+%*** mp4b %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\Lcal_{gauge}=-\tr (\pl_MA^M)^2=-\half (\pl_MA^M_{~\al})^2
+\pr
+\label{mp4b}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The corresponding ghost Lagrangian is given by
+%*** mp4c %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\Lcal_{ghost}=2\,\tr \pl_M\cbar\cdot D^M(A)c
+=2\,\tr\pl_M\cbar\cdot (\pl^Mc-ig[A^M,c])
+\com
+\label{mp4c}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+where $c$ and $\cbar$ are the complex ghost fields. 
+We take the following bulk action.
+%*** mp4d %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\Lcal_{blk}=\Lcal_{SYM}+\Lcal_{gauge}+\Lcal_{ghost}
+\pr
+\label{mp4d}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+It is known that we can consistently project out $\Ncal=1$ SUSY
+multiplet, which has 4 real super charges, 
+%*** mp5 %%%%%%%%%%%%%%%%
+%\begin{eqnarray}
+%Z_2\mbox{ transformation}:\ 
+%x^5\ra -x^5\pr
+%\label{mp5}
+%\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+by assigning $Z_2$-parity 
+to all fields in accordance with the 5D SUSY. 
+A consistent choice is given as:\  $P=+1$ for 
+$A^m, \la^1_L, X^3$;  $P=-1$ for 
+$A^5, \Phi, \la^2_L, X^1, X^2$ ($m=0,1,2,3$). 
+Then ($A^m,\la^1_L,X^3-\pl_5\Phi$) constitute
+ an $\Ncal =1$ vector multiplet. 
+Especially $D\equiv X^3-\pl_5\Phi$ plays the role
+of {\it D-field} on the wall. 
+We introduce a 4 dim chiral multiplet ($\phi,\psi,F$) on the wall: 
+a complex scalar field $\phi$,  a Weyl spinor $\psi$, and
+an auxiliary field of complex scalar $F$. 
+This is the simplest matter candidate and was taken
+in the original theory\cite{MP97}. 
+Using the $\Ncal=1$ SUSY property of the fields ($A^m,\la^1_L,X^3-\pl_5\Phi$),
+we can find the following bulk-boundary coupling.
+%*** mp7 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\Lcal_{bnd}=D_m\phi^\dag D^m\phi+\psi^\dag i\sibar^m D_m\psi+F^\dag F
+-\sqrt{2}g(\phi^\dag\la^T_L\si^2\psi+\psi^\dag \si^2\la^*_L\phi)
++g\phi^\dag D\phi\com
+\label{mp7}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+where $    %c=-i\si^2,\ 
+D_m\equiv \pl_m-igA_m,\ \la_L\equiv \la^1_L,\ D=X^3-\pl_5\Phi$.
+We take the fundamental representation for $\phi,\phi^\dag$. 
+The quadratic (kinetic) terms of the vector $A^m$, the gaugino spinor $\la_L$
+and the 'auxiliary' field $D=X^3-\pl_5\Phi$ are in the bulk 
+Lagrangian $\Lcal_{SYM}$. 
+We note the interaction between the bulk fields and the boundary
+ones is definitely fixed from SUSY.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% Background Expansion       %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf 3}\ {\it SUSY Boundary Condition, Background Expansion and Generalized vacuum}\q
+First we point out an important fact about
+the SUSY effective potential. 
+The 1-loop SUSY effective potential can be calculated
+only by the scalar loop \footnote
+{Non-scalar
+external fields are always put zero from the definition
+of the effective potential.
+}
+{\it up to the $F$- and $D$-independent terms}
+in the off-shell treatment. 
+If we trace the origin of this phenomenon, 
+it is simply that
+the auxiliary fields have the
+{\it higher physical dimension} of $M^2$. They
+cannot have the Yukawa coupling with fermions and vectors.
+F and D-dependence in the SUSY effective
+potential is very important to determine the vacuum behaviour. 
+The above fact means that 
+$dV^{eff}_{1-loop}/dD$ ( or $dV^{eff}_{1-loop}/dF$ )  
+is definitely determined only by the scalar loop.
+Miller\cite{Mil83PL,Mil83NP}, using the above fact, 
+obtained  
+F-tadpole or D-tadpole \cite{Wein73} 
+(F and D-tadpole correspond to $dV^{eff}_{1-loop}/dF$
+and $dV^{eff}_{1-loop}/dD$, respectively.) 
+in general 4D SUSY theories. 
+He noticed, if the theory preserve SUSY at the quantum level, 
+the {\it $F$ and $D$-independent} parts in $V^{eff}_{1-loop}$ can be obtained
+not by calculating diagrams but 
+by a {\it boundary condition} on the effective potential.
+This is because, 
+in the SUSY-preserving case, the effective potential
+should satisfy:\ 
+$V^{eff}(F=0,D=0)=0$ --{\it supersymmetric boundary condition}--.
+He confirmed the correctness by comparing his results with
+the results in the ordinary method. (See ref.\cite{AM98IJMPA}
+for an application to unified models.)  
+We follow Miller's idea.
+
+Hence we may put, 
+for the purpose of obtaining the 1-loop SUSY effective potential, 
+the following conditions: 
+%*** ep1 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+A^m=0\ (m=0,1,2,3)\com\q \la^i=\labar^i=0
+\com\q \psi=0\com\q \la_L=0
+%\com\q c=0\com\q \cbar=0     
+%\com\q \psi_L=\psi^\dag_L=0
+\pr
+\label{ep1}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Here the extra (fifth) component of the bulk vector $A^5$ 
+does {\it not} taken to be zero because it is regarded
+as a {\it 4D scalar} on the wall. 
+%The last two conditions come from the requirement
+%that the vacuum should not have the ghost charge.
+%******  ghost-loop important !!!!  $A^5$ no kiyo, keisann seyo !!! *****  
+The extra coordinate $\xf$ is regarded as a parameter.
+%On $\Lcal_{bnd}$, we may impose the conditions:
+%*** ep2 %%%%%%%%%%%%%%%%
+%\begin{eqnarray}
+%\mbox{a. Chiral matter : }
+%A^m=0\com\q \psi=0\com\q \la_L=0
+%\mbox{b. Non-chiral matter : }
+%A^m=0\com\q \psi_S=\psi_R=0\com\q \la_L=0
+%\pr
+%\label{ep2}
+%\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Then $\Lcal_{blk}$    %=\Lcal^{SYM}+\Lcal_{gauge}+\Lcal_{ghost}$ 
+reduces to
+%*** ep3 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\Lcal^{red}_{blk}[\Phi,X^3,A_5]
+%=\half\pl_M\Phi_\al\pl^M\Phi_\al
+%+\half X^3_\al X^3_\al\nn
+%+\half\pl_MA_{5\al}\pl^MA_{5\al}  %**** M\ra m???? ****\nn
+%-gf_{\ab\ga}\pl_5\Phi_\al\cdot A_{5\be}\Phi_\ga
+%-\frac{g^2}{2}f_{\ab\tau}f_{\ga\del\tau}A_{5\al}\Phi_\be A_{5\ga}\Phi_\del\nn
+%\mbox{OR}\nn
+=\tr \left\{ \pl_M\Phi\pl^M\Phi+X^3X^3-\pl_MA_5\pl^MA^5
+-2g(\pl_5\Phi\times A_5)\Phi\right.\nn
+\left. -g^2(A_5\times\Phi)(A_5\times\Phi)
++2\pl_M\cbar\cdot\pl^Mc-2ig\pl_5\cbar\cdot [A^5,c]\right\}
++\mbox{irrel. terms}
+\com
+\label{ep3}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+where we have dropped terms of $X^1_\al X^1_\al, X^2_\al X^2_\al$
+as  'irrelevant terms' because they decouple from other fields. 
+(Note $A^5=-A_5,\ \tr (\pl_5\Phi\times A_5)\Phi
+=(1/2)f_{\ab\ga}\pl_5\Phi_\al A_{5\be}\Phi_\ga$.) While
+$\Lcal_{bnd}$ reduces to
+%*** ep4 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+%\mbox{a. Chiral matter}\nn
+\Lcal^{red}_{bnd}[\phi,\phi^\dag,X^3-\pl_5\Phi]=\pl_m\phi^\dag\pl^m\phi
++g(X^3_\al-\pl_5\Phi_\al)\phi^\dag_\bep (T^\al)_{\bep\gap}\phi_\gap
++\mbox{irrl. terms} %\nn
+%\mbox{b. Non-chiral matter}\nn
+%\Lcal^{red}_{bnd(b)}[\phi_S,\phi_S^\dag,\phi_R,\phi_R^\dag,X^3-\pl_5\Phi]=
+%\pl_m\phi_S^\dag\pl^m\phi_S+\pl_m\phi_R^\dag\pl^m\phi_R\nn
+%+g(X^3_\al-\pl_5\Phi_\al)(T^\al)_{\bep\gap}
+%(\phi^\dag_{S\bep} \phi_{S\gap}-\phi^\dag_{R\bep} \phi_{R\gap})
+%+\mbox{irrl. terms}
+\com
+\label{ep4}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+where we have dropped $F^\dag F$-terms as the irrelevant terms.
+$\alp, \bep$ are the suffixes of the fundamental representation.
+
+Now we take the background-field method\cite{DeW67,tH73,IO82} 
+to obtain the effective
+potential. 
+We expand all scalar fields ($\Phi, X^3, A_5; \phi$), except ghosts, 
+into the {\it quantum fields} (which are denoted again by the same symbols) 
+and the {\it background fields}
+($\vp, x^3, a_5; \eta$).
+%*** ep5 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\Phi\ra\vp+\Phi\com\q
+X^3\ra x^3+X^3\com\q
+A_5\ra a_5+A_5\com\q \phi\ra\eta+\phi\com
+%\left\{
+%\begin{array}{cc}
+%\phi\ra\eta+\phi & \mbox{chiral matter} \\
+%\phi_S\ra\eta_S+\phi_S, \phi_R\ra\eta_R+\phi_R & \mbox{non-chiral matter}
+%\end{array}
+%\right.
+\label{ep5}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We treat the ghosts $c$ and $\cbar$ as quantum fields. 
+%So far we have considered the case that the background fields depend
+%on the coordinates generally. 
+
+We state an important point of the background-fields
+in the space with the extra dimension. 
+Usually we take the following procedure in order 
+to obtain the vacuum .
+
+[{\it Ordinary} procedure of the vacuum search]\nl
+1) First we obtain the effective potential
+assuming the {\it scalar} property of the vacuum
+(as described in (\ref{ep1}))
+and the {\it constancy} of the scalar vacuum
+expectation values. \nl
+2) Then we take the minimum of the effective
+potential.
+%(in order to pick up the non-derivative part of the effective action). 
+
+In the present case, however, we have the {\it extra} coordinate $\xf$. 
+We have "freedom" in the treatment of the vacuum expectation values
+because $\xf$ is regarded as a parameter. 
+We require that
+{\it the background fields may be constant only in 4D world, not necessarily
+in 5D world}. 
+We may allow the background fields to depend on the extra coordinate $x^5$. 
+This gives an interesting possibility to the higher dimensional model and 
+generalizes the vacuum of the system. 
+
+When the background fields ($\vp, x^3, a_5; \eta$) satisfy 
+the {\it field equations} derived from (\ref{ep3}) and (\ref{ep4}),
+we say they satisfy the "on-shell" condition. The equations are given as, 
+%*** ep5b %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+{\pl_5}^2\vp_\al-gf_{\be\ga\al}\pl_5\vp_\be a_{5\ga}
++gf_{\ab\ga}\pl_5(a_{5\be}\vp_\ga)
+-g^2f_{\be\al\tau}f_{\ga\del\tau}a_{5\be}a_{5\ga}\vp_\del\nn
++g\pl_5(\del(\xf)-\del(\xf-l))\eta^\dag T^\al\eta
+=0,\nn
+{\pl_5}^2a_{5\al}-gf_{\be\al\ga}\pl_5\vp_\be\, \vp_\ga
+-g^2f_{\ab\tau}f_{\ga\del\tau}\vp_\be a_{5\ga}\vp_\del=0\ ,\nn
+x^3_\al+g(\del(\xf)-\del(\xf-l))\eta^\dag_\bep(T^\al)_{\bep\gap}\eta_\gap=0\ ,\ 
+g(x^3_\be-\pl_5\vp_\be)(T^\be)_{\alp\gap}\eta_\gap=0\com
+\label{ep5b}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+where we assume, based on the standpoint of the previous paragraph,
+$\vp=\vp(\xf), x^3=x^3(\xf), a_5=a_5(\xf), \eta=\mbox{const},
+\eta^\dag=\mbox{const}$. 
+In the above derivation, we use the fact that 
+total divergences, in the action, 
+vanish from the {\it periodicity} condition. 
+Because we seek the effective potential (an off-shell quantity), 
+we generally do not need to assume the above on-shell condition. 
+However the {\it minimum} of the effective potential should always
+be consistent with the on-shell condition. 
+The on-shell condition will become important 
+when we {\it restrict} the forms of the background fields.
+(See later discussion.)
+A new on-shell condition will be replaced. 
+We should check that the new {\it minimum} 
+is consistent with the new on-shell condition.
+
+The {\it quadratic} part w.r.t. the quantum fields ($\Phi, X^3, A_5; \phi$)
+give us
+the 1-loop quantum effect. This part %$\Lcal^{red}_{blk}$
+is given as
+%*** ep6 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\Lcal^2_{blk}[\Phi,A_5,X^3]
+%=\half\pl_M\Phi_\al\pl^M\Phi_\al
+%+\half X^3_\al X^3_\al +\half\pl_M A_{5\al}\pl^M A_{5\al}\nn
+%-gf_{\ab\ga}\{  \pl_5\vp_\al\cdot A_{5\be}\Phi_\ga 
+%+\pl_5\Phi_\al\cdot a_{5\be}\Phi_\ga+\pl_5\Phi_\al\cdot A_{5\be}\vp_\ga  
+%             \}                                   \nn
+%-g^2f_{\ab\tau}f_{\ga\del\tau}a_{5\al}\vp_\be A_{5\ga}\Phi_\del
+%-\frac{g^2}{2}\{f_{\ab\tau}(a_{5\al}\Phi_\be+A_{5\al}\vp_\be)  \}^2\pr\nn
+%\mbox{OR}\nn
+=\tr\,\{ \pl_M\Phi\pl^M\Phi
++ X^3 X^3 +\pl_M A_{5}\pl^M A_{5}\}\nn
+-2g\,\tr\left[ (\pl_5\vp\times A_5)\Phi+(\pl_5\Phi\times a_5)\Phi
++(\pl_5\Phi\times A_5)\vp \right]\nn
+-2g^2\tr\left[ (a_5\times\vp)(A_5\times \Phi)\right]
+-g^2\tr (a_5\times\Phi+A_5\times\vp)^2\nn
++2\tr\,\{\pl_M\cbar\cdot\pl^Mc+ig\pl_5\cbar\cdot [a_5,c]\}\ ,\nn
+\Lcal^2_{bnd}=\pl_m\phi^\dag\pl^m\phi
++g\{ d_\al\,\phi^\dag T^\al\phi
++(X^3_\al-\pl_5\Phi_\al)(\eta^\dag T^\al\phi+\phi^\dag T^\al\eta)
+                   \}
+\com
+\label{ep6}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%**** NOTE   $a^5=-a_5$  *****\ \ 
+%The quadratic part of $\Lcal^{red}_{bnd}$ is given by
+%*** ep7 %%%%%%%%%%%%%%%%
+%\begin{eqnarray}
+%\Lcal^2_{bnd}=\pl_m\phi^\dag\pl^m\phi
+%+g\{ d_\al\phi^\dag T^\al\phi
+%+(X^3_\al-\pl_5\Phi_\al)(\eta^\dag T^\al\phi+\phi^\dag T^\al\eta)
+%                   \}\com\nn
+%d_\al\equiv x^3_\al-\pl_5\vp_\al\com%\nn
+%\Lcal^2_{bnd(b)}=\pl_m\phi_S^\dag\pl^m\phi_S+\pl_m\phi_R^\dag\pl^m\phi_R
+%+g\{
+%d_\al(\phi^\dag_{S}T^\al\phi_{S}-\phi^\dag_{R}T^\al\phi_{R})   \nn
+%+(X^3_\al-\pl_5\Phi_\al)(\eta^\dag_{S}T^\al\phi_{S}+\phi^\dag_{S} T^\al\eta_{S
+%-\eta^\dag_{R}T^\al\phi_{R}-\phi^\dag_{R}T^\al\eta_{R})
+%                   \}\com
+%\label{ep7}
+%\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+where $d_\al\equiv x^3_\al-\pl_5\vp_\al$ 
+ is the background (4 dimensional) D-field and 
+$\phi^\dag T^\ga\phi\equiv \phi^\dag_\alp(T^\ga)_{\alp\bep}\phi_\bep$.
+Now we can integrate out the auxiliary field $X^3_\al$ in
+$\Lcal^2_{blk}+\del(x^5)\Lcal^2_{bnd}$.  We obtain
+the final "1-loop Lagrangian", necessary for the present purpose, as
+%*** ep9 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+S^{(2)}[\Phi,A_5;\phi]=\int d^5X \left[
+\Lcal_{blk}^2|_{X^3=0}+\del(x^5)\pl_m\phi^\dag \pl^m\phi\right.\nn
+\left. +\del(x^5)\{
+gd_\al (\phi^\dag T^\al\phi)-g\pl_5\Phi_\al 
+(\eta^\dag T^\al\phi+\phi^\dag T^\al\eta)
+-\frac{g^2}{2}\del(0)(\eta^\dag T^\al\phi+\phi^\dag T^\al\eta)^2
+            \}                \right]
+\pr\label{ep9}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%for the chiral matter model. 
+%Similarly we obtain,
+%for the non-chiral case, as
+%*** ep10 %%%%%%%%%%%%%%%%
+%\begin{eqnarray}
+%S^2_b[\Phi,A_5;\phi_S, \phi_R]=\int d^5X \left[
+%\Lcal_{blk}^2|_{X^3=0}+\del(x^5)(\pl_m\phi_S^\dag \pl^m\phi_S  
+%+\pl_m\phi_R^\dag \pl^m\phi_R)\right.\nn
+%+\del(x^5)\{
+%gd_\al (\phi_S^\dag T^\al\phi_S-\phi_R^\dag T^\al\phi_R)
+%-g\pl_5\Phi_\al 
+%(\eta_S^\dag T^\al\phi_S+\phi_S^\dag T^\al\eta_S
+%-\eta_R^\dag T^\al\phi_R-\phi_R^\dag T^\al\eta_R)\nn
+%\left. -\frac{g^2}{2}\del(0)(  
+%\eta_S^\dag T^\al\phi_S+\phi_S^\dag T^\al\eta_S
+%-\eta_R^\dag T^\al\phi_R-\phi_R^\dag T^\al\eta_R
+%                        )^2
+%            \}                \right]
+%\pr\label{ep10}
+%\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%for the non-chiral matter model.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Generalized Vacuum and Mass-Matrix                    %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf 4}\ {\it Mass-Matrix and the Localized Background Configuration}\q
+We are now ready for the full ( with repect to the coupling order) 
+calculation of the 1-loop effective potential. 
+The "1-loop action" can be expressed as
+%*** det1 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+S^{(2)}=S^{ghost}+S^{free}+\int d^5X\nn
+\times\half \left(\begin{array}{cccc}
+\phi^\dag_{\al'} & \phi_{\al'} & \Phi_\al & A_{5\al} 
+              \end{array}\right)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+       {\left(\begin{array}{cc}
+%%
+\left(\begin{array}{cc}
+M_{\phi^\dag\phi} & M_{\phi^\dag\phi^\dag}  \\
+M_{\phi\phi} & M_{\phi\phi^\dag}  \\
+\end{array}
+\right)_{\alp\bep}         &
+%
+\left(\begin{array}{cc}
+M_{\phi^\dag\Phi} & 0 \\
+ M_{\phi\Phi} & 0 
+\end{array}
+\right)_{\alp\be}          \\
+%%
+\left(\begin{array}{cc}
+M_{\Phi\phi} & M_{\Phi\phi^\dag} \\
+0 & 0  
+\end{array}
+\right)_{\al\bep}         &
+%
+\left(\begin{array}{cc}
+M_{\Phi\Phi}  & M_{\Phi A_5} \\
+M_{A_5\Phi} & M_{A_5 A_5}
+\end{array}
+\right)_{\al\be}
+             \end{array}\right)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\left(\begin{array}{c}
+\phi_{\be'} \\ \phi^\dag_{\be'} \\ \Phi_\be \\ A_{5\be}
+              \end{array}\right)  ,\nn
+S^{ghost}=\int d^5X\left[
+\pl_M\cbar_\al\cdot\pl^Mc_\al
++igf_{\ab\ga}\pl_5\cbar_\al\cdot a_{5\be}c_\ga
+\right]\q\nn
+S^{free}=\intdX
+\left[ \tr\,\{ \pl_M\Phi\pl^M\Phi
++\pl_M A_{5}\pl^M A_{5}\}+\del(\xf)\pl_m\phi^\dag\pl^m\phi\right]
+,\label{det1}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+where $S^{ghost}$ is decoupled from others, and the components $M'$s
+are read from (\ref{ep9}). 
+%as
+%*** det2 %%%%%%%%%%%%%%%%
+%\begin{eqnarray}
+%(M_{\phi^\dag\phi})_{\alp\bep}=
+%g\del(\xf)d_\ga (T^\ga)_{\alp\bep}
+%-g^2\del(0)\del(\xf)(T^\ga\eta)_\alp (\eta^\dag T^\ga)_\bep\com\nn
+%(M_{\phi\phi^\dag})_{\alp\bep}=
+%g\del(\xf)d_\ga (T^\ga)_{\bep\alp}
+%-g^2\del(0)\del(\xf) (\eta^\dag T^\ga)_\alp(T^\ga\eta)_\bep \com\nn
+%(M_{\phi\phi})_{\alp\bep}=
+%-g^2\del(0)\del(\xf) (\eta^\dag T^\ga)_\alp (\eta^\dag T^\ga)_\bep \nn
+%(M_{\phi^\dag\phi^\dag})_{\alp\bep}=
+%-g^2\del(0)\del(\xf)(T^\ga\eta)_\alp (T^\ga\eta)_\bep \ ,\nn
+%%
+%(M_{\Phi\phi})_{\al\bep}=(M_{\phi\Phi})_{\bep\al}=
+%g\pl_5\del(\xf)\cdot (\eta^\dag T^\al)_\bep \ ,\nn
+%(M_{\Phi\phi^\dag})_{\al\bep}=(M_{\phi^\dag\Phi})_{\bep\al}=
+%g\pl_5\del(\xf)\cdot (T^\al\eta)_\bep \ ,\nn
+%%
+%(M_{\Phi\Phi})_{\al\be}=
+%g\lpl_5f_{\ab\ga}a_{5\ga}-gf_{\ab\ga}a_{5\ga}\rpl_5
+%-g^2f_{\al\del\tau}f_{\be\ga\tau}a_{5\del}a_{5\ga}\ ,\nn
+%(M_{A_5 A_5})_{\al\be}=
+%-g^2f_{\al\ga\tau}f_{\be\del\tau}\vp^\ga\vp^\del\ ,\nn
+%(M_{A_5\Phi})_{\al\be}=
+%-gf_{\ab\ga}\pl_5\vp_\ga+gf_{\ab\ga}\vp_{\ga}\rpl_5
+%-g^2f_{\ab\tau}f_{\ga\del\tau}a_{5\ga}\vp_{\del}
+%-g^2f_{\ga\be\tau}f_{\al\del\tau}a_{5\ga}\vp_{\del}\ ,\nn
+%(M_{\Phi A_5})_{\al\be}=
+%gf_{\ab\ga}\pl_5\vp_\ga-gf_{\ab\ga}\lpl_5\vp_{\ga}
+%+g^2f_{\ab\tau}f_{\ga\del\tau}a_{5\ga}\vp_{\del}
+%-g^2f_{\ga\al\tau}f_{\be\del\tau}a_{5\ga}\vp_{\del}
+%\com\label{det2}
+%\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Now we restrict the form of the background fields 
+in the present 5D approach. The relevant scalars
+are $a_5$ and $\vp$ in the bulk. 
+%and
+%$\eta, \eta^\dag$ and $d$ on the boundary. 
+%They are the background fields
+%which, in principle, should be given by solving
+%the (renormalized) equation of motion.
+%It should describe the vacuum. 
+We should
+take into account the {\it $x^5$-dependence}
+and the Z$_2$-property of the background fields.
+
+(i) brane-anti-brane solution\nl
+We take the following forms of $a_5(\xf)$ and $\vp(\xf)$,
+which describe the localized (around $x^5=0$) configurations and
+a natural generalization of the ordinary treatment stated before.
+%They will be shown to satisfy the field equation.
+%*** det6 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+a_{5\ga}(\xf)=\abar_\ga\,\ep (\xf)\com\q
+\vp_\ga(\xf)=\vpbar_\ga\ep (\xf)\nn
+\ep(\xf)=\left\{
+\begin{array}{cc}
++1 & \mbox{for }2nl<\xf<(1+2n)l \\
+-1 & \mbox{for }(2n-1)l<\xf<2nl \end{array}
+\right.\q n\in {\bf Z}\pr
+\label{det6}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+where $\ep(\xf)$ is the {\it periodic sign function}
+with the periodicity $2l$. $\abar_\ga$ and $\vpbar_\ga$ are 
+some positive constants. See Fig.1.
+%%%%%%%%%%%%%%%%%  Fig.1 %%%%%%%%%%%%%%%%%%%%%
+\begin{figure}%[htb]
+\centerline{ \psfig{figure=Sign.eps,height=3cm,angle=0}}
+%\epsfysize=3cm\epsfbox{SignFunc.eps}
+%   \begin{center}
+%Fig.5\ 
+\caption{ 
+The graph of the periodic sign function $\ep(\xf)$, (\ref{det6}).
+Background fields $a_5$ and $\vp$ behave as
+$a_{5\ga}(\xf)=\abar_\ga\,\ep (\xf)\com\q
+\vp_\ga(\xf)=\vpbar_\ga\ep (\xf)$.
+%*** Sign.eps
+}
+%   \end{center}
+\label{fig:Sign}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+It is the {\it thin-wall limit} of a (periodic) kink solution
+and shows the {\it localization} of the fields. 
+
+The background fields, (\ref{det6}),
+satisfy the required boundary condition. 
+We show they also {\it satisfy the on-shell condition} (\ref{ep5b}) 
+for an appropriate
+choice of $\abar, \vpbar, \eta, \eta^\dag$ and $x^3$.
+The assumed background forms are summarized as 
+%*** C1 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\vp_\al(\xf)=\vpbar_\al\ep(\xf)\com\q a_{5\al}(\xf)=\abar_\al\ep(\xf)\com\nn
+\eta_\alp=\mbox{const}\com\q \eta^\dag_\alp=\mbox{const}\com\q
+d_\al=x^3_\al-\pl_5\vp_\al=\mbox{const}
+\com
+\label{C1}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+where "const"'s mean some constants which generally may be different. 
+%First we stress that the total derivative terms, appearing in the
+%derivation of the field equation (\ref{ep5b}), can be safely
+%put to $0$ because of the periodicity property. 
+%(\ref{det15}) 
+We note the relation
+%*** det15 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\pl_5\vp_\ga=2\vpbar_\ga\{\del(\xf)-\del(\xf-l)\}
++\mbox{periodic terms}
+\com
+\label{det15}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+which expresses the {\it localization} of the bulk scalar
+at $\xf=0$ and $\xf=l$. It is considered to be the field theoretical
+version of the brane-anti-brane configuration. 
+See Fig.2. 
+%%%%%%%%%%%%%%%%%  Fig.2 %%%%%%%%%%%%%%%%%%%%%
+\begin{figure}%[htb]
+\centerline{ \psfig{figure=DelFunc.eps,height=3cm,angle=0}}
+%\epsfysize=3cm\epsfbox{SignFun2.eps}
+%   \begin{center}
+%Fig.6\ 
+\caption{ Behaviour of 
+ $\pl_5\vp_\ga(x^5)$.
+%*** DelFunc.eps
+}
+%   \end{center}
+\label{fig:DelFunc}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Using this relation, 
+the four equations in (\ref{ep5b}) can be replaced by
+%*** C2 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+2\vpbar_\al\pl_5(\del(\xf)-\del(\xf-l))+
+6g(\del(\xf)-\del(\xf-l))\ep(\xf)(\abar\times\vpbar)_\al\nn
+-g^2{\ep(\xf)}^3((\abar\times\vpbar)\times\abar)_\al
++g\pl_5(\del(\xf)-\del(\xf-l))\eta^\dag T^\al\eta=0,\nn
+2\abar\pl_5(\del(\xf)-\del(\xf-l))
+%-2g\ep(\xf)(\del(\xf)-\del(\xf-l))(\vpbar\times\vpbar)_\al
+-g^2{\ep(\xf)}^3(\vpbar\times(\abar\times\vpbar))_\al=0,\nn
+x^3_\al+g(\del(\xf)-\del(\xf-l))\eta^\dag T^\al\eta=0\ ,\ 
+g\{x^3_\be-2\vpbar_\be (\del(\xf)-\del(\xf-l))\}(T^\be\eta)_\alp=0
+.
+\label{C2}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We note here the following things.
+\begin{enumerate}
+\item
+When $\abar_\al\propto\vpbar_\al$, the following relations hold:\ 
+$(\abar\times\vpbar)_\al=f_{\ab\ga}\abar_\be\vpbar_\ga=0$.
+%(In particular, the second term of the second equation above vanishes.)
+\item
+$\pl_5(\del(\xf)-\del(\xf-l))\times\mbox{const}=0$.
+\item
+$\ep(\xf)^3=\ep(\xf)$.
+\end{enumerate}
+Then we can conclude that (\ref{C1}) is a {\it solution of the field
+equation (\ref{ep5b})} for the following choice.
+%*** C3 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\mbox{const}\times \abar_\al=\vpbar_\al
+=-\frac{g}{2}\eta^\dag T^\al\eta\com\q
+x^3_\al=-g(\del(\xf)-\del(\xf-l))\eta^\dag T^\al\eta
+\pr
+\label{C3}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\footnote{
+The another choice is given by :\ 
+$
+\abar_\al= 0,\ 
+\vpbar_\al
+=-\frac{g}{2}\eta^\dag T^\al\eta\ ,
+x^3_\al=-g(\del(\xf)-\del(\xf-l))\eta^\dag T^\al\eta
+$.
+}
+In this choice $d_\al=0$ is concluded. 
+We can regard these as the new on-shell condition due to the
+restriction of the background fields (\ref{det6}). 
+We note that the sign choice
+in (\ref{mp1c}) comes from the consistency with the above solution.
+\footnote{
+Instead, we can start from a more general case where (\ref{mp1c}) is not
+postulated but 
+$\Lcal'_{bnd}$ is made of another chiral multiplet $(\phi',\psi',F')$.
+Then the brane-anti-brane solution (\ref{det6}) with 
+$\eta^\dag T^\al\eta=-{\eta'}^\dag T^\al\eta'$ is derived
+from the on-shell condition.
+%Then the on-shell condition gives the same result as the solution
+%(i) without the assumption of the forms of $\vp_\al(\xf)$ and
+%$a_{5\al}(\xf)$. 
+}
+%We can understand that the new on-shell condition is obtained above. 
+The present vacuum (minimum point of the effective potential)
+should be consistent with (\ref{C3}). 
+
+(ii) Sawtooth wave solution
+
+We consider another solution. 
+%*** noko1 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+a_{5\ga}(\xf)=\abar_\ga\times [\xf]_p\com\q
+\vp_\ga(\xf)=\vpbar_\ga \times [\xf]_p\com  \nn
+ \mbox{[$\xf$]$_p$} =
+\left\{
+\begin{array}{cc}
+\xf & -l<\xf <l \\
+\mbox{periodic} & \mbox{other regions} 
+\end{array}
+\right.\com
+\label{noko1}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+where $(\xf)_p$ is the {\it sawtooth wave} (periodic linear function)
+with the periodicity $2l$. $\abar_\ga$ and $\vpbar_\ga$ are 
+some positive constants. See Fig.3.
+%%%%%%%%%%%%%%%%%  Fig.3 %%%%%%%%%%%%%%%%%%%%%
+\begin{figure}%[htb]
+\centerline{ \psfig{figure=SawTooth.eps,height=3cm,angle=0}}
+%\epsfysize=3cm\epsfbox{SignFunc.eps}
+%   \begin{center}
+%Fig.5\ 
+\caption{ 
+The graph of the sawtooth wave $[\xf]_p$, (\ref{noko1}).
+Background fields $a_5$ and $\vp$ behave as
+$a_{5\ga}(\xf)=\abar_\ga\times [\xf]_p\com\q
+\vp_\ga(\xf)=\vpbar_\ga\times [\xf]_p$.
+%*** SawTooth.eps
+}
+%   \end{center}
+\label{fig:SawTooth}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Using (\ref{noko1}), with the following relations in $-l<\xf<l$:\ 
+$\pl_5\vp_\al=\vpbar_\al, {\pl_5}^2\vp_\al=0; 
+\pl_5a_{5\ga}=\abar_\ga, {\pl_5}^2A_{5\ga}=0$, 
+the four equations of the on-shell condition (\ref{ep5b})
+can be rewritten as
+%*** noko2 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+0-gf_{\be\ga\al}\vpbar_\be\abar_\ga \xf
++gf_{\ab\ga}\pl_5(\abar_\be\xf\vpbar_\al\xf)\nn
+-g^2f_{\be\al\tau}f_{\ga\del\tau}\abar_\be\abar_\ga\vpbar_\del (\xf)^3
++g\pl_5(\del(\xf)-\del(\xf-l))\eta^\dag T^\al\eta=0,\nn
+0-0-g^2f_{\ab\tau}f_{\ga\del\tau}\vpbar_\be\abar_\ga\vpbar_\del (\xf)^3=0,\nn
+x^3_\al+g(\del(\xf)-\del(\xf-l))(\eta^\dag T^\al\eta)=0,\q
+(x^3-\vpbar)_\be (T^\be\eta)_\alp=0
+\pr
+\label{noko2}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+All equations are satisfied by the choice:
+%*** noko3 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\mbox{const}\times \abar_\al=\vpbar_\al\com\q
+x^3_\al=0\com\q \eta_\al=\eta^\dag_\al=0
+\pr
+\label{noko3}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In this choice, $d_\al=x^3_\al-\pl_5\vp_\al=-\vpbar_\al$. 
+From the form of $\pl_5\vp_\al=\vpbar_\al$ (see Fig.4), 
+these backgrounds are considered to describe a non-localized
+configuration.
+
+%%%%%%%%%%%%%%%%%  Fig.4 %%%%%%%%%%%%%%%%%%%%%
+\begin{figure}%[htb]
+\centerline{ \psfig{figure=Const.eps,height=3cm,angle=0}}
+%\epsfysize=3cm\epsfbox{SignFun2.eps}
+%   \begin{center}
+%Fig.6\ 
+\caption{ Behaviour of 
+ $\pl_5\vp_\ga(x^5)$ for the sawtooth wave solution (\ref{noko1}).
+%*** Const.eps
+}
+%   \end{center}
+\label{fig:Const}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Let us evaluate $S^{(2)}$, (\ref{det1}), furthermore taking the 
+localized solution (i).
+\footnote{
+The solution (ii) will be treated in the forthcoming paper.
+}
+ From the periodicity ($\xf\ra\xf+2l$) and the Z$_2$ 
+property, the bulk quantum fields $\Phi(X), A_5(X)$ and $c(X)$
+can be KK-expanded as
+%*** det3 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\Phi(x,\xf)=
+\frac{1}{\sql}\sum_{n=1}^{\infty}\Phi_n(x)\sin(\npl\xf)\com\q
+A_5(x,\xf)=
+\frac{1}{\sql}\sum_{n=1}^{\infty}A_n(x)\sin(\npl\xf)\com\nn
+c(x,\xf)=
+\frac{1}{2\sql}\left\{ c_0(x)+2\sum_{n=1}^{\infty}c_n(x)\cos(\npl\xf)
+               \right\}\pr
+\label{det3}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(The $Z_2$-parity of the ghost field is even because it should be
+the same as that of 
+the gauge parameter $\La$\ : $\del A^M=\pl^M\La-ig[A^M,\La]$. )
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%We note a relation $\ep(\xf)^2=1$. 
+Now we use 
+the Fourier expansion of the periodic sign function,
+%*** det9 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\ep(x)=\frac{4}{\pi}\sum_{n=0}^\infty\frac{1}{2n+1}
+\sin\{\frac{(2n+1)\pi}{l}x\}
+\com
+\label{det9}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+and the relation: 
+%*** det10 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\int_{-l}^{l}d\xf\ep(\xf)\cos(\mpl\xf)\sin(\npl\xf)
+=-\frac{2l}{\pi}Q_{mn}\com\nn
+Q_{mn}=\left\{
+\begin{array}{cc}
+\frac{1}{m-n}\q & m-n=\mbox{odd} \\
+0    &  m-n=\mbox{even}
+\end{array}
+\right.
+%=\left\{
+%\begin{array}{cc}
+%\half\{1-(-1)^{m-n}\}\frac{1}{m-n}\q & m\neq n \\
+%0    &  m=n
+%\end{array}
+%\right.
+\pr
+\label{det10}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Noting the above equations and (\ref{det15}), 
+we can express $S^{(2)}$ in terms of the 4D integral as follows.
+%*** det19 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+S^{(2)}=S^{ghost}+\int d^4x\times\nn
+\half \left(\begin{array}{cccc}
+\phi^\dag_{\al'} & \phi_{\al'} & \Phi_{m\al} & A_{m\al} 
+              \end{array}\right)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+       {\left(\begin{array}{cc}
+%%
+\left(\begin{array}{cc}
+\Mcal_{\phi^\dag\phi} & \Mcal_{\phi^\dag\phi^\dag}  \\
+\Mcal_{\phi\phi} & \Mcal_{\phi\phi^\dag}  \\
+\end{array}
+\right)_{\alp\,\bep}         &
+%
+\left(\begin{array}{cc}
+\Mcal_{\phi^\dag\Phi} & 0 \\
+\Mcal_{\phi\Phi} & 0 
+\end{array}
+\right)_{\alp \, n\be}          \\
+%%
+\left(\begin{array}{cc}
+\Mcal_{\Phi\phi} & \Mcal_{\Phi\phi^\dag} \\
+0 & 0  
+\end{array}
+\right)_{m\al \, \bep}         &
+%
+\left(\begin{array}{cc}
+\Mcal_{\Phi\Phi}  & \Mcal_{\Phi A} \\
+\Mcal_{A\Phi} & \Mcal_{A A}
+\end{array}
+\right)_{m\al \, n\be}
+             \end{array}\right)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\left(\begin{array}{c}
+\phi_{\be'} \\ \phi^\dag_{\be'} \\ \Phi_{n\be} \\ A_{n\be}
+              \end{array}\right)  ,
+\label{det19}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+where the integer suffixes $m$ and $n$ runs from 1 to $\infty$, and 
+each component is described as
+%*** det20 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\Mcal_{\phi^\dag_\alp\phi_\bep}=
+-\pl^2\del_{\alp\bep}+
+gd_\ga (T^\ga)_{\alp\bep}-g^2\del(0)(T^\ga\eta)_\alp
+(\eta^\dag T^\ga)_\bep\com\nn
+\Mcal_{\phi^\dag_\alp\phi^\dag_\bep}=
+-g^2\del(0)(T^\ga\eta)_\alp (T^\ga\eta)_\bep\com\q
+\Mcal_{\phi_\alp\phi_\bep}= 
+-g^2\del(0)(\eta^\dag T^\ga)_\alp (\eta^\dag T^\ga)_\bep\com\nn
+\Mcal_{\phi_\alp\phi^\dag_\bep}= 
+-\pl^2\del_{\alp\bep}+
+gd_\ga (T^\ga)_{\bep\alp}-g^2\del(0)(\eta^\dag T^\ga)_\alp (T^\ga\eta)_\bep
+\com\nn
+%
+\Mcal_{\phi^\dag_\alp\Phi_{n\be}}=
+-\frac{g}{2\sql}(T^\be\eta)_\alp\npl=\Mcal_{\Phi_{n\be}\phi^\dag_\alp}\com\q
+\Mcal_{\phi_\alp\Phi_{n\be}}=
+-\frac{g}{2\sql}(\eta^\dag T^\be)_\alp\npl=\Mcal_{\Phi_{n\be}\phi_\alp}\com\nn
+%
+\Mcal_{\Phi_{m\al}\Phi_{n\be}}=
+-\{\pl^2+(\npl)^2\}\del_{mn}\del_\ab
+-g^2f_{\al\del\tau}f_{\be\ga\tau}\abar_\del\abar_\ga\del_{mn}
+-\frac{4g}{l}f_{\ab\ga}\abar_\ga mQ_{mn}\com\nn
+\Mcal_{\Phi_{m\al} A_{n\be}}=
+g^2f_{\ab\tau}f_{\ga\del\tau}\abar_\ga\vpbar_\del\del_{mn}
+-g^2f_{\ga\al\tau}f_{\be\del\tau}\abar_\ga\vpbar_\del\del_{mn}
++\frac{2g}{l}f_{\ab\ga}\vpbar_\ga mQ_{mn}
+=\Mcal_{A_{n\be}\Phi_{m\al}} ,\nn
+\Mcal_{A_{m\al} A_{n\be}}=
+-\{\pl^2+(\npl)^2\}\del_{mn}\del_\ab
+-g^2 f_{\al\ga\tau}f_{\be\del\tau}\vpbar_\ga\vpbar_\del\del_{mn}\com
+\label{det20}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+where the kinetic (free) part is also included 
+($\pl^2\equiv \pl_m\pl^m$) 
+in the ``Mass'' matrix and the repeated indices imply the Einstein's 
+summation convention. 
+$S^{ghost}$ is decoupled and is given by
+%*** det21 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+S^{ghost}=\int d^4x\left\{
+\half\pl_m\cbar_{0\al}\pl^mc_{0\al}
++\sum_{k=1}^{\infty}\left(\pl_m\cbar_{k\al}\pl^mc_{k\al}
+-(\frac{k\pi}{l})^2\cbar_{k\al}c_{k\al}\right)
+\right.\nn
++
+\left.
+\sum_{n=1}^\infty\sum_{k=1}^\infty\cbar_{n\al}(x)
+[-\frac{2ig}{l}f_{\al\ga\be}\abar_\ga nQ_{nk}]c_{k\be}(x)
+\right\}
+\pr
+\label{det21}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+This contribution is treated independently from others.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% Effective Potential                      %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf 5}\ {\it Effective Potential of Bulk-Boundary System}\q
+The effective potential
+is obtained from the eigen values of the mass-matrix obtained
+in (\ref{det19}),(\ref{det20}) and (\ref{det21}). We briefly
+see the behaviour for two typical cases.
+
+(A)$\eta=0,\eta^\dag=0$(Bulk-Boundary decoupled case)\nl
+In this case the matrix $\Mcal$ decouples to the boundary part 
+($\phi,\phi^\dag$) 
+and the bulk part ($\Phi, A$). The former part gives the following eigen values.
+%*** B5 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\la_\pm=k^2\pm\frac{g}{2}\sqrt{d^2}\com\q
+d^2\equiv {d_1}^2+{d_2}^2+{d_3}^2
+\com
+\label{B5}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+where we take G=SU(2) and the doublet representation for the boundary matter
+fields. $k^2=k_mk^m$ and $k^m$ is the 4D momentum. 
+This gives, taking the supersymmetric boundary condition,
+the Coleman-Weinberg (CW) potential\cite{CW73}:
+%*** B7 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+V^{eff}_{1-loop}
+=\int\frac{d^4k}{(2\pi)^4}
+\ln \{1-\frac{g^2}{4}\frac{d^2}{(k^2)^2}\}
+=-\frac{g^2}{4}\int\frac{d^4k}{(2\pi)^4}\frac{d^2}{(k^2)^2}
++O(g^4)
+\com
+\label{B7}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The last approximated form 
+is logarithmically divergent and can be checked by the perturbative (w.r.t. $g$) calculation. 
+It is renormalized
+by the {\it bulk} wave function of $X^3$ and $\Phi$.  Here the 4D world's 
+connection to the Bulk world appears. The quantum fluctuation
+within the boundary influence the bulk world through the renormalization.
+The appearance of the CW potential is natural from the fact that the ordinary
+SUSY theories quantumly produce the potential and the present model
+is a 5D generalization of the ordinary ones.
+
+The bulk part of $\Mcal$ and the ghost part does {\it not} depend on $d$.
+They depend only on $\abar$ and $\vpbar$ (and the length unit $l$).
+It means that this part does {\it not} contribute to the effective potential
+in the supersymmetric boundary condition. We can interpret that this part
+is the scalar-loop contribution to the Casimir potential which depends
+on $\abar$ and $\vpbar$ (and the length unit $l$). It is, however, cancelled
+by the spinor and vector-loop contribution in the present SUSY theory.
+Therefore we expect the brane-anti-brane solution (i) does not collapse. 
+
+(B)$\abar=0,\vpbar=0$\nl
+In this case, the localized configuration disappears.
+The bulk background configuration is trivial. 5D bulk quantum fields
+fluctuate 
+with the periodic boundary condition in the extra space. 
+This is similar to the 5D Kaluza-Klein case mentioned
+in the introduction. The eigen values for the bulk part,
+$c(X), \cbar(X), \Phi(X)$ and $A_5(X)$ are commonly given by, 
+%*** B10 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\la_n=k^2-(\npl)^2\com\q n=1,2,3,\cdots
+\com
+\label{B10}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The eigen value structure is basically the same as the KK case \cite{AC83}.
+They depend {\it only} on the radius (or the periodicity) parameter $l$.
+This part, taking the supersymmetric boundary condition,
+does {\it not} contribute to the effective potential. It can be regarded
+as the scalar-loop contribution to the Casimir potential.
+From the dimensional analysis it should have the form
+$V^{eff}_{scalar}\propto\pm 1/l^5$.
+% where "const" can be fixed
+%using an appropriate renormalization procedure. 
+
+The eigenvalues for the boundary part is obtained as 
+a complicated expression involving the following terms:
+%*** B20a %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+S\equiv\eta^\dag\eta\ ,\ d^2=d_\al d_\al\ ,\ 
+d\cdot V\equiv d_\al \eta^\dag T^\al\eta\ ,\ 
+V^2\equiv (\eta^\dag T^\al\eta)^2 
+\pr
+\label{B20a}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+For some special cases only, we present here the explicit forms.\nl
+(i) $\eta=\eta^\dag=0\ (d\cdot V=0, V^2=0, S=0)$\nl
+This is a special case of (A), the decoupled case.
+%*** B22 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\la_1=\la_2=\la_+\com\q\la_3=\la_4=\la_-\com\q
+\la_\pm=k^2\pm \frac{g}{2}\sqrt{d^2}
+\pr
+\label{B22}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+It is consistent with Case (A).
+
+(ii) $d\cdot V\neq 0$, others=$0$ ($S=0, d^2=0, V^2=0$)\nl
+%*** B23 %%%%%%%%%%%%%%%%
+\begin{eqnarray}
+\la_1=\la_2=k^2\com\q \la_3=\la_+\com\q \la_4=\la_-,\nn
+\la_\pm=k^2\pm\frac{g}{2}\sqrt{gd\cdot V\sqrt{\la_\pm-k^2}
+\coth\sqrt{\la_\pm-k^2}}
+\pr
+\label{B23}
+\end{eqnarray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+This is consistent with the perturbative result
+(the vertex correction on the boundary)
+ up to the order of $g^3$. 
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% Conclusion                               %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf 6}\ {\it Conclusion}\q
+We have analyzed the effective potential of 
+the Mirabelli-Peskin model. An interesting
+localized configuration (solution) is found 
+in the bulk scalar
+and the extra-component of the bulk vector
+when we solve the field equation (on-shell condition).
+The vacuum is generalized in connection to
+the treatment of the extra-axis. 
+We treat $\xf$ as a parameter independent of the 4D world. 
+In this SUSY invariant theory, the Casimir
+force vanishes. Its scalar-loop contribution
+can be evaluated from the obtained explicit matrix
+elements depending on the boundary parameters
+$\abar$, $\vpbar$ and $l$. 
+
+We hope the present result improves 
+the understanding of the quantum dynamics of 
+the bulk-boundary system.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%  Acknowledgment %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{flushleft}
+{\bf Acknowledgment}
+\end{flushleft}
+The authors thank N. Sakai for valuable comments 
+when this work, still at the primitive stage, 
+was presented at the Chubu Summer School 2002 (Tsumagoi, Gunma, Japan,
+2002.8.30-9.2). 
+This work is completed in the present form when 
+one of the author (S.I.) stays at
+ DAMTP(Univ. of Cambridge). He thanks 
+G.W. Gibbons and G. Silva for comments and discussions. 
+The hospitality there is acknowledged. 
+He also thanks the governor of the Shizuoka prefecture for
+the financial support.
+
+
+
+\vs 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% reference %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{99}
+\bibitem{HW96} %*HW96*
+P.Ho\v{r}ava and E.Witten,
+{\NP{\bf B460}(1996)506,hep-th/9510209}
+\bibitem{MP97} %*MP97*
+E.A.Mirabelli and M.E. Peskin,
+Phys.Rev.{\bf D58}(1998)065002, hep-th/9712214
+\bibitem{AC83} %*AC83*
+T. Appelquist and A. Chodos, \PR{\bf D28}(1983)772;\ 
+\PRL{\bf 50}(1983)141
+\bibitem{SI85} %*SI85*
+S. Ichinose, \PL{\bf 152B}(1985)56
+\bibitem{Mil83PL} %*Mil83PL*
+R. D.C. Miller, Phys.Lett.{\bf 124B}(1983)59
+\bibitem{Mil83NP} %*Mil83NP*
+R. D.C. Miller,{\NP{\bf B229}(1983)189}
+\bibitem{Wein73} %*Wein73*
+S.Weinberg, \PR{\bf D7}(1973)2887
+\bibitem{AM98IJMPA}  %*AM98IJMPA*
+A. Murayama, \IJMP{\bf A13}(1998)4257
+\bibitem{DeW67} %*DeW67*
+B.S. DeWitt, \PR{\bf 162}(1967)1195,1239
+\bibitem{tH73} %*tH73*
+G.'t Hooft, \NP{\bf B62}(1973)444
+\bibitem{IO82} %*IO82*
+S. Ichinose and M. Omote, \NP{\bf B203}(1982)221
+\bibitem{CW73} %*CW73*
+S.Coleman and E.Weinberg, \PR{\bf D7}(1973)1888
+%\bibitem{SI0008}   *SI0008*
+%S.Ichinose,{
+%\PR{\bf D65}(2002)084038, hep-th/0008245, 
+%Univ.of Shizuoka preprint, US-00-07, 
+%"Wall and Anti-Wall in the Randall-Sundrum Model and
+%A New Infrared Regularization"
+%}
+%\bibitem{SI02PR}  **SI02PR**
+%S. Ichinose, \PR{\bf D66}(2002)104015,
+%hep-th/0206187
+%'Fermions in Kaluza-Klein and Randall-Sundrum Theories'
+%\bibitem{WB92} *WB92*
+%J. Wess and J. Bagger, {\it Supersymmetry and Supergravity}. 
+%Princeton University Press, Princeton, 1992
+%\bibitem{BFM} *BFM*
+%DeWitt, t' Hooft, Slavnov and Taylor
+%\bibitem{GW0104} *GW0104*
+%W.D. Goldberger and M.B. Wise, \PR{\bf D65}(2002)025011,
+%hep-th/0104170
+%\bibitem{CH85} *CH85*
+%C.G.Callan and J.A.Harvey,{\NP{\bf B250}(1985)427}
+%\bibitem{BFMPS82} *BFMPS82*
+%R.Barbieri, S.Ferrara, L.Maiani, F.Palumbo, and C.A.Savoy,
+%\PL{\bf 115B}(1982)212
+%\bibitem{RS0108a}  *RS0108a*
+%L. Randall and M.D. Schwartz, hep-th/0108115, PRL*****
+%\bibitem{RS0108b}  *RS0108b*
+%L. Randall and M.D. Schwartz, hep-th/0108114, JHEP****
+\end{thebibliography}
+
+ 
+\end{document}
+
+
+
